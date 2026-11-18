@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "data:validate": "python scripts/data_pipeline/validate_data.py",
+    "data:publish": "python scripts/data_pipeline/publish_data.py"
   },
   "dependencies": {
     "@types/leaflet": "^1.9.22",

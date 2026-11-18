@@ -1,0 +1,1833 @@
+id,name,fuel,capacityMW,lat,lng,region,status,origin_source,period,location,stateDescription,sectorid,sectorDescription,fueltypeid,fuelTypeDescription,generation,generation-units
+1,Palo Verde Generating Station,Nuclear,3937,33.3965,-112.8677,Southwest,Online,PLANTS_DATA_TS,,,,,,,,,
+2,Grand Coulee Hydro Dam,Hydro,6809,47.957,-118.981,Northwest,Online,PLANTS_DATA_TS,,,,,,,,,
+3,W. A. Parish Electric Station,Natural Gas,3653,29.4842,-95.6322,Texas / Gulf,Maintenance,PLANTS_DATA_TS,,,,,,,,,
+4,Topaz Solar Farm,Solar,550,35.3831,-120.0633,West,Online,PLANTS_DATA_TS,,,,,,,,,
+5,Alta Wind Energy Center,Wind,1548,35.0189,-118.3247,West,Online,PLANTS_DATA_TS,,,,,,,,,
+6,James M. Barry Generating Plant,Coal,2670,31.0069,-88.0111,Southeast,Online,PLANTS_DATA_TS,,,,,,,,,
+7,Robert Moses Niagara Power Plant,Hydro,2525,43.1417,-79.0444,Northeast,Online,PLANTS_DATA_TS,,,,,,,,,
+8,The Geysers Geothermal Complex,Geothermal,1517,38.7969,-122.7553,West,Online,PLANTS_DATA_TS,,,,,,,,,
+9,Bruce Nuclear Generating Station,Nuclear,6550,44.3253,-81.5997,Northeast,Online,PLANTS_DATA_TS,,,,,,,,,
+10,Robert-Bourassa Hydroelectric,Hydro,5616,53.7819,-77.5303,Northeast,Online,PLANTS_DATA_TS,,,,,,,,,
+11,Gila Bend Solar Complex,Solar,1100,32.9478,-112.7169,Southwest,Online,PLANTS_DATA_TS,,,,,,,,,
+12,Roscoe Wind Farm,Wind,781,32.4446,-100.5387,Texas / Gulf,Online,PLANTS_DATA_TS,,,,,,,,,
+13,Laguna Verde Nuclear Plant,Nuclear,1640,19.7208,-96.4064,Texas / Gulf,Online,PLANTS_DATA_TS,,,,,,,,,
+14,Vogtle Electric Generating Plant,Nuclear,4536,33.1419,-81.7647,Southeast,Online,PLANTS_DATA_TS,,,,,,,,,
+15,Itaipu Hydroelectric Dam,Hydro,14000,-25.4081,-54.5889,South America,Online,PLANTS_DATA_TS,,,,,,,,,
+16,Belo Monte Hydropower Complex,Hydro,11233,-3.1264,-51.775,South America,Online,PLANTS_DATA_TS,,,,,,,,,
+17,Guri Hydroelectric Station,Hydro,10235,7.7658,-62.9981,South America,Maintenance,PLANTS_DATA_TS,,,,,,,,,
+18,Atacama Cerro Dominador Solar,Solar,210,-22.7719,-69.4797,South America,Online,PLANTS_DATA_TS,,,,,,,,,
+19,Gravelines Nuclear Power Station,Nuclear,5460,51.0153,2.1361,Europe,Online,PLANTS_DATA_TS,,,,,,,,,
+20,Hornsea Offshore Wind Farm,Wind,2600,53.885,1.7911,Europe,Online,PLANTS_DATA_TS,,,,,,,,,
+21,Cattenom Nuclear Station,Nuclear,5200,49.4158,6.2181,Europe,Online,PLANTS_DATA_TS,,,,,,,,,
+22,Belchatow Thermal Power Station,Coal,5102,51.2661,19.3264,Europe,Maintenance,PLANTS_DATA_TS,,,,,,,,,
+23,Nunez de Balboa Solar Plant,Solar,500,38.4525,-6.2244,Europe,Online,PLANTS_DATA_TS,,,,,,,,,
+24,Hellisheidi Geothermal Station,Geothermal,303,64.0375,-21.4006,Europe,Online,PLANTS_DATA_TS,,,,,,,,,
+25,Kvilldal Hydro Power Plant,Hydro,1240,59.5186,6.6531,Europe,Online,PLANTS_DATA_TS,,,,,,,,,
+26,Kozloduy Nuclear Power Plant,Nuclear,2000,43.7461,23.7706,Europe,Online,PLANTS_DATA_TS,,,,,,,,,
+27,Barakah Nuclear Energy Plant,Nuclear,5380,23.9606,52.2617,Middle East & Africa,Online,PLANTS_DATA_TS,,,,,,,,,
+28,Mohammed bin Rashid Solar Park,Solar,2860,24.7547,55.3636,Middle East & Africa,Online,PLANTS_DATA_TS,,,,,,,,,
+29,Benban Solar Park,Solar,1650,24.4561,32.7389,Middle East & Africa,Online,PLANTS_DATA_TS,,,,,,,,,
+30,Grand Ethiopian Renaissance Dam,Hydro,5150,11.2142,35.0928,Middle East & Africa,Online,PLANTS_DATA_TS,,,,,,,,,
+31,Koeberg Nuclear Power Station,Nuclear,1860,-33.6764,18.4319,Middle East & Africa,Online,PLANTS_DATA_TS,,,,,,,,,
+32,Medupi Thermal Power Station,Coal,4764,-23.7042,27.5567,Middle East & Africa,Maintenance,PLANTS_DATA_TS,,,,,,,,,
+33,Noor Ouarzazate Solar Complex,Solar,580,31.0472,-6.8631,Middle East & Africa,Online,PLANTS_DATA_TS,,,,,,,,,
+34,Three Gorges Dam,Hydro,22500,30.8231,111.0033,Asia-Pacific,Online,PLANTS_DATA_TS,,,,,,,,,
+35,Baihetan Hydropower Station,Hydro,16000,27.2231,102.9031,Asia-Pacific,Online,PLANTS_DATA_TS,,,,,,,,,
+36,Bhadla Solar Park,Solar,2245,27.5397,71.9153,Asia-Pacific,Online,PLANTS_DATA_TS,,,,,,,,,
+37,Kudankulam Nuclear Power Plant,Nuclear,2000,8.1689,77.7125,Asia-Pacific,Online,PLANTS_DATA_TS,,,,,,,,,
+38,Muppandal Wind Farm,Wind,1500,8.2581,77.5561,Asia-Pacific,Online,PLANTS_DATA_TS,,,,,,,,,
+39,Vindhyachal Thermal Power Station,Coal,4760,24.0983,82.6719,Asia-Pacific,Online,PLANTS_DATA_TS,,,,,,,,,
+40,Kashiwazaki-Kariwa Station,Nuclear,7965,37.4286,138.6014,Asia-Pacific,Maintenance,PLANTS_DATA_TS,,,,,,,,,
+41,Hanul Nuclear Power Plant,Nuclear,5928,37.0928,129.3836,Asia-Pacific,Online,PLANTS_DATA_TS,,,,,,,,,
+42,Jiuquan Wind Power Base,Wind,10000,40.5167,96.65,Asia-Pacific,Online,PLANTS_DATA_TS,,,,,,,,,
+43,Tengger Desert Solar Park,Solar,1547,37.55,105.05,Asia-Pacific,Online,PLANTS_DATA_TS,,,,,,,,,
+44,Bayswater Power Station,Coal,2640,-32.3961,150.9492,Asia-Pacific,Online,PLANTS_DATA_TS,,,,,,,,,
+45,Macarthur Wind Farm,Wind,420,-38.0469,142.1917,Asia-Pacific,Online,PLANTS_DATA_TS,,,,,,,,,
+,,,,,,,,EIA_API_v2,2023,,Alaska,1,Electric Utility,,all fuels,6022.62187,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alaska,1,Electric Utility,,all fuels,5910.71728,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alaska,1,Electric Utility,,all renewables,61.10586,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alaska,1,Electric Utility,,all renewables,86.799,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alaska,1,Electric Utility,,"coal, excluding waste coal",356.93621,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alaska,1,Electric Utility,,"coal, excluding waste coal",338.71005,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alaska,1,Electric Utility,,all coal products,433.75299,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alaska,1,Electric Utility,,all coal products,431.4998,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alaska,1,Electric Utility,,distillate fuel oil,459.25833,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alaska,1,Electric Utility,,distillate fuel oil,455.2757,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alaska,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alaska,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alaska,1,Electric Utility,,fossil fuels,4382.07001,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alaska,1,Electric Utility,,fossil fuels,4308.34728,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alaska,1,Electric Utility,,conventional hydroelectric,1583.709,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alaska,1,Electric Utility,,conventional hydroelectric,1519.712,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alaska,1,Electric Utility,,lignite coal,292.91621,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alaska,1,Electric Utility,,lignite coal,273.65205,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alaska,1,Electric Utility,,natural gas,3113.07363,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alaska,1,Electric Utility,,natural gas,3020.4925,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alaska,1,Electric Utility,,natural gas & other gases,3113.07363,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alaska,1,Electric Utility,,natural gas & other gases,3020.4925,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alaska,1,Electric Utility,,other,-4.263,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alaska,1,Electric Utility,,other,-4.141,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alaska,1,Electric Utility,,petroleum liquids,835.24339,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alaska,1,Electric Utility,,petroleum liquids,856.35498,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alaska,1,Electric Utility,,petroleum,835.24339,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alaska,1,Electric Utility,,petroleum,856.35498,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alaska,1,Electric Utility,,renewable,1644.81486,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alaska,1,Electric Utility,,renewable,1606.511,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alaska,1,Electric Utility,,residual fuel oil,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alaska,1,Electric Utility,,residual fuel oil,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alaska,1,Electric Utility,,solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alaska,1,Electric Utility,,solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alaska,1,Electric Utility,,subbituminous coal,64.02,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alaska,1,Electric Utility,,subbituminous coal,65.058,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alaska,1,Electric Utility,,solar,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alaska,1,Electric Utility,,solar,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alaska,1,Electric Utility,,estimated total solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alaska,1,Electric Utility,,estimated total solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alaska,1,Electric Utility,,estimated total solar,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alaska,1,Electric Utility,,estimated total solar,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alaska,1,Electric Utility,,wind,61.10586,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alaska,1,Electric Utility,,wind,86.799,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alaska,1,Electric Utility,,onshore wind turbine,61.10586,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alaska,1,Electric Utility,,onshore wind turbine,86.799,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alaska,1,Electric Utility,,waste coal,76.81678,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alaska,1,Electric Utility,,waste coal,92.78974,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alaska,1,Electric Utility,,waste oil and other oils,375.98506,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alaska,1,Electric Utility,,waste oil and other oils,401.07929,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alabama,1,Electric Utility,,all fuels,97500.93162,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alabama,1,Electric Utility,,all fuels,106804.34,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alabama,1,Electric Utility,,all renewables,24.611,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alabama,1,Electric Utility,,all renewables,24.293,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alabama,1,Electric Utility,,bituminous coal and synthetic coal,3480.55263,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alabama,1,Electric Utility,,bituminous coal and synthetic coal,6648.83636,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alabama,1,Electric Utility,,bituminous coal,3480.55263,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alabama,1,Electric Utility,,bituminous coal,6648.83636,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alabama,1,Electric Utility,,"coal, excluding waste coal",19181.95839,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alabama,1,Electric Utility,,"coal, excluding waste coal",26900.88874,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alabama,1,Electric Utility,,all coal products,19181.95839,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alabama,1,Electric Utility,,all coal products,26900.88874,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alabama,1,Electric Utility,,distillate fuel oil,12.82201,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alabama,1,Electric Utility,,distillate fuel oil,4.2122,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alabama,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alabama,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alabama,1,Electric Utility,,fossil fuels,43467.56062,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alabama,1,Electric Utility,,fossil fuels,49222.749,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alabama,1,Electric Utility,,conventional hydroelectric,8429.721,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alabama,1,Electric Utility,,conventional hydroelectric,11520.809,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alabama,1,Electric Utility,,natural gas,24272.78021,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alabama,1,Electric Utility,,natural gas,22317.64806,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alabama,1,Electric Utility,,natural gas & other gases,24272.78021,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alabama,1,Electric Utility,,natural gas & other gases,22317.64806,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alabama,1,Electric Utility,,nuclear,45579.039,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alabama,1,Electric Utility,,nuclear,46036.489,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alabama,1,Electric Utility,,petroleum liquids,12.82201,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alabama,1,Electric Utility,,petroleum liquids,4.2122,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alabama,1,Electric Utility,,petroleum,12.82201,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alabama,1,Electric Utility,,petroleum,4.2122,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alabama,1,Electric Utility,,renewable,8454.332,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alabama,1,Electric Utility,,renewable,11545.102,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alabama,1,Electric Utility,,solar photovoltaic,24.611,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alabama,1,Electric Utility,,solar photovoltaic,24.293,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alabama,1,Electric Utility,,subbituminous coal,15701.40577,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alabama,1,Electric Utility,,subbituminous coal,20252.05238,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alabama,1,Electric Utility,,solar,24.611,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alabama,1,Electric Utility,,solar,24.293,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alabama,1,Electric Utility,,estimated total solar photovoltaic,24.611,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alabama,1,Electric Utility,,estimated total solar photovoltaic,24.29302,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Alabama,1,Electric Utility,,estimated total solar,24.611,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Alabama,1,Electric Utility,,estimated total solar,24.29302,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arkansas,1,Electric Utility,,all fuels,57014.93849,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arkansas,1,Electric Utility,,all fuels,54354.374,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arkansas,1,Electric Utility,,all renewables,240.99149,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arkansas,1,Electric Utility,,all renewables,5.903,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arkansas,1,Electric Utility,,"coal, excluding waste coal",13439.8169,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arkansas,1,Electric Utility,,"coal, excluding waste coal",17350.35911,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arkansas,1,Electric Utility,,all coal products,13439.8169,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arkansas,1,Electric Utility,,all coal products,17350.35911,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arkansas,1,Electric Utility,,distillate fuel oil,33.98003,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arkansas,1,Electric Utility,,distillate fuel oil,43.49986,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arkansas,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arkansas,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arkansas,1,Electric Utility,,fossil fuels,38528.457,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arkansas,1,Electric Utility,,fossil fuels,36740.61,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arkansas,1,Electric Utility,,hydro-electric pumped storage,100.532,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arkansas,1,Electric Utility,,hydro-electric pumped storage,83.706,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arkansas,1,Electric Utility,,conventional hydroelectric,3172.477,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arkansas,1,Electric Utility,,conventional hydroelectric,3968.471,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arkansas,1,Electric Utility,,natural gas,25054.66007,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arkansas,1,Electric Utility,,natural gas,19346.75103,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arkansas,1,Electric Utility,,natural gas & other gases,25054.66007,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arkansas,1,Electric Utility,,natural gas & other gases,19346.75103,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arkansas,1,Electric Utility,,nuclear,14972.481,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arkansas,1,Electric Utility,,nuclear,13555.684,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Arkansas,1,Electric Utility,,other,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arkansas,1,Electric Utility,,petroleum liquids,33.98003,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arkansas,1,Electric Utility,,petroleum liquids,43.49986,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arkansas,1,Electric Utility,,petroleum,33.98003,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arkansas,1,Electric Utility,,petroleum,43.49986,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arkansas,1,Electric Utility,,renewable,3413.46849,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arkansas,1,Electric Utility,,renewable,3974.374,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arkansas,1,Electric Utility,,residual fuel oil,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arkansas,1,Electric Utility,,residual fuel oil,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arkansas,1,Electric Utility,,solar photovoltaic,240.99149,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arkansas,1,Electric Utility,,solar photovoltaic,5.903,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arkansas,1,Electric Utility,,subbituminous coal,13439.8169,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arkansas,1,Electric Utility,,subbituminous coal,17350.35911,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arkansas,1,Electric Utility,,solar,240.99149,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arkansas,1,Electric Utility,,solar,5.903,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arkansas,1,Electric Utility,,estimated total solar photovoltaic,240.99149,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arkansas,1,Electric Utility,,estimated total solar photovoltaic,5.903,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arkansas,1,Electric Utility,,estimated total solar,240.99149,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arkansas,1,Electric Utility,,estimated total solar,5.903,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arizona,1,Electric Utility,,all fuels,86637.41798,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arizona,1,Electric Utility,,all fuels,86412.43749,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arizona,1,Electric Utility,,all renewables,593.22798,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arizona,1,Electric Utility,,all renewables,732.45655,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arizona,1,Electric Utility,,biomass,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arizona,1,Electric Utility,,bituminous coal and synthetic coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arizona,1,Electric Utility,,bituminous coal and synthetic coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arizona,1,Electric Utility,,bituminous coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arizona,1,Electric Utility,,bituminous coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arizona,1,Electric Utility,,"coal, excluding waste coal",12068.55331,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arizona,1,Electric Utility,,"coal, excluding waste coal",14300.57241,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arizona,1,Electric Utility,,all coal products,12068.55331,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arizona,1,Electric Utility,,all coal products,14300.57241,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arizona,1,Electric Utility,,distillate fuel oil,31.53425,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arizona,1,Electric Utility,,distillate fuel oil,43.51907,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arizona,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arizona,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arizona,1,Electric Utility,,fossil fuels,48454.476,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arizona,1,Electric Utility,,fossil fuels,47987.58394,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arizona,1,Electric Utility,,hydro-electric pumped storage,136.248,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arizona,1,Electric Utility,,hydro-electric pumped storage,90.895,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arizona,1,Electric Utility,,conventional hydroelectric,5937.328,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arizona,1,Electric Utility,,conventional hydroelectric,5972.854,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arizona,1,Electric Utility,,landfill gas,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arizona,1,Electric Utility,,municiapl landfill gas,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arizona,1,Electric Utility,,natural gas,36354.38845,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arizona,1,Electric Utility,,natural gas,33643.49246,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arizona,1,Electric Utility,,natural gas & other gases,36354.38845,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arizona,1,Electric Utility,,natural gas & other gases,33643.49246,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arizona,1,Electric Utility,,nuclear,31522.59,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arizona,1,Electric Utility,,nuclear,31629.862,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arizona,1,Electric Utility,,other,-6.452,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arizona,1,Electric Utility,,other,-1.214,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arizona,1,Electric Utility,,petroleum liquids,31.53425,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arizona,1,Electric Utility,,petroleum liquids,43.51907,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arizona,1,Electric Utility,,petroleum,31.53425,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arizona,1,Electric Utility,,petroleum,43.51907,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arizona,1,Electric Utility,,refined coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arizona,1,Electric Utility,,renewable,6530.55598,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arizona,1,Electric Utility,,renewable,6705.31055,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arizona,1,Electric Utility,,residual fuel oil,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arizona,1,Electric Utility,,residual fuel oil,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arizona,1,Electric Utility,,solar photovoltaic,593.22798,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arizona,1,Electric Utility,,solar photovoltaic,732.45655,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arizona,1,Electric Utility,,subbituminous coal,12068.55331,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arizona,1,Electric Utility,,subbituminous coal,6165.1891,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arizona,1,Electric Utility,,solar,593.22798,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arizona,1,Electric Utility,,solar,732.45655,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arizona,1,Electric Utility,,estimated total solar photovoltaic,593.22799,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arizona,1,Electric Utility,,estimated total solar photovoltaic,732.45656,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arizona,1,Electric Utility,,estimated total solar,593.22799,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Arizona,1,Electric Utility,,estimated total solar,732.45656,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Arizona,1,Electric Utility,,renewable waste products,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,California,1,Electric Utility,,all fuels,77632.62029,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,California,1,Electric Utility,,all fuels,62190.17402,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,California,1,Electric Utility,,all renewables,1489.84648,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,California,1,Electric Utility,,all renewables,2153.36746,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,California,1,Electric Utility,,biomass,46.67848,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,California,1,Electric Utility,,biomass,69.68214,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,California,1,Electric Utility,,distillate fuel oil,30.48611,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,California,1,Electric Utility,,distillate fuel oil,33.37405,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,California,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,California,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,California,1,Electric Utility,,fossil fuels,28330.81281,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,California,1,Electric Utility,,fossil fuels,30017.04155,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,California,1,Electric Utility,,geothermal,533.685,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,California,1,Electric Utility,,geothermal,796.206,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,California,1,Electric Utility,,hydro-electric pumped storage,-392.677,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,California,1,Electric Utility,,hydro-electric pumped storage,-317.434,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,California,1,Electric Utility,,conventional hydroelectric,30524.932,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,California,1,Electric Utility,,conventional hydroelectric,13873.30601,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,California,1,Electric Utility,,landfill gas,2.95892,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,California,1,Electric Utility,,landfill gas,3.00042,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,California,1,Electric Utility,,municiapl landfill gas,2.95892,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,California,1,Electric Utility,,municiapl landfill gas,3.00042,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,California,1,Electric Utility,,natural gas,28298.7257,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,California,1,Electric Utility,,natural gas,29982.9665,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,California,1,Electric Utility,,natural gas & other gases,28298.7257,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,California,1,Electric Utility,,natural gas & other gases,29982.9665,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,California,1,Electric Utility,,nuclear,17718.368,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,California,1,Electric Utility,,nuclear,16477.366,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,California,1,Electric Utility,,biomass,43.71956,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,California,1,Electric Utility,,biomass,66.68172,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,California,1,Electric Utility,,biomass,43.71956,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,California,1,Electric Utility,,biomass,66.68172,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,California,1,Electric Utility,,other gases,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,California,1,Electric Utility,,other gases,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,California,1,Electric Utility,,other renewables,43.71956,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,California,1,Electric Utility,,other renewables,66.68172,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,California,1,Electric Utility,,other,-38.662,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,California,1,Electric Utility,,other,-13.473,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,California,1,Electric Utility,,petroleum liquids,32.08711,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,California,1,Electric Utility,,petroleum liquids,34.07505,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,California,1,Electric Utility,,petroleum,32.08711,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,California,1,Electric Utility,,petroleum,34.07505,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,California,1,Electric Utility,,renewable,32014.77848,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,California,1,Electric Utility,,renewable,16026.67347,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,California,1,Electric Utility,,residual fuel oil,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,California,1,Electric Utility,,residual fuel oil,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,California,1,Electric Utility,,solar photovoltaic,330.201,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,California,1,Electric Utility,,solar photovoltaic,414.22132,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,California,1,Electric Utility,,solar,330.201,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,California,1,Electric Utility,,solar,414.22132,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,California,1,Electric Utility,,estimated total solar photovoltaic,330.201,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,California,1,Electric Utility,,estimated total solar photovoltaic,414.22134,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,California,1,Electric Utility,,estimated total solar,330.201,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,California,1,Electric Utility,,estimated total solar,414.22134,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,California,1,Electric Utility,,renewable waste products,46.67848,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,California,1,Electric Utility,,renewable waste products,69.68214,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,California,1,Electric Utility,,wind,579.282,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,California,1,Electric Utility,,wind,873.258,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,California,1,Electric Utility,,onshore wind turbine,579.282,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,California,1,Electric Utility,,onshore wind turbine,873.258,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,California,1,Electric Utility,,waste oil and other oils,1.601,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,California,1,Electric Utility,,waste oil and other oils,.701,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Colorado,1,Electric Utility,,all fuels,39335.50218,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Colorado,1,Electric Utility,,all fuels,41491.55545,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Colorado,1,Electric Utility,,anthracite coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Colorado,1,Electric Utility,,all renewables,4256.274,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Colorado,1,Electric Utility,,all renewables,4285.50205,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Colorado,1,Electric Utility,,bituminous coal and synthetic coal,2437.13428,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Colorado,1,Electric Utility,,bituminous coal and synthetic coal,2622.12595,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Colorado,1,Electric Utility,,bituminous coal,2437.13428,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Colorado,1,Electric Utility,,bituminous coal,2622.12595,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Colorado,1,Electric Utility,,"coal, excluding waste coal",18787.6167,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Colorado,1,Electric Utility,,"coal, excluding waste coal",23602.04163,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Colorado,1,Electric Utility,,all coal products,18787.6167,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Colorado,1,Electric Utility,,all coal products,23602.04163,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Colorado,1,Electric Utility,,distillate fuel oil,47.35632,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Colorado,1,Electric Utility,,distillate fuel oil,27.76917,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Colorado,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Colorado,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Colorado,1,Electric Utility,,fossil fuels,33678.88318,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Colorado,1,Electric Utility,,fossil fuels,35830.6164,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Colorado,1,Electric Utility,,hydro-electric pumped storage,25.01,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Colorado,1,Electric Utility,,hydro-electric pumped storage,-35.5,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Colorado,1,Electric Utility,,conventional hydroelectric,1375.595,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Colorado,1,Electric Utility,,conventional hydroelectric,1411.193,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Colorado,1,Electric Utility,,natural gas,14843.91016,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Colorado,1,Electric Utility,,natural gas,12200.8056,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Colorado,1,Electric Utility,,natural gas & other gases,14843.91016,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Colorado,1,Electric Utility,,natural gas & other gases,12200.8056,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Colorado,1,Electric Utility,,other,-.26,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Colorado,1,Electric Utility,,other,-.256,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Colorado,1,Electric Utility,,petroleum liquids,47.35632,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Colorado,1,Electric Utility,,petroleum liquids,27.76917,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Colorado,1,Electric Utility,,petroleum,47.35632,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Colorado,1,Electric Utility,,petroleum,27.76917,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Colorado,1,Electric Utility,,renewable,5631.869,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Colorado,1,Electric Utility,,renewable,5696.69505,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Colorado,1,Electric Utility,,solar photovoltaic,13.215,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Colorado,1,Electric Utility,,solar photovoltaic,13.26305,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Colorado,1,Electric Utility,,subbituminous coal,16350.48242,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Colorado,1,Electric Utility,,subbituminous coal,20979.91568,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Colorado,1,Electric Utility,,solar,13.215,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Colorado,1,Electric Utility,,solar,13.26305,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Colorado,1,Electric Utility,,estimated total solar photovoltaic,13.215,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Colorado,1,Electric Utility,,estimated total solar photovoltaic,13.26305,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Colorado,1,Electric Utility,,estimated total solar,13.215,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Colorado,1,Electric Utility,,estimated total solar,13.26305,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Colorado,1,Electric Utility,,wind,4243.059,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Colorado,1,Electric Utility,,wind,4272.239,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Colorado,1,Electric Utility,,onshore wind turbine,4243.059,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Colorado,1,Electric Utility,,onshore wind turbine,4272.239,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Connecticut,1,Electric Utility,,all fuels,135.02396,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Connecticut,1,Electric Utility,,all fuels,112.78539,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Connecticut,1,Electric Utility,,all renewables,.099,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Connecticut,1,Electric Utility,,all renewables,2.403,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Connecticut,1,Electric Utility,,biomass,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Connecticut,1,Electric Utility,,biomass,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Connecticut,1,Electric Utility,,distillate fuel oil,4.864,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Connecticut,1,Electric Utility,,distillate fuel oil,4.87409,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Connecticut,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Connecticut,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Connecticut,1,Electric Utility,,fossil fuels,96.056,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Connecticut,1,Electric Utility,,fossil fuels,66.57873,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Connecticut,1,Electric Utility,,conventional hydroelectric,38.86896,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Connecticut,1,Electric Utility,,conventional hydroelectric,43.80366,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Connecticut,1,Electric Utility,,landfill gas,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Connecticut,1,Electric Utility,,landfill gas,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Connecticut,1,Electric Utility,,municiapl landfill gas,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Connecticut,1,Electric Utility,,municiapl landfill gas,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Connecticut,1,Electric Utility,,natural gas,91.192,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Connecticut,1,Electric Utility,,natural gas,61.70464,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Connecticut,1,Electric Utility,,natural gas & other gases,91.192,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Connecticut,1,Electric Utility,,natural gas & other gases,61.70464,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Connecticut,1,Electric Utility,,petroleum liquids,4.864,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Connecticut,1,Electric Utility,,petroleum liquids,4.87409,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Connecticut,1,Electric Utility,,petroleum,4.864,thousand megawatthours
+,,,,,,,,EIA_API_v2,2021,,Connecticut,1,Electric Utility,,petroleum,4.87409,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Connecticut,1,Electric Utility,,renewable,33.46903,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Connecticut,1,Electric Utility,,residual fuel oil,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Connecticut,1,Electric Utility,,solar photovoltaic,1.973,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Connecticut,1,Electric Utility,,solar,1.973,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Connecticut,1,Electric Utility,,estimated total solar photovoltaic,1.973,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Connecticut,1,Electric Utility,,estimated total solar,1.973,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Connecticut,1,Electric Utility,,renewable waste products,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,District of Columbia,1,Electric Utility,,all fuels,1.48638,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,District of Columbia,1,Electric Utility,,all renewables,1.48638,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,District of Columbia,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,District of Columbia,1,Electric Utility,,renewable,1.48638,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,District of Columbia,1,Electric Utility,,solar photovoltaic,1.48638,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,District of Columbia,1,Electric Utility,,solar,1.48638,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,District of Columbia,1,Electric Utility,,estimated total solar photovoltaic,1.48638,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,District of Columbia,1,Electric Utility,,estimated total solar,1.48638,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Delaware,1,Electric Utility,,all fuels,72.718,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Delaware,1,Electric Utility,,all renewables,6.772,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Delaware,1,Electric Utility,,distillate fuel oil,.12532,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Delaware,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Delaware,1,Electric Utility,,fossil fuels,65.946,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Delaware,1,Electric Utility,,natural gas,65.82068,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Delaware,1,Electric Utility,,natural gas & other gases,65.82068,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Delaware,1,Electric Utility,,petroleum liquids,.12532,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Delaware,1,Electric Utility,,petroleum,.12532,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Delaware,1,Electric Utility,,renewable,6.772,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Delaware,1,Electric Utility,,solar photovoltaic,6.772,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Delaware,1,Electric Utility,,solar,6.772,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Delaware,1,Electric Utility,,estimated total solar photovoltaic,6.772,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Delaware,1,Electric Utility,,estimated total solar,6.772,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,all fuels,222905.03135,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,all renewables,12624.18303,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,biomass,630.57291,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,bituminous coal and synthetic coal,40315.95237,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,bituminous coal,40315.95237,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,"coal, excluding waste coal",89437.78361,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,all coal products,89437.78361,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,distillate fuel oil,287.95375,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,fossil fuels,181213.41831,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,hydro-electric pumped storage,-976.469,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,conventional hydroelectric,3743.72458,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,landfill gas,169.115,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,municiapl landfill gas,182.2543,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,biogenic municipal solid waste,13.1393,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,natural gas,90218.90419,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,natural gas & other gases,90218.90419,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,nuclear,26280.776,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,biomass,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,biomass,13.1393,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,other renewables,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,other,19.39843,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,petroleum coke,1262.99128,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,petroleum liquids,293.73923,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,petroleum,1556.73051,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,refined coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,renewable,16367.90761,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,residual fuel oil,5.70948,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,solar photovoltaic,4519.904,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,subbituminous coal,49121.83125,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,solar,4519.904,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,estimated total solar photovoltaic,4519.904,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,estimated total solar,4519.904,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,renewable waste products,182.2543,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,wind,7473.70613,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,onshore wind turbine,7473.70613,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,waste oil and other oils,.076,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East North Central,1,Electric Utility,,wood and wood wastes,448.3186,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,all fuels,314219.39245,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,all renewables,319.21007,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,biomass,86.359,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,bituminous coal and synthetic coal,51624.32376,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,bituminous coal,51624.32376,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,"coal, excluding waste coal",84193.50175,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,all coal products,84193.50175,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,distillate fuel oil,186.50605,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,fossil fuels,206473.00073,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,hydro-electric pumped storage,-570.83,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,conventional hydroelectric,20659.718,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,landfill gas,86.359,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,municiapl landfill gas,86.359,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,natural gas,122092.99293,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,natural gas & other gases,122092.99293,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,nuclear,87326.557,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,biomass,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,biomass,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,other renewables,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,other,11.73664,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,petroleum coke,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,petroleum liquids,186.50605,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,petroleum,186.50605,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,refined coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,renewable,20978.92807,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,residual fuel oil,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,solar photovoltaic,232.85107,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,subbituminous coal,32569.17799,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,solar,232.85107,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,estimated total solar photovoltaic,232.85108,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,estimated total solar,232.85108,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,renewable waste products,86.359,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,wind,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,onshore wind turbine,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,waste coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,waste oil and other oils,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,East South Central,1,Electric Utility,,wood and wood wastes,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Florida,1,Electric Utility,,all fuels,249530.74123,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Florida,1,Electric Utility,,all renewables,17752.17654,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Florida,1,Electric Utility,,biomass,329.88249,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Florida,1,Electric Utility,,bituminous coal and synthetic coal,7827.39474,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Florida,1,Electric Utility,,bituminous coal,7827.39474,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Florida,1,Electric Utility,,"coal, excluding waste coal",7827.39474,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Florida,1,Electric Utility,,all coal products,7827.39474,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Florida,1,Electric Utility,,distillate fuel oil,154.17788,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Florida,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Florida,1,Electric Utility,,fossil fuels,202574.10569,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Florida,1,Electric Utility,,conventional hydroelectric,177.238,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Florida,1,Electric Utility,,landfill gas,47.77082,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Florida,1,Electric Utility,,municiapl landfill gas,47.77082,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Florida,1,Electric Utility,,natural gas,193942.50575,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Florida,1,Electric Utility,,natural gas & other gases,193942.50575,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Florida,1,Electric Utility,,nuclear,29053.59,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Florida,1,Electric Utility,,other,-26.369,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Florida,1,Electric Utility,,petroleum coke,646.1812,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Florida,1,Electric Utility,,petroleum liquids,158.024,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Florida,1,Electric Utility,,petroleum,804.20519,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Florida,1,Electric Utility,,renewable,17929.41454,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Florida,1,Electric Utility,,residual fuel oil,3.84612,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Florida,1,Electric Utility,,solar photovoltaic,17422.29405,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Florida,1,Electric Utility,,solar thermal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Florida,1,Electric Utility,,subbituminous coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Florida,1,Electric Utility,,solar,17422.29405,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Florida,1,Electric Utility,,estimated total solar photovoltaic,17422.29405,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Florida,1,Electric Utility,,estimated total solar,17422.29405,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Florida,1,Electric Utility,,renewable waste products,47.77082,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Florida,1,Electric Utility,,waste oil and other oils,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Florida,1,Electric Utility,,wood and wood wastes,282.11167,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Georgia,1,Electric Utility,,all fuels,115578.04001,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Georgia,1,Electric Utility,,all renewables,502.599,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Georgia,1,Electric Utility,,bituminous coal and synthetic coal,10694.52145,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Georgia,1,Electric Utility,,bituminous coal,10694.52145,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Georgia,1,Electric Utility,,"coal, excluding waste coal",17716.1503,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Georgia,1,Electric Utility,,all coal products,17716.1503,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Georgia,1,Electric Utility,,distillate fuel oil,48.9239,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Georgia,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Georgia,1,Electric Utility,,fossil fuels,64932.75101,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Georgia,1,Electric Utility,,hydro-electric pumped storage,-759.908,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Georgia,1,Electric Utility,,conventional hydroelectric,2929.03,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Georgia,1,Electric Utility,,natural gas,47167.67681,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Georgia,1,Electric Utility,,natural gas & other gases,47167.67681,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Georgia,1,Electric Utility,,nuclear,47975.859,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Georgia,1,Electric Utility,,other,-2.291,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Georgia,1,Electric Utility,,petroleum liquids,48.9239,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Georgia,1,Electric Utility,,petroleum,48.9239,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Georgia,1,Electric Utility,,renewable,3431.629,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Georgia,1,Electric Utility,,solar photovoltaic,502.599,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Georgia,1,Electric Utility,,subbituminous coal,7021.62885,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Georgia,1,Electric Utility,,solar,502.599,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Georgia,1,Electric Utility,,estimated total solar photovoltaic,502.599,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Georgia,1,Electric Utility,,estimated total solar,502.599,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Hawaii,1,Electric Utility,,all fuels,5577.115,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Hawaii,1,Electric Utility,,all renewables,95.63768,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Hawaii,1,Electric Utility,,biomass,18.84268,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Hawaii,1,Electric Utility,,distillate fuel oil,1382.6106,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Hawaii,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Hawaii,1,Electric Utility,,fossil fuels,5477.36432,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Hawaii,1,Electric Utility,,conventional hydroelectric,4.113,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Hawaii,1,Electric Utility,,biomass,18.84268,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Hawaii,1,Electric Utility,,biomass,18.84268,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Hawaii,1,Electric Utility,,other renewables,18.84268,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Hawaii,1,Electric Utility,,other,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Hawaii,1,Electric Utility,,petroleum liquids,5477.36432,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Hawaii,1,Electric Utility,,petroleum,5477.36432,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Hawaii,1,Electric Utility,,renewable,99.75068,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Hawaii,1,Electric Utility,,residual fuel oil,4006.539,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Hawaii,1,Electric Utility,,solar photovoltaic,76.795,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Hawaii,1,Electric Utility,,solar,76.795,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Hawaii,1,Electric Utility,,estimated total solar photovoltaic,76.795,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Hawaii,1,Electric Utility,,estimated total solar,76.795,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Hawaii,1,Electric Utility,,renewable waste products,18.84268,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Hawaii,1,Electric Utility,,waste oil and other oils,88.21472,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Iowa,1,Electric Utility,,all fuels,55445.25356,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Iowa,1,Electric Utility,,all renewables,32438.62982,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Iowa,1,Electric Utility,,biomass,27.81082,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Iowa,1,Electric Utility,,bituminous coal and synthetic coal,.49556,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Iowa,1,Electric Utility,,bituminous coal,.49556,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Iowa,1,Electric Utility,,"coal, excluding waste coal",13030.40636,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Iowa,1,Electric Utility,,all coal products,13030.40636,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Iowa,1,Electric Utility,,distillate fuel oil,39.96208,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Iowa,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Iowa,1,Electric Utility,,fossil fuels,21982.07174,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Iowa,1,Electric Utility,,conventional hydroelectric,1025.231,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Iowa,1,Electric Utility,,natural gas,8911.0523,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Iowa,1,Electric Utility,,natural gas & other gases,8911.0523,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Iowa,1,Electric Utility,,biomass,27.81082,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Iowa,1,Electric Utility,,biomass,27.81082,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Iowa,1,Electric Utility,,other renewables,27.81082,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Iowa,1,Electric Utility,,other,-.679,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Iowa,1,Electric Utility,,petroleum liquids,40.61308,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Iowa,1,Electric Utility,,petroleum,40.61308,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Iowa,1,Electric Utility,,refined coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Iowa,1,Electric Utility,,renewable,33463.86082,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Iowa,1,Electric Utility,,solar photovoltaic,417.666,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Iowa,1,Electric Utility,,subbituminous coal,13029.9108,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Iowa,1,Electric Utility,,solar,417.666,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Iowa,1,Electric Utility,,estimated total solar photovoltaic,417.666,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Iowa,1,Electric Utility,,estimated total solar,417.666,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Iowa,1,Electric Utility,,renewable waste products,27.81082,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Iowa,1,Electric Utility,,wind,31993.153,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Iowa,1,Electric Utility,,onshore wind turbine,31993.153,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Iowa,1,Electric Utility,,waste oil and other oils,.651,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Iowa,1,Electric Utility,,wood and wood wastes,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Idaho,1,Electric Utility,,all fuels,13475.312,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Idaho,1,Electric Utility,,all renewables,445.067,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Idaho,1,Electric Utility,,biomass,19.896,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Idaho,1,Electric Utility,,distillate fuel oil,.045,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Idaho,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Idaho,1,Electric Utility,,fossil fuels,4709.141,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Idaho,1,Electric Utility,,conventional hydroelectric,8322.392,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Idaho,1,Electric Utility,,landfill gas,19.896,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Idaho,1,Electric Utility,,municiapl landfill gas,19.896,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Idaho,1,Electric Utility,,natural gas,4709.096,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Idaho,1,Electric Utility,,natural gas & other gases,4709.096,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Idaho,1,Electric Utility,,other,-1.288,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Idaho,1,Electric Utility,,petroleum liquids,.045,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Idaho,1,Electric Utility,,petroleum,.045,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Idaho,1,Electric Utility,,renewable,8767.459,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Idaho,1,Electric Utility,,solar photovoltaic,257.783,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Idaho,1,Electric Utility,,solar,257.783,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Idaho,1,Electric Utility,,estimated total solar photovoltaic,257.783,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Idaho,1,Electric Utility,,estimated total solar,257.783,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Idaho,1,Electric Utility,,renewable waste products,19.896,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Idaho,1,Electric Utility,,wind,167.388,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Idaho,1,Electric Utility,,onshore wind turbine,167.388,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Illinois,1,Electric Utility,,all fuels,4244.628,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Illinois,1,Electric Utility,,all renewables,88.438,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Illinois,1,Electric Utility,,biomass,75.065,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Illinois,1,Electric Utility,,bituminous coal and synthetic coal,1174.3716,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Illinois,1,Electric Utility,,bituminous coal,1174.3716,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Illinois,1,Electric Utility,,"coal, excluding waste coal",1174.3716,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Illinois,1,Electric Utility,,all coal products,1174.3716,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Illinois,1,Electric Utility,,distillate fuel oil,5.59615,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Illinois,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Illinois,1,Electric Utility,,fossil fuels,4114.126,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Illinois,1,Electric Utility,,conventional hydroelectric,42.064,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Illinois,1,Electric Utility,,landfill gas,75.065,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Illinois,1,Electric Utility,,municiapl landfill gas,75.065,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Illinois,1,Electric Utility,,natural gas,2934.08224,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Illinois,1,Electric Utility,,natural gas & other gases,2934.08224,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Illinois,1,Electric Utility,,other,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Illinois,1,Electric Utility,,petroleum coke,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Illinois,1,Electric Utility,,petroleum liquids,5.67215,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Illinois,1,Electric Utility,,petroleum,5.67215,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Illinois,1,Electric Utility,,renewable,130.502,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Illinois,1,Electric Utility,,solar photovoltaic,6.953,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Illinois,1,Electric Utility,,subbituminous coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Illinois,1,Electric Utility,,solar,6.953,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Illinois,1,Electric Utility,,estimated total solar photovoltaic,6.953,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Illinois,1,Electric Utility,,estimated total solar,6.953,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Illinois,1,Electric Utility,,renewable waste products,75.065,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Illinois,1,Electric Utility,,wind,6.42,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Illinois,1,Electric Utility,,onshore wind turbine,6.42,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Illinois,1,Electric Utility,,waste oil and other oils,.076,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Indiana,1,Electric Utility,,all fuels,59951.92487,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Indiana,1,Electric Utility,,all renewables,2289.99113,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Indiana,1,Electric Utility,,biomass,94.05,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Indiana,1,Electric Utility,,bituminous coal and synthetic coal,31180.84194,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Indiana,1,Electric Utility,,bituminous coal,31180.84194,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Indiana,1,Electric Utility,,"coal, excluding waste coal",37156.30638,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Indiana,1,Electric Utility,,all coal products,37156.30638,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Indiana,1,Electric Utility,,distillate fuel oil,118.62292,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Indiana,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Indiana,1,Electric Utility,,fossil fuels,57295.48175,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Indiana,1,Electric Utility,,conventional hydroelectric,368.458,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Indiana,1,Electric Utility,,landfill gas,94.05,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Indiana,1,Electric Utility,,municiapl landfill gas,94.05,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Indiana,1,Electric Utility,,natural gas,20020.55245,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Indiana,1,Electric Utility,,natural gas & other gases,20020.55245,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Indiana,1,Electric Utility,,other,-2.006,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Indiana,1,Electric Utility,,petroleum coke,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Indiana,1,Electric Utility,,petroleum liquids,118.62292,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Indiana,1,Electric Utility,,petroleum,118.62292,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Indiana,1,Electric Utility,,renewable,2658.44913,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Indiana,1,Electric Utility,,solar photovoltaic,1967.663,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Indiana,1,Electric Utility,,subbituminous coal,5975.46443,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Indiana,1,Electric Utility,,solar,1967.663,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Indiana,1,Electric Utility,,estimated total solar photovoltaic,1967.663,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Indiana,1,Electric Utility,,estimated total solar,1967.663,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Indiana,1,Electric Utility,,renewable waste products,94.05,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Indiana,1,Electric Utility,,wind,228.27813,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Indiana,1,Electric Utility,,onshore wind turbine,228.27813,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kansas,1,Electric Utility,,all fuels,30081.30456,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kansas,1,Electric Utility,,all renewables,2740.585,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kansas,1,Electric Utility,,bituminous coal and synthetic coal,40.56287,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kansas,1,Electric Utility,,bituminous coal,40.56287,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kansas,1,Electric Utility,,"coal, excluding waste coal",13079.1832,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kansas,1,Electric Utility,,all coal products,13079.1832,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kansas,1,Electric Utility,,distillate fuel oil,97.46797,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kansas,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kansas,1,Electric Utility,,fossil fuels,18136.49356,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kansas,1,Electric Utility,,natural gas,4959.84239,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kansas,1,Electric Utility,,natural gas & other gases,4959.84239,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kansas,1,Electric Utility,,nuclear,9204.226,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kansas,1,Electric Utility,,petroleum liquids,97.46797,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kansas,1,Electric Utility,,petroleum,97.46797,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kansas,1,Electric Utility,,renewable,2740.585,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kansas,1,Electric Utility,,residual fuel oil,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kansas,1,Electric Utility,,solar photovoltaic,58.195,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kansas,1,Electric Utility,,subbituminous coal,13038.62033,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kansas,1,Electric Utility,,solar,58.195,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kansas,1,Electric Utility,,estimated total solar photovoltaic,58.195,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kansas,1,Electric Utility,,estimated total solar,58.195,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kansas,1,Electric Utility,,wind,2682.39,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kansas,1,Electric Utility,,onshore wind turbine,2682.39,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kentucky,1,Electric Utility,,all fuels,65645.70489,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kentucky,1,Electric Utility,,all renewables,129.21207,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kentucky,1,Electric Utility,,biomass,86.359,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kentucky,1,Electric Utility,,bituminous coal and synthetic coal,38134.42902,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kentucky,1,Electric Utility,,bituminous coal,38134.42902,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kentucky,1,Electric Utility,,"coal, excluding waste coal",44829.32174,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kentucky,1,Electric Utility,,all coal products,44829.32174,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kentucky,1,Electric Utility,,distillate fuel oil,58.08252,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kentucky,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kentucky,1,Electric Utility,,fossil fuels,61405.34717,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kentucky,1,Electric Utility,,conventional hydroelectric,4099.409,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kentucky,1,Electric Utility,,landfill gas,86.359,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kentucky,1,Electric Utility,,municiapl landfill gas,86.359,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kentucky,1,Electric Utility,,natural gas,16517.94292,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kentucky,1,Electric Utility,,natural gas & other gases,16517.94292,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kentucky,1,Electric Utility,,other,11.73664,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kentucky,1,Electric Utility,,petroleum coke,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kentucky,1,Electric Utility,,petroleum liquids,58.08252,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kentucky,1,Electric Utility,,petroleum,58.08252,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kentucky,1,Electric Utility,,refined coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kentucky,1,Electric Utility,,renewable,4228.62107,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kentucky,1,Electric Utility,,solar photovoltaic,42.85307,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kentucky,1,Electric Utility,,subbituminous coal,6694.89271,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kentucky,1,Electric Utility,,solar,42.85307,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kentucky,1,Electric Utility,,estimated total solar photovoltaic,42.85308,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kentucky,1,Electric Utility,,estimated total solar,42.85308,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kentucky,1,Electric Utility,,renewable waste products,86.359,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kentucky,1,Electric Utility,,waste coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kentucky,1,Electric Utility,,waste oil and other oils,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Kentucky,1,Electric Utility,,wood and wood wastes,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Louisiana,1,Electric Utility,,all fuels,64884.44091,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Louisiana,1,Electric Utility,,all renewables,28.465,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Louisiana,1,Electric Utility,,bituminous coal and synthetic coal,12.61302,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Louisiana,1,Electric Utility,,bituminous coal,12.61302,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Louisiana,1,Electric Utility,,"coal, excluding waste coal",2919.52169,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Louisiana,1,Electric Utility,,all coal products,2919.52169,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Louisiana,1,Electric Utility,,distillate fuel oil,9.89333,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Louisiana,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Louisiana,1,Electric Utility,,fossil fuels,50003.20291,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Louisiana,1,Electric Utility,,lignite coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Louisiana,1,Electric Utility,,natural gas,47037.11732,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Louisiana,1,Electric Utility,,natural gas & other gases,47037.11732,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Louisiana,1,Electric Utility,,nuclear,14651.585,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Louisiana,1,Electric Utility,,other,201.188,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Louisiana,1,Electric Utility,,petroleum coke,36.67058,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Louisiana,1,Electric Utility,,petroleum liquids,9.89333,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Louisiana,1,Electric Utility,,petroleum,46.56391,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Louisiana,1,Electric Utility,,renewable,28.465,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Louisiana,1,Electric Utility,,residual fuel oil,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Louisiana,1,Electric Utility,,solar photovoltaic,28.465,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Louisiana,1,Electric Utility,,subbituminous coal,2906.90867,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Louisiana,1,Electric Utility,,solar,28.465,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Louisiana,1,Electric Utility,,estimated total solar photovoltaic,28.465,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Louisiana,1,Electric Utility,,estimated total solar,28.465,thousand megawatthours
+,,,,,,,,EIA_API_v2,2022,,Louisiana,1,Electric Utility,,waste oil and other oils,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Massachusetts,1,Electric Utility,,all fuels,547.032,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Massachusetts,1,Electric Utility,,all renewables,109.619,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Massachusetts,1,Electric Utility,,distillate fuel oil,36.23891,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Massachusetts,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Massachusetts,1,Electric Utility,,fossil fuels,211.859,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Massachusetts,1,Electric Utility,,conventional hydroelectric,226.175,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Massachusetts,1,Electric Utility,,natural gas,175.62009,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Massachusetts,1,Electric Utility,,natural gas & other gases,175.62009,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Massachusetts,1,Electric Utility,,other,-.621,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Massachusetts,1,Electric Utility,,petroleum liquids,36.23891,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Massachusetts,1,Electric Utility,,petroleum,36.23891,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Massachusetts,1,Electric Utility,,renewable,335.794,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Massachusetts,1,Electric Utility,,residual fuel oil,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Massachusetts,1,Electric Utility,,solar photovoltaic,77.226,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Massachusetts,1,Electric Utility,,solar,77.226,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Massachusetts,1,Electric Utility,,estimated total solar photovoltaic,77.226,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Massachusetts,1,Electric Utility,,estimated total solar,77.226,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Massachusetts,1,Electric Utility,,wind,32.393,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Massachusetts,1,Electric Utility,,onshore wind turbine,32.393,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Middle Atlantic,1,Electric Utility,,all fuels,36582.65166,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Middle Atlantic,1,Electric Utility,,all renewables,126.755,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Middle Atlantic,1,Electric Utility,,bituminous coal and synthetic coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Middle Atlantic,1,Electric Utility,,bituminous coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Middle Atlantic,1,Electric Utility,,"coal, excluding waste coal",0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Middle Atlantic,1,Electric Utility,,all coal products,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Middle Atlantic,1,Electric Utility,,distillate fuel oil,46.8177,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Middle Atlantic,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Middle Atlantic,1,Electric Utility,,fossil fuels,13278.66466,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Middle Atlantic,1,Electric Utility,,hydro-electric pumped storage,-409.577,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Middle Atlantic,1,Electric Utility,,conventional hydroelectric,23589.131,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Middle Atlantic,1,Electric Utility,,natural gas,13124.13975,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Middle Atlantic,1,Electric Utility,,natural gas & other gases,13124.13975,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Middle Atlantic,1,Electric Utility,,other,-2.322,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Middle Atlantic,1,Electric Utility,,petroleum liquids,154.52491,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Middle Atlantic,1,Electric Utility,,petroleum,154.52491,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Middle Atlantic,1,Electric Utility,,renewable,23715.886,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Middle Atlantic,1,Electric Utility,,residual fuel oil,85.67619,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Middle Atlantic,1,Electric Utility,,solar photovoltaic,126.755,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Middle Atlantic,1,Electric Utility,,subbituminous coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Middle Atlantic,1,Electric Utility,,solar,126.755,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Middle Atlantic,1,Electric Utility,,estimated total solar photovoltaic,126.755,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Middle Atlantic,1,Electric Utility,,estimated total solar,126.755,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Middle Atlantic,1,Electric Utility,,wind,232.445,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Middle Atlantic,1,Electric Utility,,onshore wind turbine,232.445,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Middle Atlantic,1,Electric Utility,,waste oil and other oils,22.03102,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Maryland,1,Electric Utility,,all fuels,2973.907,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Maryland,1,Electric Utility,,all renewables,7.32,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Maryland,1,Electric Utility,,distillate fuel oil,-1.53055,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Maryland,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Maryland,1,Electric Utility,,fossil fuels,2966.715,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Maryland,1,Electric Utility,,natural gas,2968.24555,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Maryland,1,Electric Utility,,natural gas & other gases,2968.24555,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Maryland,1,Electric Utility,,other,-.128,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Maryland,1,Electric Utility,,petroleum liquids,-1.53055,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Maryland,1,Electric Utility,,petroleum,-1.53055,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Maryland,1,Electric Utility,,renewable,7.32,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Maryland,1,Electric Utility,,residual fuel oil,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Maryland,1,Electric Utility,,solar photovoltaic,7.32,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Maryland,1,Electric Utility,,solar,7.32,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Maryland,1,Electric Utility,,estimated total solar photovoltaic,7.32,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Maryland,1,Electric Utility,,estimated total solar,7.32,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Maine,1,Electric Utility,,all fuels,2.558,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Maine,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Maine,1,Electric Utility,,conventional hydroelectric,2.558,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Maine,1,Electric Utility,,renewable,2.558,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Maine,1,Electric Utility,,estimated total solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Maine,1,Electric Utility,,estimated total solar,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Michigan,1,Electric Utility,,all fuels,90700.01995,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Michigan,1,Electric Utility,,all renewables,5952.751,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Michigan,1,Electric Utility,,bituminous coal and synthetic coal,2220.45289,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Michigan,1,Electric Utility,,bituminous coal,2220.45289,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Michigan,1,Electric Utility,,"coal, excluding waste coal",25568.8017,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Michigan,1,Electric Utility,,all coal products,25568.8017,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Michigan,1,Electric Utility,,distillate fuel oil,78.7017,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Michigan,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Michigan,1,Electric Utility,,fossil fuels,58262.59695,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Michigan,1,Electric Utility,,hydro-electric pumped storage,-976.469,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Michigan,1,Electric Utility,,conventional hydroelectric,1180.458,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Michigan,1,Electric Utility,,natural gas,31349.49409,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Michigan,1,Electric Utility,,natural gas & other gases,31349.49409,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Michigan,1,Electric Utility,,nuclear,26280.776,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Michigan,1,Electric Utility,,other,-.093,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Michigan,1,Electric Utility,,petroleum coke,1259.88998,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Michigan,1,Electric Utility,,petroleum liquids,84.41118,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Michigan,1,Electric Utility,,petroleum,1344.30116,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Michigan,1,Electric Utility,,refined coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Michigan,1,Electric Utility,,renewable,7133.209,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Michigan,1,Electric Utility,,residual fuel oil,5.70948,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Michigan,1,Electric Utility,,solar photovoltaic,79.547,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Michigan,1,Electric Utility,,subbituminous coal,23348.34881,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Michigan,1,Electric Utility,,solar,79.547,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Michigan,1,Electric Utility,,estimated total solar photovoltaic,79.547,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Michigan,1,Electric Utility,,estimated total solar,79.547,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Michigan,1,Electric Utility,,wind,5873.204,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Michigan,1,Electric Utility,,onshore wind turbine,5873.204,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Michigan,1,Electric Utility,,waste oil and other oils,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Minnesota,1,Electric Utility,,all fuels,40859.06412,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Minnesota,1,Electric Utility,,all renewables,6664.55714,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Minnesota,1,Electric Utility,,biomass,118.32914,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Minnesota,1,Electric Utility,,bituminous coal and synthetic coal,.61148,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Minnesota,1,Electric Utility,,bituminous coal,.61148,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Minnesota,1,Electric Utility,,"coal, excluding waste coal",11279.41186,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Minnesota,1,Electric Utility,,all coal products,11279.41186,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Minnesota,1,Electric Utility,,distillate fuel oil,16.28635,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Minnesota,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Minnesota,1,Electric Utility,,fossil fuels,21633.763,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Minnesota,1,Electric Utility,,conventional hydroelectric,593.69306,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Minnesota,1,Electric Utility,,landfill gas,.366,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Minnesota,1,Electric Utility,,lignite coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Minnesota,1,Electric Utility,,municiapl landfill gas,100.66577,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Minnesota,1,Electric Utility,,biogenic municipal solid waste,100.29977,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Minnesota,1,Electric Utility,,natural gas,10338.06479,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Minnesota,1,Electric Utility,,natural gas & other gases,10338.06479,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Minnesota,1,Electric Utility,,nuclear,11844.611,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Minnesota,1,Electric Utility,,biomass,100.29977,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Minnesota,1,Electric Utility,,other,122.43992,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Minnesota,1,Electric Utility,,petroleum liquids,16.28635,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Minnesota,1,Electric Utility,,petroleum,16.28635,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Minnesota,1,Electric Utility,,refined coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Minnesota,1,Electric Utility,,renewable,7258.2502,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Minnesota,1,Electric Utility,,solar photovoltaic,148.904,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Minnesota,1,Electric Utility,,subbituminous coal,11278.80038,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Minnesota,1,Electric Utility,,solar,148.904,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Minnesota,1,Electric Utility,,estimated total solar photovoltaic,148.904,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Minnesota,1,Electric Utility,,estimated total solar,148.904,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Minnesota,1,Electric Utility,,renewable waste products,100.66577,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Minnesota,1,Electric Utility,,wind,6397.324,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Minnesota,1,Electric Utility,,onshore wind turbine,6397.324,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Minnesota,1,Electric Utility,,wood and wood wastes,17.66337,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Missouri,1,Electric Utility,,all fuels,60065.31566,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Missouri,1,Electric Utility,,all renewables,2767.41556,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Missouri,1,Electric Utility,,biomass,23.444,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Missouri,1,Electric Utility,,bituminous coal and synthetic coal,783.64081,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Missouri,1,Electric Utility,,bituminous coal,783.64081,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Missouri,1,Electric Utility,,"coal, excluding waste coal",38826.08055,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Missouri,1,Electric Utility,,all coal products,38826.08055,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Missouri,1,Electric Utility,,distillate fuel oil,123.89732,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Missouri,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Missouri,1,Electric Utility,,fossil fuels,45604.2551,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Missouri,1,Electric Utility,,hydro-electric pumped storage,147.44,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Missouri,1,Electric Utility,,conventional hydroelectric,1020.421,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Missouri,1,Electric Utility,,landfill gas,23.444,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Missouri,1,Electric Utility,,municiapl landfill gas,23.444,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Missouri,1,Electric Utility,,natural gas,6630.71819,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Missouri,1,Electric Utility,,natural gas & other gases,6630.71819,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Missouri,1,Electric Utility,,nuclear,10525.784,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Missouri,1,Electric Utility,,other,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Missouri,1,Electric Utility,,petroleum liquids,147.45635,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Missouri,1,Electric Utility,,petroleum,147.45635,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Missouri,1,Electric Utility,,refined coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Missouri,1,Electric Utility,,renewable,3787.83656,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Missouri,1,Electric Utility,,solar photovoltaic,67.80156,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Missouri,1,Electric Utility,,subbituminous coal,38042.43975,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Missouri,1,Electric Utility,,solar,67.80156,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Missouri,1,Electric Utility,,estimated total solar photovoltaic,67.80156,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Missouri,1,Electric Utility,,estimated total solar,67.80156,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Missouri,1,Electric Utility,,renewable waste products,23.444,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Missouri,1,Electric Utility,,wind,2676.17,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Missouri,1,Electric Utility,,onshore wind turbine,2676.17,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Missouri,1,Electric Utility,,waste oil and other oils,23.55903,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mississippi,1,Electric Utility,,all fuels,71679.09656,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mississippi,1,Electric Utility,,all renewables,110.648,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mississippi,1,Electric Utility,,bituminous coal and synthetic coal,76.93503,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mississippi,1,Electric Utility,,bituminous coal,76.93503,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mississippi,1,Electric Utility,,"coal, excluding waste coal",1466.41157,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mississippi,1,Electric Utility,,all coal products,1466.41157,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mississippi,1,Electric Utility,,distillate fuel oil,4.65792,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mississippi,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mississippi,1,Electric Utility,,fossil fuels,60915.04556,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mississippi,1,Electric Utility,,natural gas,59443.97607,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mississippi,1,Electric Utility,,natural gas & other gases,59443.97607,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mississippi,1,Electric Utility,,nuclear,10653.403,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Mississippi,1,Electric Utility,,other,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mississippi,1,Electric Utility,,petroleum liquids,4.65792,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mississippi,1,Electric Utility,,petroleum,4.65792,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mississippi,1,Electric Utility,,renewable,110.648,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mississippi,1,Electric Utility,,residual fuel oil,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mississippi,1,Electric Utility,,solar photovoltaic,110.648,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mississippi,1,Electric Utility,,subbituminous coal,1389.47654,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mississippi,1,Electric Utility,,solar,110.648,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mississippi,1,Electric Utility,,estimated total solar photovoltaic,110.648,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mississippi,1,Electric Utility,,estimated total solar,110.648,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Montana,1,Electric Utility,,all fuels,11663.292,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Montana,1,Electric Utility,,all renewables,1746.742,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Montana,1,Electric Utility,,biomass,17.77,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Montana,1,Electric Utility,,"coal, excluding waste coal",0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Montana,1,Electric Utility,,all coal products,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Montana,1,Electric Utility,,distillate fuel oil,6.4752,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Montana,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Montana,1,Electric Utility,,fossil fuels,814.009,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Montana,1,Electric Utility,,conventional hydroelectric,9102.541,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Montana,1,Electric Utility,,landfill gas,17.77,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Montana,1,Electric Utility,,lignite coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Montana,1,Electric Utility,,municiapl landfill gas,17.77,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Montana,1,Electric Utility,,natural gas,807.5338,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Montana,1,Electric Utility,,natural gas & other gases,807.5338,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Montana,1,Electric Utility,,petroleum liquids,6.4752,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Montana,1,Electric Utility,,petroleum,6.4752,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Montana,1,Electric Utility,,renewable,10849.283,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Montana,1,Electric Utility,,subbituminous coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Montana,1,Electric Utility,,estimated total solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Montana,1,Electric Utility,,estimated total solar,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Montana,1,Electric Utility,,renewable waste products,17.77,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Montana,1,Electric Utility,,wind,1728.972,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Montana,1,Electric Utility,,onshore wind turbine,1728.972,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mountain,1,Electric Utility,,all fuels,258580.66621,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mountain,1,Electric Utility,,anthracite coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mountain,1,Electric Utility,,all renewables,16555.05586,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mountain,1,Electric Utility,,biomass,37.666,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mountain,1,Electric Utility,,bituminous coal and synthetic coal,25958.84871,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mountain,1,Electric Utility,,bituminous coal,25958.84871,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mountain,1,Electric Utility,,"coal, excluding waste coal",74997.0795,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mountain,1,Electric Utility,,all coal products,74997.0795,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mountain,1,Electric Utility,,distillate fuel oil,152.01171,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mountain,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mountain,1,Electric Utility,,fossil fuels,181976.72035,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mountain,1,Electric Utility,,geothermal,272.457,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mountain,1,Electric Utility,,hydro-electric pumped storage,135.565,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mountain,1,Electric Utility,,conventional hydroelectric,27550.878,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mountain,1,Electric Utility,,landfill gas,37.666,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mountain,1,Electric Utility,,lignite coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mountain,1,Electric Utility,,municiapl landfill gas,37.666,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mountain,1,Electric Utility,,natural gas,106821.62363,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mountain,1,Electric Utility,,natural gas & other gases,106821.62363,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mountain,1,Electric Utility,,nuclear,32388.118,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mountain,1,Electric Utility,,other,-25.671,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mountain,1,Electric Utility,,petroleum liquids,158.01722,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mountain,1,Electric Utility,,petroleum,158.01722,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mountain,1,Electric Utility,,refined coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mountain,1,Electric Utility,,renewable,44105.93386,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mountain,1,Electric Utility,,residual fuel oil,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mountain,1,Electric Utility,,solar photovoltaic,2216.24786,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mountain,1,Electric Utility,,subbituminous coal,49038.23079,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mountain,1,Electric Utility,,solar,2216.24786,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mountain,1,Electric Utility,,estimated total solar photovoltaic,2216.24786,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mountain,1,Electric Utility,,estimated total solar,2216.24786,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mountain,1,Electric Utility,,renewable waste products,37.666,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mountain,1,Electric Utility,,wind,14028.685,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mountain,1,Electric Utility,,onshore wind turbine,14028.685,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Mountain,1,Electric Utility,,waste oil and other oils,6.00552,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Carolina,1,Electric Utility,,all fuels,112771.40678,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Carolina,1,Electric Utility,,all renewables,1058.356,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Carolina,1,Electric Utility,,bituminous coal and synthetic coal,17025.19295,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Carolina,1,Electric Utility,,bituminous coal,17025.19295,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Carolina,1,Electric Utility,,"coal, excluding waste coal",17025.19295,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Carolina,1,Electric Utility,,all coal products,17025.19295,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Carolina,1,Electric Utility,,distillate fuel oil,127.25466,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Carolina,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Carolina,1,Electric Utility,,fossil fuels,64230.78878,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Carolina,1,Electric Utility,,hydro-electric pumped storage,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Carolina,1,Electric Utility,,conventional hydroelectric,4138.174,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Carolina,1,Electric Utility,,natural gas,47078.34116,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Carolina,1,Electric Utility,,natural gas & other gases,47078.34116,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Carolina,1,Electric Utility,,nuclear,43349.344,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Carolina,1,Electric Utility,,other,-5.256,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Carolina,1,Electric Utility,,petroleum liquids,127.25466,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Carolina,1,Electric Utility,,petroleum,127.25466,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Carolina,1,Electric Utility,,renewable,5196.53,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Carolina,1,Electric Utility,,solar photovoltaic,1058.356,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Carolina,1,Electric Utility,,solar,1058.356,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Carolina,1,Electric Utility,,estimated total solar photovoltaic,1058.356,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Carolina,1,Electric Utility,,estimated total solar,1058.356,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Dakota,1,Electric Utility,,all fuels,32737.889,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Dakota,1,Electric Utility,,all renewables,5114.462,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Dakota,1,Electric Utility,,"coal, excluding waste coal",23053.64547,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Dakota,1,Electric Utility,,all coal products,23053.64547,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Dakota,1,Electric Utility,,distillate fuel oil,43.37635,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Dakota,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Dakota,1,Electric Utility,,fossil fuels,25525.222,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Dakota,1,Electric Utility,,conventional hydroelectric,2060.635,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Dakota,1,Electric Utility,,lignite coal,14740.61678,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Dakota,1,Electric Utility,,natural gas,2428.08272,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Dakota,1,Electric Utility,,natural gas & other gases,2428.08272,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Dakota,1,Electric Utility,,other,37.57,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Dakota,1,Electric Utility,,petroleum liquids,43.49381,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Dakota,1,Electric Utility,,petroleum,43.49381,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Dakota,1,Electric Utility,,refined coal,8313.02869,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Dakota,1,Electric Utility,,renewable,7175.097,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Dakota,1,Electric Utility,,subbituminous coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Dakota,1,Electric Utility,,estimated total solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Dakota,1,Electric Utility,,estimated total solar,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Dakota,1,Electric Utility,,wind,5114.462,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Dakota,1,Electric Utility,,onshore wind turbine,5114.462,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,North Dakota,1,Electric Utility,,waste oil and other oils,.11746,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nebraska,1,Electric Utility,,all fuels,24875.73718,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nebraska,1,Electric Utility,,all renewables,150.06449,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nebraska,1,Electric Utility,,biomass,69.15149,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nebraska,1,Electric Utility,,"coal, excluding waste coal",16050.12008,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nebraska,1,Electric Utility,,all coal products,16050.12008,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nebraska,1,Electric Utility,,distillate fuel oil,47.81897,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nebraska,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nebraska,1,Electric Utility,,fossil fuels,17447.29569,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nebraska,1,Electric Utility,,conventional hydroelectric,1182.67,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nebraska,1,Electric Utility,,landfill gas,69.11801,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nebraska,1,Electric Utility,,municiapl landfill gas,69.11801,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nebraska,1,Electric Utility,,natural gas,1349.35665,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nebraska,1,Electric Utility,,natural gas & other gases,1349.35665,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nebraska,1,Electric Utility,,nuclear,6095.731,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nebraska,1,Electric Utility,,biomass,.03348,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nebraska,1,Electric Utility,,biomass,.03348,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nebraska,1,Electric Utility,,other renewables,.03348,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Nebraska,1,Electric Utility,,other,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nebraska,1,Electric Utility,,petroleum liquids,47.81897,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nebraska,1,Electric Utility,,petroleum,47.81897,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nebraska,1,Electric Utility,,refined coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nebraska,1,Electric Utility,,renewable,1332.73449,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nebraska,1,Electric Utility,,residual fuel oil,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nebraska,1,Electric Utility,,solar photovoltaic,19.135,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nebraska,1,Electric Utility,,subbituminous coal,16050.12008,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nebraska,1,Electric Utility,,solar,19.135,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nebraska,1,Electric Utility,,estimated total solar photovoltaic,19.135,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nebraska,1,Electric Utility,,estimated total solar,19.135,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nebraska,1,Electric Utility,,renewable waste products,69.15149,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nebraska,1,Electric Utility,,wind,61.778,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nebraska,1,Electric Utility,,onshore wind turbine,61.778,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New England,1,Electric Utility,,all fuels,1590.54383,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New England,1,Electric Utility,,all renewables,587.55556,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New England,1,Electric Utility,,biomass,246.00776,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New England,1,Electric Utility,,distillate fuel oil,42.47891,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New England,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New England,1,Electric Utility,,fossil fuels,315.91924,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New England,1,Electric Utility,,conventional hydroelectric,685.30703,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New England,1,Electric Utility,,landfill gas,49.484,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New England,1,Electric Utility,,municiapl landfill gas,49.484,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New England,1,Electric Utility,,natural gas,272.53733,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New England,1,Electric Utility,,natural gas & other gases,272.53733,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New England,1,Electric Utility,,other,1.762,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New England,1,Electric Utility,,petroleum liquids,43.38191,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New England,1,Electric Utility,,petroleum,43.38191,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New England,1,Electric Utility,,renewable,1272.86259,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New England,1,Electric Utility,,residual fuel oil,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New England,1,Electric Utility,,solar photovoltaic,137.6688,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New England,1,Electric Utility,,solar,137.6688,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New England,1,Electric Utility,,estimated total solar photovoltaic,137.6688,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New England,1,Electric Utility,,estimated total solar,137.6688,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New England,1,Electric Utility,,renewable waste products,49.484,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New England,1,Electric Utility,,wind,203.879,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New England,1,Electric Utility,,onshore wind turbine,203.879,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New England,1,Electric Utility,,waste oil and other oils,.903,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New England,1,Electric Utility,,wood and wood wastes,196.52376,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Hampshire,1,Electric Utility,,all fuels,6.888,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Hampshire,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Hampshire,1,Electric Utility,,conventional hydroelectric,6.888,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Hampshire,1,Electric Utility,,renewable,6.888,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Hampshire,1,Electric Utility,,estimated total solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Hampshire,1,Electric Utility,,estimated total solar,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Jersey,1,Electric Utility,,all fuels,263.583,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Jersey,1,Electric Utility,,all renewables,126.755,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Jersey,1,Electric Utility,,bituminous coal and synthetic coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Jersey,1,Electric Utility,,bituminous coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Jersey,1,Electric Utility,,"coal, excluding waste coal",0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Jersey,1,Electric Utility,,all coal products,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Jersey,1,Electric Utility,,distillate fuel oil,.063,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Jersey,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Jersey,1,Electric Utility,,fossil fuels,136.828,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Jersey,1,Electric Utility,,natural gas,136.765,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Jersey,1,Electric Utility,,natural gas & other gases,136.765,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Jersey,1,Electric Utility,,other,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Jersey,1,Electric Utility,,petroleum liquids,.063,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Jersey,1,Electric Utility,,petroleum,.063,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Jersey,1,Electric Utility,,renewable,126.755,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Jersey,1,Electric Utility,,residual fuel oil,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Jersey,1,Electric Utility,,solar photovoltaic,126.755,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Jersey,1,Electric Utility,,solar,126.755,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Jersey,1,Electric Utility,,estimated total solar photovoltaic,126.755,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Jersey,1,Electric Utility,,estimated total solar,126.755,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Mexico,1,Electric Utility,,all fuels,20682.823,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Mexico,1,Electric Utility,,all renewables,3393.481,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Mexico,1,Electric Utility,,bituminous coal and synthetic coal,8431.8337,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Mexico,1,Electric Utility,,bituminous coal,8431.8337,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Mexico,1,Electric Utility,,"coal, excluding waste coal",8431.8337,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Mexico,1,Electric Utility,,all coal products,8431.8337,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Mexico,1,Electric Utility,,distillate fuel oil,.75187,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Mexico,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Mexico,1,Electric Utility,,fossil fuels,17137.827,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Mexico,1,Electric Utility,,conventional hydroelectric,153.211,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Mexico,1,Electric Utility,,natural gas,8705.24143,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Mexico,1,Electric Utility,,natural gas & other gases,8705.24143,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Mexico,1,Electric Utility,,other,-1.696,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Mexico,1,Electric Utility,,petroleum liquids,.75187,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Mexico,1,Electric Utility,,petroleum,.75187,thousand megawatthours
+,,,,,,,,EIA_API_v2,2022,,New Mexico,1,Electric Utility,,refined coal,1207.49448,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Mexico,1,Electric Utility,,renewable,3546.692,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Mexico,1,Electric Utility,,solar photovoltaic,450.804,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Mexico,1,Electric Utility,,subbituminous coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Mexico,1,Electric Utility,,solar,450.804,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Mexico,1,Electric Utility,,estimated total solar photovoltaic,450.804,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Mexico,1,Electric Utility,,estimated total solar,450.804,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Mexico,1,Electric Utility,,wind,2942.677,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New Mexico,1,Electric Utility,,onshore wind turbine,2942.677,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nevada,1,Electric Utility,,all fuels,26477.919,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nevada,1,Electric Utility,,all renewables,418.386,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nevada,1,Electric Utility,,bituminous coal and synthetic coal,572.11232,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nevada,1,Electric Utility,,bituminous coal,572.11232,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nevada,1,Electric Utility,,"coal, excluding waste coal",1160.32876,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nevada,1,Electric Utility,,all coal products,1160.32876,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nevada,1,Electric Utility,,distillate fuel oil,4.27725,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nevada,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nevada,1,Electric Utility,,fossil fuels,24544.509,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nevada,1,Electric Utility,,conventional hydroelectric,1531.949,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nevada,1,Electric Utility,,natural gas,23379.903,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nevada,1,Electric Utility,,natural gas & other gases,23379.903,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nevada,1,Electric Utility,,other,-16.925,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nevada,1,Electric Utility,,petroleum liquids,4.27725,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nevada,1,Electric Utility,,petroleum,4.27725,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nevada,1,Electric Utility,,renewable,1950.335,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nevada,1,Electric Utility,,solar photovoltaic,418.386,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nevada,1,Electric Utility,,subbituminous coal,588.21644,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nevada,1,Electric Utility,,solar,418.386,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nevada,1,Electric Utility,,estimated total solar photovoltaic,418.386,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Nevada,1,Electric Utility,,estimated total solar,418.386,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New York,1,Electric Utility,,all fuels,36206.57466,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,New York,1,Electric Utility,,all renewables,232.445,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New York,1,Electric Utility,,bituminous coal and synthetic coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New York,1,Electric Utility,,bituminous coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New York,1,Electric Utility,,"coal, excluding waste coal",0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New York,1,Electric Utility,,all coal products,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New York,1,Electric Utility,,distillate fuel oil,43.92396,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New York,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New York,1,Electric Utility,,fossil fuels,13113.17666,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New York,1,Electric Utility,,hydro-electric pumped storage,-409.577,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New York,1,Electric Utility,,conventional hydroelectric,23505.297,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New York,1,Electric Utility,,natural gas,12961.54548,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New York,1,Electric Utility,,natural gas & other gases,12961.54548,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New York,1,Electric Utility,,other,-2.322,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New York,1,Electric Utility,,petroleum liquids,151.63117,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New York,1,Electric Utility,,petroleum,151.63117,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New York,1,Electric Utility,,renewable,23505.297,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New York,1,Electric Utility,,residual fuel oil,85.67619,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New York,1,Electric Utility,,estimated total solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New York,1,Electric Utility,,estimated total solar,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,New York,1,Electric Utility,,wind,232.445,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,New York,1,Electric Utility,,onshore wind turbine,232.445,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,New York,1,Electric Utility,,waste oil and other oils,22.03102,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Ohio,1,Electric Utility,,all fuels,15750.37857,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Ohio,1,Electric Utility,,all renewables,10.702,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Ohio,1,Electric Utility,,biomass,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Ohio,1,Electric Utility,,bituminous coal and synthetic coal,4437.58347,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Ohio,1,Electric Utility,,bituminous coal,4437.58347,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Ohio,1,Electric Utility,,"coal, excluding waste coal",4838.74859,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Ohio,1,Electric Utility,,all coal products,4838.74859,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Ohio,1,Electric Utility,,distillate fuel oil,25.01286,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Ohio,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Ohio,1,Electric Utility,,fossil fuels,15447.415,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Ohio,1,Electric Utility,,conventional hydroelectric,292.78358,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Ohio,1,Electric Utility,,natural gas,10583.65355,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Ohio,1,Electric Utility,,natural gas & other gases,10583.65355,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Ohio,1,Electric Utility,,biomass,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Ohio,1,Electric Utility,,biomass,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Ohio,1,Electric Utility,,other renewables,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Ohio,1,Electric Utility,,other,-.522,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Ohio,1,Electric Utility,,petroleum liquids,25.01286,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Ohio,1,Electric Utility,,petroleum,25.01286,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Ohio,1,Electric Utility,,renewable,303.48558,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Ohio,1,Electric Utility,,solar photovoltaic,7.114,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Ohio,1,Electric Utility,,subbituminous coal,401.16512,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Ohio,1,Electric Utility,,solar,7.114,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Ohio,1,Electric Utility,,estimated total solar photovoltaic,7.114,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Ohio,1,Electric Utility,,estimated total solar,7.114,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Ohio,1,Electric Utility,,renewable waste products,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Ohio,1,Electric Utility,,wind,3.588,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Ohio,1,Electric Utility,,onshore wind turbine,3.588,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Ohio,1,Electric Utility,,waste oil and other oils,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oklahoma,1,Electric Utility,,all fuels,46637.69834,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oklahoma,1,Electric Utility,,all renewables,6911.267,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oklahoma,1,Electric Utility,,biomass,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oklahoma,1,Electric Utility,,bituminous coal and synthetic coal,4.63161,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oklahoma,1,Electric Utility,,bituminous coal,4.63161,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oklahoma,1,Electric Utility,,"coal, excluding waste coal",6085.14502,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oklahoma,1,Electric Utility,,all coal products,6085.14502,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oklahoma,1,Electric Utility,,distillate fuel oil,24.22148,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oklahoma,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oklahoma,1,Electric Utility,,fossil fuels,38166.61864,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oklahoma,1,Electric Utility,,hydro-electric pumped storage,-47.522,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oklahoma,1,Electric Utility,,conventional hydroelectric,1581.58834,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oklahoma,1,Electric Utility,,natural gas,32057.25214,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oklahoma,1,Electric Utility,,natural gas & other gases,32057.25214,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oklahoma,1,Electric Utility,,other,25.74636,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oklahoma,1,Electric Utility,,petroleum liquids,24.22148,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oklahoma,1,Electric Utility,,petroleum,24.22148,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oklahoma,1,Electric Utility,,refined coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oklahoma,1,Electric Utility,,renewable,8492.85534,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oklahoma,1,Electric Utility,,residual fuel oil,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oklahoma,1,Electric Utility,,solar photovoltaic,91.669,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oklahoma,1,Electric Utility,,subbituminous coal,6080.51341,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oklahoma,1,Electric Utility,,solar,91.669,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oklahoma,1,Electric Utility,,estimated total solar photovoltaic,91.669,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oklahoma,1,Electric Utility,,estimated total solar,91.669,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oklahoma,1,Electric Utility,,wind,6819.598,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oklahoma,1,Electric Utility,,onshore wind turbine,6819.598,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oklahoma,1,Electric Utility,,wood and wood wastes,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oregon,1,Electric Utility,,all fuels,41615.71,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oregon,1,Electric Utility,,all renewables,1645.802,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oregon,1,Electric Utility,,biomass,60.301,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oregon,1,Electric Utility,,distillate fuel oil,12.88993,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oregon,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oregon,1,Electric Utility,,fossil fuels,13296.722,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oregon,1,Electric Utility,,conventional hydroelectric,26673.439,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oregon,1,Electric Utility,,landfill gas,60.301,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oregon,1,Electric Utility,,municiapl landfill gas,60.301,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oregon,1,Electric Utility,,natural gas,13283.83207,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oregon,1,Electric Utility,,natural gas & other gases,13283.83207,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oregon,1,Electric Utility,,other,-.253,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oregon,1,Electric Utility,,petroleum liquids,12.88993,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oregon,1,Electric Utility,,petroleum,12.88993,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oregon,1,Electric Utility,,renewable,28319.241,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oregon,1,Electric Utility,,solar photovoltaic,5.152,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oregon,1,Electric Utility,,solar,5.152,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oregon,1,Electric Utility,,estimated total solar photovoltaic,5.152,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oregon,1,Electric Utility,,estimated total solar,5.152,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oregon,1,Electric Utility,,renewable waste products,60.301,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oregon,1,Electric Utility,,wind,1580.349,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Oregon,1,Electric Utility,,onshore wind turbine,1580.349,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pennsylvania,1,Electric Utility,,all fuels,112.494,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pennsylvania,1,Electric Utility,,bituminous coal and synthetic coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pennsylvania,1,Electric Utility,,bituminous coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pennsylvania,1,Electric Utility,,"coal, excluding waste coal",0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pennsylvania,1,Electric Utility,,all coal products,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pennsylvania,1,Electric Utility,,distillate fuel oil,2.83074,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pennsylvania,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pennsylvania,1,Electric Utility,,fossil fuels,28.66,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pennsylvania,1,Electric Utility,,conventional hydroelectric,83.834,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pennsylvania,1,Electric Utility,,natural gas,25.82926,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pennsylvania,1,Electric Utility,,natural gas & other gases,25.82926,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pennsylvania,1,Electric Utility,,petroleum liquids,2.83074,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pennsylvania,1,Electric Utility,,petroleum,2.83074,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pennsylvania,1,Electric Utility,,renewable,83.834,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pennsylvania,1,Electric Utility,,subbituminous coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pennsylvania,1,Electric Utility,,estimated total solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pennsylvania,1,Electric Utility,,estimated total solar,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific,1,Electric Utility,,all fuels,217070.10049,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific,1,Electric Utility,,all renewables,8253.03279,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific,1,Electric Utility,,biomass,419.76479,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific,1,Electric Utility,,"coal, excluding waste coal",401.175,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific,1,Electric Utility,,all coal products,482.76122,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific,1,Electric Utility,,distillate fuel oil,1928.68539,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific,1,Electric Utility,,fossil fuels,63903.38005,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific,1,Electric Utility,,geothermal,641.509,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific,1,Electric Utility,,hydro-electric pumped storage,-43.997,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific,1,Electric Utility,,conventional hydroelectric,116678.24465,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific,1,Electric Utility,,landfill gas,62.47574,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific,1,Electric Utility,,lignite coal,334.789,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific,1,Electric Utility,,municiapl landfill gas,62.47574,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific,1,Electric Utility,,natural gas,56997.01765,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific,1,Electric Utility,,natural gas & other gases,56997.01765,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific,1,Electric Utility,,nuclear,28345.974,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific,1,Electric Utility,,biomass,64.94498,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific,1,Electric Utility,,biomass,64.94498,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific,1,Electric Utility,,other gases,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific,1,Electric Utility,,other renewables,64.94498,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific,1,Electric Utility,,other,-66.534,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific,1,Electric Utility,,petroleum liquids,6423.60118,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific,1,Electric Utility,,petroleum,6423.60118,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific,1,Electric Utility,,renewable,124931.27744,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific,1,Electric Utility,,residual fuel oil,4006.539,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific,1,Electric Utility,,solar photovoltaic,394.325,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific,1,Electric Utility,,subbituminous coal,66.386,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific,1,Electric Utility,,solar,394.325,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific,1,Electric Utility,,renewable waste products,127.42072,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific,1,Electric Utility,,wind,6797.434,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific,1,Electric Utility,,onshore wind turbine,6797.434,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific,1,Electric Utility,,waste coal,81.58622,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific,1,Electric Utility,,waste oil and other oils,488.37679,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific,1,Electric Utility,,wood and wood wastes,292.34407,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Contiguous,1,Electric Utility,,all fuels,205472.55974,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Contiguous,1,Electric Utility,,all renewables,8087.27911,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Contiguous,1,Electric Utility,,biomass,400.92211,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Contiguous,1,Electric Utility,,distillate fuel oil,78.25452,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Contiguous,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Contiguous,1,Electric Utility,,fossil fuels,53984.77886,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Contiguous,1,Electric Utility,,geothermal,641.509,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Contiguous,1,Electric Utility,,hydro-electric pumped storage,-43.997,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Contiguous,1,Electric Utility,,conventional hydroelectric,115160.53877,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Contiguous,1,Electric Utility,,landfill gas,62.47574,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Contiguous,1,Electric Utility,,municiapl landfill gas,62.47574,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Contiguous,1,Electric Utility,,natural gas,53904.87134,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Contiguous,1,Electric Utility,,natural gas & other gases,53904.87134,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Contiguous,1,Electric Utility,,nuclear,28345.974,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Contiguous,1,Electric Utility,,biomass,46.1023,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Contiguous,1,Electric Utility,,biomass,46.1023,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Contiguous,1,Electric Utility,,other gases,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Contiguous,1,Electric Utility,,other renewables,46.1023,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Contiguous,1,Electric Utility,,other,-62.014,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Contiguous,1,Electric Utility,,petroleum liquids,79.90752,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Contiguous,1,Electric Utility,,petroleum,79.90752,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Contiguous,1,Electric Utility,,renewable,123247.81788,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Contiguous,1,Electric Utility,,residual fuel oil,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Contiguous,1,Electric Utility,,solar photovoltaic,317.53,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Contiguous,1,Electric Utility,,solar,317.53,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Contiguous,1,Electric Utility,,estimated total solar photovoltaic,317.53,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Contiguous,1,Electric Utility,,estimated total solar,317.53,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Contiguous,1,Electric Utility,,renewable waste products,108.57804,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Contiguous,1,Electric Utility,,wind,6727.318,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Contiguous,1,Electric Utility,,onshore wind turbine,6727.318,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Contiguous,1,Electric Utility,,waste oil and other oils,1.653,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Contiguous,1,Electric Utility,,wood and wood wastes,292.34407,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Noncontiguous,1,Electric Utility,,all fuels,11597.54075,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Noncontiguous,1,Electric Utility,,all renewables,165.75368,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Noncontiguous,1,Electric Utility,,biomass,18.84268,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Noncontiguous,1,Electric Utility,,"coal, excluding waste coal",401.175,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Noncontiguous,1,Electric Utility,,all coal products,482.76122,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Noncontiguous,1,Electric Utility,,distillate fuel oil,1850.43087,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Noncontiguous,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Noncontiguous,1,Electric Utility,,fossil fuels,9918.60119,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Noncontiguous,1,Electric Utility,,conventional hydroelectric,1517.70588,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Noncontiguous,1,Electric Utility,,lignite coal,334.789,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Noncontiguous,1,Electric Utility,,natural gas,3092.14631,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Noncontiguous,1,Electric Utility,,natural gas & other gases,3092.14631,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Noncontiguous,1,Electric Utility,,biomass,18.84268,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Noncontiguous,1,Electric Utility,,biomass,18.84268,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Noncontiguous,1,Electric Utility,,other renewables,18.84268,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Noncontiguous,1,Electric Utility,,other,-4.52,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Noncontiguous,1,Electric Utility,,petroleum liquids,6343.69366,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Noncontiguous,1,Electric Utility,,petroleum,6343.69366,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Noncontiguous,1,Electric Utility,,renewable,1683.45957,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Noncontiguous,1,Electric Utility,,residual fuel oil,4006.539,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Noncontiguous,1,Electric Utility,,solar photovoltaic,76.795,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Noncontiguous,1,Electric Utility,,subbituminous coal,66.386,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Noncontiguous,1,Electric Utility,,solar,76.795,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Noncontiguous,1,Electric Utility,,estimated total solar photovoltaic,76.795,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Noncontiguous,1,Electric Utility,,estimated total solar,76.795,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Noncontiguous,1,Electric Utility,,renewable waste products,18.84268,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Noncontiguous,1,Electric Utility,,wind,70.116,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Noncontiguous,1,Electric Utility,,onshore wind turbine,70.116,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Noncontiguous,1,Electric Utility,,waste coal,81.58622,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Pacific Noncontiguous,1,Electric Utility,,waste oil and other oils,486.72379,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Puerto Rico,1,Electric Utility,,all fuels,9664.682,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Puerto Rico,1,Electric Utility,,all renewables,23.903,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Puerto Rico,1,Electric Utility,,distillate fuel oil,2082.17411,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Puerto Rico,1,Electric Utility,,fossil fuels,9593.34,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Puerto Rico,1,Electric Utility,,conventional hydroelectric,47.439,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Puerto Rico,1,Electric Utility,,natural gas,3243.50523,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Puerto Rico,1,Electric Utility,,natural gas & other gases,3243.50523,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Puerto Rico,1,Electric Utility,,petroleum liquids,6349.83477,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Puerto Rico,1,Electric Utility,,petroleum,6349.83477,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Puerto Rico,1,Electric Utility,,renewable,71.342,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Puerto Rico,1,Electric Utility,,residual fuel oil,4267.66065,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Puerto Rico,1,Electric Utility,,solar photovoltaic,23.903,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Puerto Rico,1,Electric Utility,,solar,23.903,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Rhode Island,1,Electric Utility,,all fuels,.119,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Rhode Island,1,Electric Utility,,distillate fuel oil,.119,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Rhode Island,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Rhode Island,1,Electric Utility,,fossil fuels,.119,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Rhode Island,1,Electric Utility,,petroleum liquids,.119,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Rhode Island,1,Electric Utility,,petroleum,.119,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Rhode Island,1,Electric Utility,,estimated total solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Rhode Island,1,Electric Utility,,estimated total solar,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,all fuels,689705.84712,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,all renewables,22811.32269,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,biomass,1390.14826,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,bituminous coal and synthetic coal,80560.04204,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,bituminous coal,80560.04204,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,"coal, excluding waste coal",98186.69246,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,all coal products,98186.69246,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,distillate fuel oil,677.15488,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,fossil fuels,455005.84058,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,hydro-electric pumped storage,-2543.561,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,conventional hydroelectric,11376.15485,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,landfill gas,99.45882,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,municiapl landfill gas,99.45882,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,natural gas,355484.86846,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,natural gas & other gases,355484.86846,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,nuclear,203094.527,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,other,-38.437,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,petroleum coke,646.1812,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,petroleum liquids,688.09847,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,petroleum,1334.27966,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,refined coal,10605.02158,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,renewable,34187.47754,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,residual fuel oil,3.84612,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,solar photovoltaic,21370.91443,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,solar thermal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,subbituminous coal,7021.62885,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,solar,21370.91443,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,estimated total solar photovoltaic,21370.91443,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,estimated total solar,21370.91443,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,renewable waste products,99.45882,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,wind,50.26,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,offshore wind turbine,50.26,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,waste coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,waste oil and other oils,7.09746,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Atlantic,1,Electric Utility,,wood and wood wastes,1290.68945,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Carolina,1,Electric Utility,,all fuels,94346.75213,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Carolina,1,Electric Utility,,all renewables,59.375,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Carolina,1,Electric Utility,,biomass,51.688,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Carolina,1,Electric Utility,,bituminous coal and synthetic coal,16829.2029,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Carolina,1,Electric Utility,,bituminous coal,16829.2029,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Carolina,1,Electric Utility,,"coal, excluding waste coal",16829.2029,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Carolina,1,Electric Utility,,all coal products,16829.2029,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Carolina,1,Electric Utility,,distillate fuel oil,87.96617,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Carolina,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Carolina,1,Electric Utility,,fossil fuels,38409.63813,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Carolina,1,Electric Utility,,hydro-electric pumped storage,-251.067,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Carolina,1,Electric Utility,,conventional hydroelectric,2358.399,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Carolina,1,Electric Utility,,landfill gas,51.688,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Carolina,1,Electric Utility,,municiapl landfill gas,51.688,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Carolina,1,Electric Utility,,natural gas,21485.47323,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Carolina,1,Electric Utility,,natural gas & other gases,21485.47323,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Carolina,1,Electric Utility,,nuclear,53770.407,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Carolina,1,Electric Utility,,petroleum coke,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Carolina,1,Electric Utility,,petroleum liquids,94.96199,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Carolina,1,Electric Utility,,petroleum,94.96199,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Carolina,1,Electric Utility,,refined coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Carolina,1,Electric Utility,,renewable,2417.774,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Carolina,1,Electric Utility,,residual fuel oil,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Carolina,1,Electric Utility,,solar photovoltaic,7.687,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Carolina,1,Electric Utility,,solar,7.687,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Carolina,1,Electric Utility,,estimated total solar photovoltaic,7.687,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Carolina,1,Electric Utility,,estimated total solar,7.687,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Carolina,1,Electric Utility,,renewable waste products,51.688,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Carolina,1,Electric Utility,,waste oil and other oils,6.99582,thousand megawatthours
+,,,,,,,,EIA_API_v2,2022,,South Carolina,1,Electric Utility,,wood and wood wastes,-.24933,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Dakota,1,Electric Utility,,all fuels,10820.65798,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Dakota,1,Electric Utility,,all renewables,2425.67725,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Dakota,1,Electric Utility,,biomass,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Dakota,1,Electric Utility,,"coal, excluding waste coal",1562.67884,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Dakota,1,Electric Utility,,all coal products,1562.67884,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Dakota,1,Electric Utility,,distillate fuel oil,15.91452,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Dakota,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Dakota,1,Electric Utility,,fossil fuels,3794.46473,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Dakota,1,Electric Utility,,conventional hydroelectric,4600.516,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Dakota,1,Electric Utility,,natural gas,2215.87137,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Dakota,1,Electric Utility,,natural gas & other gases,2215.87137,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Dakota,1,Electric Utility,,biomass,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Dakota,1,Electric Utility,,biomass,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Dakota,1,Electric Utility,,other renewables,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Dakota,1,Electric Utility,,petroleum liquids,15.91452,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Dakota,1,Electric Utility,,petroleum,15.91452,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Dakota,1,Electric Utility,,renewable,7026.19325,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Dakota,1,Electric Utility,,subbituminous coal,1562.67884,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Dakota,1,Electric Utility,,estimated total solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Dakota,1,Electric Utility,,estimated total solar,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Dakota,1,Electric Utility,,renewable waste products,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Dakota,1,Electric Utility,,wind,2425.67725,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,South Dakota,1,Electric Utility,,onshore wind turbine,2425.67725,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Tennessee,1,Electric Utility,,all fuels,71979.795,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Tennessee,1,Electric Utility,,all renewables,2.464,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Tennessee,1,Electric Utility,,biomass,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Tennessee,1,Electric Utility,,bituminous coal and synthetic coal,10889.63259,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Tennessee,1,Electric Utility,,bituminous coal,10889.63259,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Tennessee,1,Electric Utility,,"coal, excluding waste coal",16961.60246,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Tennessee,1,Electric Utility,,all coal products,16961.60246,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Tennessee,1,Electric Utility,,distillate fuel oil,120.80256,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Tennessee,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Tennessee,1,Electric Utility,,fossil fuels,32159.154,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Tennessee,1,Electric Utility,,hydro-electric pumped storage,-570.83,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Tennessee,1,Electric Utility,,conventional hydroelectric,8203.047,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Tennessee,1,Electric Utility,,natural gas,15076.74899,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Tennessee,1,Electric Utility,,natural gas & other gases,15076.74899,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Tennessee,1,Electric Utility,,nuclear,32185.96,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Tennessee,1,Electric Utility,,biomass,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Tennessee,1,Electric Utility,,biomass,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Tennessee,1,Electric Utility,,other renewables,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Tennessee,1,Electric Utility,,petroleum liquids,120.80256,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Tennessee,1,Electric Utility,,petroleum,120.80256,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Tennessee,1,Electric Utility,,refined coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Tennessee,1,Electric Utility,,renewable,8205.511,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Tennessee,1,Electric Utility,,solar photovoltaic,2.464,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Tennessee,1,Electric Utility,,subbituminous coal,6071.96986,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Tennessee,1,Electric Utility,,solar,2.464,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Tennessee,1,Electric Utility,,estimated total solar photovoltaic,2.464,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Tennessee,1,Electric Utility,,estimated total solar,2.464,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Tennessee,1,Electric Utility,,renewable waste products,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Tennessee,1,Electric Utility,,wind,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Tennessee,1,Electric Utility,,onshore wind turbine,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Texas,1,Electric Utility,,all fuels,94888.69839,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Texas,1,Electric Utility,,all renewables,2536.38,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Texas,1,Electric Utility,,biomass,190.028,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Texas,1,Electric Utility,,"coal, excluding waste coal",22450.07952,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Texas,1,Electric Utility,,all coal products,22450.07952,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Texas,1,Electric Utility,,distillate fuel oil,65.53459,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Texas,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Texas,1,Electric Utility,,fossil fuels,91612.57939,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Texas,1,Electric Utility,,conventional hydroelectric,740.655,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Texas,1,Electric Utility,,lignite coal,1301.91308,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Texas,1,Electric Utility,,natural gas,69096.96528,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Texas,1,Electric Utility,,natural gas & other gases,69096.96528,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Texas,1,Electric Utility,,biomass,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Texas,1,Electric Utility,,biomass,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Texas,1,Electric Utility,,other renewables,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Texas,1,Electric Utility,,other,-.916,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Texas,1,Electric Utility,,petroleum liquids,65.53459,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Texas,1,Electric Utility,,petroleum,65.53459,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Texas,1,Electric Utility,,refined coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Texas,1,Electric Utility,,renewable,3277.035,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Texas,1,Electric Utility,,residual fuel oil,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Texas,1,Electric Utility,,solar photovoltaic,15.212,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Texas,1,Electric Utility,,subbituminous coal,21148.16644,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Texas,1,Electric Utility,,solar,15.212,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Texas,1,Electric Utility,,estimated total solar photovoltaic,15.212,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Texas,1,Electric Utility,,estimated total solar,15.212,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Texas,1,Electric Utility,,renewable waste products,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Texas,1,Electric Utility,,wind,2331.14,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Texas,1,Electric Utility,,onshore wind turbine,2331.14,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Texas,1,Electric Utility,,waste oil and other oils,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Texas,1,Electric Utility,,wood and wood wastes,190.028,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,all fuels,2256336.24792,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,anthracite coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,all renewables,123555.48643,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,biomass,3239.28216,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,bituminous coal and synthetic coal,199301.72222,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,bituminous coal,199301.72222,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,"coal, excluding waste coal",508067.26213,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,all coal products,508148.84835,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,distillate fuel oil,3853.64131,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,fossil fuels,1472044.54063,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,geothermal,913.966,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,hydro-electric pumped storage,-4232.426,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,conventional hydroelectric,220162.7205,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,landfill gas,597.48656,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,lignite coal,16377.31886,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,municiapl landfill gas,710.92564,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,biogenic municipal solid waste,113.43908,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,natural gas,953445.61984,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,natural gas & other gases,953445.61984,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,nuclear,444520.668,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,biomass,92.78928,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,biomass,206.22836,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,other gases,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,other renewables,92.78928,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,other,285.25836,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,petroleum coke,1945.84306,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,petroleum liquids,8504.22939,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,petroleum,10450.07244,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,refined coal,18918.05027,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,renewable,343718.20693,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,residual fuel oil,4101.77079,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,solar photovoltaic,30346.58189,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,solar thermal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,subbituminous coal,273470.17079,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,solar,30346.58189,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,estimated total solar photovoltaic,30346.58189,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,estimated total solar,30346.58189,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,renewable waste products,803.71492,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,wind,89055.65638,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,offshore wind turbine,50.26,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,onshore wind turbine,89005.39638,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,waste coal,81.58622,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,waste oil and other oils,548.81728,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,U.S. Total,1,Electric Utility,,wood and wood wastes,2435.56724,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Utah,1,Electric Utility,,all fuels,27900.02791,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Utah,1,Electric Utility,,all renewables,305.69291,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Utah,1,Electric Utility,,bituminous coal and synthetic coal,14857.30467,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Utah,1,Electric Utility,,bituminous coal,14857.30467,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Utah,1,Electric Utility,,"coal, excluding waste coal",15617.42666,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Utah,1,Electric Utility,,all coal products,15617.42666,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Utah,1,Electric Utility,,distillate fuel oil,32.16877,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Utah,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Utah,1,Electric Utility,,fossil fuels,26858.187,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Utah,1,Electric Utility,,geothermal,272.457,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Utah,1,Electric Utility,,conventional hydroelectric,697.187,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Utah,1,Electric Utility,,natural gas,11208.59157,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Utah,1,Electric Utility,,natural gas & other gases,11208.59157,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Utah,1,Electric Utility,,other,38.961,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Utah,1,Electric Utility,,petroleum liquids,32.16877,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Utah,1,Electric Utility,,petroleum,32.16877,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Utah,1,Electric Utility,,refined coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Utah,1,Electric Utility,,renewable,1002.87991,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Utah,1,Electric Utility,,solar photovoltaic,33.23591,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Utah,1,Electric Utility,,subbituminous coal,760.12199,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Utah,1,Electric Utility,,solar,33.23591,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Utah,1,Electric Utility,,estimated total solar photovoltaic,33.23591,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Utah,1,Electric Utility,,estimated total solar,33.23591,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Virginia,1,Electric Utility,,all fuels,76210.75761,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Virginia,1,Electric Utility,,all renewables,3393.29177,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Virginia,1,Electric Utility,,biomass,1008.57777,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Virginia,1,Electric Utility,,bituminous coal and synthetic coal,1859.54651,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Virginia,1,Electric Utility,,bituminous coal,1859.54651,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Virginia,1,Electric Utility,,"coal, excluding waste coal",1859.54651,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Virginia,1,Electric Utility,,all coal products,1859.54651,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Virginia,1,Electric Utility,,distillate fuel oil,135.55162,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Virginia,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Virginia,1,Electric Utility,,fossil fuels,44266.38699,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Virginia,1,Electric Utility,,hydro-electric pumped storage,-1532.586,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Virginia,1,Electric Utility,,conventional hydroelectric,1142.73085,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Virginia,1,Electric Utility,,landfill gas,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Virginia,1,Electric Utility,,municiapl landfill gas,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Virginia,1,Electric Utility,,natural gas,42271.28886,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Virginia,1,Electric Utility,,natural gas & other gases,42271.28886,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Virginia,1,Electric Utility,,nuclear,28945.327,thousand megawatthours
+,,,,,,,,EIA_API_v2,2023,,Virginia,1,Electric Utility,,other,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Virginia,1,Electric Utility,,petroleum liquids,135.55162,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Virginia,1,Electric Utility,,petroleum,135.55162,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Virginia,1,Electric Utility,,renewable,4536.02262,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Virginia,1,Electric Utility,,residual fuel oil,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Virginia,1,Electric Utility,,solar photovoltaic,2334.454,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Virginia,1,Electric Utility,,solar,2334.454,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Virginia,1,Electric Utility,,estimated total solar photovoltaic,2334.454,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Virginia,1,Electric Utility,,estimated total solar,2334.454,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Virginia,1,Electric Utility,,renewable waste products,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Virginia,1,Electric Utility,,wind,50.26,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Virginia,1,Electric Utility,,offshore wind turbine,50.26,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Virginia,1,Electric Utility,,waste coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Virginia,1,Electric Utility,,wood and wood wastes,1008.57777,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Vermont,1,Electric Utility,,all fuels,900.1308,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Vermont,1,Electric Utility,,all renewables,475.96356,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Vermont,1,Electric Utility,,biomass,246.00776,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Vermont,1,Electric Utility,,distillate fuel oil,2.181,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Vermont,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Vermont,1,Electric Utility,,fossil fuels,3.59424,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Vermont,1,Electric Utility,,conventional hydroelectric,418.19,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Vermont,1,Electric Utility,,landfill gas,49.484,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Vermont,1,Electric Utility,,municiapl landfill gas,49.484,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Vermont,1,Electric Utility,,natural gas,.51024,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Vermont,1,Electric Utility,,natural gas & other gases,.51024,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Vermont,1,Electric Utility,,other,2.383,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Vermont,1,Electric Utility,,petroleum liquids,3.084,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Vermont,1,Electric Utility,,petroleum,3.084,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Vermont,1,Electric Utility,,renewable,894.15356,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Vermont,1,Electric Utility,,residual fuel oil,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Vermont,1,Electric Utility,,solar photovoltaic,58.4698,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Vermont,1,Electric Utility,,solar,58.4698,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Vermont,1,Electric Utility,,estimated total solar photovoltaic,58.4698,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Vermont,1,Electric Utility,,estimated total solar,58.4698,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Vermont,1,Electric Utility,,renewable waste products,49.484,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Vermont,1,Electric Utility,,wind,171.486,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Vermont,1,Electric Utility,,onshore wind turbine,171.486,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Vermont,1,Electric Utility,,waste oil and other oils,.903,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Vermont,1,Electric Utility,,wood and wood wastes,196.52376,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Washington,1,Electric Utility,,all fuels,87935.31877,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Washington,1,Electric Utility,,all renewables,4690.68707,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Washington,1,Electric Utility,,biomass,292.34407,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Washington,1,Electric Utility,,distillate fuel oil,34.32311,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Washington,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Washington,1,Electric Utility,,fossil fuels,12754.99693,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Washington,1,Electric Utility,,hydro-electric pumped storage,1.691,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Washington,1,Electric Utility,,conventional hydroelectric,60521.14277,thousand megawatthours
+,,,,,,,,EIA_API_v2,2022,,Washington,1,Electric Utility,,landfill gas,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2022,,Washington,1,Electric Utility,,municiapl landfill gas,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Washington,1,Electric Utility,,natural gas,12720.67382,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Washington,1,Electric Utility,,natural gas & other gases,12720.67382,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Washington,1,Electric Utility,,nuclear,9967.139,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Washington,1,Electric Utility,,other,-.338,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Washington,1,Electric Utility,,petroleum liquids,34.32311,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Washington,1,Electric Utility,,petroleum,34.32311,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Washington,1,Electric Utility,,renewable,65211.82984,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Washington,1,Electric Utility,,solar photovoltaic,6.702,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Washington,1,Electric Utility,,solar,6.702,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Washington,1,Electric Utility,,estimated total solar photovoltaic,6.702,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Washington,1,Electric Utility,,estimated total solar,6.702,thousand megawatthours
+,,,,,,,,EIA_API_v2,2022,,Washington,1,Electric Utility,,renewable waste products,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Washington,1,Electric Utility,,wind,4391.641,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Washington,1,Electric Utility,,onshore wind turbine,4391.641,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Washington,1,Electric Utility,,wood and wood wastes,292.34407,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wisconsin,1,Electric Utility,,all fuels,52258.07996,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wisconsin,1,Electric Utility,,all renewables,4282.30091,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wisconsin,1,Electric Utility,,biomass,461.45791,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wisconsin,1,Electric Utility,,bituminous coal and synthetic coal,1302.70247,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wisconsin,1,Electric Utility,,bituminous coal,1302.70247,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wisconsin,1,Electric Utility,,"coal, excluding waste coal",20699.55535,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wisconsin,1,Electric Utility,,all coal products,20699.55535,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wisconsin,1,Electric Utility,,distillate fuel oil,60.02012,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wisconsin,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wisconsin,1,Electric Utility,,fossil fuels,46093.79862,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wisconsin,1,Electric Utility,,conventional hydroelectric,1859.961,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wisconsin,1,Electric Utility,,municiapl landfill gas,13.1393,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wisconsin,1,Electric Utility,,biogenic municipal solid waste,13.1393,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wisconsin,1,Electric Utility,,natural gas,25331.12185,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wisconsin,1,Electric Utility,,natural gas & other gases,25331.12185,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wisconsin,1,Electric Utility,,biomass,13.1393,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wisconsin,1,Electric Utility,,other,22.01943,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wisconsin,1,Electric Utility,,petroleum coke,3.1013,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wisconsin,1,Electric Utility,,petroleum liquids,60.02012,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wisconsin,1,Electric Utility,,petroleum,63.12142,thousand megawatthours
+,,,,,,,,EIA_API_v2,2022,,Wisconsin,1,Electric Utility,,refined coal,2830.368,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wisconsin,1,Electric Utility,,renewable,6142.26191,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wisconsin,1,Electric Utility,,solar photovoltaic,2458.627,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wisconsin,1,Electric Utility,,subbituminous coal,19396.85288,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wisconsin,1,Electric Utility,,solar,2458.627,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wisconsin,1,Electric Utility,,estimated total solar photovoltaic,2458.627,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wisconsin,1,Electric Utility,,estimated total solar,2458.627,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wisconsin,1,Electric Utility,,renewable waste products,13.1393,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wisconsin,1,Electric Utility,,wind,1362.216,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wisconsin,1,Electric Utility,,onshore wind turbine,1362.216,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wisconsin,1,Electric Utility,,waste oil and other oils,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wisconsin,1,Electric Utility,,wood and wood wastes,448.3186,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,all fuels,254885.22207,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,all renewables,52301.39127,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,biomass,238.73545,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,bituminous coal and synthetic coal,825.31072,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,bituminous coal,825.31072,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,"coal, excluding waste coal",116881.52636,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,all coal products,116881.52636,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,distillate fuel oil,384.72355,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,fossil fuels,154123.56582,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,hydro-electric pumped storage,147.44,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,conventional hydroelectric,10483.16606,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,landfill gas,92.92801,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,lignite coal,14740.61678,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,municiapl landfill gas,193.22778,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,biogenic municipal solid waste,100.29977,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,natural gas,36832.98843,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,natural gas & other gases,36832.98843,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,nuclear,37670.352,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,biomass,27.8443,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,biomass,128.14408,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,other renewables,27.8443,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,other,159.30692,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,petroleum liquids,409.05104,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,petroleum,409.05104,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,refined coal,8313.02869,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,renewable,62784.55733,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,residual fuel oil,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,solar photovoltaic,711.70156,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,subbituminous coal,93002.57017,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,solar,711.70156,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,estimated total solar photovoltaic,711.70156,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,estimated total solar,711.70156,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,renewable waste products,221.07208,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,wind,51350.95425,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,onshore wind turbine,51350.95425,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,waste oil and other oils,24.32749,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West North Central,1,Electric Utility,,wood and wood wastes,17.66337,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,all fuels,260796.79274,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,all renewables,9976.98016,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,biomass,190.028,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,bituminous coal and synthetic coal,17.24463,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,bituminous coal,17.24463,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,"coal, excluding waste coal",43969.50345,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,all coal products,43969.50345,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,distillate fuel oil,147.30937,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,fossil fuels,215754.03088,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,hydro-electric pumped storage,29.003,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,conventional hydroelectric,5396.39634,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,lignite coal,1301.91308,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,natural gas,171600.54747,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,natural gas & other gases,171600.54747,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,nuclear,29414.364,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,biomass,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,biomass,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,other renewables,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,other,226.01836,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,petroleum coke,36.67058,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,petroleum liquids,147.30937,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,petroleum,183.97995,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,refined coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,renewable,15373.3765,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,residual fuel oil,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,solar photovoltaic,636.21416,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,subbituminous coal,42650.34574,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,solar,636.21416,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,estimated total solar photovoltaic,636.21416,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,estimated total solar,636.21416,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,renewable waste products,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,wind,9150.738,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,onshore wind turbine,9150.738,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,waste oil and other oils,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West South Central,1,Electric Utility,,wood and wood wastes,190.028,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West Virginia,1,Electric Utility,,all fuels,38220.038,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West Virginia,1,Electric Utility,,all renewables,29.946,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West Virginia,1,Electric Utility,,bituminous coal and synthetic coal,26324.18348,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West Virginia,1,Electric Utility,,bituminous coal,26324.18348,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West Virginia,1,Electric Utility,,"coal, excluding waste coal",36929.20506,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West Virginia,1,Electric Utility,,all coal products,36929.20506,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West Virginia,1,Electric Utility,,distillate fuel oil,124.68588,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West Virginia,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West Virginia,1,Electric Utility,,fossil fuels,37559.509,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West Virginia,1,Electric Utility,,conventional hydroelectric,630.583,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West Virginia,1,Electric Utility,,natural gas,505.51642,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West Virginia,1,Electric Utility,,natural gas & other gases,505.51642,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West Virginia,1,Electric Utility,,petroleum liquids,124.78752,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West Virginia,1,Electric Utility,,petroleum,124.78752,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West Virginia,1,Electric Utility,,refined coal,10605.02158,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West Virginia,1,Electric Utility,,renewable,660.529,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West Virginia,1,Electric Utility,,solar photovoltaic,29.946,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West Virginia,1,Electric Utility,,subbituminous coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West Virginia,1,Electric Utility,,solar,29.946,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West Virginia,1,Electric Utility,,estimated total solar photovoltaic,29.946,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West Virginia,1,Electric Utility,,estimated total solar,29.946,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,West Virginia,1,Electric Utility,,waste oil and other oils,.10164,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wyoming,1,Electric Utility,,all fuels,34034.78466,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wyoming,1,Electric Utility,,all renewables,4774.438,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wyoming,1,Electric Utility,,"coal, excluding waste coal",23495.10768,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wyoming,1,Electric Utility,,all coal products,23495.10768,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wyoming,1,Electric Utility,,distillate fuel oil,39.8035,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wyoming,1,Electric Utility,,estimated small scale solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wyoming,1,Electric Utility,,fossil fuels,28253.78266,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wyoming,1,Electric Utility,,conventional hydroelectric,1006.564,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wyoming,1,Electric Utility,,natural gas,4712.86597,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wyoming,1,Electric Utility,,natural gas & other gases,4712.86597,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wyoming,1,Electric Utility,,petroleum liquids,45.80901,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wyoming,1,Electric Utility,,petroleum,45.80901,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wyoming,1,Electric Utility,,refined coal,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wyoming,1,Electric Utility,,renewable,5781.002,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wyoming,1,Electric Utility,,subbituminous coal,23495.10768,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wyoming,1,Electric Utility,,estimated total solar photovoltaic,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wyoming,1,Electric Utility,,estimated total solar,0,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wyoming,1,Electric Utility,,wind,4774.438,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wyoming,1,Electric Utility,,onshore wind turbine,4774.438,thousand megawatthours
+,,,,,,,,EIA_API_v2,2024,,Wyoming,1,Electric Utility,,waste oil and other oils,6.00552,thousand megawatthours

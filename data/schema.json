@@ -1,0 +1,22 @@
+{
+  "record_id": { "type": "string", "required": true, "nullable": false, "unique": true, "description": "Unique canonical asset or measurement identifier" },
+  "record_type": { "type": "string", "required": true, "nullable": false, "allowed_values": ["entity", "event", "transaction", "measurement", "process", "scenario", "node", "edge", "document"] },
+  "observed_at": { "type": "datetime", "required": true, "nullable": false, "format": "ISO-8601" },
+  "entity_id": { "type": "string", "required": true, "nullable": false, "description": "Power plant ID or U.S. state/national location code" },
+  "related_entity_id": { "type": "string", "required": false, "nullable": true, "description": "Parent region slug or US national interconnect code" },
+  "entity_name": { "type": "string", "required": false, "nullable": true, "description": "Readable power plant or state/region name" },
+  "category": { "type": "string", "required": true, "nullable": false, "allowed_values": ["natural_gas", "solar", "wind", "coal", "nuclear", "hydro", "geothermal", "petroleum", "biomass", "other"] },
+  "subcategory": { "type": "string", "required": false, "nullable": true, "description": "Grid region slug or raw EIA fueltypeid code" },
+  "status": { "type": "string", "required": false, "nullable": true, "allowed_values": ["online", "maintenance", "offline", "active", "unknown"] },
+  "stage": { "type": "string", "required": false, "nullable": true, "allowed_values": ["operational", "annual"] },
+  "metric_name": { "type": "string", "required": true, "nullable": false, "allowed_values": ["nameplate_capacity", "net_generation"] },
+  "metric_value": { "type": "number", "required": false, "nullable": true, "description": "Nameplate capacity (MW) or annual generation (thousand_MWh)" },
+  "metric_unit": { "type": "string", "required": true, "nullable": false, "allowed_values": ["MW", "thousand_MWh", "MWh"] },
+  "text_value": { "type": "string", "required": false, "nullable": true, "max_length": 500 },
+  "latitude": { "type": "number", "required": false, "nullable": true, "min": -90, "max": 90 },
+  "longitude": { "type": "number", "required": false, "nullable": true, "min": -180, "max": 180 },
+  "source_name": { "type": "string", "required": true, "nullable": false, "allowed_values": ["PLANTS_DATA_TS", "EIA_API_v2"] },
+  "source_record_id": { "type": "string", "required": false, "nullable": true, "description": "Original plant ID or composite period_location_fueltypeid key" },
+  "is_synthetic": { "type": "boolean", "required": true, "nullable": false },
+  "data_version": { "type": "string", "required": true, "nullable": false }
+}
