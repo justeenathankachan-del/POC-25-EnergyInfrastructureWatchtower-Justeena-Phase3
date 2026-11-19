@@ -1,6 +1,7 @@
 {
   "status": "PASS",
   "errors": [],
+  "data_version": "1.0.1",
   "total_data_size_mb": 1.549,
   "canonical_rows": 1832,
   "canonical_columns": 20

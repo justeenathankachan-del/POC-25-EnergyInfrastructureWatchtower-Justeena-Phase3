@@ -6,6 +6,7 @@ DATA_DIR = Path("data")
 SAMPLE = DATA_DIR / "source-sample" / "source_sample.csv"
 CANONICAL = DATA_DIR / "canonical" / "intelligence_data.csv"
 PUBLISHED = DATA_DIR / "published" / "intelligence_data.json"
+PUBLIC_PUBLISHED = Path("public/data/intelligence_data.json")
 MANIFEST = DATA_DIR / "manifest.json"
 SCHEMA = DATA_DIR / "schema.json"
 PROFILE = DATA_DIR / "quality" / "data_profile.json"
@@ -27,7 +28,7 @@ MANDATORY_COLUMNS = [
 
 def main():
     errors = []
-    for path in [DATA_DIR / "README.md", MANIFEST, SCHEMA, SAMPLE, CANONICAL]:
+    for path in [DATA_DIR / "README.md", MANIFEST, SCHEMA, SAMPLE, CANONICAL, PUBLISHED]:
         if not path.exists():
             errors.append(f"Missing required path: {path}")
 
@@ -71,6 +72,34 @@ def main():
         if df["text_value"].dropna().astype(str).str.len().max() > 500:
             errors.append("text_value exceeds 500 characters")
 
+        # Schema enum consistency check
+        if SCHEMA.exists():
+            schema = json.loads(SCHEMA.read_text(encoding="utf-8"))
+            if list(schema.keys()) != list(df.columns):
+                errors.append("schema.json keys do not match canonical CSV columns")
+            for col, rules in schema.items():
+                if "allowed_values" in rules and col in df.columns:
+                    invalid_vals = set(df[col].dropna().astype(str).unique()) - set(rules["allowed_values"])
+                    if invalid_vals:
+                        errors.append(f"Column {col} has values outside schema allowed_values: {invalid_vals}")
+
+        # Published JSON consistency & stale output check
+        if PUBLISHED.exists():
+            if PUBLISHED.stat().st_size > MAX_FILE_MB * 1024 * 1024:
+                errors.append("Published JSON exceeds 5 MB")
+            if PUBLISHED.stat().st_mtime < CANONICAL.stat().st_mtime:
+                errors.append("Stale output: published/intelligence_data.json is older than canonical CSV")
+            pub_records = json.loads(PUBLISHED.read_text(encoding="utf-8"))
+            if len(pub_records) != len(df):
+                errors.append(f"Published JSON count ({len(pub_records)}) != canonical CSV ({len(df)})")
+            if pub_records and list(pub_records[0].keys()) != list(df.columns):
+                errors.append("Published JSON keys do not match canonical CSV columns")
+            if PUBLIC_PUBLISHED.exists():
+                public_records = json.loads(PUBLIC_PUBLISHED.read_text(encoding="utf-8"))
+                if len(public_records) != len(pub_records):
+                    errors.append("public/data/intelligence_data.json is out of sync with data/published/intelligence_data.json")
+
+        # Manifest consistency check
         if MANIFEST.exists():
             manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
             if manifest.get("canonical_record_count") != len(df):
@@ -83,6 +112,7 @@ def main():
         profile_data = {
             "row_count": int(len(df)),
             "column_count": int(len(df.columns)),
+            "data_version": str(df["data_version"].iloc[0]),
             "null_counts": {col: int(df[col].isna().sum()) for col in df.columns},
             "record_type_distribution": df["record_type"].value_counts().to_dict(),
             "source_distribution": df["source_name"].value_counts().to_dict(),
@@ -105,6 +135,7 @@ def main():
     result = {
         "status": "PASS" if not errors else "FAIL",
         "errors": errors,
+        "data_version": str(df["data_version"].iloc[0]) if df is not None else "unknown",
         "total_data_size_mb": round(total_bytes / 1024 / 1024, 3),
         "canonical_rows": int(len(df)) if df is not None else 0,
         "canonical_columns": int(len(df.columns)) if df is not None else 0,
@@ -114,7 +145,7 @@ def main():
 
     if errors:
         raise SystemExit("\n".join(errors))
-    print("Canonical data validation passed: PASS")
+    print("Canonical data validation passed: PASS (v1.0.1)")
 
 
 if __name__ == "__main__":

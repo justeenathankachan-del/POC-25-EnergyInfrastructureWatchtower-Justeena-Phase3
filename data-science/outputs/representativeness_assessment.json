@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "data_version": "1.0.1",
+  "source_sample_rows": 1832,
+  "canonical_rows": 1832,
+  "entity_preservation": {
+    "expected_plants": 45,
+    "preserved_plants": 45,
+    "preservation_rate_pct": 100.0,
+    "regions_represented": [
+      "asia_pacific",
+      "europe",
+      "middle_east_&_africa",
+      "northeast",
+      "northwest",
+      "south_america",
+      "southeast",
+      "southwest",
+      "texas_gulf",
+      "west"
+    ],
+    "plant_statuses": {
+      "online": 40,
+      "maintenance": 5
+    }
+  },
+  "measurement_coverage": {
+    "eia_records": 1787,
+    "unique_locations": 1,
+    "unique_fuel_categories": [
+      "biomass",
+      "coal",
+      "geothermal",
+      "hydro",
+      "natural_gas",
+      "nuclear",
+      "other",
+      "petroleum",
+      "solar",
+      "wind"
+    ],
+    "years_covered": [
+      2021,
+      2022,
+      2023,
+      2024
+    ]
+  },
+  "known_limitations": [
+    "EIA operational measurements cover U.S. utility-scale sector (sectorid=1) on an annual grain (2018-2024), not global or sub-hourly generation.",
+    "Global power plant registry covers 45 flagship facilities rather than every regional generator worldwide.",
+    "13 EIA state-level records lack state centroid coordinates if non-state aggregate codes appear."
+  ]
+}

@@ -1,6 +1,7 @@
 {
   "row_count": 1832,
   "column_count": 20,
+  "data_version": "1.0.1",
   "null_counts": {
     "record_id": 0,
     "record_type": 0,

@@ -1,0 +1,382 @@
+{
+  "dataset_structure": {
+    "record_count": 1832,
+    "column_count": 20,
+    "file_size_mb": 0.409,
+    "data_version": "1.0.1",
+    "record_type_distribution": {
+      "measurement": 1787,
+      "entity": 45
+    },
+    "unique_entity_count": 46,
+    "unique_related_entity_count": 11,
+    "source_distribution": {
+      "EIA_API_v2": 1787,
+      "PLANTS_DATA_TS": 45
+    },
+    "synthetic_count": 0,
+    "non_synthetic_count": 1832
+  },
+  "field_completeness": {
+    "record_id": {
+      "dtype": "str",
+      "non_null_count": 1832,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 1832,
+      "examples": [
+        "PLANT-0001",
+        "PLANT-0002",
+        "PLANT-0003"
+      ]
+    },
+    "record_type": {
+      "dtype": "str",
+      "non_null_count": 1832,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 2,
+      "examples": [
+        "entity",
+        "entity",
+        "entity"
+      ]
+    },
+    "observed_at": {
+      "dtype": "str",
+      "non_null_count": 1832,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 5,
+      "examples": [
+        "2026-01-01T00:00:00Z",
+        "2026-01-01T00:00:00Z",
+        "2026-01-01T00:00:00Z"
+      ]
+    },
+    "entity_id": {
+      "dtype": "str",
+      "non_null_count": 1832,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 46,
+      "examples": [
+        "PLANT-1",
+        "PLANT-2",
+        "PLANT-3"
+      ]
+    },
+    "related_entity_id": {
+      "dtype": "str",
+      "non_null_count": 1832,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 11,
+      "examples": [
+        "southwest",
+        "northwest",
+        "texas_gulf"
+      ]
+    },
+    "entity_name": {
+      "dtype": "str",
+      "non_null_count": 1832,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 109,
+      "examples": [
+        "Palo Verde Generating Station",
+        "Grand Coulee Hydro Dam",
+        "W. A. Parish Electric Station"
+      ]
+    },
+    "category": {
+      "dtype": "str",
+      "non_null_count": 1832,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 10,
+      "examples": [
+        "nuclear",
+        "hydro",
+        "natural_gas"
+      ]
+    },
+    "subcategory": {
+      "dtype": "str",
+      "non_null_count": 45,
+      "null_count": 1787,
+      "null_percentage": 97.54,
+      "unique_count": 10,
+      "examples": [
+        "southwest",
+        "northwest",
+        "texas_gulf"
+      ]
+    },
+    "status": {
+      "dtype": "str",
+      "non_null_count": 1832,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 4,
+      "examples": [
+        "online",
+        "online",
+        "maintenance"
+      ]
+    },
+    "stage": {
+      "dtype": "str",
+      "non_null_count": 1832,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 2,
+      "examples": [
+        "operational",
+        "operational",
+        "operational"
+      ]
+    },
+    "metric_name": {
+      "dtype": "str",
+      "non_null_count": 1832,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 2,
+      "examples": [
+        "nameplate_capacity",
+        "nameplate_capacity",
+        "nameplate_capacity"
+      ]
+    },
+    "metric_value": {
+      "dtype": "float64",
+      "non_null_count": 1832,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 931,
+      "examples": [
+        "3937.0",
+        "6809.0",
+        "3653.0"
+      ]
+    },
+    "metric_unit": {
+      "dtype": "str",
+      "non_null_count": 1832,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 2,
+      "examples": [
+        "MW",
+        "MW",
+        "MW"
+      ]
+    },
+    "text_value": {
+      "dtype": "str",
+      "non_null_count": 1832,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 1812,
+      "examples": [
+        "Palo Verde Generating Station (Southwest): 3937 MW Nuclear facility",
+        "Grand Coulee Hydro Dam (Northwest): 6809 MW Hydro facility",
+        "W. A. Parish Electric Station (Texas / Gulf): 3653 MW Natural Gas facility"
+      ]
+    },
+    "latitude": {
+      "dtype": "float64",
+      "non_null_count": 45,
+      "null_count": 1787,
+      "null_percentage": 97.54,
+      "unique_count": 45,
+      "examples": [
+        "33.3965",
+        "47.957",
+        "29.4842"
+      ]
+    },
+    "longitude": {
+      "dtype": "float64",
+      "non_null_count": 45,
+      "null_count": 1787,
+      "null_percentage": 97.54,
+      "unique_count": 45,
+      "examples": [
+        "-112.8677",
+        "-118.981",
+        "-95.6322"
+      ]
+    },
+    "source_name": {
+      "dtype": "str",
+      "non_null_count": 1832,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 2,
+      "examples": [
+        "PLANTS_DATA_TS",
+        "PLANTS_DATA_TS",
+        "PLANTS_DATA_TS"
+      ]
+    },
+    "source_record_id": {
+      "dtype": "str",
+      "non_null_count": 1832,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 49,
+      "examples": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "is_synthetic": {
+      "dtype": "bool",
+      "non_null_count": 1832,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 1,
+      "examples": [
+        "False",
+        "False",
+        "False"
+      ]
+    },
+    "data_version": {
+      "dtype": "str",
+      "non_null_count": 1832,
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 1,
+      "examples": [
+        "1.0.1",
+        "1.0.1",
+        "1.0.1"
+      ]
+    }
+  },
+  "numerical_coverage": {
+    "non_null_count": 1832,
+    "invalid_or_infinite_count": 0,
+    "overall_min": -4232.426,
+    "overall_max": 2256336.24792,
+    "overall_mean": 15666.0,
+    "overall_median": 183.117125,
+    "overall_std": 81708.74,
+    "by_metric_name": {
+      "nameplate_capacity": {
+        "count": 45,
+        "units": [
+          "MW"
+        ],
+        "min": 210.0,
+        "max": 22500.0,
+        "mean": 4472.53,
+        "median": 2670.0,
+        "std": 4554.62
+      },
+      "net_generation": {
+        "count": 1787,
+        "units": [
+          "thousand_MWh"
+        ],
+        "min": -4232.426,
+        "max": 2256336.24792,
+        "mean": 15947.88,
+        "median": 150.06449,
+        "std": 82709.05
+      }
+    }
+  },
+  "temporal_coverage": {
+    "parse_success_rate_pct": 100.0,
+    "earliest": "2021-01-01T00:00:00+00:00",
+    "latest": "2026-01-01T00:00:00+00:00",
+    "unique_dates": 5,
+    "unique_years": [
+      2021,
+      2022,
+      2023,
+      2024,
+      2026
+    ],
+    "records_by_year": {
+      "2021": 159,
+      "2022": 7,
+      "2023": 172,
+      "2024": 1449,
+      "2026": 45
+    },
+    "records_by_year_and_record_type": {
+      "entity": {
+        "2026": 45
+      },
+      "measurement": {
+        "2021": 159,
+        "2022": 7,
+        "2023": 172,
+        "2024": 1449
+      }
+    }
+  },
+  "category_and_status_coverage": {
+    "category_distribution": {
+      "other": 586,
+      "solar": 339,
+      "coal": 285,
+      "petroleum": 149,
+      "natural_gas": 133,
+      "hydro": 101,
+      "biomass": 94,
+      "wind": 93,
+      "nuclear": 43,
+      "geothermal": 9
+    },
+    "subcategory_top_15": {
+      "asia_pacific": 12,
+      "europe": 8,
+      "middle_east_&_africa": 7,
+      "south_america": 4,
+      "texas_gulf": 3,
+      "west": 3,
+      "northeast": 3,
+      "southwest": 2,
+      "southeast": 2,
+      "northwest": 1
+    },
+    "status_distribution": {
+      "active": 1471,
+      "offline": 316,
+      "online": 40,
+      "maintenance": 5
+    },
+    "stage_distribution": {
+      "annual": 1787,
+      "operational": 45
+    }
+  },
+  "geographic_coverage": {
+    "valid_coordinate_count": 45,
+    "null_coordinate_count": 1787,
+    "latitude_range": [
+      -38.0469,
+      64.0375
+    ],
+    "longitude_range": [
+      -122.7553,
+      150.9492
+    ],
+    "unique_coordinate_pairs": 45
+  },
+  "text_coverage": {
+    "non_null_count": 1832,
+    "avg_length": 67.38,
+    "max_length": 96,
+    "empty_or_whitespace_count": 0,
+    "truncated_at_500_count": 0
+  }
+}

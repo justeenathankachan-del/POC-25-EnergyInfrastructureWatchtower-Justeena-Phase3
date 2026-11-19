@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "data_version": "1.0.1",
+  "blocking_issues_count": 0,
+  "non_blocking_caveats_count": 2,
+  "dimensions_checked": [
+    "Completeness",
+    "Uniqueness",
+    "Validity",
+    "Consistency",
+    "Accuracy",
+    "Representativeness",
+    "Timeliness",
+    "Provenance",
+    "Safety",
+    "Reproducibility"
+  ],
+  "issues": [
+    {
+      "severity": "non_blocking_caveat",
+      "dimension": "Structural Separation",
+      "field": "record_type",
+      "issue": "Dataset mixes 45 global infrastructure entities (nameplate_capacity in MW) with 1,787 U.S. annual utility generation measurements (net_generation in thousand_MWh); downstream analysis must filter by record_type."
+    },
+    {
+      "severity": "non_blocking_caveat",
+      "dimension": "Provenance & Status",
+      "field": "status",
+      "issue": "Curated registry (app/plantsData.ts) uses static operational statuses ('online', 'maintenance') without live SCADA telemetry."
+    }
+  ]
+}

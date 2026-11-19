@@ -3,7 +3,7 @@ import pandas as pd
 
 INPUT = Path("data/source-sample/source_sample.csv")
 OUTPUT = Path("data/canonical/intelligence_data.csv")
-DATA_VERSION = "1.0.0"
+DATA_VERSION = "1.0.1"
 
 MANDATORY_COLUMNS = [
     "record_id", "record_type", "observed_at", "entity_id",

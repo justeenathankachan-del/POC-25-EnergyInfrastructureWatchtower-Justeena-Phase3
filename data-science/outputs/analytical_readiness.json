@@ -1,0 +1,68 @@
+{
+  "data_version": "1.0.1",
+  "confirmed_primary_archetype": "Hybrid (Entity / Snapshot + Time-Series Measurement)",
+  "primary_analytical_question": "How do electricity generation shares and capacity concentrations compare across fuel types, U.S. states (2018-2024), and global grid regions, and which high-capacity facilities currently in maintenance represent the largest regional capacity exposure?",
+  "decision_to_be_supported": "Prioritizing regional grid resilience monitoring and clean-energy transition benchmarking for energy infrastructure analysts.",
+  "recommended_primary_track": "Track A \u2014 Comparative Intelligence",
+  "optional_supporting_track": "Track B \u2014 Trend Intelligence (U.S. EIA 2018-2024 annual fuel-mix trajectories) & Track C \u2014 Risk & Priority Intelligence (maintenance capacity exposure)",
+  "predictive_intelligence_status": "REJECTED",
+  "track_matrix": [
+    {
+      "track": "Track A \u2014 Comparative Intelligence",
+      "status": "Supported",
+      "evidence": "10 standardized fuel categories, 52 U.S. state/national entities, and 10 global grid regions with complete capacity (MW) and generation (thousand_MWh) metrics.",
+      "missing_requirement": "None (must stratify by record_type so MW and thousand_MWh are compared within their own populations).",
+      "recommendation": "Recommended Primary Track"
+    },
+    {
+      "track": "Track B \u2014 Trend Intelligence",
+      "status": "Conditionally Supported",
+      "evidence": "1,787 EIA measurement records span 7 ordered annual periods (2018-2024) across U.S. states and fuel types.",
+      "missing_requirement": "Applies strictly to record_type='measurement' (EIA annual series); the 45 global plant entities are a single 2026 snapshot.",
+      "recommendation": "Optional Supporting Track (for U.S. annual fuel-mix trends)"
+    },
+    {
+      "track": "Track C \u2014 Risk & Priority Intelligence",
+      "status": "Conditionally Supported",
+      "evidence": "45 global plants include nameplate capacity (MW), operational status ('online' vs 'maintenance'), and regional concentration.",
+      "missing_requirement": "Lacks real-time grid load, reserve margin, or outage duration telemetry for dynamic risk scoring.",
+      "recommendation": "Optional Supporting Track (capacity-at-risk / maintenance exposure ranking)"
+    },
+    {
+      "track": "Track D \u2014 Anomaly Intelligence",
+      "status": "Conditionally Supported",
+      "evidence": "Comparable state-level annual generation baselines across 2018-2024 allow year-over-year generation shock detection.",
+      "missing_requirement": "Annual resolution cannot detect short-term plant outages or intraday grid spikes.",
+      "recommendation": "Secondary / Optional"
+    },
+    {
+      "track": "Track E \u2014 Segmentation Intelligence",
+      "status": "Supported",
+      "evidence": "Multi-dimensional attributes (fuel category, geography, capacity/generation scale, operational status) support interpretable energy-profile grouping.",
+      "missing_requirement": "Must segment entities and measurements separately.",
+      "recommendation": "Optional Supporting Track"
+    },
+    {
+      "track": "Track F \u2014 Predictive Intelligence",
+      "status": "Not Supported",
+      "evidence": "Dataset contains annual historical generation aggregates and a static plant snapshot.",
+      "missing_requirement": "No genuine forecasting target with sub-annual granularity, exogenous weather/demand predictors, or decision-time feature separation; only 7 annual steps exist.",
+      "recommendation": "Rejected per Predictive Intelligence Approval Checklist"
+    },
+    {
+      "track": "Track G \u2014 Simulation & Scenario Intelligence",
+      "status": "Not Supported",
+      "evidence": "Records represent observed historical EIA values and static plant capacities.",
+      "missing_requirement": "No configurable scenario inputs, dispatch constraints, or parameterized simulation runs exist in canonical data.",
+      "recommendation": "Rejected"
+    },
+    {
+      "track": "Track H \u2014 Text & Theme Intelligence",
+      "status": "Not Supported",
+      "evidence": "text_value consists of deterministic template strings generated during standardization.",
+      "missing_requirement": "No organic unstructured text corpus (incident logs, operator notes, regulatory filings) exists.",
+      "recommendation": "Rejected"
+    }
+  ],
+  "final_result": "DATA READY FOR ANALYTICAL TRACK DEVELOPMENT"
+}

@@ -1,7 +1,7 @@
 {
   "project_id": "POC-25",
   "project_title": "Energy Infrastructure Watchtower",
-  "data_version": "1.0.0",
+  "data_version": "1.0.1",
   "canonical_file": "data/canonical/intelligence_data.csv",
   "published_file": "data/published/intelligence_data.json",
   "source_type": "public_api_and_static_registry",
