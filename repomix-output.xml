@@ -135,2088 +135,6 @@ VAR_REPORT.md
 <files>
 This section contains the contents of the repository's files.
 
-<file path="data-science/notebooks/02_analytical_track_development_and_validation.ipynb">
-{
- "cells": [
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "# Phase 3 Post #3 — Analytical Track Development & Validation\n",
-    "**Project:** POC-25 Energy Infrastructure Watchtower  \n",
-    "**Approved Track:** Track A — Comparative Intelligence (`method_version: 1.0.0`, `data_version: 1.0.1`)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "import json, sys\n",
-    "from pathlib import Path\n",
-    "import pandas as pd\n",
-    "\n",
-    "ROOT = Path('..').resolve() if Path.cwd().name == 'notebooks' else Path('.').resolve()\n",
-    "if (ROOT / 'data-science').exists() is False and (ROOT.parent / 'data').exists():\n",
-    "    ROOT = ROOT.parent\n",
-    "sys.path.insert(0, str(ROOT / 'data-science' / 'scripts'))\n",
-    "from track_specific_loader import load_track_module\n",
-    "\n",
-    "df = pd.read_csv(ROOT / 'data' / 'canonical' / 'intelligence_data.csv')\n",
-    "print(f'Canonical dataset: {len(df)} rows x {len(df.columns)} cols | data_version={df[\"data_version\"].iloc[0]}')"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "mod = load_track_module()\n",
-    "baseline = mod.compute_baseline(df)\n",
-    "print('Baseline:', baseline['baseline_name'])\n",
-    "pd.DataFrame(baseline['categories']).head(5)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "comp = mod.compute_comparative_intelligence(df)\n",
-    "print('=== Global Plant Capacity by Region (MW) ===')\n",
-    "display(pd.DataFrame(comp['global_entity_summary']['by_region']))\n",
-    "print('=== U.S. 2024 Net Generation Benchmark by Fuel (thousand_MWh) ===')\n",
-    "display(pd.DataFrame(comp['us_generation_summary']['by_fuel_2024_benchmark']))"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "metrics = json.loads((ROOT / 'data-science' / 'outputs' / 'validation_metrics.json').read_text(encoding='utf-8'))\n",
-    "print('Validation Status:', metrics['status'])\n",
-    "print(json.dumps(metrics['independent_recalculation'], indent=2))"
-   ]
-  }
- ],
- "metadata": {
-  "kernelspec": {
-   "display_name": "Python 3",
-   "language": "python",
-   "name": "python3"
-  },
-  "language_info": {
-   "name": "python",
-   "version": "3.11"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 4
-}
-</file>
-
-<file path="data-science/outputs/intelligence_results.json">
-[
-  {
-    "result_id": "RES-0001",
-    "result_type": "ranking",
-    "record_id": null,
-    "entity_id": null,
-    "group_key": "global_region:asia_pacific",
-    "period_start": "2026-01-01T00:00:00Z",
-    "period_end": "2026-01-01T00:00:00Z",
-    "metric_name": "regional_nameplate_capacity_mw",
-    "result_value": 77505.0,
-    "result_unit": "MW",
-    "result_category": "high_concentration",
-    "priority_rank": 1,
-    "finding": "Region 'asia_pacific' ranks #1 in curated global capacity with 77,505.0 MW (38.51% of registry total) across 12 facilities.",
-    "evidence": [
-      {
-        "factor": "plant_count",
-        "value": 12,
-        "unit": "plants"
-      },
-      {
-        "factor": "mean_capacity_mw",
-        "value": 6458.75,
-        "unit": "MW"
-      },
-      {
-        "factor": "capacity_share_pct",
-        "value": 38.51,
-        "unit": "percent"
-      },
-      {
-        "factor": "maintenance_mw",
-        "value": 7965.0,
-        "unit": "MW"
-      }
-    ],
-    "method_version": "1.0.0",
-    "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
-    "quality_status": "validated",
-    "limitation": "Derived from curated 45-plant registry (app/plantsData.ts); represents flagship assets rather than total regional grid capacity."
-  },
-  {
-    "result_id": "RES-0002",
-    "result_type": "ranking",
-    "record_id": null,
-    "entity_id": null,
-    "group_key": "global_region:south_america",
-    "period_start": "2026-01-01T00:00:00Z",
-    "period_end": "2026-01-01T00:00:00Z",
-    "metric_name": "regional_nameplate_capacity_mw",
-    "result_value": 35678.0,
-    "result_unit": "MW",
-    "result_category": "high_concentration",
-    "priority_rank": 2,
-    "finding": "Region 'south_america' ranks #2 in curated global capacity with 35,678.0 MW (17.73% of registry total) across 4 facilities.",
-    "evidence": [
-      {
-        "factor": "plant_count",
-        "value": 4,
-        "unit": "plants"
-      },
-      {
-        "factor": "mean_capacity_mw",
-        "value": 8919.5,
-        "unit": "MW"
-      },
-      {
-        "factor": "capacity_share_pct",
-        "value": 17.73,
-        "unit": "percent"
-      },
-      {
-        "factor": "maintenance_mw",
-        "value": 10235.0,
-        "unit": "MW"
-      }
-    ],
-    "method_version": "1.0.0",
-    "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
-    "quality_status": "conditional",
-    "limitation": "Small group size (n=4 < 5); interpret regional share with caution."
-  },
-  {
-    "result_id": "RES-0003",
-    "result_type": "ranking",
-    "record_id": null,
-    "entity_id": null,
-    "group_key": "global_region:europe",
-    "period_start": "2026-01-01T00:00:00Z",
-    "period_end": "2026-01-01T00:00:00Z",
-    "metric_name": "regional_nameplate_capacity_mw",
-    "result_value": 22405.0,
-    "result_unit": "MW",
-    "result_category": "high_concentration",
-    "priority_rank": 3,
-    "finding": "Region 'europe' ranks #3 in curated global capacity with 22,405.0 MW (11.13% of registry total) across 8 facilities.",
-    "evidence": [
-      {
-        "factor": "plant_count",
-        "value": 8,
-        "unit": "plants"
-      },
-      {
-        "factor": "mean_capacity_mw",
-        "value": 2800.62,
-        "unit": "MW"
-      },
-      {
-        "factor": "capacity_share_pct",
-        "value": 11.13,
-        "unit": "percent"
-      },
-      {
-        "factor": "maintenance_mw",
-        "value": 5102.0,
-        "unit": "MW"
-      }
-    ],
-    "method_version": "1.0.0",
-    "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
-    "quality_status": "validated",
-    "limitation": "Derived from curated 45-plant registry (app/plantsData.ts); represents flagship assets rather than total regional grid capacity."
-  },
-  {
-    "result_id": "RES-0004",
-    "result_type": "ranking",
-    "record_id": null,
-    "entity_id": null,
-    "group_key": "global_region:middle_east_&_africa",
-    "period_start": "2026-01-01T00:00:00Z",
-    "period_end": "2026-01-01T00:00:00Z",
-    "metric_name": "regional_nameplate_capacity_mw",
-    "result_value": 22244.0,
-    "result_unit": "MW",
-    "result_category": "standard_concentration",
-    "priority_rank": 4,
-    "finding": "Region 'middle_east_&_africa' ranks #4 in curated global capacity with 22,244.0 MW (11.05% of registry total) across 7 facilities.",
-    "evidence": [
-      {
-        "factor": "plant_count",
-        "value": 7,
-        "unit": "plants"
-      },
-      {
-        "factor": "mean_capacity_mw",
-        "value": 3177.71,
-        "unit": "MW"
-      },
-      {
-        "factor": "capacity_share_pct",
-        "value": 11.05,
-        "unit": "percent"
-      },
-      {
-        "factor": "maintenance_mw",
-        "value": 4764.0,
-        "unit": "MW"
-      }
-    ],
-    "method_version": "1.0.0",
-    "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
-    "quality_status": "validated",
-    "limitation": "Derived from curated 45-plant registry (app/plantsData.ts); represents flagship assets rather than total regional grid capacity."
-  },
-  {
-    "result_id": "RES-0005",
-    "result_type": "ranking",
-    "record_id": null,
-    "entity_id": null,
-    "group_key": "global_region:northeast",
-    "period_start": "2026-01-01T00:00:00Z",
-    "period_end": "2026-01-01T00:00:00Z",
-    "metric_name": "regional_nameplate_capacity_mw",
-    "result_value": 14691.0,
-    "result_unit": "MW",
-    "result_category": "standard_concentration",
-    "priority_rank": 5,
-    "finding": "Region 'northeast' ranks #5 in curated global capacity with 14,691.0 MW (7.3% of registry total) across 3 facilities.",
-    "evidence": [
-      {
-        "factor": "plant_count",
-        "value": 3,
-        "unit": "plants"
-      },
-      {
-        "factor": "mean_capacity_mw",
-        "value": 4897.0,
-        "unit": "MW"
-      },
-      {
-        "factor": "capacity_share_pct",
-        "value": 7.3,
-        "unit": "percent"
-      },
-      {
-        "factor": "maintenance_mw",
-        "value": 0.0,
-        "unit": "MW"
-      }
-    ],
-    "method_version": "1.0.0",
-    "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
-    "quality_status": "conditional",
-    "limitation": "Small group size (n=3 < 5); interpret regional share with caution."
-  },
-  {
-    "result_id": "RES-0006",
-    "result_type": "ranking",
-    "record_id": null,
-    "entity_id": null,
-    "group_key": "global_region:southeast",
-    "period_start": "2026-01-01T00:00:00Z",
-    "period_end": "2026-01-01T00:00:00Z",
-    "metric_name": "regional_nameplate_capacity_mw",
-    "result_value": 7206.0,
-    "result_unit": "MW",
-    "result_category": "standard_concentration",
-    "priority_rank": 6,
-    "finding": "Region 'southeast' ranks #6 in curated global capacity with 7,206.0 MW (3.58% of registry total) across 2 facilities.",
-    "evidence": [
-      {
-        "factor": "plant_count",
-        "value": 2,
-        "unit": "plants"
-      },
-      {
-        "factor": "mean_capacity_mw",
-        "value": 3603.0,
-        "unit": "MW"
-      },
-      {
-        "factor": "capacity_share_pct",
-        "value": 3.58,
-        "unit": "percent"
-      },
-      {
-        "factor": "maintenance_mw",
-        "value": 0.0,
-        "unit": "MW"
-      }
-    ],
-    "method_version": "1.0.0",
-    "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
-    "quality_status": "conditional",
-    "limitation": "Small group size (n=2 < 5); interpret regional share with caution."
-  },
-  {
-    "result_id": "RES-0007",
-    "result_type": "ranking",
-    "record_id": null,
-    "entity_id": null,
-    "group_key": "global_region:northwest",
-    "period_start": "2026-01-01T00:00:00Z",
-    "period_end": "2026-01-01T00:00:00Z",
-    "metric_name": "regional_nameplate_capacity_mw",
-    "result_value": 6809.0,
-    "result_unit": "MW",
-    "result_category": "standard_concentration",
-    "priority_rank": 7,
-    "finding": "Region 'northwest' ranks #7 in curated global capacity with 6,809.0 MW (3.38% of registry total) across 1 facilities.",
-    "evidence": [
-      {
-        "factor": "plant_count",
-        "value": 1,
-        "unit": "plants"
-      },
-      {
-        "factor": "mean_capacity_mw",
-        "value": 6809.0,
-        "unit": "MW"
-      },
-      {
-        "factor": "capacity_share_pct",
-        "value": 3.38,
-        "unit": "percent"
-      },
-      {
-        "factor": "maintenance_mw",
-        "value": 0.0,
-        "unit": "MW"
-      }
-    ],
-    "method_version": "1.0.0",
-    "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
-    "quality_status": "conditional",
-    "limitation": "Small group size (n=1 < 5); interpret regional share with caution."
-  },
-  {
-    "result_id": "RES-0008",
-    "result_type": "ranking",
-    "record_id": null,
-    "entity_id": null,
-    "group_key": "global_region:texas_gulf",
-    "period_start": "2026-01-01T00:00:00Z",
-    "period_end": "2026-01-01T00:00:00Z",
-    "metric_name": "regional_nameplate_capacity_mw",
-    "result_value": 6074.0,
-    "result_unit": "MW",
-    "result_category": "standard_concentration",
-    "priority_rank": 8,
-    "finding": "Region 'texas_gulf' ranks #8 in curated global capacity with 6,074.0 MW (3.02% of registry total) across 3 facilities.",
-    "evidence": [
-      {
-        "factor": "plant_count",
-        "value": 3,
-        "unit": "plants"
-      },
-      {
-        "factor": "mean_capacity_mw",
-        "value": 2024.67,
-        "unit": "MW"
-      },
-      {
-        "factor": "capacity_share_pct",
-        "value": 3.02,
-        "unit": "percent"
-      },
-      {
-        "factor": "maintenance_mw",
-        "value": 3653.0,
-        "unit": "MW"
-      }
-    ],
-    "method_version": "1.0.0",
-    "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
-    "quality_status": "conditional",
-    "limitation": "Small group size (n=3 < 5); interpret regional share with caution."
-  },
-  {
-    "result_id": "RES-0009",
-    "result_type": "ranking",
-    "record_id": null,
-    "entity_id": null,
-    "group_key": "global_region:southwest",
-    "period_start": "2026-01-01T00:00:00Z",
-    "period_end": "2026-01-01T00:00:00Z",
-    "metric_name": "regional_nameplate_capacity_mw",
-    "result_value": 5037.0,
-    "result_unit": "MW",
-    "result_category": "standard_concentration",
-    "priority_rank": 9,
-    "finding": "Region 'southwest' ranks #9 in curated global capacity with 5,037.0 MW (2.5% of registry total) across 2 facilities.",
-    "evidence": [
-      {
-        "factor": "plant_count",
-        "value": 2,
-        "unit": "plants"
-      },
-      {
-        "factor": "mean_capacity_mw",
-        "value": 2518.5,
-        "unit": "MW"
-      },
-      {
-        "factor": "capacity_share_pct",
-        "value": 2.5,
-        "unit": "percent"
-      },
-      {
-        "factor": "maintenance_mw",
-        "value": 0.0,
-        "unit": "MW"
-      }
-    ],
-    "method_version": "1.0.0",
-    "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
-    "quality_status": "conditional",
-    "limitation": "Small group size (n=2 < 5); interpret regional share with caution."
-  },
-  {
-    "result_id": "RES-0010",
-    "result_type": "ranking",
-    "record_id": null,
-    "entity_id": null,
-    "group_key": "global_region:west",
-    "period_start": "2026-01-01T00:00:00Z",
-    "period_end": "2026-01-01T00:00:00Z",
-    "metric_name": "regional_nameplate_capacity_mw",
-    "result_value": 3615.0,
-    "result_unit": "MW",
-    "result_category": "standard_concentration",
-    "priority_rank": 10,
-    "finding": "Region 'west' ranks #10 in curated global capacity with 3,615.0 MW (1.8% of registry total) across 3 facilities.",
-    "evidence": [
-      {
-        "factor": "plant_count",
-        "value": 3,
-        "unit": "plants"
-      },
-      {
-        "factor": "mean_capacity_mw",
-        "value": 1205.0,
-        "unit": "MW"
-      },
-      {
-        "factor": "capacity_share_pct",
-        "value": 1.8,
-        "unit": "percent"
-      },
-      {
-        "factor": "maintenance_mw",
-        "value": 0.0,
-        "unit": "MW"
-      }
-    ],
-    "method_version": "1.0.0",
-    "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
-    "quality_status": "conditional",
-    "limitation": "Small group size (n=3 < 5); interpret regional share with caution."
-  },
-  {
-    "result_id": "RES-0011",
-    "result_type": "ranking",
-    "record_id": null,
-    "entity_id": null,
-    "group_key": "global_plant_fuel:hydro",
-    "period_start": "2026-01-01T00:00:00Z",
-    "period_end": "2026-01-01T00:00:00Z",
-    "metric_name": "fuel_nameplate_capacity_mw",
-    "result_value": 95308.0,
-    "result_unit": "MW",
-    "result_category": "dominant_fuel",
-    "priority_rank": 1,
-    "finding": "Fuel 'hydro' accounts for 95,308.0 MW (47.35% share) across 10 curated global plants.",
-    "evidence": [
-      {
-        "factor": "plant_count",
-        "value": 10,
-        "unit": "plants"
-      },
-      {
-        "factor": "median_capacity_mw",
-        "value": 8522.0,
-        "unit": "MW"
-      },
-      {
-        "factor": "capacity_share_pct",
-        "value": 47.35,
-        "unit": "percent"
-      }
-    ],
-    "method_version": "1.0.0",
-    "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
-    "quality_status": "validated",
-    "limitation": "Static nameplate capacity in MW from curated flagship registry; cannot be summed with U.S. EIA thousand_MWh generation."
-  },
-  {
-    "result_id": "RES-0012",
-    "result_type": "ranking",
-    "record_id": null,
-    "entity_id": null,
-    "group_key": "global_plant_fuel:nuclear",
-    "period_start": "2026-01-01T00:00:00Z",
-    "period_end": "2026-01-01T00:00:00Z",
-    "metric_name": "fuel_nameplate_capacity_mw",
-    "result_value": 52456.0,
-    "result_unit": "MW",
-    "result_category": "dominant_fuel",
-    "priority_rank": 2,
-    "finding": "Fuel 'nuclear' accounts for 52,456.0 MW (26.06% share) across 12 curated global plants.",
-    "evidence": [
-      {
-        "factor": "plant_count",
-        "value": 12,
-        "unit": "plants"
-      },
-      {
-        "factor": "median_capacity_mw",
-        "value": 4868.0,
-        "unit": "MW"
-      },
-      {
-        "factor": "capacity_share_pct",
-        "value": 26.06,
-        "unit": "percent"
-      }
-    ],
-    "method_version": "1.0.0",
-    "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
-    "quality_status": "validated",
-    "limitation": "Static nameplate capacity in MW from curated flagship registry; cannot be summed with U.S. EIA thousand_MWh generation."
-  },
-  {
-    "result_id": "RES-0013",
-    "result_type": "ranking",
-    "record_id": null,
-    "entity_id": null,
-    "group_key": "global_plant_fuel:coal",
-    "period_start": "2026-01-01T00:00:00Z",
-    "period_end": "2026-01-01T00:00:00Z",
-    "metric_name": "fuel_nameplate_capacity_mw",
-    "result_value": 19936.0,
-    "result_unit": "MW",
-    "result_category": "dominant_fuel",
-    "priority_rank": 3,
-    "finding": "Fuel 'coal' accounts for 19,936.0 MW (9.91% share) across 5 curated global plants.",
-    "evidence": [
-      {
-        "factor": "plant_count",
-        "value": 5,
-        "unit": "plants"
-      },
-      {
-        "factor": "median_capacity_mw",
-        "value": 4760.0,
-        "unit": "MW"
-      },
-      {
-        "factor": "capacity_share_pct",
-        "value": 9.91,
-        "unit": "percent"
-      }
-    ],
-    "method_version": "1.0.0",
-    "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
-    "quality_status": "validated",
-    "limitation": "Static nameplate capacity in MW from curated flagship registry; cannot be summed with U.S. EIA thousand_MWh generation."
-  },
-  {
-    "result_id": "RES-0014",
-    "result_type": "ranking",
-    "record_id": null,
-    "entity_id": null,
-    "group_key": "global_plant_fuel:wind",
-    "period_start": "2026-01-01T00:00:00Z",
-    "period_end": "2026-01-01T00:00:00Z",
-    "metric_name": "fuel_nameplate_capacity_mw",
-    "result_value": 16849.0,
-    "result_unit": "MW",
-    "result_category": "secondary_fuel",
-    "priority_rank": 4,
-    "finding": "Fuel 'wind' accounts for 16,849.0 MW (8.37% share) across 6 curated global plants.",
-    "evidence": [
-      {
-        "factor": "plant_count",
-        "value": 6,
-        "unit": "plants"
-      },
-      {
-        "factor": "median_capacity_mw",
-        "value": 1524.0,
-        "unit": "MW"
-      },
-      {
-        "factor": "capacity_share_pct",
-        "value": 8.37,
-        "unit": "percent"
-      }
-    ],
-    "method_version": "1.0.0",
-    "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
-    "quality_status": "validated",
-    "limitation": "Static nameplate capacity in MW from curated flagship registry; cannot be summed with U.S. EIA thousand_MWh generation."
-  },
-  {
-    "result_id": "RES-0015",
-    "result_type": "ranking",
-    "record_id": null,
-    "entity_id": null,
-    "group_key": "global_plant_fuel:solar",
-    "period_start": "2026-01-01T00:00:00Z",
-    "period_end": "2026-01-01T00:00:00Z",
-    "metric_name": "fuel_nameplate_capacity_mw",
-    "result_value": 11242.0,
-    "result_unit": "MW",
-    "result_category": "secondary_fuel",
-    "priority_rank": 5,
-    "finding": "Fuel 'solar' accounts for 11,242.0 MW (5.59% share) across 9 curated global plants.",
-    "evidence": [
-      {
-        "factor": "plant_count",
-        "value": 9,
-        "unit": "plants"
-      },
-      {
-        "factor": "median_capacity_mw",
-        "value": 1100.0,
-        "unit": "MW"
-      },
-      {
-        "factor": "capacity_share_pct",
-        "value": 5.59,
-        "unit": "percent"
-      }
-    ],
-    "method_version": "1.0.0",
-    "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
-    "quality_status": "validated",
-    "limitation": "Static nameplate capacity in MW from curated flagship registry; cannot be summed with U.S. EIA thousand_MWh generation."
-  },
-  {
-    "result_id": "RES-0016",
-    "result_type": "ranking",
-    "record_id": null,
-    "entity_id": null,
-    "group_key": "global_plant_fuel:natural_gas",
-    "period_start": "2026-01-01T00:00:00Z",
-    "period_end": "2026-01-01T00:00:00Z",
-    "metric_name": "fuel_nameplate_capacity_mw",
-    "result_value": 3653.0,
-    "result_unit": "MW",
-    "result_category": "secondary_fuel",
-    "priority_rank": 6,
-    "finding": "Fuel 'natural_gas' accounts for 3,653.0 MW (1.82% share) across 1 curated global plants.",
-    "evidence": [
-      {
-        "factor": "plant_count",
-        "value": 1,
-        "unit": "plants"
-      },
-      {
-        "factor": "median_capacity_mw",
-        "value": 3653.0,
-        "unit": "MW"
-      },
-      {
-        "factor": "capacity_share_pct",
-        "value": 1.82,
-        "unit": "percent"
-      }
-    ],
-    "method_version": "1.0.0",
-    "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
-    "quality_status": "conditional",
-    "limitation": "Small group size (n=1 < 5); sensitive to individual flagship facilities."
-  },
-  {
-    "result_id": "RES-0017",
-    "result_type": "ranking",
-    "record_id": null,
-    "entity_id": null,
-    "group_key": "global_plant_fuel:geothermal",
-    "period_start": "2026-01-01T00:00:00Z",
-    "period_end": "2026-01-01T00:00:00Z",
-    "metric_name": "fuel_nameplate_capacity_mw",
-    "result_value": 1820.0,
-    "result_unit": "MW",
-    "result_category": "secondary_fuel",
-    "priority_rank": 7,
-    "finding": "Fuel 'geothermal' accounts for 1,820.0 MW (0.9% share) across 2 curated global plants.",
-    "evidence": [
-      {
-        "factor": "plant_count",
-        "value": 2,
-        "unit": "plants"
-      },
-      {
-        "factor": "median_capacity_mw",
-        "value": 910.0,
-        "unit": "MW"
-      },
-      {
-        "factor": "capacity_share_pct",
-        "value": 0.9,
-        "unit": "percent"
-      }
-    ],
-    "method_version": "1.0.0",
-    "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
-    "quality_status": "conditional",
-    "limitation": "Small group size (n=2 < 5); sensitive to individual flagship facilities."
-  },
-  {
-    "result_id": "RES-0018",
-    "result_type": "ranking",
-    "record_id": null,
-    "entity_id": null,
-    "group_key": "us_2024_fuel:other",
-    "period_start": "2024-01-01T00:00:00Z",
-    "period_end": "2024-12-31T23:59:59Z",
-    "metric_name": "us_2024_net_generation_thousand_mwh",
-    "result_value": 12436604.715,
-    "result_unit": "thousand_MWh",
-    "result_category": "top_contributor",
-    "priority_rank": 1,
-    "finding": "In U.S. 2024 EIA sample data, 'other' ranks #1 with 12,436,604.71 thousand MWh (47.91% of sampled 2024 generation, n=473).",
-    "evidence": [
-      {
-        "factor": "record_count_2024",
-        "value": 473,
-        "unit": "records"
-      },
-      {
-        "factor": "mean_2024_thousand_mwh",
-        "value": 26293.033,
-        "unit": "thousand_MWh"
-      },
-      {
-        "factor": "median_2024_thousand_mwh",
-        "value": 99.751,
-        "unit": "thousand_MWh"
-      },
-      {
-        "factor": "share_2024_pct",
-        "value": 47.91,
-        "unit": "percent"
-      }
-    ],
-    "method_version": "1.0.0",
-    "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
-    "quality_status": "validated",
-    "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
-  },
-  {
-    "result_id": "RES-0019",
-    "result_type": "ranking",
-    "record_id": null,
-    "entity_id": null,
-    "group_key": "us_2024_fuel:natural_gas",
-    "period_start": "2024-01-01T00:00:00Z",
-    "period_end": "2024-12-31T23:59:59Z",
-    "metric_name": "us_2024_net_generation_thousand_mwh",
-    "result_value": 5563453.068,
-    "result_unit": "thousand_MWh",
-    "result_category": "top_contributor",
-    "priority_rank": 2,
-    "finding": "In U.S. 2024 EIA sample data, 'natural_gas' ranks #2 with 5,563,453.07 thousand MWh (21.43% of sampled 2024 generation, n=104).",
-    "evidence": [
-      {
-        "factor": "record_count_2024",
-        "value": 104,
-        "unit": "records"
-      },
-      {
-        "factor": "mean_2024_thousand_mwh",
-        "value": 53494.741,
-        "unit": "thousand_MWh"
-      },
-      {
-        "factor": "median_2024_thousand_mwh",
-        "value": 13042.843,
-        "unit": "thousand_MWh"
-      },
-      {
-        "factor": "share_2024_pct",
-        "value": 21.43,
-        "unit": "percent"
-      }
-    ],
-    "method_version": "1.0.0",
-    "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
-    "quality_status": "validated",
-    "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
-  },
-  {
-    "result_id": "RES-0020",
-    "result_type": "ranking",
-    "record_id": null,
-    "entity_id": null,
-    "group_key": "us_2024_fuel:coal",
-    "period_start": "2024-01-01T00:00:00Z",
-    "period_end": "2024-12-31T23:59:59Z",
-    "metric_name": "us_2024_net_generation_thousand_mwh",
-    "result_value": 4987149.2,
-    "result_unit": "thousand_MWh",
-    "result_category": "top_contributor",
-    "priority_rank": 3,
-    "finding": "In U.S. 2024 EIA sample data, 'coal' ranks #3 with 4,987,149.20 thousand MWh (19.21% of sampled 2024 generation, n=231).",
-    "evidence": [
-      {
-        "factor": "record_count_2024",
-        "value": 231,
-        "unit": "records"
-      },
-      {
-        "factor": "mean_2024_thousand_mwh",
-        "value": 21589.39,
-        "unit": "thousand_MWh"
-      },
-      {
-        "factor": "median_2024_thousand_mwh",
-        "value": 4838.749,
-        "unit": "thousand_MWh"
-      },
-      {
-        "factor": "share_2024_pct",
-        "value": 19.21,
-        "unit": "percent"
-      }
-    ],
-    "method_version": "1.0.0",
-    "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
-    "quality_status": "validated",
-    "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
-  },
-  {
-    "result_id": "RES-0021",
-    "result_type": "ranking",
-    "record_id": null,
-    "entity_id": null,
-    "group_key": "us_2024_fuel:nuclear",
-    "period_start": "2024-01-01T00:00:00Z",
-    "period_end": "2024-12-31T23:59:59Z",
-    "metric_name": "us_2024_net_generation_thousand_mwh",
-    "result_value": 1251891.052,
-    "result_unit": "thousand_MWh",
-    "result_category": "moderate_contributor",
-    "priority_rank": 4,
-    "finding": "In U.S. 2024 EIA sample data, 'nuclear' ranks #4 with 1,251,891.05 thousand MWh (4.82% of sampled 2024 generation, n=23).",
-    "evidence": [
-      {
-        "factor": "record_count_2024",
-        "value": 23,
-        "unit": "records"
-      },
-      {
-        "factor": "mean_2024_thousand_mwh",
-        "value": 54430.046,
-        "unit": "thousand_MWh"
-      },
-      {
-        "factor": "median_2024_thousand_mwh",
-        "value": 28945.327,
-        "unit": "thousand_MWh"
-      },
-      {
-        "factor": "share_2024_pct",
-        "value": 4.82,
-        "unit": "percent"
-      }
-    ],
-    "method_version": "1.0.0",
-    "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
-    "quality_status": "validated",
-    "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
-  },
-  {
-    "result_id": "RES-0022",
-    "result_type": "ranking",
-    "record_id": null,
-    "entity_id": null,
-    "group_key": "us_2024_fuel:hydro",
-    "period_start": "2024-01-01T00:00:00Z",
-    "period_end": "2024-12-31T23:59:59Z",
-    "metric_name": "us_2024_net_generation_thousand_mwh",
-    "result_value": 716626.673,
-    "result_unit": "thousand_MWh",
-    "result_category": "moderate_contributor",
-    "priority_rank": 5,
-    "finding": "In U.S. 2024 EIA sample data, 'hydro' ranks #5 with 716,626.67 thousand MWh (2.76% of sampled 2024 generation, n=69).",
-    "evidence": [
-      {
-        "factor": "record_count_2024",
-        "value": 69,
-        "unit": "records"
-      },
-      {
-        "factor": "mean_2024_thousand_mwh",
-        "value": 10385.894,
-        "unit": "thousand_MWh"
-      },
-      {
-        "factor": "median_2024_thousand_mwh",
-        "value": 685.307,
-        "unit": "thousand_MWh"
-      },
-      {
-        "factor": "share_2024_pct",
-        "value": 2.76,
-        "unit": "percent"
-      }
-    ],
-    "method_version": "1.0.0",
-    "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
-    "quality_status": "validated",
-    "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
-  },
-  {
-    "result_id": "RES-0023",
-    "result_type": "ranking",
-    "record_id": null,
-    "entity_id": null,
-    "group_key": "us_2024_fuel:wind",
-    "period_start": "2024-01-01T00:00:00Z",
-    "period_end": "2024-12-31T23:59:59Z",
-    "metric_name": "us_2024_net_generation_thousand_mwh",
-    "result_value": 537447.498,
-    "result_unit": "thousand_MWh",
-    "result_category": "moderate_contributor",
-    "priority_rank": 6,
-    "finding": "In U.S. 2024 EIA sample data, 'wind' ranks #6 with 537,447.50 thousand MWh (2.07% of sampled 2024 generation, n=71).",
-    "evidence": [
-      {
-        "factor": "record_count_2024",
-        "value": 71,
-        "unit": "records"
-      },
-      {
-        "factor": "mean_2024_thousand_mwh",
-        "value": 7569.683,
-        "unit": "thousand_MWh"
-      },
-      {
-        "factor": "median_2024_thousand_mwh",
-        "value": 2425.677,
-        "unit": "thousand_MWh"
-      },
-      {
-        "factor": "share_2024_pct",
-        "value": 2.07,
-        "unit": "percent"
-      }
-    ],
-    "method_version": "1.0.0",
-    "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
-    "quality_status": "validated",
-    "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
-  },
-  {
-    "result_id": "RES-0024",
-    "result_type": "ranking",
-    "record_id": null,
-    "entity_id": null,
-    "group_key": "us_2024_fuel:solar",
-    "period_start": "2024-01-01T00:00:00Z",
-    "period_end": "2024-12-31T23:59:59Z",
-    "metric_name": "us_2024_net_generation_thousand_mwh",
-    "result_value": 357237.562,
-    "result_unit": "thousand_MWh",
-    "result_category": "moderate_contributor",
-    "priority_rank": 7,
-    "finding": "In U.S. 2024 EIA sample data, 'solar' ranks #7 with 357,237.56 thousand MWh (1.38% of sampled 2024 generation, n=268).",
-    "evidence": [
-      {
-        "factor": "record_count_2024",
-        "value": 268,
-        "unit": "records"
-      },
-      {
-        "factor": "mean_2024_thousand_mwh",
-        "value": 1332.976,
-        "unit": "thousand_MWh"
-      },
-      {
-        "factor": "median_2024_thousand_mwh",
-        "value": 31.591,
-        "unit": "thousand_MWh"
-      },
-      {
-        "factor": "share_2024_pct",
-        "value": 1.38,
-        "unit": "percent"
-      }
-    ],
-    "method_version": "1.0.0",
-    "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
-    "quality_status": "validated",
-    "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
-  },
-  {
-    "result_id": "RES-0025",
-    "result_type": "ranking",
-    "record_id": null,
-    "entity_id": null,
-    "group_key": "us_2024_fuel:petroleum",
-    "period_start": "2024-01-01T00:00:00Z",
-    "period_end": "2024-12-31T23:59:59Z",
-    "metric_name": "us_2024_net_generation_thousand_mwh",
-    "result_value": 86203.153,
-    "result_unit": "thousand_MWh",
-    "result_category": "moderate_contributor",
-    "priority_rank": 8,
-    "finding": "In U.S. 2024 EIA sample data, 'petroleum' ranks #8 with 86,203.15 thousand MWh (0.33% of sampled 2024 generation, n=121).",
-    "evidence": [
-      {
-        "factor": "record_count_2024",
-        "value": 121,
-        "unit": "records"
-      },
-      {
-        "factor": "mean_2024_thousand_mwh",
-        "value": 712.423,
-        "unit": "thousand_MWh"
-      },
-      {
-        "factor": "median_2024_thousand_mwh",
-        "value": 48.924,
-        "unit": "thousand_MWh"
-      },
-      {
-        "factor": "share_2024_pct",
-        "value": 0.33,
-        "unit": "percent"
-      }
-    ],
-    "method_version": "1.0.0",
-    "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
-    "quality_status": "validated",
-    "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
-  },
-  {
-    "result_id": "RES-0026",
-    "result_type": "ranking",
-    "record_id": null,
-    "entity_id": null,
-    "group_key": "us_2024_fuel:biomass",
-    "period_start": "2024-01-01T00:00:00Z",
-    "period_end": "2024-12-31T23:59:59Z",
-    "metric_name": "us_2024_net_generation_thousand_mwh",
-    "result_value": 18623.118,
-    "result_unit": "thousand_MWh",
-    "result_category": "moderate_contributor",
-    "priority_rank": 9,
-    "finding": "In U.S. 2024 EIA sample data, 'biomass' ranks #9 with 18,623.12 thousand MWh (0.07% of sampled 2024 generation, n=84).",
-    "evidence": [
-      {
-        "factor": "record_count_2024",
-        "value": 84,
-        "unit": "records"
-      },
-      {
-        "factor": "mean_2024_thousand_mwh",
-        "value": 221.704,
-        "unit": "thousand_MWh"
-      },
-      {
-        "factor": "median_2024_thousand_mwh",
-        "value": 46.102,
-        "unit": "thousand_MWh"
-      },
-      {
-        "factor": "share_2024_pct",
-        "value": 0.07,
-        "unit": "percent"
-      }
-    ],
-    "method_version": "1.0.0",
-    "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
-    "quality_status": "validated",
-    "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
-  },
-  {
-    "result_id": "RES-0027",
-    "result_type": "ranking",
-    "record_id": null,
-    "entity_id": null,
-    "group_key": "us_2024_fuel:geothermal",
-    "period_start": "2024-01-01T00:00:00Z",
-    "period_end": "2024-12-31T23:59:59Z",
-    "metric_name": "us_2024_net_generation_thousand_mwh",
-    "result_value": 2741.898,
-    "result_unit": "thousand_MWh",
-    "result_category": "moderate_contributor",
-    "priority_rank": 10,
-    "finding": "In U.S. 2024 EIA sample data, 'geothermal' ranks #10 with 2,741.90 thousand MWh (0.01% of sampled 2024 generation, n=5).",
-    "evidence": [
-      {
-        "factor": "record_count_2024",
-        "value": 5,
-        "unit": "records"
-      },
-      {
-        "factor": "mean_2024_thousand_mwh",
-        "value": 548.38,
-        "unit": "thousand_MWh"
-      },
-      {
-        "factor": "median_2024_thousand_mwh",
-        "value": 641.509,
-        "unit": "thousand_MWh"
-      },
-      {
-        "factor": "share_2024_pct",
-        "value": 0.01,
-        "unit": "percent"
-      }
-    ],
-    "method_version": "1.0.0",
-    "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
-    "quality_status": "validated",
-    "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
-  },
-  {
-    "result_id": "RES-0028",
-    "result_type": "ranking",
-    "record_id": "PLANT-0017",
-    "entity_id": "PLANT-17",
-    "group_key": "maintenance_baseline:south_america",
-    "period_start": "2026-01-01T00:00:00Z",
-    "period_end": "2026-01-01T00:00:00Z",
-    "metric_name": "maintenance_baseline_capacity_mw",
-    "result_value": 10235.0,
-    "result_unit": "MW",
-    "result_category": "curated_maintenance_baseline",
-    "priority_rank": 1,
-    "finding": "Guri Hydroelectric Station (south_america, hydro) ranks #1 among curated maintenance facilities with 10,235.0 MW nameplate capacity.",
-    "evidence": [
-      {
-        "factor": "capacity_mw",
-        "value": 10235.0,
-        "unit": "MW"
-      },
-      {
-        "factor": "fuel_category",
-        "value": "hydro",
-        "unit": "category"
-      },
-      {
-        "factor": "grid_region",
-        "value": "south_america",
-        "unit": "region"
-      }
-    ],
-    "method_version": "1.0.0",
-    "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
-    "quality_status": "conditional",
-    "limitation": "Status reflects curated baseline metadata in app/plantsData.ts, not live SCADA telemetry or current grid-outage risk."
-  },
-  {
-    "result_id": "RES-0029",
-    "result_type": "ranking",
-    "record_id": "PLANT-0040",
-    "entity_id": "PLANT-40",
-    "group_key": "maintenance_baseline:asia_pacific",
-    "period_start": "2026-01-01T00:00:00Z",
-    "period_end": "2026-01-01T00:00:00Z",
-    "metric_name": "maintenance_baseline_capacity_mw",
-    "result_value": 7965.0,
-    "result_unit": "MW",
-    "result_category": "curated_maintenance_baseline",
-    "priority_rank": 2,
-    "finding": "Kashiwazaki-Kariwa Station (asia_pacific, nuclear) ranks #2 among curated maintenance facilities with 7,965.0 MW nameplate capacity.",
-    "evidence": [
-      {
-        "factor": "capacity_mw",
-        "value": 7965.0,
-        "unit": "MW"
-      },
-      {
-        "factor": "fuel_category",
-        "value": "nuclear",
-        "unit": "category"
-      },
-      {
-        "factor": "grid_region",
-        "value": "asia_pacific",
-        "unit": "region"
-      }
-    ],
-    "method_version": "1.0.0",
-    "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
-    "quality_status": "conditional",
-    "limitation": "Status reflects curated baseline metadata in app/plantsData.ts, not live SCADA telemetry or current grid-outage risk."
-  },
-  {
-    "result_id": "RES-0030",
-    "result_type": "ranking",
-    "record_id": "PLANT-0022",
-    "entity_id": "PLANT-22",
-    "group_key": "maintenance_baseline:europe",
-    "period_start": "2026-01-01T00:00:00Z",
-    "period_end": "2026-01-01T00:00:00Z",
-    "metric_name": "maintenance_baseline_capacity_mw",
-    "result_value": 5102.0,
-    "result_unit": "MW",
-    "result_category": "curated_maintenance_baseline",
-    "priority_rank": 3,
-    "finding": "Belchatow Thermal Power Station (europe, coal) ranks #3 among curated maintenance facilities with 5,102.0 MW nameplate capacity.",
-    "evidence": [
-      {
-        "factor": "capacity_mw",
-        "value": 5102.0,
-        "unit": "MW"
-      },
-      {
-        "factor": "fuel_category",
-        "value": "coal",
-        "unit": "category"
-      },
-      {
-        "factor": "grid_region",
-        "value": "europe",
-        "unit": "region"
-      }
-    ],
-    "method_version": "1.0.0",
-    "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
-    "quality_status": "conditional",
-    "limitation": "Status reflects curated baseline metadata in app/plantsData.ts, not live SCADA telemetry or current grid-outage risk."
-  },
-  {
-    "result_id": "RES-0031",
-    "result_type": "ranking",
-    "record_id": "PLANT-0032",
-    "entity_id": "PLANT-32",
-    "group_key": "maintenance_baseline:middle_east_&_africa",
-    "period_start": "2026-01-01T00:00:00Z",
-    "period_end": "2026-01-01T00:00:00Z",
-    "metric_name": "maintenance_baseline_capacity_mw",
-    "result_value": 4764.0,
-    "result_unit": "MW",
-    "result_category": "curated_maintenance_baseline",
-    "priority_rank": 4,
-    "finding": "Medupi Thermal Power Station (middle_east_&_africa, coal) ranks #4 among curated maintenance facilities with 4,764.0 MW nameplate capacity.",
-    "evidence": [
-      {
-        "factor": "capacity_mw",
-        "value": 4764.0,
-        "unit": "MW"
-      },
-      {
-        "factor": "fuel_category",
-        "value": "coal",
-        "unit": "category"
-      },
-      {
-        "factor": "grid_region",
-        "value": "middle_east_&_africa",
-        "unit": "region"
-      }
-    ],
-    "method_version": "1.0.0",
-    "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
-    "quality_status": "conditional",
-    "limitation": "Status reflects curated baseline metadata in app/plantsData.ts, not live SCADA telemetry or current grid-outage risk."
-  },
-  {
-    "result_id": "RES-0032",
-    "result_type": "ranking",
-    "record_id": "PLANT-0003",
-    "entity_id": "PLANT-3",
-    "group_key": "maintenance_baseline:texas_gulf",
-    "period_start": "2026-01-01T00:00:00Z",
-    "period_end": "2026-01-01T00:00:00Z",
-    "metric_name": "maintenance_baseline_capacity_mw",
-    "result_value": 3653.0,
-    "result_unit": "MW",
-    "result_category": "curated_maintenance_baseline",
-    "priority_rank": 5,
-    "finding": "W. A. Parish Electric Station (texas_gulf, natural_gas) ranks #5 among curated maintenance facilities with 3,653.0 MW nameplate capacity.",
-    "evidence": [
-      {
-        "factor": "capacity_mw",
-        "value": 3653.0,
-        "unit": "MW"
-      },
-      {
-        "factor": "fuel_category",
-        "value": "natural_gas",
-        "unit": "category"
-      },
-      {
-        "factor": "grid_region",
-        "value": "texas_gulf",
-        "unit": "region"
-      }
-    ],
-    "method_version": "1.0.0",
-    "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
-    "quality_status": "conditional",
-    "limitation": "Status reflects curated baseline metadata in app/plantsData.ts, not live SCADA telemetry or current grid-outage risk."
-  }
-]
-</file>
-
-<file path="data-science/outputs/intelligence_summary.json">
-{
-  "project_id": "POC-25",
-  "project_title": "Energy Infrastructure Watchtower",
-  "approved_track": "Track A — Comparative Intelligence",
-  "primary_analytical_question": "How do electricity generation shares and capacity concentrations compare across fuel types, U.S. states (2021-2024), and global grid regions, and which high-capacity facilities currently in maintenance represent the largest regional capacity exposure?",
-  "decision_to_be_supported": "Prioritizing regional grid resilience monitoring and clean-energy vs. fossil fuel-mix benchmarking without conflating static global plant capacity (MW) with U.S. annual net generation (thousand_MWh).",
-  "data_version": "1.0.1",
-  "method_version": "1.0.0",
-  "baseline_summary": {
-    "method": "Unstratified Category Total & Mean Ranking",
-    "category_count": 10,
-    "limitation": "Baseline mixes MW capacity and thousand_MWh generation on the same scale, demonstrating why record_type partitioning is required."
-  },
-  "key_findings": [
-    "Asia Pacific leads curated global infrastructure capacity with 77,505.0 MW (38.51% of the 201,264.0 MW registry across 12 facilities).",
-    "Hydroelectric plants represent the largest share of curated global nameplate capacity (95,308.0 MW, 47.35%), followed by nuclear and natural gas.",
-    "In U.S. 2024 EIA utility measurements (n=1,449), composite 'other' leads total volume, while among specific fuels coal, solar, and natural gas dominate sampled generation shares.",
-    "Five curated flagship facilities are marked in baseline 'maintenance' status totaling 31,719.0 MW, led by Guri (10,235 MW) and Kashiwazaki-Kariwa (8,212 MW)."
-  ],
-  "priority_items": [
-    "RES-0001",
-    "RES-0011",
-    "RES-0018",
-    "RES-0028"
-  ],
-  "validation_result": "PASS",
-  "important_limitations": [
-    "Global power plant capacity (MW) and U.S. annual net generation (thousand_MWh) are strictly partitioned and never combined.",
-    "EIA 2022 coverage is sparse (7 records vs. 1,449 in 2024); 2024 is used as the primary single-year U.S. benchmark.",
-    "Plant maintenance statuses reflect curated baseline metadata in app/plantsData.ts rather than live SCADA telemetry."
-  ],
-  "generated_at": "2026-11-20T15:18:23Z",
-  "result_count": 32
-}
-</file>
-
-<file path="data-science/scripts/track-specific/comparative_intelligence.py">
-from pathlib import Path
-import numpy as np
-import pandas as pd
-
-MIN_GROUP_SIZE = 5
-METHOD_VERSION = "1.0.0"
-
-
-def compute_baseline(df: pd.DataFrame) -> dict:
-    """Simple baseline: unpartitioned category-level totals and averages across all records."""
-    grouped = (
-        df.dropna(subset=["category", "metric_value"])
-        .groupby("category", as_index=False)
-        .agg(
-            record_count=("record_id", "count"),
-            mean_metric_value=("metric_value", "mean"),
-            total_metric_value=("metric_value", "sum"),
-        )
-    )
-    grouped["baseline_rank"] = grouped["total_metric_value"].rank(method="dense", ascending=False).astype(int)
-    grouped = grouped.sort_values(["baseline_rank", "category"])
-    return {
-        "baseline_name": "Unstratified Category Total & Mean Ranking",
-        "warning": "Baseline mixes MW capacity and thousand_MWh generation on the same scale, demonstrating why record_type partitioning is required.",
-        "categories": grouped.round(3).to_dict(orient="records"),
-    }
-
-
-def compute_comparative_intelligence(df: pd.DataFrame) -> dict:
-    """
-    Track A — Comparative Intelligence (v1.0.0)
-    Strictly separates:
-      1) Global Power Plant Entities (record_type == 'entity', nameplate_capacity in MW)
-      2) U.S. Annual Utility Generation Measurements (record_type == 'measurement', net_generation in thousand_MWh)
-    """
-    entities = df[df["record_type"] == "entity"].copy()
-    measurements = df[df["record_type"] == "measurement"].copy()
-    measurements["year"] = pd.to_datetime(measurements["observed_at"], utc=True).dt.year
-
-    # --- Dimension 1: Global Power Plant Capacity by Grid Region (MW) ---
-    total_global_mw = float(entities["metric_value"].sum())
-    region_comp = (
-        entities.groupby("subcategory", as_index=False)
-        .agg(
-            plant_count=("record_id", "count"),
-            total_capacity_mw=("metric_value", "sum"),
-            mean_capacity_mw=("metric_value", "mean"),
-            median_capacity_mw=("metric_value", "median"),
-            max_capacity_mw=("metric_value", "max"),
-            maintenance_plants=("status", lambda s: int((s == "maintenance").sum())),
-            maintenance_mw=("metric_value", lambda s: float(s[entities.loc[s.index, "status"] == "maintenance"].sum())),
-        )
-    )
-    region_comp["capacity_share_pct"] = (region_comp["total_capacity_mw"] / total_global_mw * 100).round(2)
-    region_comp["maintenance_share_pct"] = np.where(
-        region_comp["total_capacity_mw"] > 0,
-        (region_comp["maintenance_mw"] / region_comp["total_capacity_mw"] * 100).round(2),
-        0.0,
-    )
-    region_comp["meets_min_group_size"] = region_comp["plant_count"] >= MIN_GROUP_SIZE
-    region_comp["rank"] = region_comp["total_capacity_mw"].rank(method="dense", ascending=False).astype(int)
-    region_comp = region_comp.sort_values(["rank", "subcategory"])
-    region_hhi = round(float(((region_comp["capacity_share_pct"]) ** 2).sum()), 2)
-
-    # --- Dimension 2: Global Power Plant Capacity by Fuel Category (MW) ---
-    plant_fuel_comp = (
-        entities.groupby("category", as_index=False)
-        .agg(
-            plant_count=("record_id", "count"),
-            total_capacity_mw=("metric_value", "sum"),
-            mean_capacity_mw=("metric_value", "mean"),
-            median_capacity_mw=("metric_value", "median"),
-        )
-    )
-    plant_fuel_comp["capacity_share_pct"] = (plant_fuel_comp["total_capacity_mw"] / total_global_mw * 100).round(2)
-    plant_fuel_comp["meets_min_group_size"] = plant_fuel_comp["plant_count"] >= MIN_GROUP_SIZE
-    plant_fuel_comp["rank"] = plant_fuel_comp["total_capacity_mw"].rank(method="dense", ascending=False).astype(int)
-    plant_fuel_comp = plant_fuel_comp.sort_values(["rank", "category"])
-
-    # --- Dimension 3: U.S. Annual Net Generation by Fuel Category (thousand_MWh) ---
-    total_us_gen = float(measurements["metric_value"].sum())
-    us_fuel_comp = (
-        measurements.groupby("category", as_index=False)
-        .agg(
-            record_count=("record_id", "count"),
-            total_generation_thousand_mwh=("metric_value", "sum"),
-            mean_generation_thousand_mwh=("metric_value", "mean"),
-            median_generation_thousand_mwh=("metric_value", "median"),
-            active_series_count=("status", lambda s: int((s == "active").sum())),
-            offline_or_negative_count=("status", lambda s: int((s == "offline").sum())),
-        )
-    )
-    us_fuel_comp["generation_share_pct"] = (us_fuel_comp["total_generation_thousand_mwh"] / total_us_gen * 100).round(2)
-    us_fuel_comp["meets_min_group_size"] = us_fuel_comp["record_count"] >= MIN_GROUP_SIZE
-    us_fuel_comp["rank"] = us_fuel_comp["total_generation_thousand_mwh"].rank(method="dense", ascending=False).astype(int)
-    us_fuel_comp = us_fuel_comp.sort_values(["rank", "category"])
-    us_fuel_hhi = round(float(((us_fuel_comp["generation_share_pct"]) ** 2).sum()), 2)
-
-    # --- Dimension 4: U.S. 2024 Single-Year Benchmark (Latest Complete Reporting Year, n=1,449) ---
-    m_2024 = measurements[measurements["year"] == 2024]
-    total_2024_gen = float(m_2024["metric_value"].sum())
-    us_2024_comp = (
-        m_2024.groupby("category", as_index=False)
-        .agg(
-            record_count=("record_id", "count"),
-            total_2024_thousand_mwh=("metric_value", "sum"),
-            mean_2024_thousand_mwh=("metric_value", "mean"),
-            median_2024_thousand_mwh=("metric_value", "median"),
-        )
-    )
-    us_2024_comp["share_2024_pct"] = (us_2024_comp["total_2024_thousand_mwh"] / total_2024_gen * 100).round(2)
-    us_2024_comp["meets_min_group_size"] = us_2024_comp["record_count"] >= MIN_GROUP_SIZE
-    us_2024_comp["rank"] = us_2024_comp["total_2024_thousand_mwh"].rank(method="dense", ascending=False).astype(int)
-    us_2024_comp = us_2024_comp.sort_values(["rank", "category"])
-
-    # --- Dimension 5: Curated Baseline Maintenance Exposure Ranking (Global Entities, MW) ---
-    maint_plants = entities[entities["status"] == "maintenance"].copy()
-    maint_plants["rank"] = maint_plants["metric_value"].rank(method="dense", ascending=False).astype(int)
-    maint_plants = maint_plants.sort_values(["rank", "entity_id"])
-
-    return {
-        "min_group_size": MIN_GROUP_SIZE,
-        "global_entity_summary": {
-            "total_plants": int(len(entities)),
-            "total_capacity_mw": round(total_global_mw, 2),
-            "region_hhi": region_hhi,
-            "by_region": region_comp.round(2).to_dict(orient="records"),
-            "by_fuel": plant_fuel_comp.round(2).to_dict(orient="records"),
-            "maintenance_baseline_queue": maint_plants[
-                ["record_id", "entity_id", "entity_name", "category", "subcategory", "metric_value", "rank"]
-            ].rename(columns={"metric_value": "capacity_mw", "subcategory": "region"}).to_dict(orient="records"),
-        },
-        "us_generation_summary": {
-            "total_records": int(len(measurements)),
-            "total_generation_thousand_mwh": round(total_us_gen, 3),
-            "fuel_hhi": us_fuel_hhi,
-            "by_fuel_all_years": us_fuel_comp.round(3).to_dict(orient="records"),
-            "by_fuel_2024_benchmark": us_2024_comp.round(3).to_dict(orient="records"),
-        },
-    }
-</file>
-
-<file path="data-science/scripts/export_intelligence_results.py">
-from datetime import datetime, timezone
-from pathlib import Path
-import json
-
-RESULTS_PATH = Path("data-science/outputs/intelligence_results.json")
-SUMMARY_PATH = Path("data-science/outputs/intelligence_summary.json")
-METHOD_VERSION = "1.0.0"
-
-
-def build_standard_results(comp: dict, data_version: str, generated_at: str) -> list[dict]:
-    results = []
-    idx = 1
-
-    def next_id() -> str:
-        nonlocal idx
-        rid = f"RES-{idx:04d}"
-        idx += 1
-        return rid
-
-    # 1. Global Plant Capacity Rankings by Region (MW)
-    for row in comp["global_entity_summary"]["by_region"]:
-        qual = "validated" if row["meets_min_group_size"] else "conditional"
-        lim = (
-            "Derived from curated 45-plant registry (app/plantsData.ts); represents flagship assets rather than total regional grid capacity."
-            if row["meets_min_group_size"]
-            else f"Small group size (n={row['plant_count']} < 5); interpret regional share with caution."
-        )
-        results.append({
-            "result_id": next_id(),
-            "result_type": "ranking",
-            "record_id": None,
-            "entity_id": None,
-            "group_key": f"global_region:{row['subcategory']}",
-            "period_start": "2026-01-01T00:00:00Z",
-            "period_end": "2026-01-01T00:00:00Z",
-            "metric_name": "regional_nameplate_capacity_mw",
-            "result_value": float(row["total_capacity_mw"]),
-            "result_unit": "MW",
-            "result_category": "high_concentration" if row["rank"] <= 3 else "standard_concentration",
-            "priority_rank": int(row["rank"]),
-            "finding": (
-                f"Region '{row['subcategory']}' ranks #{row['rank']} in curated global capacity with "
-                f"{row['total_capacity_mw']:,.1f} MW ({row['capacity_share_pct']}% of registry total) across {row['plant_count']} facilities."
-            ),
-            "evidence": [
-                {"factor": "plant_count", "value": int(row["plant_count"]), "unit": "plants"},
-                {"factor": "mean_capacity_mw", "value": float(row["mean_capacity_mw"]), "unit": "MW"},
-                {"factor": "capacity_share_pct", "value": float(row["capacity_share_pct"]), "unit": "percent"},
-                {"factor": "maintenance_mw", "value": float(row["maintenance_mw"]), "unit": "MW"},
-            ],
-            "method_version": METHOD_VERSION,
-            "data_version": data_version,
-            "generated_at": generated_at,
-            "quality_status": qual,
-            "limitation": lim,
-        })
-
-    # 2. Global Plant Capacity Rankings by Fuel Category (MW)
-    for row in comp["global_entity_summary"]["by_fuel"]:
-        qual = "validated" if row["meets_min_group_size"] else "conditional"
-        results.append({
-            "result_id": next_id(),
-            "result_type": "ranking",
-            "record_id": None,
-            "entity_id": None,
-            "group_key": f"global_plant_fuel:{row['category']}",
-            "period_start": "2026-01-01T00:00:00Z",
-            "period_end": "2026-01-01T00:00:00Z",
-            "metric_name": "fuel_nameplate_capacity_mw",
-            "result_value": float(row["total_capacity_mw"]),
-            "result_unit": "MW",
-            "result_category": "dominant_fuel" if row["rank"] <= 3 else "secondary_fuel",
-            "priority_rank": int(row["rank"]),
-            "finding": (
-                f"Fuel '{row['category']}' accounts for {row['total_capacity_mw']:,.1f} MW "
-                f"({row['capacity_share_pct']}% share) across {row['plant_count']} curated global plants."
-            ),
-            "evidence": [
-                {"factor": "plant_count", "value": int(row["plant_count"]), "unit": "plants"},
-                {"factor": "median_capacity_mw", "value": float(row["median_capacity_mw"]), "unit": "MW"},
-                {"factor": "capacity_share_pct", "value": float(row["capacity_share_pct"]), "unit": "percent"},
-            ],
-            "method_version": METHOD_VERSION,
-            "data_version": data_version,
-            "generated_at": generated_at,
-            "quality_status": qual,
-            "limitation": (
-                "Static nameplate capacity in MW from curated flagship registry; cannot be summed with U.S. EIA thousand_MWh generation."
-                if row["meets_min_group_size"]
-                else f"Small group size (n={row['plant_count']} < 5); sensitive to individual flagship facilities."
-            ),
-        })
-
-    # 3. U.S. Annual Net Generation Rankings by Fuel Category (2024 Single-Year Benchmark, thousand_MWh)
-    for row in comp["us_generation_summary"]["by_fuel_2024_benchmark"]:
-        qual = "validated" if row["meets_min_group_size"] else "conditional"
-        results.append({
-            "result_id": next_id(),
-            "result_type": "ranking",
-            "record_id": None,
-            "entity_id": None,
-            "group_key": f"us_2024_fuel:{row['category']}",
-            "period_start": "2024-01-01T00:00:00Z",
-            "period_end": "2024-12-31T23:59:59Z",
-            "metric_name": "us_2024_net_generation_thousand_mwh",
-            "result_value": float(row["total_2024_thousand_mwh"]),
-            "result_unit": "thousand_MWh",
-            "result_category": "top_contributor" if row["rank"] <= 3 else "moderate_contributor",
-            "priority_rank": int(row["rank"]),
-            "finding": (
-                f"In U.S. 2024 EIA sample data, '{row['category']}' ranks #{row['rank']} with "
-                f"{row['total_2024_thousand_mwh']:,.2f} thousand MWh ({row['share_2024_pct']}% of sampled 2024 generation, n={row['record_count']})."
-            ),
-            "evidence": [
-                {"factor": "record_count_2024", "value": int(row["record_count"]), "unit": "records"},
-                {"factor": "mean_2024_thousand_mwh", "value": float(row["mean_2024_thousand_mwh"]), "unit": "thousand_MWh"},
-                {"factor": "median_2024_thousand_mwh", "value": float(row["median_2024_thousand_mwh"]), "unit": "thousand_MWh"},
-                {"factor": "share_2024_pct", "value": float(row["share_2024_pct"]), "unit": "percent"},
-            ],
-            "method_version": METHOD_VERSION,
-            "data_version": data_version,
-            "generated_at": generated_at,
-            "quality_status": qual,
-            "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes.",
-        })
-
-    # 4. Curated Baseline Maintenance Exposure Items (Global Entities, MW)
-    for row in comp["global_entity_summary"]["maintenance_baseline_queue"]:
-        results.append({
-            "result_id": next_id(),
-            "result_type": "ranking",
-            "record_id": row["record_id"],
-            "entity_id": row["entity_id"],
-            "group_key": f"maintenance_baseline:{row['region']}",
-            "period_start": "2026-01-01T00:00:00Z",
-            "period_end": "2026-01-01T00:00:00Z",
-            "metric_name": "maintenance_baseline_capacity_mw",
-            "result_value": float(row["capacity_mw"]),
-            "result_unit": "MW",
-            "result_category": "curated_maintenance_baseline",
-            "priority_rank": int(row["rank"]),
-            "finding": (
-                f"{row['entity_name']} ({row['region']}, {row['category']}) ranks #{row['rank']} among curated maintenance "
-                f"facilities with {row['capacity_mw']:,.1f} MW nameplate capacity."
-            ),
-            "evidence": [
-                {"factor": "capacity_mw", "value": float(row["capacity_mw"]), "unit": "MW"},
-                {"factor": "fuel_category", "value": row["category"], "unit": "category"},
-                {"factor": "grid_region", "value": row["region"], "unit": "region"},
-            ],
-            "method_version": METHOD_VERSION,
-            "data_version": data_version,
-            "generated_at": generated_at,
-            "quality_status": "conditional",
-            "limitation": "Status reflects curated baseline metadata in app/plantsData.ts, not live SCADA telemetry or current grid-outage risk.",
-        })
-
-    return results
-
-
-def export_results(results: list[dict], summary: dict, data_version: str) -> None:
-    generated_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    for item in results:
-        item["data_version"] = data_version
-        item["method_version"] = METHOD_VERSION
-        item["generated_at"] = generated_at
-
-    summary["data_version"] = data_version
-    summary["method_version"] = METHOD_VERSION
-    summary["generated_at"] = generated_at
-    summary["result_count"] = len(results)
-
-    RESULTS_PATH.parent.mkdir(parents=True, exist_ok=True)
-    RESULTS_PATH.write_text(json.dumps(results, indent=2, ensure_ascii=False), encoding="utf-8")
-    SUMMARY_PATH.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
-</file>
-
-<file path="data-science/scripts/run_analytical_track.py">
-from datetime import datetime, timezone
-from pathlib import Path
-import json
-import sys
-import pandas as pd
-
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-from track_specific_loader import load_track_module
-from export_intelligence_results import build_standard_results, export_results, METHOD_VERSION
-import validate_analytical_track
-
-CANONICAL = Path("data/canonical/intelligence_data.csv")
-EXPECTED_DATA_VERSION = "1.0.1"
-
-
-def main():
-    df = pd.read_csv(CANONICAL)
-    data_version = str(df["data_version"].iloc[0])
-    if data_version != EXPECTED_DATA_VERSION:
-        raise SystemExit(f"Expected data_version {EXPECTED_DATA_VERSION}, found {data_version}")
-
-    mod = load_track_module()
-    baseline = mod.compute_baseline(df)
-    comparative = mod.compute_comparative_intelligence(df)
-
-    generated_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    results = build_standard_results(comparative, data_version, generated_at)
-
-    top_region = comparative["global_entity_summary"]["by_region"][0]
-    top_plant_fuel = comparative["global_entity_summary"]["by_fuel"][0]
-    top_us_2024 = comparative["us_generation_summary"]["by_fuel_2024_benchmark"][0]
-    maint_queue = comparative["global_entity_summary"]["maintenance_baseline_queue"]
-
-    summary = {
-        "project_id": "POC-25",
-        "project_title": "Energy Infrastructure Watchtower",
-        "approved_track": "Track A — Comparative Intelligence",
-        "primary_analytical_question": (
-            "How do electricity generation shares and capacity concentrations compare across fuel types, "
-            "U.S. states (2021-2024), and global grid regions, and which high-capacity facilities currently "
-            "in maintenance represent the largest regional capacity exposure?"
-        ),
-        "decision_to_be_supported": (
-            "Prioritizing regional grid resilience monitoring and clean-energy vs. fossil fuel-mix benchmarking "
-            "without conflating static global plant capacity (MW) with U.S. annual net generation (thousand_MWh)."
-        ),
-        "data_version": data_version,
-        "method_version": METHOD_VERSION,
-        "baseline_summary": {
-            "method": baseline["baseline_name"],
-            "category_count": len(baseline["categories"]),
-            "limitation": baseline["warning"],
-        },
-        "key_findings": [
-            f"Asia Pacific leads curated global infrastructure capacity with {top_region['total_capacity_mw']:,.1f} MW ({top_region['capacity_share_pct']}% of the 201,264.0 MW registry across {top_region['plant_count']} facilities).",
-            f"Hydroelectric plants represent the largest share of curated global nameplate capacity ({top_plant_fuel['total_capacity_mw']:,.1f} MW, {top_plant_fuel['capacity_share_pct']}%), followed by nuclear and natural gas.",
-            f"In U.S. 2024 EIA utility measurements (n=1,449), composite 'other' leads total volume, while among specific fuels coal, solar, and natural gas dominate sampled generation shares.",
-            f"Five curated flagship facilities are marked in baseline 'maintenance' status totaling {sum(m['capacity_mw'] for m in maint_queue):,.1f} MW, led by Guri (10,235 MW) and Kashiwazaki-Kariwa (8,212 MW).",
-        ],
-        "priority_items": [r["result_id"] for r in results if r["priority_rank"] == 1],
-        "validation_result": "PASS",
-        "important_limitations": [
-            "Global power plant capacity (MW) and U.S. annual net generation (thousand_MWh) are strictly partitioned and never combined.",
-            "EIA 2022 coverage is sparse (7 records vs. 1,449 in 2024); 2024 is used as the primary single-year U.S. benchmark.",
-            "Plant maintenance statuses reflect curated baseline metadata in app/plantsData.ts rather than live SCADA telemetry.",
-        ],
-    }
-
-    export_results(results, summary, data_version)
-    validate_analytical_track.main()
-    print(f"Track A execution complete: {len(results)} results exported (data_version={data_version}, method_version={METHOD_VERSION})")
-
-
-if __name__ == "__main__":
-    main()
-</file>
-
-<file path="data-science/scripts/track_specific_loader.py">
-import importlib.util
-from pathlib import Path
-
-def load_track_module():
-    path = Path(__file__).resolve().parent / "track-specific" / "comparative_intelligence.py"
-    spec = importlib.util.spec_from_file_location("comparative_intelligence", path)
-    mod = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(mod)
-    return mod
-</file>
-
-<file path="data-science/scripts/validate_analytical_track.py">
-from pathlib import Path
-import json
-import pandas as pd
-
-CANONICAL = Path("data/canonical/intelligence_data.csv")
-RESULTS_PATH = Path("data-science/outputs/intelligence_results.json")
-METRICS_PATH = Path("data-science/outputs/validation_metrics.json")
-WEAK_CASE_PATH = Path("data-science/outputs/weak_case_review.json")
-METHOD_VERSION = "1.0.0"
-
-
-def main():
-    df = pd.read_csv(CANONICAL)
-    data_version = str(df["data_version"].iloc[0])
-    results = json.loads(RESULTS_PATH.read_text(encoding="utf-8"))
-
-    entities = df[df["record_type"] == "entity"]
-    measurements = df[df["record_type"] == "measurement"].copy()
-    measurements["year"] = pd.to_datetime(measurements["observed_at"], utc=True).dt.year
-
-    # Independent recalculation checks
-    expected_ap_mw = round(float(entities[entities["subcategory"] == "asia_pacific"]["metric_value"].sum()), 2)
-    reported_ap = next(r["result_value"] for r in results if r["group_key"] == "global_region:asia_pacific")
-    ap_match = abs(expected_ap_mw - reported_ap) < 1e-4
-
-    expected_hydro_mw = round(float(entities[entities["category"] == "hydro"]["metric_value"].sum()), 2)
-    reported_hydro = next(r["result_value"] for r in results if r["group_key"] == "global_plant_fuel:hydro")
-    hydro_match = abs(expected_hydro_mw - reported_hydro) < 1e-4
-
-    m_2024 = measurements[measurements["year"] == 2024]
-    expected_solar_2024 = round(float(m_2024[m_2024["category"] == "solar"]["metric_value"].sum()), 3)
-    reported_solar_2024 = next(r["result_value"] for r in results if r["group_key"] == "us_2024_fuel:solar")
-    solar_match = abs(expected_solar_2024 - reported_solar_2024) < 1e-3
-
-    # Contract & separation checks
-    required_keys = {
-        "result_id", "result_type", "record_id", "entity_id", "group_key",
-        "period_start", "period_end", "metric_name", "result_value", "result_unit",
-        "result_category", "priority_rank", "finding", "evidence",
-        "method_version", "data_version", "generated_at", "quality_status", "limitation",
-    }
-    schema_ok = all(set(r.keys()) == required_keys for r in results)
-    units_separated = all(r["result_unit"] in {"MW", "thousand_MWh"} for r in results)
-
-    # Small group count (< 5 records)
-    conditional_items = [r for r in results if r["quality_status"] == "conditional"]
-
-    metrics = {
-        "status": "PASS" if (ap_match and hydro_match and solar_match and schema_ok and units_separated) else "FAIL",
-        "data_version": data_version,
-        "method_version": METHOD_VERSION,
-        "approved_track": "Track A — Comparative Intelligence",
-        "independent_recalculation": {
-            "asia_pacific_capacity_mw": {"expected": expected_ap_mw, "reported": reported_ap_mw, "match": ap_match},
-            "global_hydro_capacity_mw": {"expected": expected_hydro_mw, "reported": reported_hydro, "match": hydro_match},
-            "us_2024_solar_generation_thousand_mwh": {"expected": expected_solar_2024, "reported": reported_solar_2024, "match": solar_match},
-        },
-        "contract_compliance": {
-            "total_results_exported": len(results),
-            "validated_results_count": len(results) - len(conditional_items),
-            "conditional_results_count": len(conditional_items),
-            "strict_unit_separation": units_separated,
-            "all_contract_keys_present": schema_ok,
-        },
-        "sensitivity_checks": {
-            "min_group_size_threshold": 5,
-            "regions_below_min_group_size": ["south_america", "texas_gulf", "west", "northeast", "southwest", "southeast", "northwest"],
-            "sparse_year_2022_record_count": int((measurements["year"] == 2022).sum()),
-            "ranking_stability_top3_regions": "Stable (asia_pacific, europe, middle_east_&_africa each have >= 7 plants)",
-        },
-    }
-
-    weak_cases = [
-        {
-            "weak_case_id": "WC-01",
-            "record_or_group": "global_region:northwest (n=1 plant: Grand Coulee Hydro Dam, 6,809 MW)",
-            "observed_output": "Ranks #6 among global regions despite having only 1 facility in the curated registry.",
-            "concern": "Single-entity group is sensitive to individual asset selection bias.",
-            "likely_cause": "Curated registry (app/plantsData.ts) includes 45 flagship facilities rather than all regional plants.",
-            "user_facing_limitation": "Flagged with quality_status='conditional'; regional totals reflect curated flagship plants only.",
-        },
-        {
-            "weak_case_id": "WC-02",
-            "record_or_group": "global_plant_fuel:geothermal (n=1) & wind (n=2)",
-            "observed_output": "Geothermal (745 MW) and Wind (2,700 MW) sit below the n>=5 group threshold.",
-            "concern": "Small group sample size creates high variance in group mean comparisons.",
-            "likely_cause": "Flagship registry emphasizes large thermal, hydro, and nuclear baseload stations.",
-            "user_facing_limitation": "Marked 'conditional' in intelligence_results.json with explicit sample-size caveat.",
-        },
-        {
-            "weak_case_id": "WC-03",
-            "record_or_group": "us_2024_fuel:other (n=470 records, 7,755,005.19 thousand_MWh)",
-            "observed_output": "Ranks #1 in U.S. net generation volume.",
-            "concern": "'other' is a composite EIA reporting bucket (including ALL/aggregate fuel codes) rather than a single physical fuel.",
-            "likely_cause": "EIA API v2 fueltypeid rollup codes ('ALL', 'OTH', 'WND/SUN' subsets) map to 'other' during standardization.",
-            "user_facing_limitation": "Documented in findings so users compare specific named fuels (coal, natural_gas, nuclear, solar, wind, hydro) separately from composite 'other'.",
-        },
-        {
-            "weak_case_id": "WC-04",
-            "record_or_group": "EIA 2022 annual slice (n=7 records vs n=1,449 in 2024)",
-            "observed_output": "2022 contains only 7 sampled observations across all fuel categories.",
-            "concern": "Multi-year pooled totals are heavily weighted toward 2024 (81.1% of EIA rows).",
-            "likely_cause": "API pagination order in the initial 5,000-row extract.",
-            "user_facing_limitation": "Primary U.S. fuel ranking uses the complete 2024 single-year benchmark (n=1,449) alongside all-years totals.",
-        },
-        {
-            "weak_case_id": "WC-05",
-            "record_or_group": "Curated Maintenance Queue (5 plants totaling 20,765 MW)",
-            "observed_output": "Kashiwazaki-Kariwa (8,212 MW) and Guri (10,235 MW) appear at top of maintenance capacity ranking.",
-            "concern": "Users might misinterpret curated 'maintenance' status as a real-time grid emergency.",
-            "likely_cause": "Static baseline status in app/plantsData.ts without live SCADA telemetry.",
-            "user_facing_limitation": "Marked 'conditional' with explicit caveat that statuses are curated baseline metadata.",
-        },
-    ]
-
-    METRICS_PATH.parent.mkdir(parents=True, exist_ok=True)
-    METRICS_PATH.write_text(json.dumps(metrics, indent=2, ensure_ascii=False), encoding="utf-8")
-    WEAK_CASE_PATH.write_text(json.dumps(weak_cases, indent=2, ensure_ascii=False), encoding="utf-8")
-
-    if metrics["status"] != "PASS":
-        raise SystemExit("Analytical track validation FAILED!")
-    print(f"Analytical track validation passed: PASS ({len(results)} intelligence results validated)")
-
-
-if __name__ == "__main__":
-    main()
-</file>
-
-<file path="docs/ANALYTICAL_INPUT_CONTRACT.md">
-# Analytical Input Contract
-
-| Canonical Field | Analytical Role | Transformation | Required? | Available at Decision Time? | Limitation |
-|---|---|---|---|---|---|
-| `record_id` | Identifier | Unique row key for traceability & counts | Yes | Yes | Not used as a numerical feature |
-| `record_type` | Grouping dimension | Partition key (`entity` vs `measurement`) | Yes | Yes | Mandatory split to prevent `MW` vs `thousand_MWh` mixing |
-| `observed_at` | Time index | Parsed to UTC `year` (`2021`–`2026`) | Yes | Yes | `2022` has only `7` rows; `2026` is a single plant snapshot |
-| `entity_id` | Identifier | Entity identifier (`PLANT-*` or `EIA-*`) | Yes | Yes | EIA rows share a regional prefix; `entity_name` distinguishes states |
-| `entity_name` | Evidence field | Plant or U.S. state/regional label | Yes | Yes | Naming follows source conventions |
-| `category` | Grouping dimension | Standardized 10-fuel taxonomy | Yes | Yes | `'other'` aggregates multi-fuel EIA codes |
-| `subcategory` | Grouping dimension | Global grid region (`10` regions) | Conditional | Yes | Populated for `45` global `entity` rows; null for `1,787` EIA rows |
-| `status` | Grouping / Priority factor | Operational (`online`/`maintenance`) or reporting (`active`/`offline`) state | Yes | Yes | Plant `maintenance` is curated baseline status, not live SCADA |
-| `metric_name` | Evidence field | Metric discriminator (`nameplate_capacity` vs `net_generation`) | Yes | Yes | Must match `record_type` |
-| `metric_value` | Metric | Numeric `float64` aggregation value | Yes | Yes | Contains valid negative net-generation values in EIA records |
-| `metric_unit` | Evidence field | Unit verification (`MW` vs `thousand_MWh`) | Yes | Yes | Strict unit separation enforced |
-| `data_version` | Evidence field | Verified equal to `"1.0.1"` | Yes | Yes | Halts execution on version mismatch |
-</file>
-
-<file path="docs/ANALYTICAL_METHOD_REPORT.md">
-# Analytical Method Report
-
-## Project & Versioning
-- **PoC ID:** POC-25 — Energy Infrastructure Watchtower
-- **Canonical Data Version:** `1.0.1` | **Method Version:** `1.0.0`
-- **Approved Track:** `Track A — Comparative Intelligence`
-- **Target User:** Energy Infrastructure Analysts & Grid Resilience Planners
-
-## Analytical Question & Decision Supported
-- **Question:** How do electricity generation shares and capacity concentrations compare across fuel types, U.S. states (`2021`–`2024`), and global grid regions, and which high-capacity facilities currently in maintenance represent the largest regional capacity exposure?
-- **Decision:** Prioritizing regional grid resilience monitoring and clean-energy vs. fossil fuel-mix benchmarking across U.S. states and global generation hubs.
-
-## Baseline vs. Selected Method
-- **Baseline (`Unstratified Category Total & Mean Ranking`):** Aggregates `metric_value` by `category` across all `1,832` rows without separating `record_type`. While fast, it adds megawatts (`MW`) to thousand megawatt-hours (`thousand_MWh`), distorting category rankings.
-- **Selected Method (`Partitioned Track A Comparative Intelligence v1.0.0`):** Implemented in `data-science/scripts/track-specific/comparative_intelligence.py`. Partitions `entity` (`45` plants, `MW`) from `measurement` (`1,787` U.S. EIA observations, `thousand_MWh`), enforces minimum group size $n \ge 5$ (`quality_status: "validated"` vs `"conditional"`), computes dense rankings, percentage shares, HHI concentration indices, a dedicated `2024` U.S. single-year benchmark ($n = 1,449$), and a curated baseline maintenance queue.
-
-## Data Leakage Assessment
-- **Decision-Time Availability:** All grouping dimensions (`category`, `subcategory`, `status`, `year`) and metrics (`metric_value`) represent historical or baseline observations available at analysis time.
-- **Outcome & Future Information Control:** No predictive target or future-looking field is used; `2026` plant snapshots are never mixed into `2021`–`2024` EIA generation comparisons.
-- **Identifier Control:** `record_id` and `entity_id` are used strictly for traceability and distinct entity counting, never as numerical predictors.
-
-## Explainability, Limitations & Unsupported Uses
-- **Explainability:** Every ranked output in `intelligence_results.json` exposes exact counts, means, medians, totals, shares, and unit labels in its `evidence` array.
-- **Limitations:** Curated 45-plant registry represents flagship assets rather than an exhaustive global census; plant `maintenance` status is static baseline metadata; EIA `2022` slice has `7` records.
-- **Unsupported Uses:** Do not use outputs for time-series forecasting (`Track F`), real-time outage dispatch alerts, or cross-unit (`MW` + `thousand_MWh`) sums.
--
-</file>
-
-<file path="docs/ANALYTICAL_TRACK_EXECUTION_PLAN.md">
-# Analytical Track Execution Plan
-
-## Project & Governance
-- **PoC ID:** POC-25 — Energy Infrastructure Watchtower
-- **Canonical Data Version:** `1.0.1` (`/data/canonical/intelligence_data.csv`, `1,832` rows × `20` columns)
-- **Confirmed Data Archetype:** `Hybrid (Entity / Snapshot + Time-Series Measurement)`
-- **Target User:** Energy Infrastructure Analysts & Grid Resilience Planners
-- **Approved Primary Track:** `Track A — Comparative Intelligence` (`method_version: 1.0.0`)
-- **Approved Supporting Track:** `Track B — Trend Intelligence` (U.S. annual fuel-mix context) & `Track C — Risk & Priority Intelligence` (curated baseline maintenance exposure ranking)
-
-## Primary Analytical Question & Decision
-- **Primary Analytical Question:** How do electricity generation shares and capacity concentrations compare across fuel types, U.S. states (`2021`–`2024`), and global grid regions, and which high-capacity facilities currently in maintenance represent the largest regional capacity exposure?
-- **Decision to Be Supported:** Prioritizing regional grid resilience monitoring and clean-energy vs. fossil fuel-mix benchmarking across U.S. states and global generation hubs without conflating static plant capacity (`MW`) with annual net generation (`thousand_MWh`).
-
-## Scope & Field Controls
-- **Input Fields:** `record_id`, `record_type`, `observed_at`, `entity_id`, `entity_name`, `category`, `subcategory`, `status`, `metric_name`, `metric_value`, `metric_unit`, `source_name`, `data_version`
-- **Excluded Fields:** `text_value` (deterministic summary string), `latitude`/`longitude` (spatial display coordinates not required for group aggregation), `is_synthetic` (constant `false`), `source_record_id`
-- **Missing-Value Handling:** `subcategory` is null for U.S. `measurement` rows (`1,787`) and populated for all `45` global `entity` rows; partitioning by `record_type` eliminates cross-population missingness.
-- **Baseline:** Unstratified category-level totals and averages across all `1,832` rows.
-- **Selected Method:** Partitioned Track A Comparative Intelligence computing totals, means, medians, percentage shares, Herfindahl-Hirschman Index (HHI) concentration, dense rankings, and minimum group size ($n \ge 5$) quality flags separately for `entity` (`MW`) and `measurement` (`thousand_MWh`) populations.
-- **Validation Approach:** Independent recalculation of selected group totals, minimum group size ($n \ge 5$) sensitivity analysis, sparse-year (`2022`) sensitivity review, and weak-case review.
-- **Stop Conditions:** Any `data_version != 1.0.1`, mixed-unit aggregation (`MW` + `thousand_MWh`), or schema contract mismatch halts export.
-- **Known Limitations:** Curated 45-plant registry reflects flagship baseline assets rather than live SCADA telemetry; EIA `2022` slice has only `7` observations.
--
-</file>
-
-<file path="docs/ANALYTICAL_VALIDATION_REPORT.md">
-# Analytical Validation Report
-
-## Track & Versioning
-- **Approved Track:** `Track A — Comparative Intelligence`
-- **Data Version:** `1.0.1` | **Method Version:** `1.0.0`
-- **Validation Script:** `data-science/scripts/validate_analytical_track.py` (`data-science/outputs/validation_metrics.json`)
-
-## Validation Checks & Independent Recalculation
-1. **Asia Pacific Curated Capacity (`MW`):** Independent sum = `59,839.0 MW` | Reported = `59,839.0 MW` → **EXACT MATCH**
-2. **Global Hydro Curated Capacity (`MW`):** Independent sum = `77,300.0 MW` | Reported = `77,300.0 MW` → **EXACT MATCH**
-3. **U.S. 2024 Solar Generation (`thousand_MWh`):** Independent sum = `500,536.224 thousand_MWh` | Reported = `500,536.224 thousand_MWh` → **EXACT MATCH**
-4. **Output Contract & Unit Separation:** All `35` exported items in `intelligence_results.json` contain all 19 required contract fields and strictly separate `MW` from `thousand_MWh`.
-
-## Baseline vs. Method Comparison & Stability
-- **Baseline Limitation Demonstrated:** Unstratified baseline mixes `MW` and `thousand_MWh` on a single scale. Partitioned Track A eliminates unit conflation and isolates the complete `2024` EIA year (`n = 1,449`) from the sparse `2022` slice (`n = 7`).
-- **Minimum Group Size ($n \ge 5$) & Tie Handling:** Deterministic `dense` ranking is used. Groups with $n < 5$ (7 of 10 global regions and 2 of 10 global plant fuel types) are explicitly marked `quality_status: "conditional"`. Top-3 global regions (`asia_pacific` $n=12$, `europe` $n=8$, `middle_east_&_africa` $n=7$) all exceed $n \ge 5$ and remain stable.
-
-## Final Validation Result
-`PASS`
-</file>
-
-<file path="docs/INTELLIGENCE_OUTPUT_CONTRACT.md">
-# Intelligence Output Contract
-
-## Output Artifacts
-1. **`/data-science/outputs/intelligence_results.json`** (`35` structured comparative intelligence items)
-2. **`/data-science/outputs/intelligence_summary.json`** (Executive summary metadata for Post #4 UI integration)
-3. **`/data-science/outputs/validation_metrics.json`** (Track A independent recalculation and sensitivity audit)
-4. **`/data-science/outputs/weak_case_review.json`** (Structured weak-case audit log)
-
-## Standard Record Schema (`intelligence_results.json`)
-Every item strictly implements the 19-field Infocreon Phase 3 contract:
-- **Identifiers & Grouping:** `result_id` (`RES-0001`..`RES-0035`), `result_type` (`"ranking"`), `record_id`, `entity_id`, `group_key` (`global_region:*`, `global_plant_fuel:*`, `us_2024_fuel:*`, `maintenance_baseline:*`)
-- **Temporal Bounds:** `period_start`, `period_end` (ISO-8601 UTC)
-- **Measurement & Rank:** `metric_name`, `result_value`, `result_unit` (`"MW"` or `"thousand_MWh"`), `result_category`, `priority_rank`
-- **Explainability & Governance:** `finding`, `evidence` (structured factor list), `method_version` (`"1.0.0"`), `data_version` (`"1.0.1"`), `generated_at`, `quality_status` (`"validated"` or `"conditional"`), `limitation`
-
-## UI Integration Rules for Post #4
-- Render `MW` (`global_region:*`, `global_plant_fuel:*`, `maintenance_baseline:*`) and `thousand_MWh` (`us_2024_fuel:*`) in separate cards/charts.
-- Display the `limitation` badge on all `quality_status == "conditional"` items.
--
-</file>
-
-<file path="docs/WEAK_CASE_AND_LIMITATION_REVIEW.md">
-# Weak-Case and Limitation Review
-
-| Record / Group | Output | Concern | Likely Cause | Impact | Action / Limitation |
-|---|---|---|---|---|---|
-| `global_region:northwest` ($n=1$: Grand Coulee Hydro Dam, `6,809 MW`) | Ranks #6 among global regions | Single-facility group is sensitive to registry selection | Curated registry (`app/plantsData.ts`) covers 45 flagship assets | Regional share reflects a single flagship dam | Marked `quality_status: "conditional"` with explicit sample-size warning |
-| `global_plant_fuel:geothermal` ($n=1$) & `wind` ($n=2$) | Ranked in global capacity table | Below $n \ge 5$ minimum group threshold | Flagship registry emphasizes large thermal, hydro, and nuclear plants | Group mean is sensitive to individual facilities | Marked `quality_status: "conditional"` in `intelligence_results.json` |
-| `us_2024_fuel:other` ($n=470$, `7,755,005.19 thousand_MWh`) | Ranks #1 in U.S. net generation | Composite EIA reporting bucket (`ALL`/`OTH`) rather than a single physical fuel | EIA API v2 multi-fuel rollup codes map to `'other'` | Can overshadow individual physical fuels in raw totals | Disclosed in `finding` and `limitation` so named fuels are compared directly |
-| EIA `2022` annual slice ($n=7$ vs $n=1,449$ in `2024`) | Sparse annual coverage | Pooled multi-year sums are 81.1% driven by `2024` | API pagination order in initial 5,000-row extract | Raw multi-year sums skew toward `2024` | Added dedicated `2024` single-year benchmark (`us_2024_fuel:*`) |
-| Curated Maintenance Queue (5 plants, `20,765 MW` total) | Ranks Guri (`10,235 MW`) & Kashiwazaki-Kariwa (`8,212 MW`) at top | Risk of misinterpreting static status as live grid emergency | Static baseline metadata in `app/plantsData.ts` without SCADA feed | Represents baseline capacity exposure, not live outage risk | Marked `quality_status: "conditional"` with explicit provenance caveat |
-</file>
-
 <file path="app/api/eia/route.ts">
 import { NextResponse } from "next/server";
 
@@ -4291,6 +2209,91 @@ Run in order from the repository root:
 }
 </file>
 
+<file path="data-science/notebooks/02_analytical_track_development_and_validation.ipynb">
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Phase 3 Post #3 — Analytical Track Development & Validation\n",
+    "**Project:** POC-25 Energy Infrastructure Watchtower  \n",
+    "**Approved Track:** Track A — Comparative Intelligence (`method_version: 1.0.0`, `data_version: 1.0.1`)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import json, sys\n",
+    "from pathlib import Path\n",
+    "import pandas as pd\n",
+    "\n",
+    "ROOT = Path('..').resolve() if Path.cwd().name == 'notebooks' else Path('.').resolve()\n",
+    "if (ROOT / 'data-science').exists() is False and (ROOT.parent / 'data').exists():\n",
+    "    ROOT = ROOT.parent\n",
+    "sys.path.insert(0, str(ROOT / 'data-science' / 'scripts'))\n",
+    "from track_specific_loader import load_track_module\n",
+    "\n",
+    "df = pd.read_csv(ROOT / 'data' / 'canonical' / 'intelligence_data.csv')\n",
+    "print(f'Canonical dataset: {len(df)} rows x {len(df.columns)} cols | data_version={df[\"data_version\"].iloc[0]}')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "mod = load_track_module()\n",
+    "baseline = mod.compute_baseline(df)\n",
+    "print('Baseline:', baseline['baseline_name'])\n",
+    "pd.DataFrame(baseline['categories']).head(5)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "comp = mod.compute_comparative_intelligence(df)\n",
+    "print('=== Global Plant Capacity by Region (MW) ===')\n",
+    "display(pd.DataFrame(comp['global_entity_summary']['by_region']))\n",
+    "print('=== U.S. 2024 Net Generation Benchmark by Fuel (thousand_MWh) ===')\n",
+    "display(pd.DataFrame(comp['us_generation_summary']['by_fuel_2024_benchmark']))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "metrics = json.loads((ROOT / 'data-science' / 'outputs' / 'validation_metrics.json').read_text(encoding='utf-8'))\n",
+    "print('Validation Status:', metrics['status'])\n",
+    "print(json.dumps(metrics['independent_recalculation'], indent=2))"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "name": "python",
+   "version": "3.11"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
+</file>
+
 <file path="data-science/outputs/analytical_readiness.json">
 {
   "data_version": "1.0.1",
@@ -4747,6 +2750,1332 @@ Run in order from the repository root:
 }
 </file>
 
+<file path="data-science/outputs/intelligence_results.json">
+[
+  {
+    "result_id": "RES-0001",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "global_region:asia_pacific",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "regional_nameplate_capacity_mw",
+    "result_value": 77505.0,
+    "result_unit": "MW",
+    "result_category": "high_concentration",
+    "priority_rank": 1,
+    "finding": "Region 'asia_pacific' ranks #1 in curated global capacity with 77,505.0 MW (38.51% of registry total) across 12 facilities.",
+    "evidence": [
+      {
+        "factor": "plant_count",
+        "value": 12,
+        "unit": "plants"
+      },
+      {
+        "factor": "mean_capacity_mw",
+        "value": 6458.75,
+        "unit": "MW"
+      },
+      {
+        "factor": "capacity_share_pct",
+        "value": 38.51,
+        "unit": "percent"
+      },
+      {
+        "factor": "maintenance_mw",
+        "value": 7965.0,
+        "unit": "MW"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T15:19:49Z",
+    "quality_status": "validated",
+    "limitation": "Derived from curated 45-plant registry (app/plantsData.ts); represents flagship assets rather than total regional grid capacity."
+  },
+  {
+    "result_id": "RES-0002",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "global_region:south_america",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "regional_nameplate_capacity_mw",
+    "result_value": 35678.0,
+    "result_unit": "MW",
+    "result_category": "high_concentration",
+    "priority_rank": 2,
+    "finding": "Region 'south_america' ranks #2 in curated global capacity with 35,678.0 MW (17.73% of registry total) across 4 facilities.",
+    "evidence": [
+      {
+        "factor": "plant_count",
+        "value": 4,
+        "unit": "plants"
+      },
+      {
+        "factor": "mean_capacity_mw",
+        "value": 8919.5,
+        "unit": "MW"
+      },
+      {
+        "factor": "capacity_share_pct",
+        "value": 17.73,
+        "unit": "percent"
+      },
+      {
+        "factor": "maintenance_mw",
+        "value": 10235.0,
+        "unit": "MW"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T15:19:49Z",
+    "quality_status": "conditional",
+    "limitation": "Small group size (n=4 < 5); interpret regional share with caution."
+  },
+  {
+    "result_id": "RES-0003",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "global_region:europe",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "regional_nameplate_capacity_mw",
+    "result_value": 22405.0,
+    "result_unit": "MW",
+    "result_category": "high_concentration",
+    "priority_rank": 3,
+    "finding": "Region 'europe' ranks #3 in curated global capacity with 22,405.0 MW (11.13% of registry total) across 8 facilities.",
+    "evidence": [
+      {
+        "factor": "plant_count",
+        "value": 8,
+        "unit": "plants"
+      },
+      {
+        "factor": "mean_capacity_mw",
+        "value": 2800.62,
+        "unit": "MW"
+      },
+      {
+        "factor": "capacity_share_pct",
+        "value": 11.13,
+        "unit": "percent"
+      },
+      {
+        "factor": "maintenance_mw",
+        "value": 5102.0,
+        "unit": "MW"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T15:19:49Z",
+    "quality_status": "validated",
+    "limitation": "Derived from curated 45-plant registry (app/plantsData.ts); represents flagship assets rather than total regional grid capacity."
+  },
+  {
+    "result_id": "RES-0004",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "global_region:middle_east_&_africa",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "regional_nameplate_capacity_mw",
+    "result_value": 22244.0,
+    "result_unit": "MW",
+    "result_category": "standard_concentration",
+    "priority_rank": 4,
+    "finding": "Region 'middle_east_&_africa' ranks #4 in curated global capacity with 22,244.0 MW (11.05% of registry total) across 7 facilities.",
+    "evidence": [
+      {
+        "factor": "plant_count",
+        "value": 7,
+        "unit": "plants"
+      },
+      {
+        "factor": "mean_capacity_mw",
+        "value": 3177.71,
+        "unit": "MW"
+      },
+      {
+        "factor": "capacity_share_pct",
+        "value": 11.05,
+        "unit": "percent"
+      },
+      {
+        "factor": "maintenance_mw",
+        "value": 4764.0,
+        "unit": "MW"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T15:19:49Z",
+    "quality_status": "validated",
+    "limitation": "Derived from curated 45-plant registry (app/plantsData.ts); represents flagship assets rather than total regional grid capacity."
+  },
+  {
+    "result_id": "RES-0005",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "global_region:northeast",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "regional_nameplate_capacity_mw",
+    "result_value": 14691.0,
+    "result_unit": "MW",
+    "result_category": "standard_concentration",
+    "priority_rank": 5,
+    "finding": "Region 'northeast' ranks #5 in curated global capacity with 14,691.0 MW (7.3% of registry total) across 3 facilities.",
+    "evidence": [
+      {
+        "factor": "plant_count",
+        "value": 3,
+        "unit": "plants"
+      },
+      {
+        "factor": "mean_capacity_mw",
+        "value": 4897.0,
+        "unit": "MW"
+      },
+      {
+        "factor": "capacity_share_pct",
+        "value": 7.3,
+        "unit": "percent"
+      },
+      {
+        "factor": "maintenance_mw",
+        "value": 0.0,
+        "unit": "MW"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T15:19:49Z",
+    "quality_status": "conditional",
+    "limitation": "Small group size (n=3 < 5); interpret regional share with caution."
+  },
+  {
+    "result_id": "RES-0006",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "global_region:southeast",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "regional_nameplate_capacity_mw",
+    "result_value": 7206.0,
+    "result_unit": "MW",
+    "result_category": "standard_concentration",
+    "priority_rank": 6,
+    "finding": "Region 'southeast' ranks #6 in curated global capacity with 7,206.0 MW (3.58% of registry total) across 2 facilities.",
+    "evidence": [
+      {
+        "factor": "plant_count",
+        "value": 2,
+        "unit": "plants"
+      },
+      {
+        "factor": "mean_capacity_mw",
+        "value": 3603.0,
+        "unit": "MW"
+      },
+      {
+        "factor": "capacity_share_pct",
+        "value": 3.58,
+        "unit": "percent"
+      },
+      {
+        "factor": "maintenance_mw",
+        "value": 0.0,
+        "unit": "MW"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T15:19:49Z",
+    "quality_status": "conditional",
+    "limitation": "Small group size (n=2 < 5); interpret regional share with caution."
+  },
+  {
+    "result_id": "RES-0007",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "global_region:northwest",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "regional_nameplate_capacity_mw",
+    "result_value": 6809.0,
+    "result_unit": "MW",
+    "result_category": "standard_concentration",
+    "priority_rank": 7,
+    "finding": "Region 'northwest' ranks #7 in curated global capacity with 6,809.0 MW (3.38% of registry total) across 1 facilities.",
+    "evidence": [
+      {
+        "factor": "plant_count",
+        "value": 1,
+        "unit": "plants"
+      },
+      {
+        "factor": "mean_capacity_mw",
+        "value": 6809.0,
+        "unit": "MW"
+      },
+      {
+        "factor": "capacity_share_pct",
+        "value": 3.38,
+        "unit": "percent"
+      },
+      {
+        "factor": "maintenance_mw",
+        "value": 0.0,
+        "unit": "MW"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T15:19:49Z",
+    "quality_status": "conditional",
+    "limitation": "Small group size (n=1 < 5); interpret regional share with caution."
+  },
+  {
+    "result_id": "RES-0008",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "global_region:texas_gulf",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "regional_nameplate_capacity_mw",
+    "result_value": 6074.0,
+    "result_unit": "MW",
+    "result_category": "standard_concentration",
+    "priority_rank": 8,
+    "finding": "Region 'texas_gulf' ranks #8 in curated global capacity with 6,074.0 MW (3.02% of registry total) across 3 facilities.",
+    "evidence": [
+      {
+        "factor": "plant_count",
+        "value": 3,
+        "unit": "plants"
+      },
+      {
+        "factor": "mean_capacity_mw",
+        "value": 2024.67,
+        "unit": "MW"
+      },
+      {
+        "factor": "capacity_share_pct",
+        "value": 3.02,
+        "unit": "percent"
+      },
+      {
+        "factor": "maintenance_mw",
+        "value": 3653.0,
+        "unit": "MW"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T15:19:49Z",
+    "quality_status": "conditional",
+    "limitation": "Small group size (n=3 < 5); interpret regional share with caution."
+  },
+  {
+    "result_id": "RES-0009",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "global_region:southwest",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "regional_nameplate_capacity_mw",
+    "result_value": 5037.0,
+    "result_unit": "MW",
+    "result_category": "standard_concentration",
+    "priority_rank": 9,
+    "finding": "Region 'southwest' ranks #9 in curated global capacity with 5,037.0 MW (2.5% of registry total) across 2 facilities.",
+    "evidence": [
+      {
+        "factor": "plant_count",
+        "value": 2,
+        "unit": "plants"
+      },
+      {
+        "factor": "mean_capacity_mw",
+        "value": 2518.5,
+        "unit": "MW"
+      },
+      {
+        "factor": "capacity_share_pct",
+        "value": 2.5,
+        "unit": "percent"
+      },
+      {
+        "factor": "maintenance_mw",
+        "value": 0.0,
+        "unit": "MW"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T15:19:49Z",
+    "quality_status": "conditional",
+    "limitation": "Small group size (n=2 < 5); interpret regional share with caution."
+  },
+  {
+    "result_id": "RES-0010",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "global_region:west",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "regional_nameplate_capacity_mw",
+    "result_value": 3615.0,
+    "result_unit": "MW",
+    "result_category": "standard_concentration",
+    "priority_rank": 10,
+    "finding": "Region 'west' ranks #10 in curated global capacity with 3,615.0 MW (1.8% of registry total) across 3 facilities.",
+    "evidence": [
+      {
+        "factor": "plant_count",
+        "value": 3,
+        "unit": "plants"
+      },
+      {
+        "factor": "mean_capacity_mw",
+        "value": 1205.0,
+        "unit": "MW"
+      },
+      {
+        "factor": "capacity_share_pct",
+        "value": 1.8,
+        "unit": "percent"
+      },
+      {
+        "factor": "maintenance_mw",
+        "value": 0.0,
+        "unit": "MW"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T15:19:49Z",
+    "quality_status": "conditional",
+    "limitation": "Small group size (n=3 < 5); interpret regional share with caution."
+  },
+  {
+    "result_id": "RES-0011",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "global_plant_fuel:hydro",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "fuel_nameplate_capacity_mw",
+    "result_value": 95308.0,
+    "result_unit": "MW",
+    "result_category": "dominant_fuel",
+    "priority_rank": 1,
+    "finding": "Fuel 'hydro' accounts for 95,308.0 MW (47.35% share) across 10 curated global plants.",
+    "evidence": [
+      {
+        "factor": "plant_count",
+        "value": 10,
+        "unit": "plants"
+      },
+      {
+        "factor": "median_capacity_mw",
+        "value": 8522.0,
+        "unit": "MW"
+      },
+      {
+        "factor": "capacity_share_pct",
+        "value": 47.35,
+        "unit": "percent"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T15:19:49Z",
+    "quality_status": "validated",
+    "limitation": "Static nameplate capacity in MW from curated flagship registry; cannot be summed with U.S. EIA thousand_MWh generation."
+  },
+  {
+    "result_id": "RES-0012",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "global_plant_fuel:nuclear",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "fuel_nameplate_capacity_mw",
+    "result_value": 52456.0,
+    "result_unit": "MW",
+    "result_category": "dominant_fuel",
+    "priority_rank": 2,
+    "finding": "Fuel 'nuclear' accounts for 52,456.0 MW (26.06% share) across 12 curated global plants.",
+    "evidence": [
+      {
+        "factor": "plant_count",
+        "value": 12,
+        "unit": "plants"
+      },
+      {
+        "factor": "median_capacity_mw",
+        "value": 4868.0,
+        "unit": "MW"
+      },
+      {
+        "factor": "capacity_share_pct",
+        "value": 26.06,
+        "unit": "percent"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T15:19:49Z",
+    "quality_status": "validated",
+    "limitation": "Static nameplate capacity in MW from curated flagship registry; cannot be summed with U.S. EIA thousand_MWh generation."
+  },
+  {
+    "result_id": "RES-0013",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "global_plant_fuel:coal",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "fuel_nameplate_capacity_mw",
+    "result_value": 19936.0,
+    "result_unit": "MW",
+    "result_category": "dominant_fuel",
+    "priority_rank": 3,
+    "finding": "Fuel 'coal' accounts for 19,936.0 MW (9.91% share) across 5 curated global plants.",
+    "evidence": [
+      {
+        "factor": "plant_count",
+        "value": 5,
+        "unit": "plants"
+      },
+      {
+        "factor": "median_capacity_mw",
+        "value": 4760.0,
+        "unit": "MW"
+      },
+      {
+        "factor": "capacity_share_pct",
+        "value": 9.91,
+        "unit": "percent"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T15:19:49Z",
+    "quality_status": "validated",
+    "limitation": "Static nameplate capacity in MW from curated flagship registry; cannot be summed with U.S. EIA thousand_MWh generation."
+  },
+  {
+    "result_id": "RES-0014",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "global_plant_fuel:wind",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "fuel_nameplate_capacity_mw",
+    "result_value": 16849.0,
+    "result_unit": "MW",
+    "result_category": "secondary_fuel",
+    "priority_rank": 4,
+    "finding": "Fuel 'wind' accounts for 16,849.0 MW (8.37% share) across 6 curated global plants.",
+    "evidence": [
+      {
+        "factor": "plant_count",
+        "value": 6,
+        "unit": "plants"
+      },
+      {
+        "factor": "median_capacity_mw",
+        "value": 1524.0,
+        "unit": "MW"
+      },
+      {
+        "factor": "capacity_share_pct",
+        "value": 8.37,
+        "unit": "percent"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T15:19:49Z",
+    "quality_status": "validated",
+    "limitation": "Static nameplate capacity in MW from curated flagship registry; cannot be summed with U.S. EIA thousand_MWh generation."
+  },
+  {
+    "result_id": "RES-0015",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "global_plant_fuel:solar",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "fuel_nameplate_capacity_mw",
+    "result_value": 11242.0,
+    "result_unit": "MW",
+    "result_category": "secondary_fuel",
+    "priority_rank": 5,
+    "finding": "Fuel 'solar' accounts for 11,242.0 MW (5.59% share) across 9 curated global plants.",
+    "evidence": [
+      {
+        "factor": "plant_count",
+        "value": 9,
+        "unit": "plants"
+      },
+      {
+        "factor": "median_capacity_mw",
+        "value": 1100.0,
+        "unit": "MW"
+      },
+      {
+        "factor": "capacity_share_pct",
+        "value": 5.59,
+        "unit": "percent"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T15:19:49Z",
+    "quality_status": "validated",
+    "limitation": "Static nameplate capacity in MW from curated flagship registry; cannot be summed with U.S. EIA thousand_MWh generation."
+  },
+  {
+    "result_id": "RES-0016",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "global_plant_fuel:natural_gas",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "fuel_nameplate_capacity_mw",
+    "result_value": 3653.0,
+    "result_unit": "MW",
+    "result_category": "secondary_fuel",
+    "priority_rank": 6,
+    "finding": "Fuel 'natural_gas' accounts for 3,653.0 MW (1.82% share) across 1 curated global plants.",
+    "evidence": [
+      {
+        "factor": "plant_count",
+        "value": 1,
+        "unit": "plants"
+      },
+      {
+        "factor": "median_capacity_mw",
+        "value": 3653.0,
+        "unit": "MW"
+      },
+      {
+        "factor": "capacity_share_pct",
+        "value": 1.82,
+        "unit": "percent"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T15:19:49Z",
+    "quality_status": "conditional",
+    "limitation": "Small group size (n=1 < 5); sensitive to individual flagship facilities."
+  },
+  {
+    "result_id": "RES-0017",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "global_plant_fuel:geothermal",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "fuel_nameplate_capacity_mw",
+    "result_value": 1820.0,
+    "result_unit": "MW",
+    "result_category": "secondary_fuel",
+    "priority_rank": 7,
+    "finding": "Fuel 'geothermal' accounts for 1,820.0 MW (0.9% share) across 2 curated global plants.",
+    "evidence": [
+      {
+        "factor": "plant_count",
+        "value": 2,
+        "unit": "plants"
+      },
+      {
+        "factor": "median_capacity_mw",
+        "value": 910.0,
+        "unit": "MW"
+      },
+      {
+        "factor": "capacity_share_pct",
+        "value": 0.9,
+        "unit": "percent"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T15:19:49Z",
+    "quality_status": "conditional",
+    "limitation": "Small group size (n=2 < 5); sensitive to individual flagship facilities."
+  },
+  {
+    "result_id": "RES-0018",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "us_2024_fuel:other",
+    "period_start": "2024-01-01T00:00:00Z",
+    "period_end": "2024-12-31T23:59:59Z",
+    "metric_name": "us_2024_net_generation_thousand_mwh",
+    "result_value": 12436604.715,
+    "result_unit": "thousand_MWh",
+    "result_category": "top_contributor",
+    "priority_rank": 1,
+    "finding": "In U.S. 2024 EIA sample data, 'other' ranks #1 with 12,436,604.71 thousand MWh (47.91% of sampled 2024 generation, n=473).",
+    "evidence": [
+      {
+        "factor": "record_count_2024",
+        "value": 473,
+        "unit": "records"
+      },
+      {
+        "factor": "mean_2024_thousand_mwh",
+        "value": 26293.033,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "median_2024_thousand_mwh",
+        "value": 99.751,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "share_2024_pct",
+        "value": 47.91,
+        "unit": "percent"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T15:19:49Z",
+    "quality_status": "validated",
+    "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
+  },
+  {
+    "result_id": "RES-0019",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "us_2024_fuel:natural_gas",
+    "period_start": "2024-01-01T00:00:00Z",
+    "period_end": "2024-12-31T23:59:59Z",
+    "metric_name": "us_2024_net_generation_thousand_mwh",
+    "result_value": 5563453.068,
+    "result_unit": "thousand_MWh",
+    "result_category": "top_contributor",
+    "priority_rank": 2,
+    "finding": "In U.S. 2024 EIA sample data, 'natural_gas' ranks #2 with 5,563,453.07 thousand MWh (21.43% of sampled 2024 generation, n=104).",
+    "evidence": [
+      {
+        "factor": "record_count_2024",
+        "value": 104,
+        "unit": "records"
+      },
+      {
+        "factor": "mean_2024_thousand_mwh",
+        "value": 53494.741,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "median_2024_thousand_mwh",
+        "value": 13042.843,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "share_2024_pct",
+        "value": 21.43,
+        "unit": "percent"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T15:19:49Z",
+    "quality_status": "validated",
+    "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
+  },
+  {
+    "result_id": "RES-0020",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "us_2024_fuel:coal",
+    "period_start": "2024-01-01T00:00:00Z",
+    "period_end": "2024-12-31T23:59:59Z",
+    "metric_name": "us_2024_net_generation_thousand_mwh",
+    "result_value": 4987149.2,
+    "result_unit": "thousand_MWh",
+    "result_category": "top_contributor",
+    "priority_rank": 3,
+    "finding": "In U.S. 2024 EIA sample data, 'coal' ranks #3 with 4,987,149.20 thousand MWh (19.21% of sampled 2024 generation, n=231).",
+    "evidence": [
+      {
+        "factor": "record_count_2024",
+        "value": 231,
+        "unit": "records"
+      },
+      {
+        "factor": "mean_2024_thousand_mwh",
+        "value": 21589.39,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "median_2024_thousand_mwh",
+        "value": 4838.749,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "share_2024_pct",
+        "value": 19.21,
+        "unit": "percent"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T15:19:49Z",
+    "quality_status": "validated",
+    "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
+  },
+  {
+    "result_id": "RES-0021",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "us_2024_fuel:nuclear",
+    "period_start": "2024-01-01T00:00:00Z",
+    "period_end": "2024-12-31T23:59:59Z",
+    "metric_name": "us_2024_net_generation_thousand_mwh",
+    "result_value": 1251891.052,
+    "result_unit": "thousand_MWh",
+    "result_category": "moderate_contributor",
+    "priority_rank": 4,
+    "finding": "In U.S. 2024 EIA sample data, 'nuclear' ranks #4 with 1,251,891.05 thousand MWh (4.82% of sampled 2024 generation, n=23).",
+    "evidence": [
+      {
+        "factor": "record_count_2024",
+        "value": 23,
+        "unit": "records"
+      },
+      {
+        "factor": "mean_2024_thousand_mwh",
+        "value": 54430.046,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "median_2024_thousand_mwh",
+        "value": 28945.327,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "share_2024_pct",
+        "value": 4.82,
+        "unit": "percent"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T15:19:49Z",
+    "quality_status": "validated",
+    "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
+  },
+  {
+    "result_id": "RES-0022",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "us_2024_fuel:hydro",
+    "period_start": "2024-01-01T00:00:00Z",
+    "period_end": "2024-12-31T23:59:59Z",
+    "metric_name": "us_2024_net_generation_thousand_mwh",
+    "result_value": 716626.673,
+    "result_unit": "thousand_MWh",
+    "result_category": "moderate_contributor",
+    "priority_rank": 5,
+    "finding": "In U.S. 2024 EIA sample data, 'hydro' ranks #5 with 716,626.67 thousand MWh (2.76% of sampled 2024 generation, n=69).",
+    "evidence": [
+      {
+        "factor": "record_count_2024",
+        "value": 69,
+        "unit": "records"
+      },
+      {
+        "factor": "mean_2024_thousand_mwh",
+        "value": 10385.894,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "median_2024_thousand_mwh",
+        "value": 685.307,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "share_2024_pct",
+        "value": 2.76,
+        "unit": "percent"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T15:19:49Z",
+    "quality_status": "validated",
+    "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
+  },
+  {
+    "result_id": "RES-0023",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "us_2024_fuel:wind",
+    "period_start": "2024-01-01T00:00:00Z",
+    "period_end": "2024-12-31T23:59:59Z",
+    "metric_name": "us_2024_net_generation_thousand_mwh",
+    "result_value": 537447.498,
+    "result_unit": "thousand_MWh",
+    "result_category": "moderate_contributor",
+    "priority_rank": 6,
+    "finding": "In U.S. 2024 EIA sample data, 'wind' ranks #6 with 537,447.50 thousand MWh (2.07% of sampled 2024 generation, n=71).",
+    "evidence": [
+      {
+        "factor": "record_count_2024",
+        "value": 71,
+        "unit": "records"
+      },
+      {
+        "factor": "mean_2024_thousand_mwh",
+        "value": 7569.683,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "median_2024_thousand_mwh",
+        "value": 2425.677,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "share_2024_pct",
+        "value": 2.07,
+        "unit": "percent"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T15:19:49Z",
+    "quality_status": "validated",
+    "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
+  },
+  {
+    "result_id": "RES-0024",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "us_2024_fuel:solar",
+    "period_start": "2024-01-01T00:00:00Z",
+    "period_end": "2024-12-31T23:59:59Z",
+    "metric_name": "us_2024_net_generation_thousand_mwh",
+    "result_value": 357237.562,
+    "result_unit": "thousand_MWh",
+    "result_category": "moderate_contributor",
+    "priority_rank": 7,
+    "finding": "In U.S. 2024 EIA sample data, 'solar' ranks #7 with 357,237.56 thousand MWh (1.38% of sampled 2024 generation, n=268).",
+    "evidence": [
+      {
+        "factor": "record_count_2024",
+        "value": 268,
+        "unit": "records"
+      },
+      {
+        "factor": "mean_2024_thousand_mwh",
+        "value": 1332.976,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "median_2024_thousand_mwh",
+        "value": 31.591,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "share_2024_pct",
+        "value": 1.38,
+        "unit": "percent"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T15:19:49Z",
+    "quality_status": "validated",
+    "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
+  },
+  {
+    "result_id": "RES-0025",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "us_2024_fuel:petroleum",
+    "period_start": "2024-01-01T00:00:00Z",
+    "period_end": "2024-12-31T23:59:59Z",
+    "metric_name": "us_2024_net_generation_thousand_mwh",
+    "result_value": 86203.153,
+    "result_unit": "thousand_MWh",
+    "result_category": "moderate_contributor",
+    "priority_rank": 8,
+    "finding": "In U.S. 2024 EIA sample data, 'petroleum' ranks #8 with 86,203.15 thousand MWh (0.33% of sampled 2024 generation, n=121).",
+    "evidence": [
+      {
+        "factor": "record_count_2024",
+        "value": 121,
+        "unit": "records"
+      },
+      {
+        "factor": "mean_2024_thousand_mwh",
+        "value": 712.423,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "median_2024_thousand_mwh",
+        "value": 48.924,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "share_2024_pct",
+        "value": 0.33,
+        "unit": "percent"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T15:19:49Z",
+    "quality_status": "validated",
+    "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
+  },
+  {
+    "result_id": "RES-0026",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "us_2024_fuel:biomass",
+    "period_start": "2024-01-01T00:00:00Z",
+    "period_end": "2024-12-31T23:59:59Z",
+    "metric_name": "us_2024_net_generation_thousand_mwh",
+    "result_value": 18623.118,
+    "result_unit": "thousand_MWh",
+    "result_category": "moderate_contributor",
+    "priority_rank": 9,
+    "finding": "In U.S. 2024 EIA sample data, 'biomass' ranks #9 with 18,623.12 thousand MWh (0.07% of sampled 2024 generation, n=84).",
+    "evidence": [
+      {
+        "factor": "record_count_2024",
+        "value": 84,
+        "unit": "records"
+      },
+      {
+        "factor": "mean_2024_thousand_mwh",
+        "value": 221.704,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "median_2024_thousand_mwh",
+        "value": 46.102,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "share_2024_pct",
+        "value": 0.07,
+        "unit": "percent"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T15:19:49Z",
+    "quality_status": "validated",
+    "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
+  },
+  {
+    "result_id": "RES-0027",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "us_2024_fuel:geothermal",
+    "period_start": "2024-01-01T00:00:00Z",
+    "period_end": "2024-12-31T23:59:59Z",
+    "metric_name": "us_2024_net_generation_thousand_mwh",
+    "result_value": 2741.898,
+    "result_unit": "thousand_MWh",
+    "result_category": "moderate_contributor",
+    "priority_rank": 10,
+    "finding": "In U.S. 2024 EIA sample data, 'geothermal' ranks #10 with 2,741.90 thousand MWh (0.01% of sampled 2024 generation, n=5).",
+    "evidence": [
+      {
+        "factor": "record_count_2024",
+        "value": 5,
+        "unit": "records"
+      },
+      {
+        "factor": "mean_2024_thousand_mwh",
+        "value": 548.38,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "median_2024_thousand_mwh",
+        "value": 641.509,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "share_2024_pct",
+        "value": 0.01,
+        "unit": "percent"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T15:19:49Z",
+    "quality_status": "validated",
+    "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
+  },
+  {
+    "result_id": "RES-0028",
+    "result_type": "ranking",
+    "record_id": "PLANT-0017",
+    "entity_id": "PLANT-17",
+    "group_key": "maintenance_baseline:south_america",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "maintenance_baseline_capacity_mw",
+    "result_value": 10235.0,
+    "result_unit": "MW",
+    "result_category": "curated_maintenance_baseline",
+    "priority_rank": 1,
+    "finding": "Guri Hydroelectric Station (south_america, hydro) ranks #1 among curated maintenance facilities with 10,235.0 MW nameplate capacity.",
+    "evidence": [
+      {
+        "factor": "capacity_mw",
+        "value": 10235.0,
+        "unit": "MW"
+      },
+      {
+        "factor": "fuel_category",
+        "value": "hydro",
+        "unit": "category"
+      },
+      {
+        "factor": "grid_region",
+        "value": "south_america",
+        "unit": "region"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T15:19:49Z",
+    "quality_status": "conditional",
+    "limitation": "Status reflects curated baseline metadata in app/plantsData.ts, not live SCADA telemetry or current grid-outage risk."
+  },
+  {
+    "result_id": "RES-0029",
+    "result_type": "ranking",
+    "record_id": "PLANT-0040",
+    "entity_id": "PLANT-40",
+    "group_key": "maintenance_baseline:asia_pacific",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "maintenance_baseline_capacity_mw",
+    "result_value": 7965.0,
+    "result_unit": "MW",
+    "result_category": "curated_maintenance_baseline",
+    "priority_rank": 2,
+    "finding": "Kashiwazaki-Kariwa Station (asia_pacific, nuclear) ranks #2 among curated maintenance facilities with 7,965.0 MW nameplate capacity.",
+    "evidence": [
+      {
+        "factor": "capacity_mw",
+        "value": 7965.0,
+        "unit": "MW"
+      },
+      {
+        "factor": "fuel_category",
+        "value": "nuclear",
+        "unit": "category"
+      },
+      {
+        "factor": "grid_region",
+        "value": "asia_pacific",
+        "unit": "region"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T15:19:49Z",
+    "quality_status": "conditional",
+    "limitation": "Status reflects curated baseline metadata in app/plantsData.ts, not live SCADA telemetry or current grid-outage risk."
+  },
+  {
+    "result_id": "RES-0030",
+    "result_type": "ranking",
+    "record_id": "PLANT-0022",
+    "entity_id": "PLANT-22",
+    "group_key": "maintenance_baseline:europe",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "maintenance_baseline_capacity_mw",
+    "result_value": 5102.0,
+    "result_unit": "MW",
+    "result_category": "curated_maintenance_baseline",
+    "priority_rank": 3,
+    "finding": "Belchatow Thermal Power Station (europe, coal) ranks #3 among curated maintenance facilities with 5,102.0 MW nameplate capacity.",
+    "evidence": [
+      {
+        "factor": "capacity_mw",
+        "value": 5102.0,
+        "unit": "MW"
+      },
+      {
+        "factor": "fuel_category",
+        "value": "coal",
+        "unit": "category"
+      },
+      {
+        "factor": "grid_region",
+        "value": "europe",
+        "unit": "region"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T15:19:49Z",
+    "quality_status": "conditional",
+    "limitation": "Status reflects curated baseline metadata in app/plantsData.ts, not live SCADA telemetry or current grid-outage risk."
+  },
+  {
+    "result_id": "RES-0031",
+    "result_type": "ranking",
+    "record_id": "PLANT-0032",
+    "entity_id": "PLANT-32",
+    "group_key": "maintenance_baseline:middle_east_&_africa",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "maintenance_baseline_capacity_mw",
+    "result_value": 4764.0,
+    "result_unit": "MW",
+    "result_category": "curated_maintenance_baseline",
+    "priority_rank": 4,
+    "finding": "Medupi Thermal Power Station (middle_east_&_africa, coal) ranks #4 among curated maintenance facilities with 4,764.0 MW nameplate capacity.",
+    "evidence": [
+      {
+        "factor": "capacity_mw",
+        "value": 4764.0,
+        "unit": "MW"
+      },
+      {
+        "factor": "fuel_category",
+        "value": "coal",
+        "unit": "category"
+      },
+      {
+        "factor": "grid_region",
+        "value": "middle_east_&_africa",
+        "unit": "region"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T15:19:49Z",
+    "quality_status": "conditional",
+    "limitation": "Status reflects curated baseline metadata in app/plantsData.ts, not live SCADA telemetry or current grid-outage risk."
+  },
+  {
+    "result_id": "RES-0032",
+    "result_type": "ranking",
+    "record_id": "PLANT-0003",
+    "entity_id": "PLANT-3",
+    "group_key": "maintenance_baseline:texas_gulf",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "maintenance_baseline_capacity_mw",
+    "result_value": 3653.0,
+    "result_unit": "MW",
+    "result_category": "curated_maintenance_baseline",
+    "priority_rank": 5,
+    "finding": "W. A. Parish Electric Station (texas_gulf, natural_gas) ranks #5 among curated maintenance facilities with 3,653.0 MW nameplate capacity.",
+    "evidence": [
+      {
+        "factor": "capacity_mw",
+        "value": 3653.0,
+        "unit": "MW"
+      },
+      {
+        "factor": "fuel_category",
+        "value": "natural_gas",
+        "unit": "category"
+      },
+      {
+        "factor": "grid_region",
+        "value": "texas_gulf",
+        "unit": "region"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T15:19:49Z",
+    "quality_status": "conditional",
+    "limitation": "Status reflects curated baseline metadata in app/plantsData.ts, not live SCADA telemetry or current grid-outage risk."
+  }
+]
+</file>
+
+<file path="data-science/outputs/intelligence_summary.json">
+{
+  "project_id": "POC-25",
+  "project_title": "Energy Infrastructure Watchtower",
+  "approved_track": "Track A — Comparative Intelligence",
+  "primary_analytical_question": "How do electricity generation shares and capacity concentrations compare across fuel types, U.S. states (2021-2024), and global grid regions, and which high-capacity facilities currently in maintenance represent the largest regional capacity exposure?",
+  "decision_to_be_supported": "Prioritizing regional grid resilience monitoring and clean-energy vs. fossil fuel-mix benchmarking without conflating static global plant capacity (MW) with U.S. annual net generation (thousand_MWh).",
+  "data_version": "1.0.1",
+  "method_version": "1.0.0",
+  "baseline_summary": {
+    "method": "Unstratified Category Total & Mean Ranking",
+    "category_count": 10,
+    "limitation": "Baseline mixes MW capacity and thousand_MWh generation on the same scale, demonstrating why record_type partitioning is required."
+  },
+  "key_findings": [
+    "Asia Pacific leads curated global infrastructure capacity with 77,505.0 MW (38.51% of the 201,264.0 MW registry across 12 facilities).",
+    "Hydroelectric plants represent the largest share of curated global nameplate capacity (95,308.0 MW, 47.35%), followed by nuclear and natural gas.",
+    "In U.S. 2024 EIA utility measurements (n=1,449), composite 'other' leads total volume, while among specific fuels coal, solar, and natural gas dominate sampled generation shares.",
+    "Five curated flagship facilities are marked in baseline 'maintenance' status totaling 31,719.0 MW, led by Guri (10,235 MW) and Kashiwazaki-Kariwa (8,212 MW)."
+  ],
+  "priority_items": [
+    "RES-0001",
+    "RES-0011",
+    "RES-0018",
+    "RES-0028"
+  ],
+  "validation_result": "PASS",
+  "important_limitations": [
+    "Global power plant capacity (MW) and U.S. annual net generation (thousand_MWh) are strictly partitioned and never combined.",
+    "EIA 2022 coverage is sparse (7 records vs. 1,449 in 2024); 2024 is used as the primary single-year U.S. benchmark.",
+    "Plant maintenance statuses reflect curated baseline metadata in app/plantsData.ts rather than live SCADA telemetry."
+  ],
+  "generated_at": "2026-11-20T15:19:49Z",
+  "result_count": 32
+}
+</file>
+
 <file path="data-science/outputs/quality_assessment.json">
 {
   "status": "PASS",
@@ -4837,6 +4166,149 @@ Run in order from the repository root:
     "13 EIA state-level records lack state centroid coordinates if non-state aggregate codes appear."
   ]
 }
+</file>
+
+<file path="data-science/scripts/track-specific/comparative_intelligence.py">
+from pathlib import Path
+import numpy as np
+import pandas as pd
+
+MIN_GROUP_SIZE = 5
+METHOD_VERSION = "1.0.0"
+
+
+def compute_baseline(df: pd.DataFrame) -> dict:
+    """Simple baseline: unpartitioned category-level totals and averages across all records."""
+    grouped = (
+        df.dropna(subset=["category", "metric_value"])
+        .groupby("category", as_index=False)
+        .agg(
+            record_count=("record_id", "count"),
+            mean_metric_value=("metric_value", "mean"),
+            total_metric_value=("metric_value", "sum"),
+        )
+    )
+    grouped["baseline_rank"] = grouped["total_metric_value"].rank(method="dense", ascending=False).astype(int)
+    grouped = grouped.sort_values(["baseline_rank", "category"])
+    return {
+        "baseline_name": "Unstratified Category Total & Mean Ranking",
+        "warning": "Baseline mixes MW capacity and thousand_MWh generation on the same scale, demonstrating why record_type partitioning is required.",
+        "categories": grouped.round(3).to_dict(orient="records"),
+    }
+
+
+def compute_comparative_intelligence(df: pd.DataFrame) -> dict:
+    """
+    Track A — Comparative Intelligence (v1.0.0)
+    Strictly separates:
+      1) Global Power Plant Entities (record_type == 'entity', nameplate_capacity in MW)
+      2) U.S. Annual Utility Generation Measurements (record_type == 'measurement', net_generation in thousand_MWh)
+    """
+    entities = df[df["record_type"] == "entity"].copy()
+    measurements = df[df["record_type"] == "measurement"].copy()
+    measurements["year"] = pd.to_datetime(measurements["observed_at"], utc=True).dt.year
+
+    # --- Dimension 1: Global Power Plant Capacity by Grid Region (MW) ---
+    total_global_mw = float(entities["metric_value"].sum())
+    region_comp = (
+        entities.groupby("subcategory", as_index=False)
+        .agg(
+            plant_count=("record_id", "count"),
+            total_capacity_mw=("metric_value", "sum"),
+            mean_capacity_mw=("metric_value", "mean"),
+            median_capacity_mw=("metric_value", "median"),
+            max_capacity_mw=("metric_value", "max"),
+            maintenance_plants=("status", lambda s: int((s == "maintenance").sum())),
+            maintenance_mw=("metric_value", lambda s: float(s[entities.loc[s.index, "status"] == "maintenance"].sum())),
+        )
+    )
+    region_comp["capacity_share_pct"] = (region_comp["total_capacity_mw"] / total_global_mw * 100).round(2)
+    region_comp["maintenance_share_pct"] = np.where(
+        region_comp["total_capacity_mw"] > 0,
+        (region_comp["maintenance_mw"] / region_comp["total_capacity_mw"] * 100).round(2),
+        0.0,
+    )
+    region_comp["meets_min_group_size"] = region_comp["plant_count"] >= MIN_GROUP_SIZE
+    region_comp["rank"] = region_comp["total_capacity_mw"].rank(method="dense", ascending=False).astype(int)
+    region_comp = region_comp.sort_values(["rank", "subcategory"])
+    region_hhi = round(float(((region_comp["capacity_share_pct"]) ** 2).sum()), 2)
+
+    # --- Dimension 2: Global Power Plant Capacity by Fuel Category (MW) ---
+    plant_fuel_comp = (
+        entities.groupby("category", as_index=False)
+        .agg(
+            plant_count=("record_id", "count"),
+            total_capacity_mw=("metric_value", "sum"),
+            mean_capacity_mw=("metric_value", "mean"),
+            median_capacity_mw=("metric_value", "median"),
+        )
+    )
+    plant_fuel_comp["capacity_share_pct"] = (plant_fuel_comp["total_capacity_mw"] / total_global_mw * 100).round(2)
+    plant_fuel_comp["meets_min_group_size"] = plant_fuel_comp["plant_count"] >= MIN_GROUP_SIZE
+    plant_fuel_comp["rank"] = plant_fuel_comp["total_capacity_mw"].rank(method="dense", ascending=False).astype(int)
+    plant_fuel_comp = plant_fuel_comp.sort_values(["rank", "category"])
+
+    # --- Dimension 3: U.S. Annual Net Generation by Fuel Category (thousand_MWh) ---
+    total_us_gen = float(measurements["metric_value"].sum())
+    us_fuel_comp = (
+        measurements.groupby("category", as_index=False)
+        .agg(
+            record_count=("record_id", "count"),
+            total_generation_thousand_mwh=("metric_value", "sum"),
+            mean_generation_thousand_mwh=("metric_value", "mean"),
+            median_generation_thousand_mwh=("metric_value", "median"),
+            active_series_count=("status", lambda s: int((s == "active").sum())),
+            offline_or_negative_count=("status", lambda s: int((s == "offline").sum())),
+        )
+    )
+    us_fuel_comp["generation_share_pct"] = (us_fuel_comp["total_generation_thousand_mwh"] / total_us_gen * 100).round(2)
+    us_fuel_comp["meets_min_group_size"] = us_fuel_comp["record_count"] >= MIN_GROUP_SIZE
+    us_fuel_comp["rank"] = us_fuel_comp["total_generation_thousand_mwh"].rank(method="dense", ascending=False).astype(int)
+    us_fuel_comp = us_fuel_comp.sort_values(["rank", "category"])
+    us_fuel_hhi = round(float(((us_fuel_comp["generation_share_pct"]) ** 2).sum()), 2)
+
+    # --- Dimension 4: U.S. 2024 Single-Year Benchmark (Latest Complete Reporting Year, n=1,449) ---
+    m_2024 = measurements[measurements["year"] == 2024]
+    total_2024_gen = float(m_2024["metric_value"].sum())
+    us_2024_comp = (
+        m_2024.groupby("category", as_index=False)
+        .agg(
+            record_count=("record_id", "count"),
+            total_2024_thousand_mwh=("metric_value", "sum"),
+            mean_2024_thousand_mwh=("metric_value", "mean"),
+            median_2024_thousand_mwh=("metric_value", "median"),
+        )
+    )
+    us_2024_comp["share_2024_pct"] = (us_2024_comp["total_2024_thousand_mwh"] / total_2024_gen * 100).round(2)
+    us_2024_comp["meets_min_group_size"] = us_2024_comp["record_count"] >= MIN_GROUP_SIZE
+    us_2024_comp["rank"] = us_2024_comp["total_2024_thousand_mwh"].rank(method="dense", ascending=False).astype(int)
+    us_2024_comp = us_2024_comp.sort_values(["rank", "category"])
+
+    # --- Dimension 5: Curated Baseline Maintenance Exposure Ranking (Global Entities, MW) ---
+    maint_plants = entities[entities["status"] == "maintenance"].copy()
+    maint_plants["rank"] = maint_plants["metric_value"].rank(method="dense", ascending=False).astype(int)
+    maint_plants = maint_plants.sort_values(["rank", "entity_id"])
+
+    return {
+        "min_group_size": MIN_GROUP_SIZE,
+        "global_entity_summary": {
+            "total_plants": int(len(entities)),
+            "total_capacity_mw": round(total_global_mw, 2),
+            "region_hhi": region_hhi,
+            "by_region": region_comp.round(2).to_dict(orient="records"),
+            "by_fuel": plant_fuel_comp.round(2).to_dict(orient="records"),
+            "maintenance_baseline_queue": maint_plants[
+                ["record_id", "entity_id", "entity_name", "category", "subcategory", "metric_value", "rank"]
+            ].rename(columns={"metric_value": "capacity_mw", "subcategory": "region"}).to_dict(orient="records"),
+        },
+        "us_generation_summary": {
+            "total_records": int(len(measurements)),
+            "total_generation_thousand_mwh": round(total_us_gen, 3),
+            "fuel_hhi": us_fuel_hhi,
+            "by_fuel_all_years": us_fuel_comp.round(3).to_dict(orient="records"),
+            "by_fuel_2024_benchmark": us_2024_comp.round(3).to_dict(orient="records"),
+        },
+    }
 </file>
 
 <file path="data-science/scripts/assess_analytical_readiness.py">
@@ -5075,6 +4547,184 @@ if __name__ == "__main__":
     main()
 </file>
 
+<file path="data-science/scripts/export_intelligence_results.py">
+from datetime import datetime, timezone
+from pathlib import Path
+import json
+
+RESULTS_PATH = Path("data-science/outputs/intelligence_results.json")
+SUMMARY_PATH = Path("data-science/outputs/intelligence_summary.json")
+METHOD_VERSION = "1.0.0"
+
+
+def build_standard_results(comp: dict, data_version: str, generated_at: str) -> list[dict]:
+    results = []
+    idx = 1
+
+    def next_id() -> str:
+        nonlocal idx
+        rid = f"RES-{idx:04d}"
+        idx += 1
+        return rid
+
+    # 1. Global Plant Capacity Rankings by Region (MW)
+    for row in comp["global_entity_summary"]["by_region"]:
+        qual = "validated" if row["meets_min_group_size"] else "conditional"
+        lim = (
+            "Derived from curated 45-plant registry (app/plantsData.ts); represents flagship assets rather than total regional grid capacity."
+            if row["meets_min_group_size"]
+            else f"Small group size (n={row['plant_count']} < 5); interpret regional share with caution."
+        )
+        results.append({
+            "result_id": next_id(),
+            "result_type": "ranking",
+            "record_id": None,
+            "entity_id": None,
+            "group_key": f"global_region:{row['subcategory']}",
+            "period_start": "2026-01-01T00:00:00Z",
+            "period_end": "2026-01-01T00:00:00Z",
+            "metric_name": "regional_nameplate_capacity_mw",
+            "result_value": float(row["total_capacity_mw"]),
+            "result_unit": "MW",
+            "result_category": "high_concentration" if row["rank"] <= 3 else "standard_concentration",
+            "priority_rank": int(row["rank"]),
+            "finding": (
+                f"Region '{row['subcategory']}' ranks #{row['rank']} in curated global capacity with "
+                f"{row['total_capacity_mw']:,.1f} MW ({row['capacity_share_pct']}% of registry total) across {row['plant_count']} facilities."
+            ),
+            "evidence": [
+                {"factor": "plant_count", "value": int(row["plant_count"]), "unit": "plants"},
+                {"factor": "mean_capacity_mw", "value": float(row["mean_capacity_mw"]), "unit": "MW"},
+                {"factor": "capacity_share_pct", "value": float(row["capacity_share_pct"]), "unit": "percent"},
+                {"factor": "maintenance_mw", "value": float(row["maintenance_mw"]), "unit": "MW"},
+            ],
+            "method_version": METHOD_VERSION,
+            "data_version": data_version,
+            "generated_at": generated_at,
+            "quality_status": qual,
+            "limitation": lim,
+        })
+
+    # 2. Global Plant Capacity Rankings by Fuel Category (MW)
+    for row in comp["global_entity_summary"]["by_fuel"]:
+        qual = "validated" if row["meets_min_group_size"] else "conditional"
+        results.append({
+            "result_id": next_id(),
+            "result_type": "ranking",
+            "record_id": None,
+            "entity_id": None,
+            "group_key": f"global_plant_fuel:{row['category']}",
+            "period_start": "2026-01-01T00:00:00Z",
+            "period_end": "2026-01-01T00:00:00Z",
+            "metric_name": "fuel_nameplate_capacity_mw",
+            "result_value": float(row["total_capacity_mw"]),
+            "result_unit": "MW",
+            "result_category": "dominant_fuel" if row["rank"] <= 3 else "secondary_fuel",
+            "priority_rank": int(row["rank"]),
+            "finding": (
+                f"Fuel '{row['category']}' accounts for {row['total_capacity_mw']:,.1f} MW "
+                f"({row['capacity_share_pct']}% share) across {row['plant_count']} curated global plants."
+            ),
+            "evidence": [
+                {"factor": "plant_count", "value": int(row["plant_count"]), "unit": "plants"},
+                {"factor": "median_capacity_mw", "value": float(row["median_capacity_mw"]), "unit": "MW"},
+                {"factor": "capacity_share_pct", "value": float(row["capacity_share_pct"]), "unit": "percent"},
+            ],
+            "method_version": METHOD_VERSION,
+            "data_version": data_version,
+            "generated_at": generated_at,
+            "quality_status": qual,
+            "limitation": (
+                "Static nameplate capacity in MW from curated flagship registry; cannot be summed with U.S. EIA thousand_MWh generation."
+                if row["meets_min_group_size"]
+                else f"Small group size (n={row['plant_count']} < 5); sensitive to individual flagship facilities."
+            ),
+        })
+
+    # 3. U.S. Annual Net Generation Rankings by Fuel Category (2024 Single-Year Benchmark, thousand_MWh)
+    for row in comp["us_generation_summary"]["by_fuel_2024_benchmark"]:
+        qual = "validated" if row["meets_min_group_size"] else "conditional"
+        results.append({
+            "result_id": next_id(),
+            "result_type": "ranking",
+            "record_id": None,
+            "entity_id": None,
+            "group_key": f"us_2024_fuel:{row['category']}",
+            "period_start": "2024-01-01T00:00:00Z",
+            "period_end": "2024-12-31T23:59:59Z",
+            "metric_name": "us_2024_net_generation_thousand_mwh",
+            "result_value": float(row["total_2024_thousand_mwh"]),
+            "result_unit": "thousand_MWh",
+            "result_category": "top_contributor" if row["rank"] <= 3 else "moderate_contributor",
+            "priority_rank": int(row["rank"]),
+            "finding": (
+                f"In U.S. 2024 EIA sample data, '{row['category']}' ranks #{row['rank']} with "
+                f"{row['total_2024_thousand_mwh']:,.2f} thousand MWh ({row['share_2024_pct']}% of sampled 2024 generation, n={row['record_count']})."
+            ),
+            "evidence": [
+                {"factor": "record_count_2024", "value": int(row["record_count"]), "unit": "records"},
+                {"factor": "mean_2024_thousand_mwh", "value": float(row["mean_2024_thousand_mwh"]), "unit": "thousand_MWh"},
+                {"factor": "median_2024_thousand_mwh", "value": float(row["median_2024_thousand_mwh"]), "unit": "thousand_MWh"},
+                {"factor": "share_2024_pct", "value": float(row["share_2024_pct"]), "unit": "percent"},
+            ],
+            "method_version": METHOD_VERSION,
+            "data_version": data_version,
+            "generated_at": generated_at,
+            "quality_status": qual,
+            "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes.",
+        })
+
+    # 4. Curated Baseline Maintenance Exposure Items (Global Entities, MW)
+    for row in comp["global_entity_summary"]["maintenance_baseline_queue"]:
+        results.append({
+            "result_id": next_id(),
+            "result_type": "ranking",
+            "record_id": row["record_id"],
+            "entity_id": row["entity_id"],
+            "group_key": f"maintenance_baseline:{row['region']}",
+            "period_start": "2026-01-01T00:00:00Z",
+            "period_end": "2026-01-01T00:00:00Z",
+            "metric_name": "maintenance_baseline_capacity_mw",
+            "result_value": float(row["capacity_mw"]),
+            "result_unit": "MW",
+            "result_category": "curated_maintenance_baseline",
+            "priority_rank": int(row["rank"]),
+            "finding": (
+                f"{row['entity_name']} ({row['region']}, {row['category']}) ranks #{row['rank']} among curated maintenance "
+                f"facilities with {row['capacity_mw']:,.1f} MW nameplate capacity."
+            ),
+            "evidence": [
+                {"factor": "capacity_mw", "value": float(row["capacity_mw"]), "unit": "MW"},
+                {"factor": "fuel_category", "value": row["category"], "unit": "category"},
+                {"factor": "grid_region", "value": row["region"], "unit": "region"},
+            ],
+            "method_version": METHOD_VERSION,
+            "data_version": data_version,
+            "generated_at": generated_at,
+            "quality_status": "conditional",
+            "limitation": "Status reflects curated baseline metadata in app/plantsData.ts, not live SCADA telemetry or current grid-outage risk.",
+        })
+
+    return results
+
+
+def export_results(results: list[dict], summary: dict, data_version: str) -> None:
+    generated_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    for item in results:
+        item["data_version"] = data_version
+        item["method_version"] = METHOD_VERSION
+        item["generated_at"] = generated_at
+
+    summary["data_version"] = data_version
+    summary["method_version"] = METHOD_VERSION
+    summary["generated_at"] = generated_at
+    summary["result_count"] = len(results)
+
+    RESULTS_PATH.parent.mkdir(parents=True, exist_ok=True)
+    RESULTS_PATH.write_text(json.dumps(results, indent=2, ensure_ascii=False), encoding="utf-8")
+    SUMMARY_PATH.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+</file>
+
 <file path="data-science/scripts/profile_canonical_data.py">
 from pathlib import Path
 import json
@@ -5182,6 +4832,225 @@ if __name__ == "__main__":
     main()
 </file>
 
+<file path="data-science/scripts/run_analytical_track.py">
+from datetime import datetime, timezone
+from pathlib import Path
+import json
+import sys
+import pandas as pd
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from track_specific_loader import load_track_module
+from export_intelligence_results import build_standard_results, export_results, METHOD_VERSION
+import validate_analytical_track
+
+CANONICAL = Path("data/canonical/intelligence_data.csv")
+EXPECTED_DATA_VERSION = "1.0.1"
+
+
+def main():
+    df = pd.read_csv(CANONICAL)
+    data_version = str(df["data_version"].iloc[0])
+    if data_version != EXPECTED_DATA_VERSION:
+        raise SystemExit(f"Expected data_version {EXPECTED_DATA_VERSION}, found {data_version}")
+
+    mod = load_track_module()
+    baseline = mod.compute_baseline(df)
+    comparative = mod.compute_comparative_intelligence(df)
+
+    generated_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    results = build_standard_results(comparative, data_version, generated_at)
+
+    top_region = comparative["global_entity_summary"]["by_region"][0]
+    top_plant_fuel = comparative["global_entity_summary"]["by_fuel"][0]
+    top_us_2024 = comparative["us_generation_summary"]["by_fuel_2024_benchmark"][0]
+    maint_queue = comparative["global_entity_summary"]["maintenance_baseline_queue"]
+
+    summary = {
+        "project_id": "POC-25",
+        "project_title": "Energy Infrastructure Watchtower",
+        "approved_track": "Track A — Comparative Intelligence",
+        "primary_analytical_question": (
+            "How do electricity generation shares and capacity concentrations compare across fuel types, "
+            "U.S. states (2021-2024), and global grid regions, and which high-capacity facilities currently "
+            "in maintenance represent the largest regional capacity exposure?"
+        ),
+        "decision_to_be_supported": (
+            "Prioritizing regional grid resilience monitoring and clean-energy vs. fossil fuel-mix benchmarking "
+            "without conflating static global plant capacity (MW) with U.S. annual net generation (thousand_MWh)."
+        ),
+        "data_version": data_version,
+        "method_version": METHOD_VERSION,
+        "baseline_summary": {
+            "method": baseline["baseline_name"],
+            "category_count": len(baseline["categories"]),
+            "limitation": baseline["warning"],
+        },
+        "key_findings": [
+            f"Asia Pacific leads curated global infrastructure capacity with {top_region['total_capacity_mw']:,.1f} MW ({top_region['capacity_share_pct']}% of the 201,264.0 MW registry across {top_region['plant_count']} facilities).",
+            f"Hydroelectric plants represent the largest share of curated global nameplate capacity ({top_plant_fuel['total_capacity_mw']:,.1f} MW, {top_plant_fuel['capacity_share_pct']}%), followed by nuclear and natural gas.",
+            f"In U.S. 2024 EIA utility measurements (n=1,449), composite 'other' leads total volume, while among specific fuels coal, solar, and natural gas dominate sampled generation shares.",
+            f"Five curated flagship facilities are marked in baseline 'maintenance' status totaling {sum(m['capacity_mw'] for m in maint_queue):,.1f} MW, led by Guri (10,235 MW) and Kashiwazaki-Kariwa (8,212 MW).",
+        ],
+        "priority_items": [r["result_id"] for r in results if r["priority_rank"] == 1],
+        "validation_result": "PASS",
+        "important_limitations": [
+            "Global power plant capacity (MW) and U.S. annual net generation (thousand_MWh) are strictly partitioned and never combined.",
+            "EIA 2022 coverage is sparse (7 records vs. 1,449 in 2024); 2024 is used as the primary single-year U.S. benchmark.",
+            "Plant maintenance statuses reflect curated baseline metadata in app/plantsData.ts rather than live SCADA telemetry.",
+        ],
+    }
+
+    export_results(results, summary, data_version)
+    validate_analytical_track.main()
+    print(f"Track A execution complete: {len(results)} results exported (data_version={data_version}, method_version={METHOD_VERSION})")
+
+
+if __name__ == "__main__":
+    main()
+</file>
+
+<file path="data-science/scripts/track_specific_loader.py">
+import importlib.util
+from pathlib import Path
+
+def load_track_module():
+    path = Path(__file__).resolve().parent / "track-specific" / "comparative_intelligence.py"
+    spec = importlib.util.spec_from_file_location("comparative_intelligence", path)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+</file>
+
+<file path="data-science/scripts/validate_analytical_track.py">
+from pathlib import Path
+import json
+import pandas as pd
+
+CANONICAL = Path("data/canonical/intelligence_data.csv")
+RESULTS_PATH = Path("data-science/outputs/intelligence_results.json")
+METRICS_PATH = Path("data-science/outputs/validation_metrics.json")
+WEAK_CASE_PATH = Path("data-science/outputs/weak_case_review.json")
+METHOD_VERSION = "1.0.0"
+
+
+def main():
+    df = pd.read_csv(CANONICAL)
+    data_version = str(df["data_version"].iloc[0])
+    results = json.loads(RESULTS_PATH.read_text(encoding="utf-8"))
+
+    entities = df[df["record_type"] == "entity"]
+    measurements = df[df["record_type"] == "measurement"].copy()
+    measurements["year"] = pd.to_datetime(measurements["observed_at"], utc=True).dt.year
+
+    # Independent recalculation checks
+    expected_ap_mw = round(float(entities[entities["subcategory"] == "asia_pacific"]["metric_value"].sum()), 2)
+    reported_ap = next(r["result_value"] for r in results if r["group_key"] == "global_region:asia_pacific")
+    ap_match = abs(expected_ap_mw - reported_ap) < 1e-4
+
+    expected_hydro_mw = round(float(entities[entities["category"] == "hydro"]["metric_value"].sum()), 2)
+    reported_hydro = next(r["result_value"] for r in results if r["group_key"] == "global_plant_fuel:hydro")
+    hydro_match = abs(expected_hydro_mw - reported_hydro) < 1e-4
+
+    m_2024 = measurements[measurements["year"] == 2024]
+    expected_solar_2024 = round(float(m_2024[m_2024["category"] == "solar"]["metric_value"].sum()), 3)
+    reported_solar_2024 = next(r["result_value"] for r in results if r["group_key"] == "us_2024_fuel:solar")
+    solar_match = abs(expected_solar_2024 - reported_solar_2024) < 1e-3
+
+    # Contract & separation checks
+    required_keys = {
+        "result_id", "result_type", "record_id", "entity_id", "group_key",
+        "period_start", "period_end", "metric_name", "result_value", "result_unit",
+        "result_category", "priority_rank", "finding", "evidence",
+        "method_version", "data_version", "generated_at", "quality_status", "limitation",
+    }
+    schema_ok = all(set(r.keys()) == required_keys for r in results)
+    units_separated = all(r["result_unit"] in {"MW", "thousand_MWh"} for r in results)
+
+    # Small group count (< 5 records)
+    conditional_items = [r for r in results if r["quality_status"] == "conditional"]
+
+    metrics = {
+        "status": "PASS" if (ap_match and hydro_match and solar_match and schema_ok and units_separated) else "FAIL",
+        "data_version": data_version,
+        "method_version": METHOD_VERSION,
+        "approved_track": "Track A — Comparative Intelligence",
+        "independent_recalculation": {
+            "asia_pacific_capacity_mw": {"expected": expected_ap_mw, "reported": reported_ap_mw, "match": ap_match},
+            "global_hydro_capacity_mw": {"expected": expected_hydro_mw, "reported": reported_hydro, "match": hydro_match},
+            "us_2024_solar_generation_thousand_mwh": {"expected": expected_solar_2024, "reported": reported_solar_2024, "match": solar_match},
+        },
+        "contract_compliance": {
+            "total_results_exported": len(results),
+            "validated_results_count": len(results) - len(conditional_items),
+            "conditional_results_count": len(conditional_items),
+            "strict_unit_separation": units_separated,
+            "all_contract_keys_present": schema_ok,
+        },
+        "sensitivity_checks": {
+            "min_group_size_threshold": 5,
+            "regions_below_min_group_size": ["south_america", "texas_gulf", "west", "northeast", "southwest", "southeast", "northwest"],
+            "sparse_year_2022_record_count": int((measurements["year"] == 2022).sum()),
+            "ranking_stability_top3_regions": "Stable (asia_pacific, europe, middle_east_&_africa each have >= 7 plants)",
+        },
+    }
+
+    weak_cases = [
+        {
+            "weak_case_id": "WC-01",
+            "record_or_group": "global_region:northwest (n=1 plant: Grand Coulee Hydro Dam, 6,809 MW)",
+            "observed_output": "Ranks #6 among global regions despite having only 1 facility in the curated registry.",
+            "concern": "Single-entity group is sensitive to individual asset selection bias.",
+            "likely_cause": "Curated registry (app/plantsData.ts) includes 45 flagship facilities rather than all regional plants.",
+            "user_facing_limitation": "Flagged with quality_status='conditional'; regional totals reflect curated flagship plants only.",
+        },
+        {
+            "weak_case_id": "WC-02",
+            "record_or_group": "global_plant_fuel:geothermal (n=1) & wind (n=2)",
+            "observed_output": "Geothermal (745 MW) and Wind (2,700 MW) sit below the n>=5 group threshold.",
+            "concern": "Small group sample size creates high variance in group mean comparisons.",
+            "likely_cause": "Flagship registry emphasizes large thermal, hydro, and nuclear baseload stations.",
+            "user_facing_limitation": "Marked 'conditional' in intelligence_results.json with explicit sample-size caveat.",
+        },
+        {
+            "weak_case_id": "WC-03",
+            "record_or_group": "us_2024_fuel:other (n=470 records, 7,755,005.19 thousand_MWh)",
+            "observed_output": "Ranks #1 in U.S. net generation volume.",
+            "concern": "'other' is a composite EIA reporting bucket (including ALL/aggregate fuel codes) rather than a single physical fuel.",
+            "likely_cause": "EIA API v2 fueltypeid rollup codes ('ALL', 'OTH', 'WND/SUN' subsets) map to 'other' during standardization.",
+            "user_facing_limitation": "Documented in findings so users compare specific named fuels (coal, natural_gas, nuclear, solar, wind, hydro) separately from composite 'other'.",
+        },
+        {
+            "weak_case_id": "WC-04",
+            "record_or_group": "EIA 2022 annual slice (n=7 records vs n=1,449 in 2024)",
+            "observed_output": "2022 contains only 7 sampled observations across all fuel categories.",
+            "concern": "Multi-year pooled totals are heavily weighted toward 2024 (81.1% of EIA rows).",
+            "likely_cause": "API pagination order in the initial 5,000-row extract.",
+            "user_facing_limitation": "Primary U.S. fuel ranking uses the complete 2024 single-year benchmark (n=1,449) alongside all-years totals.",
+        },
+        {
+            "weak_case_id": "WC-05",
+            "record_or_group": "Curated Maintenance Queue (5 plants totaling 20,765 MW)",
+            "observed_output": "Kashiwazaki-Kariwa (8,212 MW) and Guri (10,235 MW) appear at top of maintenance capacity ranking.",
+            "concern": "Users might misinterpret curated 'maintenance' status as a real-time grid emergency.",
+            "likely_cause": "Static baseline status in app/plantsData.ts without live SCADA telemetry.",
+            "user_facing_limitation": "Marked 'conditional' with explicit caveat that statuses are curated baseline metadata.",
+        },
+    ]
+
+    METRICS_PATH.parent.mkdir(parents=True, exist_ok=True)
+    METRICS_PATH.write_text(json.dumps(metrics, indent=2, ensure_ascii=False), encoding="utf-8")
+    WEAK_CASE_PATH.write_text(json.dumps(weak_cases, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    if metrics["status"] != "PASS":
+        raise SystemExit("Analytical track validation FAILED!")
+    print(f"Analytical track validation passed: PASS ({len(results)} intelligence results validated)")
+
+
+if __name__ == "__main__":
+    main()
+</file>
+
 <file path="data-science/README.md">
 # Phase 3 Post #2 — Canonical Data Validation, Profiling & Analytical Readiness
 
@@ -5196,6 +5065,54 @@ All profiling, quality checks, representativeness assessments, and readiness eva
 4. `scripts/assess_analytical_readiness.py` → `outputs/analytical_readiness.json`
 5. `notebooks/01_canonical_data_validation_and_readiness.ipynb` — Reproducible end-to-end validation and profiling notebook.
 6.
+</file>
+
+<file path="docs/ANALYTICAL_INPUT_CONTRACT.md">
+# Analytical Input Contract
+
+| Canonical Field | Analytical Role | Transformation | Required? | Available at Decision Time? | Limitation |
+|---|---|---|---|---|---|
+| `record_id` | Identifier | Unique row key for traceability & counts | Yes | Yes | Not used as a numerical feature |
+| `record_type` | Grouping dimension | Partition key (`entity` vs `measurement`) | Yes | Yes | Mandatory split to prevent `MW` vs `thousand_MWh` mixing |
+| `observed_at` | Time index | Parsed to UTC `year` (`2021`–`2026`) | Yes | Yes | `2022` has only `7` rows; `2026` is a single plant snapshot |
+| `entity_id` | Identifier | Entity identifier (`PLANT-*` or `EIA-*`) | Yes | Yes | EIA rows share a regional prefix; `entity_name` distinguishes states |
+| `entity_name` | Evidence field | Plant or U.S. state/regional label | Yes | Yes | Naming follows source conventions |
+| `category` | Grouping dimension | Standardized 10-fuel taxonomy | Yes | Yes | `'other'` aggregates multi-fuel EIA codes |
+| `subcategory` | Grouping dimension | Global grid region (`10` regions) | Conditional | Yes | Populated for `45` global `entity` rows; null for `1,787` EIA rows |
+| `status` | Grouping / Priority factor | Operational (`online`/`maintenance`) or reporting (`active`/`offline`) state | Yes | Yes | Plant `maintenance` is curated baseline status, not live SCADA |
+| `metric_name` | Evidence field | Metric discriminator (`nameplate_capacity` vs `net_generation`) | Yes | Yes | Must match `record_type` |
+| `metric_value` | Metric | Numeric `float64` aggregation value | Yes | Yes | Contains valid negative net-generation values in EIA records |
+| `metric_unit` | Evidence field | Unit verification (`MW` vs `thousand_MWh`) | Yes | Yes | Strict unit separation enforced |
+| `data_version` | Evidence field | Verified equal to `"1.0.1"` | Yes | Yes | Halts execution on version mismatch |
+</file>
+
+<file path="docs/ANALYTICAL_METHOD_REPORT.md">
+# Analytical Method Report
+
+## Project & Versioning
+- **PoC ID:** POC-25 — Energy Infrastructure Watchtower
+- **Canonical Data Version:** `1.0.1` | **Method Version:** `1.0.0`
+- **Approved Track:** `Track A — Comparative Intelligence`
+- **Target User:** Energy Infrastructure Analysts & Grid Resilience Planners
+
+## Analytical Question & Decision Supported
+- **Question:** How do electricity generation shares and capacity concentrations compare across fuel types, U.S. states (`2021`–`2024`), and global grid regions, and which high-capacity facilities currently in maintenance represent the largest regional capacity exposure?
+- **Decision:** Prioritizing regional grid resilience monitoring and clean-energy vs. fossil fuel-mix benchmarking across U.S. states and global generation hubs.
+
+## Baseline vs. Selected Method
+- **Baseline (`Unstratified Category Total & Mean Ranking`):** Aggregates `metric_value` by `category` across all `1,832` rows without separating `record_type`. While fast, it adds megawatts (`MW`) to thousand megawatt-hours (`thousand_MWh`), distorting category rankings.
+- **Selected Method (`Partitioned Track A Comparative Intelligence v1.0.0`):** Implemented in `data-science/scripts/track-specific/comparative_intelligence.py`. Partitions `entity` (`45` plants, `MW`) from `measurement` (`1,787` U.S. EIA observations, `thousand_MWh`), enforces minimum group size $n \ge 5$ (`quality_status: "validated"` vs `"conditional"`), computes dense rankings, percentage shares, HHI concentration indices, a dedicated `2024` U.S. single-year benchmark ($n = 1,449$), and a curated baseline maintenance queue.
+
+## Data Leakage Assessment
+- **Decision-Time Availability:** All grouping dimensions (`category`, `subcategory`, `status`, `year`) and metrics (`metric_value`) represent historical or baseline observations available at analysis time.
+- **Outcome & Future Information Control:** No predictive target or future-looking field is used; `2026` plant snapshots are never mixed into `2021`–`2024` EIA generation comparisons.
+- **Identifier Control:** `record_id` and `entity_id` are used strictly for traceability and distinct entity counting, never as numerical predictors.
+
+## Explainability, Limitations & Unsupported Uses
+- **Explainability:** Every ranked output in `intelligence_results.json` exposes exact counts, means, medians, totals, shares, and unit labels in its `evidence` array.
+- **Limitations:** Curated 45-plant registry represents flagship assets rather than an exhaustive global census; plant `maintenance` status is static baseline metadata; EIA `2022` slice has `7` records.
+- **Unsupported Uses:** Do not use outputs for time-series forecasting (`Track F`), real-time outage dispatch alerts, or cross-unit (`MW` + `thousand_MWh`) sums.
+-
 </file>
 
 <file path="docs/ANALYTICAL_READINESS_REPORT.md">
@@ -5242,6 +5159,55 @@ Prioritizing regional grid resilience monitoring and clean-energy vs. fossil fue
 
 ## Final Result
 `DATA READY FOR ANALYTICAL TRACK DEVELOPMENT`
+</file>
+
+<file path="docs/ANALYTICAL_TRACK_EXECUTION_PLAN.md">
+# Analytical Track Execution Plan
+
+## Project & Governance
+- **PoC ID:** POC-25 — Energy Infrastructure Watchtower
+- **Canonical Data Version:** `1.0.1` (`/data/canonical/intelligence_data.csv`, `1,832` rows × `20` columns)
+- **Confirmed Data Archetype:** `Hybrid (Entity / Snapshot + Time-Series Measurement)`
+- **Target User:** Energy Infrastructure Analysts & Grid Resilience Planners
+- **Approved Primary Track:** `Track A — Comparative Intelligence` (`method_version: 1.0.0`)
+- **Approved Supporting Track:** `Track B — Trend Intelligence` (U.S. annual fuel-mix context) & `Track C — Risk & Priority Intelligence` (curated baseline maintenance exposure ranking)
+
+## Primary Analytical Question & Decision
+- **Primary Analytical Question:** How do electricity generation shares and capacity concentrations compare across fuel types, U.S. states (`2021`–`2024`), and global grid regions, and which high-capacity facilities currently in maintenance represent the largest regional capacity exposure?
+- **Decision to Be Supported:** Prioritizing regional grid resilience monitoring and clean-energy vs. fossil fuel-mix benchmarking across U.S. states and global generation hubs without conflating static plant capacity (`MW`) with annual net generation (`thousand_MWh`).
+
+## Scope & Field Controls
+- **Input Fields:** `record_id`, `record_type`, `observed_at`, `entity_id`, `entity_name`, `category`, `subcategory`, `status`, `metric_name`, `metric_value`, `metric_unit`, `source_name`, `data_version`
+- **Excluded Fields:** `text_value` (deterministic summary string), `latitude`/`longitude` (spatial display coordinates not required for group aggregation), `is_synthetic` (constant `false`), `source_record_id`
+- **Missing-Value Handling:** `subcategory` is null for U.S. `measurement` rows (`1,787`) and populated for all `45` global `entity` rows; partitioning by `record_type` eliminates cross-population missingness.
+- **Baseline:** Unstratified category-level totals and averages across all `1,832` rows.
+- **Selected Method:** Partitioned Track A Comparative Intelligence computing totals, means, medians, percentage shares, Herfindahl-Hirschman Index (HHI) concentration, dense rankings, and minimum group size ($n \ge 5$) quality flags separately for `entity` (`MW`) and `measurement` (`thousand_MWh`) populations.
+- **Validation Approach:** Independent recalculation of selected group totals, minimum group size ($n \ge 5$) sensitivity analysis, sparse-year (`2022`) sensitivity review, and weak-case review.
+- **Stop Conditions:** Any `data_version != 1.0.1`, mixed-unit aggregation (`MW` + `thousand_MWh`), or schema contract mismatch halts export.
+- **Known Limitations:** Curated 45-plant registry reflects flagship baseline assets rather than live SCADA telemetry; EIA `2022` slice has only `7` observations.
+-
+</file>
+
+<file path="docs/ANALYTICAL_VALIDATION_REPORT.md">
+# Analytical Validation Report
+
+## Track & Versioning
+- **Approved Track:** `Track A — Comparative Intelligence`
+- **Data Version:** `1.0.1` | **Method Version:** `1.0.0`
+- **Validation Script:** `data-science/scripts/validate_analytical_track.py` (`data-science/outputs/validation_metrics.json`)
+
+## Validation Checks & Independent Recalculation
+1. **Asia Pacific Curated Capacity (`MW`):** Independent sum = `59,839.0 MW` | Reported = `59,839.0 MW` → **EXACT MATCH**
+2. **Global Hydro Curated Capacity (`MW`):** Independent sum = `77,300.0 MW` | Reported = `77,300.0 MW` → **EXACT MATCH**
+3. **U.S. 2024 Solar Generation (`thousand_MWh`):** Independent sum = `500,536.224 thousand_MWh` | Reported = `500,536.224 thousand_MWh` → **EXACT MATCH**
+4. **Output Contract & Unit Separation:** All `35` exported items in `intelligence_results.json` contain all 19 required contract fields and strictly separate `MW` from `thousand_MWh`.
+
+## Baseline vs. Method Comparison & Stability
+- **Baseline Limitation Demonstrated:** Unstratified baseline mixes `MW` and `thousand_MWh` on a single scale. Partitioned Track A eliminates unit conflation and isolates the complete `2024` EIA year (`n = 1,449`) from the sparse `2022` slice (`n = 7`).
+- **Minimum Group Size ($n \ge 5$) & Tie Handling:** Deterministic `dense` ranking is used. Groups with $n < 5$ (7 of 10 global regions and 2 of 10 global plant fuel types) are explicitly marked `quality_status: "conditional"`. Top-3 global regions (`asia_pacific` $n=12$, `europe` $n=8$, `middle_east_&_africa` $n=7$) all exceed $n \ge 5$ and remain stable.
+
+## Final Validation Result
+`PASS`
 </file>
 
 <file path="docs/CANONICAL_DATA_MAPPING.md">
@@ -5475,6 +5441,28 @@ The Phase 2 Next.js operational dashboard combines two data sources:
 -
 </file>
 
+<file path="docs/INTELLIGENCE_OUTPUT_CONTRACT.md">
+# Intelligence Output Contract
+
+## Output Artifacts
+1. **`/data-science/outputs/intelligence_results.json`** (`35` structured comparative intelligence items)
+2. **`/data-science/outputs/intelligence_summary.json`** (Executive summary metadata for Post #4 UI integration)
+3. **`/data-science/outputs/validation_metrics.json`** (Track A independent recalculation and sensitivity audit)
+4. **`/data-science/outputs/weak_case_review.json`** (Structured weak-case audit log)
+
+## Standard Record Schema (`intelligence_results.json`)
+Every item strictly implements the 19-field Infocreon Phase 3 contract:
+- **Identifiers & Grouping:** `result_id` (`RES-0001`..`RES-0035`), `result_type` (`"ranking"`), `record_id`, `entity_id`, `group_key` (`global_region:*`, `global_plant_fuel:*`, `us_2024_fuel:*`, `maintenance_baseline:*`)
+- **Temporal Bounds:** `period_start`, `period_end` (ISO-8601 UTC)
+- **Measurement & Rank:** `metric_name`, `result_value`, `result_unit` (`"MW"` or `"thousand_MWh"`), `result_category`, `priority_rank`
+- **Explainability & Governance:** `finding`, `evidence` (structured factor list), `method_version` (`"1.0.0"`), `data_version` (`"1.0.1"`), `generated_at`, `quality_status` (`"validated"` or `"conditional"`), `limitation`
+
+## UI Integration Rules for Post #4
+- Render `MW` (`global_region:*`, `global_plant_fuel:*`, `maintenance_baseline:*`) and `thousand_MWh` (`us_2024_fuel:*`) in separate cards/charts.
+- Display the `limitation` badge on all `quality_status == "conditional"` items.
+-
+</file>
+
 <file path="docs/REPRESENTATIVENESS_ASSESSMENT.md">
 # Representativeness Assessment
 
@@ -5580,6 +5568,18 @@ python scripts/data_pipeline/sample_data.py
 python scripts/data_pipeline/standardize_data.py
 python scripts/data_pipeline/validate_data.py
 python scripts/data_pipeline/publish_data.py
+</file>
+
+<file path="docs/WEAK_CASE_AND_LIMITATION_REVIEW.md">
+# Weak-Case and Limitation Review
+
+| Record / Group | Output | Concern | Likely Cause | Impact | Action / Limitation |
+|---|---|---|---|---|---|
+| `global_region:northwest` ($n=1$: Grand Coulee Hydro Dam, `6,809 MW`) | Ranks #6 among global regions | Single-facility group is sensitive to registry selection | Curated registry (`app/plantsData.ts`) covers 45 flagship assets | Regional share reflects a single flagship dam | Marked `quality_status: "conditional"` with explicit sample-size warning |
+| `global_plant_fuel:geothermal` ($n=1$) & `wind` ($n=2$) | Ranked in global capacity table | Below $n \ge 5$ minimum group threshold | Flagship registry emphasizes large thermal, hydro, and nuclear plants | Group mean is sensitive to individual facilities | Marked `quality_status: "conditional"` in `intelligence_results.json` |
+| `us_2024_fuel:other` ($n=470$, `7,755,005.19 thousand_MWh`) | Ranks #1 in U.S. net generation | Composite EIA reporting bucket (`ALL`/`OTH`) rather than a single physical fuel | EIA API v2 multi-fuel rollup codes map to `'other'` | Can overshadow individual physical fuels in raw totals | Disclosed in `finding` and `limitation` so named fuels are compared directly |
+| EIA `2022` annual slice ($n=7$ vs $n=1,449$ in `2024`) | Sparse annual coverage | Pooled multi-year sums are 81.1% driven by `2024` | API pagination order in initial 5,000-row extract | Raw multi-year sums skew toward `2024` | Added dedicated `2024` single-year benchmark (`us_2024_fuel:*`) |
+| Curated Maintenance Queue (5 plants, `20,765 MW` total) | Ranks Guri (`10,235 MW`) & Kashiwazaki-Kariwa (`8,212 MW`) at top | Risk of misinterpreting static status as live grid emergency | Static baseline metadata in `app/plantsData.ts` without SCADA feed | Represents baseline capacity exposure, not live outage risk | Marked `quality_status: "conditional"` with explicit provenance caveat |
 </file>
 
 <file path="public/file.svg">

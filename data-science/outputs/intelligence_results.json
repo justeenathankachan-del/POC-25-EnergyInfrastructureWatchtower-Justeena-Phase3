@@ -37,7 +37,7 @@
     ],
     "method_version": "1.0.0",
     "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
+    "generated_at": "2026-11-20T15:19:49Z",
     "quality_status": "validated",
     "limitation": "Derived from curated 45-plant registry (app/plantsData.ts); represents flagship assets rather than total regional grid capacity."
   },
@@ -79,7 +79,7 @@
     ],
     "method_version": "1.0.0",
     "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
+    "generated_at": "2026-11-20T15:19:49Z",
     "quality_status": "conditional",
     "limitation": "Small group size (n=4 < 5); interpret regional share with caution."
   },
@@ -121,7 +121,7 @@
     ],
     "method_version": "1.0.0",
     "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
+    "generated_at": "2026-11-20T15:19:49Z",
     "quality_status": "validated",
     "limitation": "Derived from curated 45-plant registry (app/plantsData.ts); represents flagship assets rather than total regional grid capacity."
   },
@@ -163,7 +163,7 @@
     ],
     "method_version": "1.0.0",
     "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
+    "generated_at": "2026-11-20T15:19:49Z",
     "quality_status": "validated",
     "limitation": "Derived from curated 45-plant registry (app/plantsData.ts); represents flagship assets rather than total regional grid capacity."
   },
@@ -205,7 +205,7 @@
     ],
     "method_version": "1.0.0",
     "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
+    "generated_at": "2026-11-20T15:19:49Z",
     "quality_status": "conditional",
     "limitation": "Small group size (n=3 < 5); interpret regional share with caution."
   },
@@ -247,7 +247,7 @@
     ],
     "method_version": "1.0.0",
     "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
+    "generated_at": "2026-11-20T15:19:49Z",
     "quality_status": "conditional",
     "limitation": "Small group size (n=2 < 5); interpret regional share with caution."
   },
@@ -289,7 +289,7 @@
     ],
     "method_version": "1.0.0",
     "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
+    "generated_at": "2026-11-20T15:19:49Z",
     "quality_status": "conditional",
     "limitation": "Small group size (n=1 < 5); interpret regional share with caution."
   },
@@ -331,7 +331,7 @@
     ],
     "method_version": "1.0.0",
     "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
+    "generated_at": "2026-11-20T15:19:49Z",
     "quality_status": "conditional",
     "limitation": "Small group size (n=3 < 5); interpret regional share with caution."
   },
@@ -373,7 +373,7 @@
     ],
     "method_version": "1.0.0",
     "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
+    "generated_at": "2026-11-20T15:19:49Z",
     "quality_status": "conditional",
     "limitation": "Small group size (n=2 < 5); interpret regional share with caution."
   },
@@ -415,7 +415,7 @@
     ],
     "method_version": "1.0.0",
     "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
+    "generated_at": "2026-11-20T15:19:49Z",
     "quality_status": "conditional",
     "limitation": "Small group size (n=3 < 5); interpret regional share with caution."
   },
@@ -452,7 +452,7 @@
     ],
     "method_version": "1.0.0",
     "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
+    "generated_at": "2026-11-20T15:19:49Z",
     "quality_status": "validated",
     "limitation": "Static nameplate capacity in MW from curated flagship registry; cannot be summed with U.S. EIA thousand_MWh generation."
   },
@@ -489,7 +489,7 @@
     ],
     "method_version": "1.0.0",
     "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
+    "generated_at": "2026-11-20T15:19:49Z",
     "quality_status": "validated",
     "limitation": "Static nameplate capacity in MW from curated flagship registry; cannot be summed with U.S. EIA thousand_MWh generation."
   },
@@ -526,7 +526,7 @@
     ],
     "method_version": "1.0.0",
     "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
+    "generated_at": "2026-11-20T15:19:49Z",
     "quality_status": "validated",
     "limitation": "Static nameplate capacity in MW from curated flagship registry; cannot be summed with U.S. EIA thousand_MWh generation."
   },
@@ -563,7 +563,7 @@
     ],
     "method_version": "1.0.0",
     "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
+    "generated_at": "2026-11-20T15:19:49Z",
     "quality_status": "validated",
     "limitation": "Static nameplate capacity in MW from curated flagship registry; cannot be summed with U.S. EIA thousand_MWh generation."
   },
@@ -600,7 +600,7 @@
     ],
     "method_version": "1.0.0",
     "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
+    "generated_at": "2026-11-20T15:19:49Z",
     "quality_status": "validated",
     "limitation": "Static nameplate capacity in MW from curated flagship registry; cannot be summed with U.S. EIA thousand_MWh generation."
   },
@@ -637,7 +637,7 @@
     ],
     "method_version": "1.0.0",
     "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
+    "generated_at": "2026-11-20T15:19:49Z",
     "quality_status": "conditional",
     "limitation": "Small group size (n=1 < 5); sensitive to individual flagship facilities."
   },
@@ -674,7 +674,7 @@
     ],
     "method_version": "1.0.0",
     "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
+    "generated_at": "2026-11-20T15:19:49Z",
     "quality_status": "conditional",
     "limitation": "Small group size (n=2 < 5); sensitive to individual flagship facilities."
   },
@@ -716,7 +716,7 @@
     ],
     "method_version": "1.0.0",
     "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
+    "generated_at": "2026-11-20T15:19:49Z",
     "quality_status": "validated",
     "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
   },
@@ -758,7 +758,7 @@
     ],
     "method_version": "1.0.0",
     "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
+    "generated_at": "2026-11-20T15:19:49Z",
     "quality_status": "validated",
     "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
   },
@@ -800,7 +800,7 @@
     ],
     "method_version": "1.0.0",
     "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
+    "generated_at": "2026-11-20T15:19:49Z",
     "quality_status": "validated",
     "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
   },
@@ -842,7 +842,7 @@
     ],
     "method_version": "1.0.0",
     "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
+    "generated_at": "2026-11-20T15:19:49Z",
     "quality_status": "validated",
     "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
   },
@@ -884,7 +884,7 @@
     ],
     "method_version": "1.0.0",
     "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
+    "generated_at": "2026-11-20T15:19:49Z",
     "quality_status": "validated",
     "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
   },
@@ -926,7 +926,7 @@
     ],
     "method_version": "1.0.0",
     "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
+    "generated_at": "2026-11-20T15:19:49Z",
     "quality_status": "validated",
     "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
   },
@@ -968,7 +968,7 @@
     ],
     "method_version": "1.0.0",
     "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
+    "generated_at": "2026-11-20T15:19:49Z",
     "quality_status": "validated",
     "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
   },
@@ -1010,7 +1010,7 @@
     ],
     "method_version": "1.0.0",
     "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
+    "generated_at": "2026-11-20T15:19:49Z",
     "quality_status": "validated",
     "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
   },
@@ -1052,7 +1052,7 @@
     ],
     "method_version": "1.0.0",
     "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
+    "generated_at": "2026-11-20T15:19:49Z",
     "quality_status": "validated",
     "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
   },
@@ -1094,7 +1094,7 @@
     ],
     "method_version": "1.0.0",
     "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
+    "generated_at": "2026-11-20T15:19:49Z",
     "quality_status": "validated",
     "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
   },
@@ -1131,7 +1131,7 @@
     ],
     "method_version": "1.0.0",
     "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
+    "generated_at": "2026-11-20T15:19:49Z",
     "quality_status": "conditional",
     "limitation": "Status reflects curated baseline metadata in app/plantsData.ts, not live SCADA telemetry or current grid-outage risk."
   },
@@ -1168,7 +1168,7 @@
     ],
     "method_version": "1.0.0",
     "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
+    "generated_at": "2026-11-20T15:19:49Z",
     "quality_status": "conditional",
     "limitation": "Status reflects curated baseline metadata in app/plantsData.ts, not live SCADA telemetry or current grid-outage risk."
   },
@@ -1205,7 +1205,7 @@
     ],
     "method_version": "1.0.0",
     "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
+    "generated_at": "2026-11-20T15:19:49Z",
     "quality_status": "conditional",
     "limitation": "Status reflects curated baseline metadata in app/plantsData.ts, not live SCADA telemetry or current grid-outage risk."
   },
@@ -1242,7 +1242,7 @@
     ],
     "method_version": "1.0.0",
     "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
+    "generated_at": "2026-11-20T15:19:49Z",
     "quality_status": "conditional",
     "limitation": "Status reflects curated baseline metadata in app/plantsData.ts, not live SCADA telemetry or current grid-outage risk."
   },
@@ -1279,7 +1279,7 @@
     ],
     "method_version": "1.0.0",
     "data_version": "1.0.1",
-    "generated_at": "2026-11-20T15:18:23Z",
+    "generated_at": "2026-11-20T15:19:49Z",
     "quality_status": "conditional",
     "limitation": "Status reflects curated baseline metadata in app/plantsData.ts, not live SCADA telemetry or current grid-outage risk."
   }
