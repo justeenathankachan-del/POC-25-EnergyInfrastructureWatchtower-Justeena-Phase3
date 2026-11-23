@@ -1,4 +1,4 @@
-# Weak-Case and Limitation Review
+﻿# Weak-Case and Limitation Review
 
 | Record / Group | Output | Concern | Likely Cause | Impact | Action / Limitation |
 |---|---|---|---|---|---|
@@ -6,4 +6,4 @@
 | `global_plant_fuel:geothermal` ($n=1$) & `wind` ($n=2$) | Ranked in global capacity table | Below $n \ge 5$ minimum group threshold | Flagship registry emphasizes large thermal, hydro, and nuclear plants | Group mean is sensitive to individual facilities | Marked `quality_status: "conditional"` in `intelligence_results.json` |
 | `us_2024_fuel:other` ($n=470$, `7,755,005.19 thousand_MWh`) | Ranks #1 in U.S. net generation | Composite EIA reporting bucket (`ALL`/`OTH`) rather than a single physical fuel | EIA API v2 multi-fuel rollup codes map to `'other'` | Can overshadow individual physical fuels in raw totals | Disclosed in `finding` and `limitation` so named fuels are compared directly |
 | EIA `2022` annual slice ($n=7$ vs $n=1,449$ in `2024`) | Sparse annual coverage | Pooled multi-year sums are 81.1% driven by `2024` | API pagination order in initial 5,000-row extract | Raw multi-year sums skew toward `2024` | Added dedicated `2024` single-year benchmark (`us_2024_fuel:*`) |
-| Curated Maintenance Queue (5 plants, `20,765 MW` total) | Ranks Guri (`10,235 MW`) & Kashiwazaki-Kariwa (`8,212 MW`) at top | Risk of misinterpreting static status as live grid emergency | Static baseline metadata in `app/plantsData.ts` without SCADA feed | Represents baseline capacity exposure, not live outage risk | Marked `quality_status: "conditional"` with explicit provenance caveat |
+| Curated Maintenance Queue (5 plants, `31,719.0 MW` total) | Ranks Guri (`10,235 MW`) & Kashiwazaki-Kariwa (`8,212 MW`) at top | Risk of misinterpreting static status as live grid emergency | Static baseline metadata in `app/plantsData.ts` without SCADA feed | Represents baseline capacity exposure, not live outage risk | Marked `quality_status: "conditional"` with explicit provenance caveat |

@@ -29,6 +29,6 @@
     "EIA 2022 coverage is sparse (7 records vs. 1,449 in 2024); 2024 is used as the primary single-year U.S. benchmark.",
     "Plant maintenance statuses reflect curated baseline metadata in app/plantsData.ts rather than live SCADA telemetry."
   ],
-  "generated_at": "2026-11-20T15:19:49Z",
+  "generated_at": "2026-11-20T16:36:34Z",
   "result_count": 32
 }

@@ -77,6 +77,16 @@ export default function EnergyWatchtowerDashboard() {
   ).length;
 
   return (
+    <>
+      <div className="border-b border-slate-800 bg-slate-950/95 px-4 py-2 text-xs text-slate-300">
+        <div className="mx-auto flex max-w-7xl items-center justify-between">
+          <span className="font-mono text-cyan-400">POC-25 • Operational Grid &amp; Plant Watchtower</span>
+          <div className="flex items-center gap-2">
+            <a href="/" className="rounded border border-cyan-500/50 bg-cyan-500/15 px-2.5 py-1 font-semibold text-cyan-300">Operational View</a>
+            <a href="/data-intelligence" className="rounded border border-slate-700 bg-slate-900 px-2.5 py-1 font-medium text-slate-200 hover:border-cyan-500/50 hover:text-cyan-300">Data Intelligence →</a>
+          </div>
+        </div>
+      </div>
     <div className="relative h-screen w-screen overflow-hidden bg-[#06110D] text-emerald-50 font-sans select-none">
       {/* 100% Full-Screen Map Stage */}
       <div className="absolute inset-0 z-0">
@@ -403,5 +413,5 @@ export default function EnergyWatchtowerDashboard() {
         </div>
       )}
     </div>
+      </>
   );
-}

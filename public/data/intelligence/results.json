@@ -1,0 +1,1286 @@
+[
+  {
+    "result_id": "RES-0001",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "global_region:asia_pacific",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "regional_nameplate_capacity_mw",
+    "result_value": 77505.0,
+    "result_unit": "MW",
+    "result_category": "high_concentration",
+    "priority_rank": 1,
+    "finding": "Region 'asia_pacific' ranks #1 in curated global capacity with 77,505.0 MW (38.51% of registry total) across 12 facilities.",
+    "evidence": [
+      {
+        "factor": "plant_count",
+        "value": 12,
+        "unit": "plants"
+      },
+      {
+        "factor": "mean_capacity_mw",
+        "value": 6458.75,
+        "unit": "MW"
+      },
+      {
+        "factor": "capacity_share_pct",
+        "value": 38.51,
+        "unit": "percent"
+      },
+      {
+        "factor": "maintenance_mw",
+        "value": 7965.0,
+        "unit": "MW"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T16:36:34Z",
+    "quality_status": "validated",
+    "limitation": "Derived from curated 45-plant registry (app/plantsData.ts); represents flagship assets rather than total regional grid capacity."
+  },
+  {
+    "result_id": "RES-0002",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "global_region:south_america",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "regional_nameplate_capacity_mw",
+    "result_value": 35678.0,
+    "result_unit": "MW",
+    "result_category": "high_concentration",
+    "priority_rank": 2,
+    "finding": "Region 'south_america' ranks #2 in curated global capacity with 35,678.0 MW (17.73% of registry total) across 4 facilities.",
+    "evidence": [
+      {
+        "factor": "plant_count",
+        "value": 4,
+        "unit": "plants"
+      },
+      {
+        "factor": "mean_capacity_mw",
+        "value": 8919.5,
+        "unit": "MW"
+      },
+      {
+        "factor": "capacity_share_pct",
+        "value": 17.73,
+        "unit": "percent"
+      },
+      {
+        "factor": "maintenance_mw",
+        "value": 10235.0,
+        "unit": "MW"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T16:36:34Z",
+    "quality_status": "conditional",
+    "limitation": "Small group size (n=4 < 5); interpret regional share with caution."
+  },
+  {
+    "result_id": "RES-0003",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "global_region:europe",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "regional_nameplate_capacity_mw",
+    "result_value": 22405.0,
+    "result_unit": "MW",
+    "result_category": "high_concentration",
+    "priority_rank": 3,
+    "finding": "Region 'europe' ranks #3 in curated global capacity with 22,405.0 MW (11.13% of registry total) across 8 facilities.",
+    "evidence": [
+      {
+        "factor": "plant_count",
+        "value": 8,
+        "unit": "plants"
+      },
+      {
+        "factor": "mean_capacity_mw",
+        "value": 2800.62,
+        "unit": "MW"
+      },
+      {
+        "factor": "capacity_share_pct",
+        "value": 11.13,
+        "unit": "percent"
+      },
+      {
+        "factor": "maintenance_mw",
+        "value": 5102.0,
+        "unit": "MW"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T16:36:34Z",
+    "quality_status": "validated",
+    "limitation": "Derived from curated 45-plant registry (app/plantsData.ts); represents flagship assets rather than total regional grid capacity."
+  },
+  {
+    "result_id": "RES-0004",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "global_region:middle_east_&_africa",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "regional_nameplate_capacity_mw",
+    "result_value": 22244.0,
+    "result_unit": "MW",
+    "result_category": "standard_concentration",
+    "priority_rank": 4,
+    "finding": "Region 'middle_east_&_africa' ranks #4 in curated global capacity with 22,244.0 MW (11.05% of registry total) across 7 facilities.",
+    "evidence": [
+      {
+        "factor": "plant_count",
+        "value": 7,
+        "unit": "plants"
+      },
+      {
+        "factor": "mean_capacity_mw",
+        "value": 3177.71,
+        "unit": "MW"
+      },
+      {
+        "factor": "capacity_share_pct",
+        "value": 11.05,
+        "unit": "percent"
+      },
+      {
+        "factor": "maintenance_mw",
+        "value": 4764.0,
+        "unit": "MW"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T16:36:34Z",
+    "quality_status": "validated",
+    "limitation": "Derived from curated 45-plant registry (app/plantsData.ts); represents flagship assets rather than total regional grid capacity."
+  },
+  {
+    "result_id": "RES-0005",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "global_region:northeast",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "regional_nameplate_capacity_mw",
+    "result_value": 14691.0,
+    "result_unit": "MW",
+    "result_category": "standard_concentration",
+    "priority_rank": 5,
+    "finding": "Region 'northeast' ranks #5 in curated global capacity with 14,691.0 MW (7.3% of registry total) across 3 facilities.",
+    "evidence": [
+      {
+        "factor": "plant_count",
+        "value": 3,
+        "unit": "plants"
+      },
+      {
+        "factor": "mean_capacity_mw",
+        "value": 4897.0,
+        "unit": "MW"
+      },
+      {
+        "factor": "capacity_share_pct",
+        "value": 7.3,
+        "unit": "percent"
+      },
+      {
+        "factor": "maintenance_mw",
+        "value": 0.0,
+        "unit": "MW"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T16:36:34Z",
+    "quality_status": "conditional",
+    "limitation": "Small group size (n=3 < 5); interpret regional share with caution."
+  },
+  {
+    "result_id": "RES-0006",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "global_region:southeast",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "regional_nameplate_capacity_mw",
+    "result_value": 7206.0,
+    "result_unit": "MW",
+    "result_category": "standard_concentration",
+    "priority_rank": 6,
+    "finding": "Region 'southeast' ranks #6 in curated global capacity with 7,206.0 MW (3.58% of registry total) across 2 facilities.",
+    "evidence": [
+      {
+        "factor": "plant_count",
+        "value": 2,
+        "unit": "plants"
+      },
+      {
+        "factor": "mean_capacity_mw",
+        "value": 3603.0,
+        "unit": "MW"
+      },
+      {
+        "factor": "capacity_share_pct",
+        "value": 3.58,
+        "unit": "percent"
+      },
+      {
+        "factor": "maintenance_mw",
+        "value": 0.0,
+        "unit": "MW"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T16:36:34Z",
+    "quality_status": "conditional",
+    "limitation": "Small group size (n=2 < 5); interpret regional share with caution."
+  },
+  {
+    "result_id": "RES-0007",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "global_region:northwest",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "regional_nameplate_capacity_mw",
+    "result_value": 6809.0,
+    "result_unit": "MW",
+    "result_category": "standard_concentration",
+    "priority_rank": 7,
+    "finding": "Region 'northwest' ranks #7 in curated global capacity with 6,809.0 MW (3.38% of registry total) across 1 facilities.",
+    "evidence": [
+      {
+        "factor": "plant_count",
+        "value": 1,
+        "unit": "plants"
+      },
+      {
+        "factor": "mean_capacity_mw",
+        "value": 6809.0,
+        "unit": "MW"
+      },
+      {
+        "factor": "capacity_share_pct",
+        "value": 3.38,
+        "unit": "percent"
+      },
+      {
+        "factor": "maintenance_mw",
+        "value": 0.0,
+        "unit": "MW"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T16:36:34Z",
+    "quality_status": "conditional",
+    "limitation": "Small group size (n=1 < 5); interpret regional share with caution."
+  },
+  {
+    "result_id": "RES-0008",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "global_region:texas_gulf",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "regional_nameplate_capacity_mw",
+    "result_value": 6074.0,
+    "result_unit": "MW",
+    "result_category": "standard_concentration",
+    "priority_rank": 8,
+    "finding": "Region 'texas_gulf' ranks #8 in curated global capacity with 6,074.0 MW (3.02% of registry total) across 3 facilities.",
+    "evidence": [
+      {
+        "factor": "plant_count",
+        "value": 3,
+        "unit": "plants"
+      },
+      {
+        "factor": "mean_capacity_mw",
+        "value": 2024.67,
+        "unit": "MW"
+      },
+      {
+        "factor": "capacity_share_pct",
+        "value": 3.02,
+        "unit": "percent"
+      },
+      {
+        "factor": "maintenance_mw",
+        "value": 3653.0,
+        "unit": "MW"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T16:36:34Z",
+    "quality_status": "conditional",
+    "limitation": "Small group size (n=3 < 5); interpret regional share with caution."
+  },
+  {
+    "result_id": "RES-0009",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "global_region:southwest",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "regional_nameplate_capacity_mw",
+    "result_value": 5037.0,
+    "result_unit": "MW",
+    "result_category": "standard_concentration",
+    "priority_rank": 9,
+    "finding": "Region 'southwest' ranks #9 in curated global capacity with 5,037.0 MW (2.5% of registry total) across 2 facilities.",
+    "evidence": [
+      {
+        "factor": "plant_count",
+        "value": 2,
+        "unit": "plants"
+      },
+      {
+        "factor": "mean_capacity_mw",
+        "value": 2518.5,
+        "unit": "MW"
+      },
+      {
+        "factor": "capacity_share_pct",
+        "value": 2.5,
+        "unit": "percent"
+      },
+      {
+        "factor": "maintenance_mw",
+        "value": 0.0,
+        "unit": "MW"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T16:36:34Z",
+    "quality_status": "conditional",
+    "limitation": "Small group size (n=2 < 5); interpret regional share with caution."
+  },
+  {
+    "result_id": "RES-0010",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "global_region:west",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "regional_nameplate_capacity_mw",
+    "result_value": 3615.0,
+    "result_unit": "MW",
+    "result_category": "standard_concentration",
+    "priority_rank": 10,
+    "finding": "Region 'west' ranks #10 in curated global capacity with 3,615.0 MW (1.8% of registry total) across 3 facilities.",
+    "evidence": [
+      {
+        "factor": "plant_count",
+        "value": 3,
+        "unit": "plants"
+      },
+      {
+        "factor": "mean_capacity_mw",
+        "value": 1205.0,
+        "unit": "MW"
+      },
+      {
+        "factor": "capacity_share_pct",
+        "value": 1.8,
+        "unit": "percent"
+      },
+      {
+        "factor": "maintenance_mw",
+        "value": 0.0,
+        "unit": "MW"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T16:36:34Z",
+    "quality_status": "conditional",
+    "limitation": "Small group size (n=3 < 5); interpret regional share with caution."
+  },
+  {
+    "result_id": "RES-0011",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "global_plant_fuel:hydro",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "fuel_nameplate_capacity_mw",
+    "result_value": 95308.0,
+    "result_unit": "MW",
+    "result_category": "dominant_fuel",
+    "priority_rank": 1,
+    "finding": "Fuel 'hydro' accounts for 95,308.0 MW (47.35% share) across 10 curated global plants.",
+    "evidence": [
+      {
+        "factor": "plant_count",
+        "value": 10,
+        "unit": "plants"
+      },
+      {
+        "factor": "median_capacity_mw",
+        "value": 8522.0,
+        "unit": "MW"
+      },
+      {
+        "factor": "capacity_share_pct",
+        "value": 47.35,
+        "unit": "percent"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T16:36:34Z",
+    "quality_status": "validated",
+    "limitation": "Static nameplate capacity in MW from curated flagship registry; cannot be summed with U.S. EIA thousand_MWh generation."
+  },
+  {
+    "result_id": "RES-0012",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "global_plant_fuel:nuclear",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "fuel_nameplate_capacity_mw",
+    "result_value": 52456.0,
+    "result_unit": "MW",
+    "result_category": "dominant_fuel",
+    "priority_rank": 2,
+    "finding": "Fuel 'nuclear' accounts for 52,456.0 MW (26.06% share) across 12 curated global plants.",
+    "evidence": [
+      {
+        "factor": "plant_count",
+        "value": 12,
+        "unit": "plants"
+      },
+      {
+        "factor": "median_capacity_mw",
+        "value": 4868.0,
+        "unit": "MW"
+      },
+      {
+        "factor": "capacity_share_pct",
+        "value": 26.06,
+        "unit": "percent"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T16:36:34Z",
+    "quality_status": "validated",
+    "limitation": "Static nameplate capacity in MW from curated flagship registry; cannot be summed with U.S. EIA thousand_MWh generation."
+  },
+  {
+    "result_id": "RES-0013",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "global_plant_fuel:coal",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "fuel_nameplate_capacity_mw",
+    "result_value": 19936.0,
+    "result_unit": "MW",
+    "result_category": "dominant_fuel",
+    "priority_rank": 3,
+    "finding": "Fuel 'coal' accounts for 19,936.0 MW (9.91% share) across 5 curated global plants.",
+    "evidence": [
+      {
+        "factor": "plant_count",
+        "value": 5,
+        "unit": "plants"
+      },
+      {
+        "factor": "median_capacity_mw",
+        "value": 4760.0,
+        "unit": "MW"
+      },
+      {
+        "factor": "capacity_share_pct",
+        "value": 9.91,
+        "unit": "percent"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T16:36:34Z",
+    "quality_status": "validated",
+    "limitation": "Static nameplate capacity in MW from curated flagship registry; cannot be summed with U.S. EIA thousand_MWh generation."
+  },
+  {
+    "result_id": "RES-0014",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "global_plant_fuel:wind",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "fuel_nameplate_capacity_mw",
+    "result_value": 16849.0,
+    "result_unit": "MW",
+    "result_category": "secondary_fuel",
+    "priority_rank": 4,
+    "finding": "Fuel 'wind' accounts for 16,849.0 MW (8.37% share) across 6 curated global plants.",
+    "evidence": [
+      {
+        "factor": "plant_count",
+        "value": 6,
+        "unit": "plants"
+      },
+      {
+        "factor": "median_capacity_mw",
+        "value": 1524.0,
+        "unit": "MW"
+      },
+      {
+        "factor": "capacity_share_pct",
+        "value": 8.37,
+        "unit": "percent"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T16:36:34Z",
+    "quality_status": "validated",
+    "limitation": "Static nameplate capacity in MW from curated flagship registry; cannot be summed with U.S. EIA thousand_MWh generation."
+  },
+  {
+    "result_id": "RES-0015",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "global_plant_fuel:solar",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "fuel_nameplate_capacity_mw",
+    "result_value": 11242.0,
+    "result_unit": "MW",
+    "result_category": "secondary_fuel",
+    "priority_rank": 5,
+    "finding": "Fuel 'solar' accounts for 11,242.0 MW (5.59% share) across 9 curated global plants.",
+    "evidence": [
+      {
+        "factor": "plant_count",
+        "value": 9,
+        "unit": "plants"
+      },
+      {
+        "factor": "median_capacity_mw",
+        "value": 1100.0,
+        "unit": "MW"
+      },
+      {
+        "factor": "capacity_share_pct",
+        "value": 5.59,
+        "unit": "percent"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T16:36:34Z",
+    "quality_status": "validated",
+    "limitation": "Static nameplate capacity in MW from curated flagship registry; cannot be summed with U.S. EIA thousand_MWh generation."
+  },
+  {
+    "result_id": "RES-0016",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "global_plant_fuel:natural_gas",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "fuel_nameplate_capacity_mw",
+    "result_value": 3653.0,
+    "result_unit": "MW",
+    "result_category": "secondary_fuel",
+    "priority_rank": 6,
+    "finding": "Fuel 'natural_gas' accounts for 3,653.0 MW (1.82% share) across 1 curated global plants.",
+    "evidence": [
+      {
+        "factor": "plant_count",
+        "value": 1,
+        "unit": "plants"
+      },
+      {
+        "factor": "median_capacity_mw",
+        "value": 3653.0,
+        "unit": "MW"
+      },
+      {
+        "factor": "capacity_share_pct",
+        "value": 1.82,
+        "unit": "percent"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T16:36:34Z",
+    "quality_status": "conditional",
+    "limitation": "Small group size (n=1 < 5); sensitive to individual flagship facilities."
+  },
+  {
+    "result_id": "RES-0017",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "global_plant_fuel:geothermal",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "fuel_nameplate_capacity_mw",
+    "result_value": 1820.0,
+    "result_unit": "MW",
+    "result_category": "secondary_fuel",
+    "priority_rank": 7,
+    "finding": "Fuel 'geothermal' accounts for 1,820.0 MW (0.9% share) across 2 curated global plants.",
+    "evidence": [
+      {
+        "factor": "plant_count",
+        "value": 2,
+        "unit": "plants"
+      },
+      {
+        "factor": "median_capacity_mw",
+        "value": 910.0,
+        "unit": "MW"
+      },
+      {
+        "factor": "capacity_share_pct",
+        "value": 0.9,
+        "unit": "percent"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T16:36:34Z",
+    "quality_status": "conditional",
+    "limitation": "Small group size (n=2 < 5); sensitive to individual flagship facilities."
+  },
+  {
+    "result_id": "RES-0018",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "us_2024_fuel:other",
+    "period_start": "2024-01-01T00:00:00Z",
+    "period_end": "2024-12-31T23:59:59Z",
+    "metric_name": "us_2024_net_generation_thousand_mwh",
+    "result_value": 12436604.715,
+    "result_unit": "thousand_MWh",
+    "result_category": "top_contributor",
+    "priority_rank": 1,
+    "finding": "In U.S. 2024 EIA sample data, 'other' ranks #1 with 12,436,604.71 thousand MWh (47.91% of sampled 2024 generation, n=473).",
+    "evidence": [
+      {
+        "factor": "record_count_2024",
+        "value": 473,
+        "unit": "records"
+      },
+      {
+        "factor": "mean_2024_thousand_mwh",
+        "value": 26293.033,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "median_2024_thousand_mwh",
+        "value": 99.751,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "share_2024_pct",
+        "value": 47.91,
+        "unit": "percent"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T16:36:34Z",
+    "quality_status": "validated",
+    "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
+  },
+  {
+    "result_id": "RES-0019",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "us_2024_fuel:natural_gas",
+    "period_start": "2024-01-01T00:00:00Z",
+    "period_end": "2024-12-31T23:59:59Z",
+    "metric_name": "us_2024_net_generation_thousand_mwh",
+    "result_value": 5563453.068,
+    "result_unit": "thousand_MWh",
+    "result_category": "top_contributor",
+    "priority_rank": 2,
+    "finding": "In U.S. 2024 EIA sample data, 'natural_gas' ranks #2 with 5,563,453.07 thousand MWh (21.43% of sampled 2024 generation, n=104).",
+    "evidence": [
+      {
+        "factor": "record_count_2024",
+        "value": 104,
+        "unit": "records"
+      },
+      {
+        "factor": "mean_2024_thousand_mwh",
+        "value": 53494.741,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "median_2024_thousand_mwh",
+        "value": 13042.843,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "share_2024_pct",
+        "value": 21.43,
+        "unit": "percent"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T16:36:34Z",
+    "quality_status": "validated",
+    "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
+  },
+  {
+    "result_id": "RES-0020",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "us_2024_fuel:coal",
+    "period_start": "2024-01-01T00:00:00Z",
+    "period_end": "2024-12-31T23:59:59Z",
+    "metric_name": "us_2024_net_generation_thousand_mwh",
+    "result_value": 4987149.2,
+    "result_unit": "thousand_MWh",
+    "result_category": "top_contributor",
+    "priority_rank": 3,
+    "finding": "In U.S. 2024 EIA sample data, 'coal' ranks #3 with 4,987,149.20 thousand MWh (19.21% of sampled 2024 generation, n=231).",
+    "evidence": [
+      {
+        "factor": "record_count_2024",
+        "value": 231,
+        "unit": "records"
+      },
+      {
+        "factor": "mean_2024_thousand_mwh",
+        "value": 21589.39,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "median_2024_thousand_mwh",
+        "value": 4838.749,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "share_2024_pct",
+        "value": 19.21,
+        "unit": "percent"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T16:36:34Z",
+    "quality_status": "validated",
+    "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
+  },
+  {
+    "result_id": "RES-0021",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "us_2024_fuel:nuclear",
+    "period_start": "2024-01-01T00:00:00Z",
+    "period_end": "2024-12-31T23:59:59Z",
+    "metric_name": "us_2024_net_generation_thousand_mwh",
+    "result_value": 1251891.052,
+    "result_unit": "thousand_MWh",
+    "result_category": "moderate_contributor",
+    "priority_rank": 4,
+    "finding": "In U.S. 2024 EIA sample data, 'nuclear' ranks #4 with 1,251,891.05 thousand MWh (4.82% of sampled 2024 generation, n=23).",
+    "evidence": [
+      {
+        "factor": "record_count_2024",
+        "value": 23,
+        "unit": "records"
+      },
+      {
+        "factor": "mean_2024_thousand_mwh",
+        "value": 54430.046,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "median_2024_thousand_mwh",
+        "value": 28945.327,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "share_2024_pct",
+        "value": 4.82,
+        "unit": "percent"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T16:36:34Z",
+    "quality_status": "validated",
+    "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
+  },
+  {
+    "result_id": "RES-0022",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "us_2024_fuel:hydro",
+    "period_start": "2024-01-01T00:00:00Z",
+    "period_end": "2024-12-31T23:59:59Z",
+    "metric_name": "us_2024_net_generation_thousand_mwh",
+    "result_value": 716626.673,
+    "result_unit": "thousand_MWh",
+    "result_category": "moderate_contributor",
+    "priority_rank": 5,
+    "finding": "In U.S. 2024 EIA sample data, 'hydro' ranks #5 with 716,626.67 thousand MWh (2.76% of sampled 2024 generation, n=69).",
+    "evidence": [
+      {
+        "factor": "record_count_2024",
+        "value": 69,
+        "unit": "records"
+      },
+      {
+        "factor": "mean_2024_thousand_mwh",
+        "value": 10385.894,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "median_2024_thousand_mwh",
+        "value": 685.307,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "share_2024_pct",
+        "value": 2.76,
+        "unit": "percent"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T16:36:34Z",
+    "quality_status": "validated",
+    "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
+  },
+  {
+    "result_id": "RES-0023",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "us_2024_fuel:wind",
+    "period_start": "2024-01-01T00:00:00Z",
+    "period_end": "2024-12-31T23:59:59Z",
+    "metric_name": "us_2024_net_generation_thousand_mwh",
+    "result_value": 537447.498,
+    "result_unit": "thousand_MWh",
+    "result_category": "moderate_contributor",
+    "priority_rank": 6,
+    "finding": "In U.S. 2024 EIA sample data, 'wind' ranks #6 with 537,447.50 thousand MWh (2.07% of sampled 2024 generation, n=71).",
+    "evidence": [
+      {
+        "factor": "record_count_2024",
+        "value": 71,
+        "unit": "records"
+      },
+      {
+        "factor": "mean_2024_thousand_mwh",
+        "value": 7569.683,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "median_2024_thousand_mwh",
+        "value": 2425.677,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "share_2024_pct",
+        "value": 2.07,
+        "unit": "percent"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T16:36:34Z",
+    "quality_status": "validated",
+    "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
+  },
+  {
+    "result_id": "RES-0024",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "us_2024_fuel:solar",
+    "period_start": "2024-01-01T00:00:00Z",
+    "period_end": "2024-12-31T23:59:59Z",
+    "metric_name": "us_2024_net_generation_thousand_mwh",
+    "result_value": 357237.562,
+    "result_unit": "thousand_MWh",
+    "result_category": "moderate_contributor",
+    "priority_rank": 7,
+    "finding": "In U.S. 2024 EIA sample data, 'solar' ranks #7 with 357,237.56 thousand MWh (1.38% of sampled 2024 generation, n=268).",
+    "evidence": [
+      {
+        "factor": "record_count_2024",
+        "value": 268,
+        "unit": "records"
+      },
+      {
+        "factor": "mean_2024_thousand_mwh",
+        "value": 1332.976,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "median_2024_thousand_mwh",
+        "value": 31.591,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "share_2024_pct",
+        "value": 1.38,
+        "unit": "percent"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T16:36:34Z",
+    "quality_status": "validated",
+    "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
+  },
+  {
+    "result_id": "RES-0025",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "us_2024_fuel:petroleum",
+    "period_start": "2024-01-01T00:00:00Z",
+    "period_end": "2024-12-31T23:59:59Z",
+    "metric_name": "us_2024_net_generation_thousand_mwh",
+    "result_value": 86203.153,
+    "result_unit": "thousand_MWh",
+    "result_category": "moderate_contributor",
+    "priority_rank": 8,
+    "finding": "In U.S. 2024 EIA sample data, 'petroleum' ranks #8 with 86,203.15 thousand MWh (0.33% of sampled 2024 generation, n=121).",
+    "evidence": [
+      {
+        "factor": "record_count_2024",
+        "value": 121,
+        "unit": "records"
+      },
+      {
+        "factor": "mean_2024_thousand_mwh",
+        "value": 712.423,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "median_2024_thousand_mwh",
+        "value": 48.924,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "share_2024_pct",
+        "value": 0.33,
+        "unit": "percent"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T16:36:34Z",
+    "quality_status": "validated",
+    "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
+  },
+  {
+    "result_id": "RES-0026",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "us_2024_fuel:biomass",
+    "period_start": "2024-01-01T00:00:00Z",
+    "period_end": "2024-12-31T23:59:59Z",
+    "metric_name": "us_2024_net_generation_thousand_mwh",
+    "result_value": 18623.118,
+    "result_unit": "thousand_MWh",
+    "result_category": "moderate_contributor",
+    "priority_rank": 9,
+    "finding": "In U.S. 2024 EIA sample data, 'biomass' ranks #9 with 18,623.12 thousand MWh (0.07% of sampled 2024 generation, n=84).",
+    "evidence": [
+      {
+        "factor": "record_count_2024",
+        "value": 84,
+        "unit": "records"
+      },
+      {
+        "factor": "mean_2024_thousand_mwh",
+        "value": 221.704,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "median_2024_thousand_mwh",
+        "value": 46.102,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "share_2024_pct",
+        "value": 0.07,
+        "unit": "percent"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T16:36:34Z",
+    "quality_status": "validated",
+    "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
+  },
+  {
+    "result_id": "RES-0027",
+    "result_type": "ranking",
+    "record_id": null,
+    "entity_id": null,
+    "group_key": "us_2024_fuel:geothermal",
+    "period_start": "2024-01-01T00:00:00Z",
+    "period_end": "2024-12-31T23:59:59Z",
+    "metric_name": "us_2024_net_generation_thousand_mwh",
+    "result_value": 2741.898,
+    "result_unit": "thousand_MWh",
+    "result_category": "moderate_contributor",
+    "priority_rank": 10,
+    "finding": "In U.S. 2024 EIA sample data, 'geothermal' ranks #10 with 2,741.90 thousand MWh (0.01% of sampled 2024 generation, n=5).",
+    "evidence": [
+      {
+        "factor": "record_count_2024",
+        "value": 5,
+        "unit": "records"
+      },
+      {
+        "factor": "mean_2024_thousand_mwh",
+        "value": 548.38,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "median_2024_thousand_mwh",
+        "value": 641.509,
+        "unit": "thousand_MWh"
+      },
+      {
+        "factor": "share_2024_pct",
+        "value": 0.01,
+        "unit": "percent"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T16:36:34Z",
+    "quality_status": "validated",
+    "limitation": "Derived from stratified EIA sample (seed=42); 'other' category aggregates multi-fuel/all-fuels EIA reporting codes."
+  },
+  {
+    "result_id": "RES-0028",
+    "result_type": "ranking",
+    "record_id": "PLANT-0017",
+    "entity_id": "PLANT-17",
+    "group_key": "maintenance_baseline:south_america",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "maintenance_baseline_capacity_mw",
+    "result_value": 10235.0,
+    "result_unit": "MW",
+    "result_category": "curated_maintenance_baseline",
+    "priority_rank": 1,
+    "finding": "Guri Hydroelectric Station (south_america, hydro) ranks #1 among curated maintenance facilities with 10,235.0 MW nameplate capacity.",
+    "evidence": [
+      {
+        "factor": "capacity_mw",
+        "value": 10235.0,
+        "unit": "MW"
+      },
+      {
+        "factor": "fuel_category",
+        "value": "hydro",
+        "unit": "category"
+      },
+      {
+        "factor": "grid_region",
+        "value": "south_america",
+        "unit": "region"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T16:36:34Z",
+    "quality_status": "conditional",
+    "limitation": "Status reflects curated baseline metadata in app/plantsData.ts, not live SCADA telemetry or current grid-outage risk."
+  },
+  {
+    "result_id": "RES-0029",
+    "result_type": "ranking",
+    "record_id": "PLANT-0040",
+    "entity_id": "PLANT-40",
+    "group_key": "maintenance_baseline:asia_pacific",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "maintenance_baseline_capacity_mw",
+    "result_value": 7965.0,
+    "result_unit": "MW",
+    "result_category": "curated_maintenance_baseline",
+    "priority_rank": 2,
+    "finding": "Kashiwazaki-Kariwa Station (asia_pacific, nuclear) ranks #2 among curated maintenance facilities with 7,965.0 MW nameplate capacity.",
+    "evidence": [
+      {
+        "factor": "capacity_mw",
+        "value": 7965.0,
+        "unit": "MW"
+      },
+      {
+        "factor": "fuel_category",
+        "value": "nuclear",
+        "unit": "category"
+      },
+      {
+        "factor": "grid_region",
+        "value": "asia_pacific",
+        "unit": "region"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T16:36:34Z",
+    "quality_status": "conditional",
+    "limitation": "Status reflects curated baseline metadata in app/plantsData.ts, not live SCADA telemetry or current grid-outage risk."
+  },
+  {
+    "result_id": "RES-0030",
+    "result_type": "ranking",
+    "record_id": "PLANT-0022",
+    "entity_id": "PLANT-22",
+    "group_key": "maintenance_baseline:europe",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "maintenance_baseline_capacity_mw",
+    "result_value": 5102.0,
+    "result_unit": "MW",
+    "result_category": "curated_maintenance_baseline",
+    "priority_rank": 3,
+    "finding": "Belchatow Thermal Power Station (europe, coal) ranks #3 among curated maintenance facilities with 5,102.0 MW nameplate capacity.",
+    "evidence": [
+      {
+        "factor": "capacity_mw",
+        "value": 5102.0,
+        "unit": "MW"
+      },
+      {
+        "factor": "fuel_category",
+        "value": "coal",
+        "unit": "category"
+      },
+      {
+        "factor": "grid_region",
+        "value": "europe",
+        "unit": "region"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T16:36:34Z",
+    "quality_status": "conditional",
+    "limitation": "Status reflects curated baseline metadata in app/plantsData.ts, not live SCADA telemetry or current grid-outage risk."
+  },
+  {
+    "result_id": "RES-0031",
+    "result_type": "ranking",
+    "record_id": "PLANT-0032",
+    "entity_id": "PLANT-32",
+    "group_key": "maintenance_baseline:middle_east_&_africa",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "maintenance_baseline_capacity_mw",
+    "result_value": 4764.0,
+    "result_unit": "MW",
+    "result_category": "curated_maintenance_baseline",
+    "priority_rank": 4,
+    "finding": "Medupi Thermal Power Station (middle_east_&_africa, coal) ranks #4 among curated maintenance facilities with 4,764.0 MW nameplate capacity.",
+    "evidence": [
+      {
+        "factor": "capacity_mw",
+        "value": 4764.0,
+        "unit": "MW"
+      },
+      {
+        "factor": "fuel_category",
+        "value": "coal",
+        "unit": "category"
+      },
+      {
+        "factor": "grid_region",
+        "value": "middle_east_&_africa",
+        "unit": "region"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T16:36:34Z",
+    "quality_status": "conditional",
+    "limitation": "Status reflects curated baseline metadata in app/plantsData.ts, not live SCADA telemetry or current grid-outage risk."
+  },
+  {
+    "result_id": "RES-0032",
+    "result_type": "ranking",
+    "record_id": "PLANT-0003",
+    "entity_id": "PLANT-3",
+    "group_key": "maintenance_baseline:texas_gulf",
+    "period_start": "2026-01-01T00:00:00Z",
+    "period_end": "2026-01-01T00:00:00Z",
+    "metric_name": "maintenance_baseline_capacity_mw",
+    "result_value": 3653.0,
+    "result_unit": "MW",
+    "result_category": "curated_maintenance_baseline",
+    "priority_rank": 5,
+    "finding": "W. A. Parish Electric Station (texas_gulf, natural_gas) ranks #5 among curated maintenance facilities with 3,653.0 MW nameplate capacity.",
+    "evidence": [
+      {
+        "factor": "capacity_mw",
+        "value": 3653.0,
+        "unit": "MW"
+      },
+      {
+        "factor": "fuel_category",
+        "value": "natural_gas",
+        "unit": "category"
+      },
+      {
+        "factor": "grid_region",
+        "value": "texas_gulf",
+        "unit": "region"
+      }
+    ],
+    "method_version": "1.0.0",
+    "data_version": "1.0.1",
+    "generated_at": "2026-11-20T16:36:34Z",
+    "quality_status": "conditional",
+    "limitation": "Status reflects curated baseline metadata in app/plantsData.ts, not live SCADA telemetry or current grid-outage risk."
+  }
+]

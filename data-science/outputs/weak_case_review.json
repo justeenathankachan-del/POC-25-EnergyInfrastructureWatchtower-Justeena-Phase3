@@ -1,0 +1,42 @@
+[
+  {
+    "weak_case_id": "WC-01",
+    "record_or_group": "global_region:northwest (n=1 plant: Grand Coulee Hydro Dam, 6,809 MW)",
+    "observed_output": "Ranks #6 among global regions despite having only 1 facility in the curated registry.",
+    "concern": "Single-entity group is sensitive to individual asset selection bias.",
+    "likely_cause": "Curated registry (app/plantsData.ts) includes 45 flagship facilities rather than all regional plants.",
+    "user_facing_limitation": "Flagged with quality_status='conditional'; regional totals reflect curated flagship plants only."
+  },
+  {
+    "weak_case_id": "WC-02",
+    "record_or_group": "global_plant_fuel:geothermal (n=1) & wind (n=2)",
+    "observed_output": "Geothermal (745 MW) and Wind (2,700 MW) sit below the n>=5 group threshold.",
+    "concern": "Small group sample size creates high variance in group mean comparisons.",
+    "likely_cause": "Flagship registry emphasizes large thermal, hydro, and nuclear baseload stations.",
+    "user_facing_limitation": "Marked 'conditional' in intelligence_results.json with explicit sample-size caveat."
+  },
+  {
+    "weak_case_id": "WC-03",
+    "record_or_group": "us_2024_fuel:other (n=470 records, 7,755,005.19 thousand_MWh)",
+    "observed_output": "Ranks #1 in U.S. net generation volume.",
+    "concern": "'other' is a composite EIA reporting bucket (including ALL/aggregate fuel codes) rather than a single physical fuel.",
+    "likely_cause": "EIA API v2 fueltypeid rollup codes ('ALL', 'OTH', 'WND/SUN' subsets) map to 'other' during standardization.",
+    "user_facing_limitation": "Documented in findings so users compare specific named fuels (coal, natural_gas, nuclear, solar, wind, hydro) separately from composite 'other'."
+  },
+  {
+    "weak_case_id": "WC-04",
+    "record_or_group": "EIA 2022 annual slice (n=7 records vs n=1,449 in 2024)",
+    "observed_output": "2022 contains only 7 sampled observations across all fuel categories.",
+    "concern": "Multi-year pooled totals are heavily weighted toward 2024 (81.1% of EIA rows).",
+    "likely_cause": "API pagination order in the initial 5,000-row extract.",
+    "user_facing_limitation": "Primary U.S. fuel ranking uses the complete 2024 single-year benchmark (n=1,449) alongside all-years totals."
+  },
+  {
+    "weak_case_id": "WC-05",
+    "record_or_group": "Curated Maintenance Queue (5 plants totaling 31,719.0 MW)",
+    "observed_output": "Kashiwazaki-Kariwa (8,212 MW) and Guri (10,235 MW) appear at top of maintenance capacity ranking.",
+    "concern": "Users might misinterpret curated 'maintenance' status as a real-time grid emergency.",
+    "likely_cause": "Static baseline status in app/plantsData.ts without live SCADA telemetry.",
+    "user_facing_limitation": "Marked 'conditional' with explicit caveat that statuses are curated baseline metadata."
+  }
+]

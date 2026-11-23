@@ -1,4 +1,4 @@
-from pathlib import Path
+﻿from pathlib import Path
 import json
 import pandas as pd
 
@@ -49,9 +49,9 @@ def main():
         "status": "PASS" if (ap_match and hydro_match and solar_match and schema_ok and units_separated) else "FAIL",
         "data_version": data_version,
         "method_version": METHOD_VERSION,
-        "approved_track": "Track A — Comparative Intelligence",
+        "approved_track": "Track A â€” Comparative Intelligence",
         "independent_recalculation": {
-            "asia_pacific_capacity_mw": {"expected": expected_ap_mw, "reported": reported_ap_mw, "match": ap_match},
+            "asia_pacific_capacity_mw": {"expected": expected_ap_mw, "reported": reported_ap, "match": ap_match},
             "global_hydro_capacity_mw": {"expected": expected_hydro_mw, "reported": reported_hydro, "match": hydro_match},
             "us_2024_solar_generation_thousand_mwh": {"expected": expected_solar_2024, "reported": reported_solar_2024, "match": solar_match},
         },
@@ -105,7 +105,7 @@ def main():
         },
         {
             "weak_case_id": "WC-05",
-            "record_or_group": "Curated Maintenance Queue (5 plants totaling 20,765 MW)",
+            "record_or_group": "Curated Maintenance Queue (5 plants totaling 31,719.0 MW)",
             "observed_output": "Kashiwazaki-Kariwa (8,212 MW) and Guri (10,235 MW) appear at top of maintenance capacity ranking.",
             "concern": "Users might misinterpret curated 'maintenance' status as a real-time grid emergency.",
             "likely_cause": "Static baseline status in app/plantsData.ts without live SCADA telemetry.",
@@ -124,3 +124,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
