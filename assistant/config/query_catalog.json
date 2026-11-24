@@ -1,0 +1,87 @@
+{
+  "get_summary": {
+    "description": "Return approved Track A executive summary and key findings.",
+    "source": "intelligence_summary",
+    "allowed_parameters": {},
+    "query_function": "get_executive_summary",
+    "requires_evidence": true,
+    "supported_track": "comparative"
+  },
+  "compare_groups": {
+    "description": "Compare approved group rankings within a single unit-consistent domain.",
+    "source": "intelligence_results",
+    "allowed_parameters": {
+      "domain": {
+        "type": "string",
+        "allowed_values": [
+          "global_region",
+          "global_plant_fuel",
+          "us_2024_fuel"
+        ],
+        "required": true
+      },
+      "limit": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 25,
+        "default": 5
+      }
+    },
+    "query_function": "compare_domain_groups",
+    "requires_evidence": true,
+    "supported_track": "comparative"
+  },
+  "list_maintenance_items": {
+    "description": "List curated flagship stations marked in maintenance baseline (static snapshot, non-SCADA).",
+    "source": "intelligence_results",
+    "allowed_parameters": {
+      "limit": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 10,
+        "default": 5
+      }
+    },
+    "query_function": "get_maintenance_baseline_items",
+    "requires_evidence": true,
+    "supported_track": "comparative"
+  },
+  "explain_result": {
+    "description": "Explain one approved intelligence result (RES-0001..RES-0032) using its supporting evidence factors.",
+    "source": "intelligence_results",
+    "allowed_parameters": {
+      "result_id": {
+        "type": "string",
+        "pattern": "^RES-[0-9]{4}$",
+        "required": true
+      }
+    },
+    "query_function": "explain_result_by_id",
+    "requires_evidence": true,
+    "supported_track": "comparative"
+  },
+  "explain_method": {
+    "description": "Explain Track A partitioned comparative methodology, baseline benchmark, and validation.",
+    "source": "validation_metrics",
+    "allowed_parameters": {},
+    "query_function": "get_method_details",
+    "requires_evidence": true,
+    "supported_track": "comparative"
+  },
+  "explain_limitation": {
+    "description": "Return approved analytical limitations and unsupported-use boundaries.",
+    "source": "intelligence_summary",
+    "allowed_parameters": {},
+    "query_function": "get_analytical_limitations",
+    "requires_evidence": true,
+    "supported_track": "comparative"
+  },
+  "get_data_freshness": {
+    "description": "Return canonical data_version, method_version, generated_at timestamp, and validation status.",
+    "source": "intelligence_summary",
+    "allowed_parameters": {},
+    "query_function": "get_freshness_metadata",
+    "requires_evidence": true,
+    "supported_track": "comparative"
+  }
+}

@@ -1,4 +1,4 @@
-﻿import type {
+import type {
   IntelligenceMetadata,
   IntelligenceResult,
   IntelligenceSummary,
@@ -61,6 +61,21 @@ export function validateIntelligencePackage(
   if (!Array.isArray(results) || results.length === 0) {
     throw new Error("Contract Error: intelligence results must be a non-empty array.");
   }
+  if (sum.result_count !== results.length) {
+    throw new Error(
+      `Contract Error: Summary result_count (${sum.result_count}) does not match loaded results (${results.length}).`
+    );
+  }
+  if (sum.data_version !== EXPECTED_DATA_VERSION) {
+    throw new Error(
+      `Contract Error: Incompatible data_version '${sum.data_version}' (expected '${EXPECTED_DATA_VERSION}').`
+    );
+  }
+  if (sum.method_version !== EXPECTED_METHOD_VERSION) {
+    throw new Error(
+      `Contract Error: Incompatible method_version '${sum.method_version}' (expected '${EXPECTED_METHOD_VERSION}').`
+    );
+  }
 
   const seenIds = new Set<string>();
   const validatedResults: IntelligenceResult[] = [];
@@ -72,22 +87,14 @@ export function validateIntelligencePackage(
       throw new Error(`Contract Error: Duplicate result_id '${raw.result_id}'.`);
     }
     seenIds.add(raw.result_id);
+    if (raw.data_version !== sum.data_version || raw.method_version !== sum.method_version) {
+      throw new Error(
+        `Contract Error: Version mismatch on ${raw.result_id} (${raw.data_version}/${raw.method_version}).`
+      );
+    }
     if (raw.quality_status !== "rejected") {
       validatedResults.push(raw);
     }
-    if (raw.data_version !== sum.data_version || raw.method_version !== sum.method_version) {
-      staleReasons.push(`Version mismatch on ${raw.result_id} (${raw.data_version}/${raw.method_version}).`);
-    }
-  }
-
-  if (sum.result_count !== results.length) {
-    staleReasons.push(`Summary count (${sum.result_count}) differs from loaded results (${results.length}).`);
-  }
-  if (sum.data_version !== EXPECTED_DATA_VERSION) {
-    staleReasons.push(`Expected data_version ${EXPECTED_DATA_VERSION}, found ${sum.data_version}.`);
-  }
-  if (sum.method_version !== EXPECTED_METHOD_VERSION) {
-    staleReasons.push(`Expected method_version ${EXPECTED_METHOD_VERSION}, found ${sum.method_version}.`);
   }
 
   const parsedGen = Date.parse(sum.generated_at);
