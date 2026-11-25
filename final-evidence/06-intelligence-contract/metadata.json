@@ -1,0 +1,12 @@
+{
+  "project_id": "POC-25",
+  "project_title": "Energy Infrastructure Watchtower",
+  "approved_track": "Track A — Comparative Intelligence",
+  "data_version": "1.0.1",
+  "method_version": "1.0.0",
+  "generated_at": "2026-11-20T16:36:34Z",
+  "quality_status": "validated",
+  "result_count": 32,
+  "validation_status": "PASS",
+  "freshness_window_days": 30
+}

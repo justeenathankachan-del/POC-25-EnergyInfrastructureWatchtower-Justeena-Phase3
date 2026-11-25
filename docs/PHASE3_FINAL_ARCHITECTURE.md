@@ -1,0 +1,2 @@
+﻿# Phase 3 Final Architecture — PoC-25
+Global Power Plants + U.S. EIA Data -> Canonical `/data` (`v1.0.1`, `1,832` rows) -> Data Readiness (`PASS`) -> Track A Partitioned Comparative Intelligence (`m1.0.0`, `32` results) -> Build-Time Static Publisher (`public/data/intelligence/*.json`) -> Fail-Closed Validator (`services/intelligenceValidator.ts`) -> `/data-intelligence` + `/` + Mode A Deterministic Assistant (`services/assistantEngine.ts`, `/api/assistant/query`) -> Render Container (`phase3-v1.0.0`).

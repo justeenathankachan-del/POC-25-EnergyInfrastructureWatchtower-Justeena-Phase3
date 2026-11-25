@@ -1,0 +1,24 @@
+{
+  "project_id": "POC-25",
+  "project_title": "Energy Infrastructure Watchtower",
+  "data_version": "1.0.1",
+  "canonical_file": "data/canonical/intelligence_data.csv",
+  "published_file": "data/published/intelligence_data.json",
+  "source_type": "public_api_and_static_registry",
+  "source_names": [
+    "PLANTS_DATA_TS",
+    "EIA_API_v2"
+  ],
+  "is_sampled": true,
+  "sampling_method": "full_entity_preservation_plus_stratified_by_location_and_fueltypeid",
+  "random_seed": 42,
+  "original_record_count": 5045,
+  "sample_record_count": 1832,
+  "canonical_record_count": 1832,
+  "canonical_column_count": 20,
+  "source_sample_size_mb": 0.186,
+  "canonical_file_size_mb": 0.409,
+  "published_file_size_mb": 0.944,
+  "contains_synthetic_data": false,
+  "contains_personal_data": false
+}

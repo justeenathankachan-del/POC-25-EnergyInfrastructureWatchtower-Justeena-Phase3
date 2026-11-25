@@ -1,36 +1,11 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+﻿# PoC-25 — Energy Infrastructure Watchtower (Phase 3 Certified)
+Interactive operational energy infrastructure watchtower (`/`) integrated with a validated **Track A Comparative Intelligence** decision dashboard (`/data-intelligence`) and a **Mode A Deterministic Guided Assistant**.
+- **Release Tag**: `phase3-v1.0.0` | **Canonical Data Version**: `1.0.1` | **Method Version**: `1.0.0`
+- **Live Deployment URL**: https://poc-25-energy-infrastructure-watchtower.onrender.com
+- **Routes**: `/` (Operational View), `/data-intelligence` (Decision Intelligence View), `/api/assistant/query` (Deterministic Assistant API), `/api/eia` (EIA Telemetry)
+## Quickstart, Validation & Build
+Run `npm ci`, `python scripts/data_pipeline/validate_data.py`, `python scripts/data_pipeline/run_track_a_analysis.py`, `node tests/run_post4_tests.mjs`, `node tests/run_post5_tests.mjs`, `node tests/run_post6_certification.mjs`, and `npm run build`.
+## Certification Documentation
+All 13 certification reports (`PHASE3_RELEASE_MANIFEST.md`, `CLEAN_CLONE_VALIDATION_REPORT.md`, `FINAL_ANALYTICAL_REVALIDATION.md`, `BUILD_AND_ENVIRONMENT_VALIDATION.md`, `FINAL_OPERATIONAL_REGRESSION_REPORT.md`, `FINAL_DATA_INTELLIGENCE_VALIDATION.md`, `FINAL_ASSISTANT_VALIDATION.md`, `FINAL_AUTOMATED_TEST_REPORT.md`, `PHASE3_FINAL_UAT.md`, `DEPLOYMENT_VALIDATION_REPORT.md`, `PHASE3_FINAL_ARCHITECTURE.md`, `PHASE3_COMPLETION_REPORT.md`, `PHASE3_HANDOVER_GUIDE.md`) are located in `/docs/`.
+## Known Limitations & Safety Boundary
+Nameplate capacity (`MW`) and U.S. 2024 utility net generation (`thousand_MWh`) are strictly partitioned and never combined. Maintenance baseline records (`31,719.0 MW` across 5 flagship stations) reflect a static snapshot rather than live SCADA telemetry. Time-series forecasting (Track F) is unsupported and refused by the assistant.

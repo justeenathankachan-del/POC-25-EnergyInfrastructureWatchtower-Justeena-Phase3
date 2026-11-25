@@ -1,0 +1,34 @@
+{
+  "project_id": "POC-25",
+  "project_title": "Energy Infrastructure Watchtower",
+  "approved_track": "Track A — Comparative Intelligence",
+  "primary_analytical_question": "How do electricity generation shares and capacity concentrations compare across fuel types, U.S. states (2021-2024), and global grid regions, and which high-capacity facilities currently in maintenance represent the largest regional capacity exposure?",
+  "decision_to_be_supported": "Prioritizing regional grid resilience monitoring and clean-energy vs. fossil fuel-mix benchmarking without conflating static global plant capacity (MW) with U.S. annual net generation (thousand_MWh).",
+  "data_version": "1.0.1",
+  "method_version": "1.0.0",
+  "baseline_summary": {
+    "method": "Unstratified Category Total & Mean Ranking",
+    "category_count": 10,
+    "limitation": "Baseline mixes MW capacity and thousand_MWh generation on the same scale, demonstrating why record_type partitioning is required."
+  },
+  "key_findings": [
+    "Asia Pacific leads curated global infrastructure capacity with 77,505.0 MW (38.51% of the 201,264.0 MW registry across 12 facilities).",
+    "Hydroelectric plants represent the largest share of curated global nameplate capacity (95,308.0 MW, 47.35%), followed by nuclear and natural gas.",
+    "In U.S. 2024 EIA utility measurements (n=1,449), composite 'other' leads total volume, while among specific fuels coal, solar, and natural gas dominate sampled generation shares.",
+    "Five curated flagship facilities are marked in baseline 'maintenance' status totaling 31,719.0 MW, led by Guri (10,235 MW) and Kashiwazaki-Kariwa (8,212 MW)."
+  ],
+  "priority_items": [
+    "RES-0001",
+    "RES-0011",
+    "RES-0018",
+    "RES-0028"
+  ],
+  "validation_result": "PASS",
+  "important_limitations": [
+    "Global power plant capacity (MW) and U.S. annual net generation (thousand_MWh) are strictly partitioned and never combined.",
+    "EIA 2022 coverage is sparse (7 records vs. 1,449 in 2024); 2024 is used as the primary single-year U.S. benchmark.",
+    "Plant maintenance statuses reflect curated baseline metadata in app/plantsData.ts rather than live SCADA telemetry."
+  ],
+  "generated_at": "2026-11-20T16:36:34Z",
+  "result_count": 32
+}

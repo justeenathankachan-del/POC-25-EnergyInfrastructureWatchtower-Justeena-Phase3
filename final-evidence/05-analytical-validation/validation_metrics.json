@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "data_version": "1.0.1",
+  "method_version": "1.0.0",
+  "approved_track": "Track A â€” Comparative Intelligence",
+  "independent_recalculation": {
+    "asia_pacific_capacity_mw": {
+      "expected": 77505.0,
+      "reported": 77505.0,
+      "match": true
+    },
+    "global_hydro_capacity_mw": {
+      "expected": 95308.0,
+      "reported": 95308.0,
+      "match": true
+    },
+    "us_2024_solar_generation_thousand_mwh": {
+      "expected": 357237.562,
+      "reported": 357237.562,
+      "match": true
+    }
+  },
+  "contract_compliance": {
+    "total_results_exported": 32,
+    "validated_results_count": 18,
+    "conditional_results_count": 14,
+    "strict_unit_separation": true,
+    "all_contract_keys_present": true
+  },
+  "sensitivity_checks": {
+    "min_group_size_threshold": 5,
+    "regions_below_min_group_size": [
+      "south_america",
+      "texas_gulf",
+      "west",
+      "northeast",
+      "southwest",
+      "southeast",
+      "northwest"
+    ],
+    "sparse_year_2022_record_count": 7,
+    "ranking_stability_top3_regions": "Stable (asia_pacific, europe, middle_east_&_africa each have >= 7 plants)"
+  }
+}
