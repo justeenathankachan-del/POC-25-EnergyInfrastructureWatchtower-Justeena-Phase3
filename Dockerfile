@@ -5,6 +5,7 @@ COPY package.json package-lock.json ./
 RUN npm ci
 
 FROM node:20-alpine AS builder
+RUN apk add --no-cache python3 && ln -sf python3 /usr/bin/python
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .

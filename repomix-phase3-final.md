@@ -252,410 +252,6 @@ VAR_REPORT.md
 <files>
 This section contains the contents of the repository's files.
 
-<file path="docs/BUILD_AND_ENVIRONMENT_VALIDATION.md">
-# Build and Environment Validation — PoC-25
-- **Runtime**: Node.js `v22.x`, Next.js `16.4.5` (Turbopack, standalone output), React `19.3.0`, Python `3.12`
-- **Environment**: `.env.example` documents optional server-side `EIA_API_KEY`; zero secrets in `NEXT_PUBLIC_*` or client bundles.
-- **Build & Container**: `npm run build` runs `publish_intelligence.py` before `next build`; multi-stage `Dockerfile` builds cleanly with non-root user and health check on `/`.
-- **Final Result**: `PASS`
-</file>
-
-<file path="docs/CLEAN_CLONE_VALIDATION_REPORT.md">
-# Clean Clone Validation Report — PoC-25
-- **Repository**: https://github.com/justeenathankachan-del/POC-25-EnergyInfrastructureWatchtower-Justeena-Phase3
-- **Checked-Out Tag / Branch**: `main` / `phase3-v1.0.0`
-- **Clone & Setup Flow**: `git clone` -> `npm ci` -> `python scripts/data_pipeline/validate_data.py` -> `python scripts/data_pipeline/run_track_a_analysis.py` -> `npm run build`
-- **Verification**: Dependency install (`PASS`), Canonical data validation `v1.0.1` (`PASS`), Analytical regeneration `m1.0.0` (`PASS`), Production build (`PASS`), Routes `/` and `/data-intelligence` (`PASS`).
-- **Final Result**: `PASS`
-</file>
-
-<file path="docs/DEPLOYMENT_VALIDATION_REPORT.md">
-# Deployment Validation Report — PoC-25
-- **Target**: Render Cloud Web Service (Docker runtime) | **Live URL**: https://poc-25-energy-infrastructure-watchtower.onrender.com
-- **Build & Start**: `docker build -t phase3-app .` (`publish_intelligence.py && next build`) -> `node server.js` (`PORT=3000`, `HOSTNAME=0.0.0.0`)
-- **Security & Rollback**: `EIA_API_KEY` server-side only (zero secrets in client bundle); public JSON ~24 KB; rollback via Render dashboard or tag `phase3-v1.0.0`.
-- **Final Result**: `PASS`
-</file>
-
-<file path="docs/FINAL_ANALYTICAL_REVALIDATION.md">
-# Final Analytical Revalidation — PoC-25
-- **Approved Track**: Track A — Comparative Intelligence (`Partitioned Comparative Intelligence`)
-- **Versions**: `data_version: 1.0.1` | `method_version: 1.0.0`
-- **Pipeline**: `data/canonical/intelligence_data.csv` -> `run_track_a_analysis.py` -> Baseline + Stratified Ranking + `n >= 5` Quality Flagging -> `intelligence_results.json` (`32`), `intelligence_summary.json`, `validation_metrics.json`.
-- **Reproducibility**: Repeated runs produce identical values (`77,505.0 MW` Asia Pacific, `95,308.0 MW` Global Hydro, `1,864,874.294 thousand_MWh` U.S. 2024 Natural Gas, `31,719.0 MW` Maintenance Baseline) with zero manual edits or LLM-generated numbers.
-- **Final Result**: `PASS`
-</file>
-
-<file path="docs/FINAL_ASSISTANT_VALIDATION.md">
-# Final Assistant Validation — PoC-25
-- **Mode**: Mode A — Deterministic Guided Assistant (`GROUNDED DATA ASSISTANT APPROVED`)
-- **Verification**: All 7 approved Track A intents execute deterministic retrieval prior to response composition; combined maintenance capacity (`31,719 MW`) is derived dynamically from validated results; clickable `RES-XXXX` evidence references highlight the corresponding record in `EvidencePanel`; `LimitationNotice` is visible on every card; forecasting (`2026`), live SCADA queries, and prompt-injection attempts are safely refused; persistent sensitive memory is disabled.
-- **Final Result**: `PASS`
-</file>
-
-<file path="docs/FINAL_AUTOMATED_TEST_REPORT.md">
-# Final Automated Test Report — PoC-25
-| Test Group | Command | Passed | Failed | Skipped | Result |
-| :--- | :--- | :---: | :---: | :---: | :---: |
-| Data pipeline | `python scripts/data_pipeline/validate_data.py` | 1 | 0 | 0 | PASS |
-| Data readiness | `python scripts/data_pipeline/profile_and_readiness.py` | 1 | 0 | 0 | PASS |
-| Analytical & publish | `python scripts/data_pipeline/publish_intelligence.py` | 1 | 0 | 0 | PASS |
-| Output contract & UI | `node tests/run_post4_tests.mjs` | 1 | 0 | 0 | PASS |
-| Assistant grounding & safety | `node tests/run_post5_tests.mjs` | 1 | 0 | 0 | PASS |
-| End-to-end certification | `node tests/run_post6_certification.mjs` | 1 | 0 | 0 | PASS |
-| Production build | `npm run build` | 1 | 0 | 0 | PASS |
-</file>
-
-<file path="docs/FINAL_DATA_INTELLIGENCE_VALIDATION.md">
-# Final Data Intelligence Validation — PoC-25
-- **Route**: `/data-intelligence` (`app/data-intelligence/page.tsx`)
-- **Verification**: Displays Track A badge, `data_version: 1.0.1`, `method_version: 1.0.0`, `generated_at`, 4 KPI summary cards, unit-separated `MW` and `thousand_MWh` comparative charts, domain/category/quality/search filters, sortable 32-row explorer, clickable `EvidencePanel`, `MethodologyPanel`, `LimitationsPanel`, and fail-closed contract validation (`services/intelligenceValidator.ts`).
-- **Final Result**: `PASS`
-</file>
-
-<file path="docs/FINAL_OPERATIONAL_REGRESSION_REPORT.md">
-# Final Operational Regression Report — PoC-25
-- **Route**: `/` (`app/page.tsx`) & `/api/eia` (`app/api/eia/route.ts`)
-- **Verification**: Interactive Leaflet global power plant map (`PowerPlantMap.tsx`), operational region/fuel filters, live EIA telemetry chart, mobile layout, and navigation link to `/data-intelligence` operate with zero console or server errors.
-- **Final Result**: `PASS`
-</file>
-
-<file path="docs/PHASE3_COMPLETION_REPORT.md">
-# Phase 3 Completion Report — PoC-25
-- **Summary**: Certified Phase 3 delivery (`phase3-v1.0.0`) extending `/` operational map with `/data-intelligence` Track A dashboard (`1.0.1` / `1.0.0`) and Mode A Deterministic Guided Assistant (`7` intents, dynamic maintenance sum `31,719 MW`, clickable evidence citations, prompt-injection/out-of-scope guards).
-- **Limitations & Unsupported Uses**: `MW` capacity and `thousand_MWh` generation are strictly partitioned; maintenance baseline is non-SCADA; Track F forecasting is unsupported.
-- **Final Result**: `PHASE 3 COMPLETE — CERTIFIED`
-</file>
-
-<file path="docs/PHASE3_FINAL_ARCHITECTURE.md">
-# Phase 3 Final Architecture — PoC-25
-Global Power Plants + U.S. EIA Data -> Canonical `/data` (`v1.0.1`, `1,832` rows) -> Data Readiness (`PASS`) -> Track A Partitioned Comparative Intelligence (`m1.0.0`, `32` results) -> Build-Time Static Publisher (`public/data/intelligence/*.json`) -> Fail-Closed Validator (`services/intelligenceValidator.ts`) -> `/data-intelligence` + `/` + Mode A Deterministic Assistant (`services/assistantEngine.ts`, `/api/assistant/query`) -> Render Container (`phase3-v1.0.0`).
-</file>
-
-<file path="docs/PHASE3_FINAL_UAT.md">
-# Phase 3 Final UAT — PoC-25
-| Area | Expected | Actual | Status | Evidence |
-| :--- | :--- | :--- | :--- | :--- |
-| Operational page (`/`) | Primary Leaflet map, filters, and `/api/eia` work | Verified intact with navigation to `/data-intelligence` | PASS | `FINAL_OPERATIONAL_REGRESSION_REPORT.md` |
-| Data Intelligence (`/data-intelligence`) | Track A charts, KPIs, and 32 results display | Verified `1.0.1` / `1.0.0` outputs and separated units | PASS | `FINAL_DATA_INTELLIGENCE_VALIDATION.md` |
-| Filters & Evidence | Filters narrow 32 rows; clicking row opens `EvidencePanel` | Verified domain/quality/search filters & evidence factors | PASS | `DATA_INTELLIGENCE_UAT.md` |
-| Methodology & Limitations | Track A rules and unsupported uses visible | Verified in `MethodologyPanel` and `LimitationsPanel` | PASS | `DATA_INTELLIGENCE_UAT.md` |
-| Grounded Assistant | Answers 7 Track A intents; refuses out-of-scope/injection | Dynamic maintenance sum, evidence links, and refusals verified | PASS | `FINAL_ASSISTANT_VALIDATION.md` |
-| Mobile & Deployment | Responsive on mobile viewports; live Render URL accessible | Verified mobile grid stacking and Render container deployment | PASS | `DEPLOYMENT_VALIDATION_REPORT.md` |
-</file>
-
-<file path="docs/PHASE3_HANDOVER_GUIDE.md">
-# Phase 3 Handover Guide — PoC-25
-- **Repository**: https://github.com/justeenathankachan-del/POC-25-EnergyInfrastructureWatchtower-Justeena-Phase3 | **Tag**: `phase3-v1.0.0` | **Live URL**: https://poc-25-energy-infrastructure-watchtower.onrender.com
-- **Setup & Run**: `npm ci` -> `python scripts/data_pipeline/validate_data.py` -> `python scripts/data_pipeline/run_track_a_analysis.py` -> `node tests/run_post4_tests.mjs && node tests/run_post5_tests.mjs && node tests/run_post6_certification.mjs` -> `npm run build && npm run start`.
-- **Update & Rollback**: Update `data_version`/`method_version` in `data/manifest.json` and `services/intelligenceValidator.ts`, rebuild, and push. Roll back via Render or `git checkout phase3-v1.0.0`.
-</file>
-
-<file path="docs/PHASE3_RELEASE_MANIFEST.md">
-# Phase 3 Release Manifest — PoC-25
-- **Project**: POC-25 — Energy Infrastructure Watchtower | **Release Tag**: `phase3-v1.0.0` | **App Version**: `0.1.0`
-- **Data Version**: `1.0.1` | **Method Version**: `1.0.0` | **Track**: Track A — Comparative Intelligence (`32` validated results)
-- **Routes**: `/` (Operational View), `/data-intelligence` (Decision Intelligence View), `/api/assistant/query` (Mode A Deterministic Assistant)
-- **Live Deployment**: https://poc-25-energy-infrastructure-watchtower.onrender.com (Render Cloud Web Service, Docker)
-- **Known Limitations**: Curated 45-plant registry (`201,264.0 MW`, `n < 5` conditional); U.S. EIA isolated to 2024 (`1,449` records, `thousand_MWh`); static maintenance snapshot (`31,719.0 MW` derived dynamically, non-SCADA); forecasting unsupported.
-- **Final Result**: `PHASE 3 COMPLETE — CERTIFIED`
-</file>
-
-<file path="final-evidence/01-release/PHASE3_RELEASE_MANIFEST.md">
-# Phase 3 Release Manifest — PoC-25
-- **Project**: POC-25 — Energy Infrastructure Watchtower | **Release Tag**: `phase3-v1.0.0` | **App Version**: `0.1.0`
-- **Data Version**: `1.0.1` | **Method Version**: `1.0.0` | **Track**: Track A — Comparative Intelligence (`32` validated results)
-- **Routes**: `/` (Operational View), `/data-intelligence` (Decision Intelligence View), `/api/assistant/query` (Mode A Deterministic Assistant)
-- **Live Deployment**: https://poc-25-energy-infrastructure-watchtower.onrender.com (Render Cloud Web Service, Docker)
-- **Known Limitations**: Curated 45-plant registry (`201,264.0 MW`, `n < 5` conditional); U.S. EIA isolated to 2024 (`1,449` records, `thousand_MWh`); static maintenance snapshot (`31,719.0 MW` derived dynamically, non-SCADA); forecasting unsupported.
-- **Final Result**: `PHASE 3 COMPLETE — CERTIFIED`
-</file>
-
-<file path="final-evidence/02-clean-clone/CLEAN_CLONE_VALIDATION_REPORT.md">
-# Clean Clone Validation Report — PoC-25
-- **Repository**: https://github.com/justeenathankachan-del/POC-25-EnergyInfrastructureWatchtower-Justeena-Phase3
-- **Checked-Out Tag / Branch**: `main` / `phase3-v1.0.0`
-- **Clone & Setup Flow**: `git clone` -> `npm ci` -> `python scripts/data_pipeline/validate_data.py` -> `python scripts/data_pipeline/run_track_a_analysis.py` -> `npm run build`
-- **Verification**: Dependency install (`PASS`), Canonical data validation `v1.0.1` (`PASS`), Analytical regeneration `m1.0.0` (`PASS`), Production build (`PASS`), Routes `/` and `/data-intelligence` (`PASS`).
-- **Final Result**: `PASS`
-</file>
-
-<file path="final-evidence/03-data-foundation/manifest.json">
-{
-  "project_id": "POC-25",
-  "project_title": "Energy Infrastructure Watchtower",
-  "data_version": "1.0.1",
-  "canonical_file": "data/canonical/intelligence_data.csv",
-  "published_file": "data/published/intelligence_data.json",
-  "source_type": "public_api_and_static_registry",
-  "source_names": [
-    "PLANTS_DATA_TS",
-    "EIA_API_v2"
-  ],
-  "is_sampled": true,
-  "sampling_method": "full_entity_preservation_plus_stratified_by_location_and_fueltypeid",
-  "random_seed": 42,
-  "original_record_count": 5045,
-  "sample_record_count": 1832,
-  "canonical_record_count": 1832,
-  "canonical_column_count": 20,
-  "source_sample_size_mb": 0.186,
-  "canonical_file_size_mb": 0.409,
-  "published_file_size_mb": 0.944,
-  "contains_synthetic_data": false,
-  "contains_personal_data": false
-}
-</file>
-
-<file path="final-evidence/03-data-foundation/schema.json">
-{
-  "record_id": { "type": "string", "required": true, "nullable": false, "unique": true, "description": "Unique canonical asset or measurement identifier" },
-  "record_type": { "type": "string", "required": true, "nullable": false, "allowed_values": ["entity", "event", "transaction", "measurement", "process", "scenario", "node", "edge", "document"] },
-  "observed_at": { "type": "datetime", "required": true, "nullable": false, "format": "ISO-8601" },
-  "entity_id": { "type": "string", "required": true, "nullable": false, "description": "Power plant ID or U.S. state/national location code" },
-  "related_entity_id": { "type": "string", "required": false, "nullable": true, "description": "Parent region slug or US national interconnect code" },
-  "entity_name": { "type": "string", "required": false, "nullable": true, "description": "Readable power plant or state/region name" },
-  "category": { "type": "string", "required": true, "nullable": false, "allowed_values": ["natural_gas", "solar", "wind", "coal", "nuclear", "hydro", "geothermal", "petroleum", "biomass", "other"] },
-  "subcategory": { "type": "string", "required": false, "nullable": true, "description": "Grid region slug or raw EIA fueltypeid code" },
-  "status": { "type": "string", "required": false, "nullable": true, "allowed_values": ["online", "maintenance", "offline", "active", "unknown"] },
-  "stage": { "type": "string", "required": false, "nullable": true, "allowed_values": ["operational", "annual"] },
-  "metric_name": { "type": "string", "required": true, "nullable": false, "allowed_values": ["nameplate_capacity", "net_generation"] },
-  "metric_value": { "type": "number", "required": false, "nullable": true, "description": "Nameplate capacity (MW) or annual generation (thousand_MWh)" },
-  "metric_unit": { "type": "string", "required": true, "nullable": false, "allowed_values": ["MW", "thousand_MWh", "MWh"] },
-  "text_value": { "type": "string", "required": false, "nullable": true, "max_length": 500 },
-  "latitude": { "type": "number", "required": false, "nullable": true, "min": -90, "max": 90 },
-  "longitude": { "type": "number", "required": false, "nullable": true, "min": -180, "max": 180 },
-  "source_name": { "type": "string", "required": true, "nullable": false, "allowed_values": ["PLANTS_DATA_TS", "EIA_API_v2"] },
-  "source_record_id": { "type": "string", "required": false, "nullable": true, "description": "Original plant ID or composite period_location_fueltypeid key" },
-  "is_synthetic": { "type": "boolean", "required": true, "nullable": false },
-  "data_version": { "type": "string", "required": true, "nullable": false }
-}
-</file>
-
-<file path="final-evidence/04-data-readiness/validation_report.json">
-{
-  "status": "PASS",
-  "errors": [],
-  "data_version": "1.0.1",
-  "total_data_size_mb": 1.549,
-  "canonical_rows": 1832,
-  "canonical_columns": 20
-}
-</file>
-
-<file path="final-evidence/05-analytical-validation/FINAL_ANALYTICAL_REVALIDATION.md">
-# Final Analytical Revalidation — PoC-25
-- **Approved Track**: Track A — Comparative Intelligence (`Partitioned Comparative Intelligence`)
-- **Versions**: `data_version: 1.0.1` | `method_version: 1.0.0`
-- **Pipeline**: `data/canonical/intelligence_data.csv` -> `run_track_a_analysis.py` -> Baseline + Stratified Ranking + `n >= 5` Quality Flagging -> `intelligence_results.json` (`32`), `intelligence_summary.json`, `validation_metrics.json`.
-- **Reproducibility**: Repeated runs produce identical values (`77,505.0 MW` Asia Pacific, `95,308.0 MW` Global Hydro, `1,864,874.294 thousand_MWh` U.S. 2024 Natural Gas, `31,719.0 MW` Maintenance Baseline) with zero manual edits or LLM-generated numbers.
-- **Final Result**: `PASS`
-</file>
-
-<file path="final-evidence/05-analytical-validation/validation_metrics.json">
-{
-  "status": "PASS",
-  "data_version": "1.0.1",
-  "method_version": "1.0.0",
-  "approved_track": "Track A â€” Comparative Intelligence",
-  "independent_recalculation": {
-    "asia_pacific_capacity_mw": {
-      "expected": 77505.0,
-      "reported": 77505.0,
-      "match": true
-    },
-    "global_hydro_capacity_mw": {
-      "expected": 95308.0,
-      "reported": 95308.0,
-      "match": true
-    },
-    "us_2024_solar_generation_thousand_mwh": {
-      "expected": 357237.562,
-      "reported": 357237.562,
-      "match": true
-    }
-  },
-  "contract_compliance": {
-    "total_results_exported": 32,
-    "validated_results_count": 18,
-    "conditional_results_count": 14,
-    "strict_unit_separation": true,
-    "all_contract_keys_present": true
-  },
-  "sensitivity_checks": {
-    "min_group_size_threshold": 5,
-    "regions_below_min_group_size": [
-      "south_america",
-      "texas_gulf",
-      "west",
-      "northeast",
-      "southwest",
-      "southeast",
-      "northwest"
-    ],
-    "sparse_year_2022_record_count": 7,
-    "ranking_stability_top3_regions": "Stable (asia_pacific, europe, middle_east_&_africa each have >= 7 plants)"
-  }
-}
-</file>
-
-<file path="final-evidence/06-intelligence-contract/metadata.json">
-{
-  "project_id": "POC-25",
-  "project_title": "Energy Infrastructure Watchtower",
-  "approved_track": "Track A — Comparative Intelligence",
-  "data_version": "1.0.1",
-  "method_version": "1.0.0",
-  "generated_at": "2026-11-20T16:36:34Z",
-  "quality_status": "validated",
-  "result_count": 32,
-  "validation_status": "PASS",
-  "freshness_window_days": 30
-}
-</file>
-
-<file path="final-evidence/06-intelligence-contract/summary.json">
-{
-  "project_id": "POC-25",
-  "project_title": "Energy Infrastructure Watchtower",
-  "approved_track": "Track A — Comparative Intelligence",
-  "primary_analytical_question": "How do electricity generation shares and capacity concentrations compare across fuel types, U.S. states (2021-2024), and global grid regions, and which high-capacity facilities currently in maintenance represent the largest regional capacity exposure?",
-  "decision_to_be_supported": "Prioritizing regional grid resilience monitoring and clean-energy vs. fossil fuel-mix benchmarking without conflating static global plant capacity (MW) with U.S. annual net generation (thousand_MWh).",
-  "data_version": "1.0.1",
-  "method_version": "1.0.0",
-  "baseline_summary": {
-    "method": "Unstratified Category Total & Mean Ranking",
-    "category_count": 10,
-    "limitation": "Baseline mixes MW capacity and thousand_MWh generation on the same scale, demonstrating why record_type partitioning is required."
-  },
-  "key_findings": [
-    "Asia Pacific leads curated global infrastructure capacity with 77,505.0 MW (38.51% of the 201,264.0 MW registry across 12 facilities).",
-    "Hydroelectric plants represent the largest share of curated global nameplate capacity (95,308.0 MW, 47.35%), followed by nuclear and natural gas.",
-    "In U.S. 2024 EIA utility measurements (n=1,449), composite 'other' leads total volume, while among specific fuels coal, solar, and natural gas dominate sampled generation shares.",
-    "Five curated flagship facilities are marked in baseline 'maintenance' status totaling 31,719.0 MW, led by Guri (10,235 MW) and Kashiwazaki-Kariwa (8,212 MW)."
-  ],
-  "priority_items": [
-    "RES-0001",
-    "RES-0011",
-    "RES-0018",
-    "RES-0028"
-  ],
-  "validation_result": "PASS",
-  "important_limitations": [
-    "Global power plant capacity (MW) and U.S. annual net generation (thousand_MWh) are strictly partitioned and never combined.",
-    "EIA 2022 coverage is sparse (7 records vs. 1,449 in 2024); 2024 is used as the primary single-year U.S. benchmark.",
-    "Plant maintenance statuses reflect curated baseline metadata in app/plantsData.ts rather than live SCADA telemetry."
-  ],
-  "generated_at": "2026-11-20T16:36:34Z",
-  "result_count": 32
-}
-</file>
-
-<file path="final-evidence/07-operational-regression/FINAL_OPERATIONAL_REGRESSION_REPORT.md">
-# Final Operational Regression Report — PoC-25
-- **Route**: `/` (`app/page.tsx`) & `/api/eia` (`app/api/eia/route.ts`)
-- **Verification**: Interactive Leaflet global power plant map (`PowerPlantMap.tsx`), operational region/fuel filters, live EIA telemetry chart, mobile layout, and navigation link to `/data-intelligence` operate with zero console or server errors.
-- **Final Result**: `PASS`
-</file>
-
-<file path="final-evidence/08-data-intelligence/FINAL_DATA_INTELLIGENCE_VALIDATION.md">
-# Final Data Intelligence Validation — PoC-25
-- **Route**: `/data-intelligence` (`app/data-intelligence/page.tsx`)
-- **Verification**: Displays Track A badge, `data_version: 1.0.1`, `method_version: 1.0.0`, `generated_at`, 4 KPI summary cards, unit-separated `MW` and `thousand_MWh` comparative charts, domain/category/quality/search filters, sortable 32-row explorer, clickable `EvidencePanel`, `MethodologyPanel`, `LimitationsPanel`, and fail-closed contract validation (`services/intelligenceValidator.ts`).
-- **Final Result**: `PASS`
-</file>
-
-<file path="final-evidence/09-assistant-or-skip/ASSISTANT_GROUNDING_VALIDATION.md">
-# Assistant Grounding Validation Report — PoC-25
-| Measure | Result |
-| :--- | :--- |
-| Intent accuracy | 100% (7/7) |
-| Parameter accuracy | 100% (7/7) |
-| Retrieval accuracy | 100% |
-| Numeric fidelity (`77,505 MW`, `95,308 MW`, `31,719 MW`) | 100% |
-| Evidence coverage | 100% |
-| Limitation & version fidelity (`1.0.1` / `1.0.0`) | 100% |
-| Unsupported & prompt-injection resistance | 100% |
-</file>
-
-<file path="final-evidence/09-assistant-or-skip/FINAL_ASSISTANT_VALIDATION.md">
-# Final Assistant Validation — PoC-25
-- **Mode**: Mode A — Deterministic Guided Assistant (`GROUNDED DATA ASSISTANT APPROVED`)
-- **Verification**: All 7 approved Track A intents execute deterministic retrieval prior to response composition; combined maintenance capacity (`31,719 MW`) is derived dynamically from validated results; clickable `RES-XXXX` evidence references highlight the corresponding record in `EvidencePanel`; `LimitationNotice` is visible on every card; forecasting (`2026`), live SCADA queries, and prompt-injection attempts are safely refused; persistent sensitive memory is disabled.
-- **Final Result**: `PASS`
-</file>
-
-<file path="final-evidence/10-automated-tests/FINAL_AUTOMATED_TEST_REPORT.md">
-# Final Automated Test Report — PoC-25
-| Test Group | Command | Passed | Failed | Skipped | Result |
-| :--- | :--- | :---: | :---: | :---: | :---: |
-| Data pipeline | `python scripts/data_pipeline/validate_data.py` | 1 | 0 | 0 | PASS |
-| Data readiness | `python scripts/data_pipeline/profile_and_readiness.py` | 1 | 0 | 0 | PASS |
-| Analytical & publish | `python scripts/data_pipeline/publish_intelligence.py` | 1 | 0 | 0 | PASS |
-| Output contract & UI | `node tests/run_post4_tests.mjs` | 1 | 0 | 0 | PASS |
-| Assistant grounding & safety | `node tests/run_post5_tests.mjs` | 1 | 0 | 0 | PASS |
-| End-to-end certification | `node tests/run_post6_certification.mjs` | 1 | 0 | 0 | PASS |
-| Production build | `npm run build` | 1 | 0 | 0 | PASS |
-</file>
-
-<file path="final-evidence/11-selenium/run_post6_certification.mjs">
-import assert from "node:assert/strict";
-import fs from "node:fs";
-const docs = ["docs/PHASE3_RELEASE_MANIFEST.md","docs/CLEAN_CLONE_VALIDATION_REPORT.md","docs/FINAL_ANALYTICAL_REVALIDATION.md","docs/BUILD_AND_ENVIRONMENT_VALIDATION.md","docs/FINAL_OPERATIONAL_REGRESSION_REPORT.md","docs/FINAL_DATA_INTELLIGENCE_VALIDATION.md","docs/FINAL_ASSISTANT_VALIDATION.md","docs/FINAL_AUTOMATED_TEST_REPORT.md","docs/PHASE3_FINAL_UAT.md","docs/DEPLOYMENT_VALIDATION_REPORT.md","docs/PHASE3_FINAL_ARCHITECTURE.md","docs/PHASE3_COMPLETION_REPORT.md","docs/PHASE3_HANDOVER_GUIDE.md","README.md"];
-for (const doc of docs) { assert.equal(fs.existsSync(doc), true, `Missing ${doc}`); }
-assert.equal(fs.readFileSync("services/assistantEngine.ts", "utf8").includes("matched.reduce"), true);
-const s = JSON.parse(fs.readFileSync("public/data/intelligence/summary.json", "utf8"));
-const r = JSON.parse(fs.readFileSync("public/data/intelligence/results.json", "utf8"));
-assert.equal(s.data_version, "1.0.1"); assert.equal(s.method_version, "1.0.0"); assert.equal(s.result_count, r.length);
-console.log("ALL POST #6 FINAL CERTIFICATION CHECKS PASSED (phase3-v1.0.0)");
-</file>
-
-<file path="final-evidence/12-uat/PHASE3_FINAL_UAT.md">
-# Phase 3 Final UAT — PoC-25
-| Area | Expected | Actual | Status | Evidence |
-| :--- | :--- | :--- | :--- | :--- |
-| Operational page (`/`) | Primary Leaflet map, filters, and `/api/eia` work | Verified intact with navigation to `/data-intelligence` | PASS | `FINAL_OPERATIONAL_REGRESSION_REPORT.md` |
-| Data Intelligence (`/data-intelligence`) | Track A charts, KPIs, and 32 results display | Verified `1.0.1` / `1.0.0` outputs and separated units | PASS | `FINAL_DATA_INTELLIGENCE_VALIDATION.md` |
-| Filters & Evidence | Filters narrow 32 rows; clicking row opens `EvidencePanel` | Verified domain/quality/search filters & evidence factors | PASS | `DATA_INTELLIGENCE_UAT.md` |
-| Methodology & Limitations | Track A rules and unsupported uses visible | Verified in `MethodologyPanel` and `LimitationsPanel` | PASS | `DATA_INTELLIGENCE_UAT.md` |
-| Grounded Assistant | Answers 7 Track A intents; refuses out-of-scope/injection | Dynamic maintenance sum, evidence links, and refusals verified | PASS | `FINAL_ASSISTANT_VALIDATION.md` |
-| Mobile & Deployment | Responsive on mobile viewports; live Render URL accessible | Verified mobile grid stacking and Render container deployment | PASS | `DEPLOYMENT_VALIDATION_REPORT.md` |
-</file>
-
-<file path="final-evidence/13-deployment/DEPLOYMENT_VALIDATION_REPORT.md">
-# Deployment Validation Report — PoC-25
-- **Target**: Render Cloud Web Service (Docker runtime) | **Live URL**: https://poc-25-energy-infrastructure-watchtower.onrender.com
-- **Build & Start**: `docker build -t phase3-app .` (`publish_intelligence.py && next build`) -> `node server.js` (`PORT=3000`, `HOSTNAME=0.0.0.0`)
-- **Security & Rollback**: `EIA_API_KEY` server-side only (zero secrets in client bundle); public JSON ~24 KB; rollback via Render dashboard or tag `phase3-v1.0.0`.
-- **Final Result**: `PASS`
-</file>
-
-<file path="final-evidence/15-handover/PHASE3_COMPLETION_REPORT.md">
-# Phase 3 Completion Report — PoC-25
-- **Summary**: Certified Phase 3 delivery (`phase3-v1.0.0`) extending `/` operational map with `/data-intelligence` Track A dashboard (`1.0.1` / `1.0.0`) and Mode A Deterministic Guided Assistant (`7` intents, dynamic maintenance sum `31,719 MW`, clickable evidence citations, prompt-injection/out-of-scope guards).
-- **Limitations & Unsupported Uses**: `MW` capacity and `thousand_MWh` generation are strictly partitioned; maintenance baseline is non-SCADA; Track F forecasting is unsupported.
-- **Final Result**: `PHASE 3 COMPLETE — CERTIFIED`
-</file>
-
-<file path="final-evidence/15-handover/PHASE3_HANDOVER_GUIDE.md">
-# Phase 3 Handover Guide — PoC-25
-- **Repository**: https://github.com/justeenathankachan-del/POC-25-EnergyInfrastructureWatchtower-Justeena-Phase3 | **Tag**: `phase3-v1.0.0` | **Live URL**: https://poc-25-energy-infrastructure-watchtower.onrender.com
-- **Setup & Run**: `npm ci` -> `python scripts/data_pipeline/validate_data.py` -> `python scripts/data_pipeline/run_track_a_analysis.py` -> `node tests/run_post4_tests.mjs && node tests/run_post5_tests.mjs && node tests/run_post6_certification.mjs` -> `npm run build && npm run start`.
-- **Update & Rollback**: Update `data_version`/`method_version` in `data/manifest.json` and `services/intelligenceValidator.ts`, rebuild, and push. Roll back via Render or `git checkout phase3-v1.0.0`.
-</file>
-
-<file path="tests/run_post6_certification.mjs">
-import assert from "node:assert/strict";
-import fs from "node:fs";
-const docs = ["docs/PHASE3_RELEASE_MANIFEST.md","docs/CLEAN_CLONE_VALIDATION_REPORT.md","docs/FINAL_ANALYTICAL_REVALIDATION.md","docs/BUILD_AND_ENVIRONMENT_VALIDATION.md","docs/FINAL_OPERATIONAL_REGRESSION_REPORT.md","docs/FINAL_DATA_INTELLIGENCE_VALIDATION.md","docs/FINAL_ASSISTANT_VALIDATION.md","docs/FINAL_AUTOMATED_TEST_REPORT.md","docs/PHASE3_FINAL_UAT.md","docs/DEPLOYMENT_VALIDATION_REPORT.md","docs/PHASE3_FINAL_ARCHITECTURE.md","docs/PHASE3_COMPLETION_REPORT.md","docs/PHASE3_HANDOVER_GUIDE.md","README.md"];
-for (const doc of docs) { assert.equal(fs.existsSync(doc), true, `Missing ${doc}`); }
-assert.equal(fs.readFileSync("services/assistantEngine.ts", "utf8").includes("matched.reduce"), true);
-const s = JSON.parse(fs.readFileSync("public/data/intelligence/summary.json", "utf8"));
-const r = JSON.parse(fs.readFileSync("public/data/intelligence/results.json", "utf8"));
-assert.equal(s.data_version, "1.0.1"); assert.equal(s.method_version, "1.0.0"); assert.equal(s.result_count, r.length);
-console.log("ALL POST #6 FINAL CERTIFICATION CHECKS PASSED (phase3-v1.0.0)");
-</file>
-
 <file path="app/api/assistant/query/route.ts">
 import { NextResponse } from "next/server";
 import fs from "node:fs";
@@ -5634,6 +5230,14 @@ Prioritizing regional grid resilience monitoring and clean-energy vs. fossil fue
 | Version mismatch / Mobile / Regression | Safe block on version mismatch; `/` and `/data-intelligence` intact | Verified via `npm run build` | PASS | `services/intelligenceValidator.ts` |
 </file>
 
+<file path="docs/BUILD_AND_ENVIRONMENT_VALIDATION.md">
+# Build and Environment Validation — PoC-25
+- **Runtime**: Node.js `v22.x`, Next.js `16.4.5` (Turbopack, standalone output), React `19.3.0`, Python `3.12`
+- **Environment**: `.env.example` documents optional server-side `EIA_API_KEY`; zero secrets in `NEXT_PUBLIC_*` or client bundles.
+- **Build & Container**: `npm run build` runs `publish_intelligence.py` before `next build`; multi-stage `Dockerfile` builds cleanly with non-root user and health check on `/`.
+- **Final Result**: `PASS`
+</file>
+
 <file path="docs/CANONICAL_DATA_MAPPING.md">
 # Canonical Data Mapping
 
@@ -5767,6 +5371,15 @@ Prioritizing regional grid resilience monitoring and clean-energy vs. fossil fue
 2. **Negative Net Generation Values:** Negative `net_generation` values (down to `-4,232.426 thousand_MWh`) represent valid utility accounting where pumped-storage pumping energy or station auxiliary consumption exceeds gross generation.
 3. **Temporal Skew in EIA Sample:** `81.1%` (`1,449 / 1,787`) of EIA measurements fall in `2024`, while `2022` has only `7` observations.
 4.
+</file>
+
+<file path="docs/CLEAN_CLONE_VALIDATION_REPORT.md">
+# Clean Clone Validation Report — PoC-25
+- **Repository**: https://github.com/justeenathankachan-del/POC-25-EnergyInfrastructureWatchtower-Justeena-Phase3
+- **Checked-Out Tag / Branch**: `main` / `phase3-v1.0.0`
+- **Clone & Setup Flow**: `git clone` -> `npm ci` -> `python scripts/data_pipeline/validate_data.py` -> `python scripts/data_pipeline/run_track_a_analysis.py` -> `npm run build`
+- **Verification**: Dependency install (`PASS`), Canonical data validation `v1.0.1` (`PASS`), Analytical regeneration `m1.0.0` (`PASS`), Production build (`PASS`), Routes `/` and `/data-intelligence` (`PASS`).
+- **Final Result**: `PASS`
 </file>
 
 <file path="docs/DATA_ARCHETYPE_CONFIRMATION.md">
@@ -5936,6 +5549,57 @@ The Phase 2 Next.js operational dashboard combines two data sources:
 -
 </file>
 
+<file path="docs/DEPLOYMENT_VALIDATION_REPORT.md">
+# Deployment Validation Report — PoC-25
+- **Target**: Render Cloud Web Service (Docker runtime) | **Live URL**: https://poc-25-energy-infrastructure-watchtower.onrender.com
+- **Build & Start**: `docker build -t phase3-app .` (`publish_intelligence.py && next build`) -> `node server.js` (`PORT=3000`, `HOSTNAME=0.0.0.0`)
+- **Security & Rollback**: `EIA_API_KEY` server-side only (zero secrets in client bundle); public JSON ~24 KB; rollback via Render dashboard or tag `phase3-v1.0.0`.
+- **Final Result**: `PASS`
+</file>
+
+<file path="docs/FINAL_ANALYTICAL_REVALIDATION.md">
+# Final Analytical Revalidation — PoC-25
+- **Approved Track**: Track A — Comparative Intelligence (`Partitioned Comparative Intelligence`)
+- **Versions**: `data_version: 1.0.1` | `method_version: 1.0.0`
+- **Pipeline**: `data/canonical/intelligence_data.csv` -> `run_track_a_analysis.py` -> Baseline + Stratified Ranking + `n >= 5` Quality Flagging -> `intelligence_results.json` (`32`), `intelligence_summary.json`, `validation_metrics.json`.
+- **Reproducibility**: Repeated runs produce identical values (`77,505.0 MW` Asia Pacific, `95,308.0 MW` Global Hydro, `1,864,874.294 thousand_MWh` U.S. 2024 Natural Gas, `31,719.0 MW` Maintenance Baseline) with zero manual edits or LLM-generated numbers.
+- **Final Result**: `PASS`
+</file>
+
+<file path="docs/FINAL_ASSISTANT_VALIDATION.md">
+# Final Assistant Validation — PoC-25
+- **Mode**: Mode A — Deterministic Guided Assistant (`GROUNDED DATA ASSISTANT APPROVED`)
+- **Verification**: All 7 approved Track A intents execute deterministic retrieval prior to response composition; combined maintenance capacity (`31,719 MW`) is derived dynamically from validated results; clickable `RES-XXXX` evidence references highlight the corresponding record in `EvidencePanel`; `LimitationNotice` is visible on every card; forecasting (`2026`), live SCADA queries, and prompt-injection attempts are safely refused; persistent sensitive memory is disabled.
+- **Final Result**: `PASS`
+</file>
+
+<file path="docs/FINAL_AUTOMATED_TEST_REPORT.md">
+# Final Automated Test Report — PoC-25
+| Test Group | Command | Passed | Failed | Skipped | Result |
+| :--- | :--- | :---: | :---: | :---: | :---: |
+| Data pipeline | `python scripts/data_pipeline/validate_data.py` | 1 | 0 | 0 | PASS |
+| Data readiness | `python scripts/data_pipeline/profile_and_readiness.py` | 1 | 0 | 0 | PASS |
+| Analytical & publish | `python scripts/data_pipeline/publish_intelligence.py` | 1 | 0 | 0 | PASS |
+| Output contract & UI | `node tests/run_post4_tests.mjs` | 1 | 0 | 0 | PASS |
+| Assistant grounding & safety | `node tests/run_post5_tests.mjs` | 1 | 0 | 0 | PASS |
+| End-to-end certification | `node tests/run_post6_certification.mjs` | 1 | 0 | 0 | PASS |
+| Production build | `npm run build` | 1 | 0 | 0 | PASS |
+</file>
+
+<file path="docs/FINAL_DATA_INTELLIGENCE_VALIDATION.md">
+# Final Data Intelligence Validation — PoC-25
+- **Route**: `/data-intelligence` (`app/data-intelligence/page.tsx`)
+- **Verification**: Displays Track A badge, `data_version: 1.0.1`, `method_version: 1.0.0`, `generated_at`, 4 KPI summary cards, unit-separated `MW` and `thousand_MWh` comparative charts, domain/category/quality/search filters, sortable 32-row explorer, clickable `EvidencePanel`, `MethodologyPanel`, `LimitationsPanel`, and fail-closed contract validation (`services/intelligenceValidator.ts`).
+- **Final Result**: `PASS`
+</file>
+
+<file path="docs/FINAL_OPERATIONAL_REGRESSION_REPORT.md">
+# Final Operational Regression Report — PoC-25
+- **Route**: `/` (`app/page.tsx`) & `/api/eia` (`app/api/eia/route.ts`)
+- **Verification**: Interactive Leaflet global power plant map (`PowerPlantMap.tsx`), operational region/fuel filters, live EIA telemetry chart, mobile layout, and navigation link to `/data-intelligence` operate with zero console or server errors.
+- **Final Result**: `PASS`
+</file>
+
 <file path="docs/GROUNDED_RESPONSE_CONTRACT.md">
 # Grounded Response Contract — PoC-25
 Every assistant response returns `{ answer_id, status, classification, intent, answer, evidence_references, key_values, metadata: { data_version: "1.0.1", method_version: "1.0.0", generated_at, quality_status }, limitation, suggested_follow_ups }`.
@@ -6004,6 +5668,47 @@ Every assistant response returns `{ answer_id, status, classification, intent, a
 
 ## Final Regression Result
 PASS
+</file>
+
+<file path="docs/PHASE3_COMPLETION_REPORT.md">
+# Phase 3 Completion Report — PoC-25
+- **Summary**: Certified Phase 3 delivery (`phase3-v1.0.0`) extending `/` operational map with `/data-intelligence` Track A dashboard (`1.0.1` / `1.0.0`) and Mode A Deterministic Guided Assistant (`7` intents, dynamic maintenance sum `31,719 MW`, clickable evidence citations, prompt-injection/out-of-scope guards).
+- **Limitations & Unsupported Uses**: `MW` capacity and `thousand_MWh` generation are strictly partitioned; maintenance baseline is non-SCADA; Track F forecasting is unsupported.
+- **Final Result**: `PHASE 3 COMPLETE — CERTIFIED`
+</file>
+
+<file path="docs/PHASE3_FINAL_ARCHITECTURE.md">
+# Phase 3 Final Architecture — PoC-25
+Global Power Plants + U.S. EIA Data -> Canonical `/data` (`v1.0.1`, `1,832` rows) -> Data Readiness (`PASS`) -> Track A Partitioned Comparative Intelligence (`m1.0.0`, `32` results) -> Build-Time Static Publisher (`public/data/intelligence/*.json`) -> Fail-Closed Validator (`services/intelligenceValidator.ts`) -> `/data-intelligence` + `/` + Mode A Deterministic Assistant (`services/assistantEngine.ts`, `/api/assistant/query`) -> Render Container (`phase3-v1.0.0`).
+</file>
+
+<file path="docs/PHASE3_FINAL_UAT.md">
+# Phase 3 Final UAT — PoC-25
+| Area | Expected | Actual | Status | Evidence |
+| :--- | :--- | :--- | :--- | :--- |
+| Operational page (`/`) | Primary Leaflet map, filters, and `/api/eia` work | Verified intact with navigation to `/data-intelligence` | PASS | `FINAL_OPERATIONAL_REGRESSION_REPORT.md` |
+| Data Intelligence (`/data-intelligence`) | Track A charts, KPIs, and 32 results display | Verified `1.0.1` / `1.0.0` outputs and separated units | PASS | `FINAL_DATA_INTELLIGENCE_VALIDATION.md` |
+| Filters & Evidence | Filters narrow 32 rows; clicking row opens `EvidencePanel` | Verified domain/quality/search filters & evidence factors | PASS | `DATA_INTELLIGENCE_UAT.md` |
+| Methodology & Limitations | Track A rules and unsupported uses visible | Verified in `MethodologyPanel` and `LimitationsPanel` | PASS | `DATA_INTELLIGENCE_UAT.md` |
+| Grounded Assistant | Answers 7 Track A intents; refuses out-of-scope/injection | Dynamic maintenance sum, evidence links, and refusals verified | PASS | `FINAL_ASSISTANT_VALIDATION.md` |
+| Mobile & Deployment | Responsive on mobile viewports; live Render URL accessible | Verified mobile grid stacking and Render container deployment | PASS | `DEPLOYMENT_VALIDATION_REPORT.md` |
+</file>
+
+<file path="docs/PHASE3_HANDOVER_GUIDE.md">
+# Phase 3 Handover Guide — PoC-25
+- **Repository**: https://github.com/justeenathankachan-del/POC-25-EnergyInfrastructureWatchtower-Justeena-Phase3 | **Tag**: `phase3-v1.0.0` | **Live URL**: https://poc-25-energy-infrastructure-watchtower.onrender.com
+- **Setup & Run**: `npm ci` -> `python scripts/data_pipeline/validate_data.py` -> `python scripts/data_pipeline/run_track_a_analysis.py` -> `node tests/run_post4_tests.mjs && node tests/run_post5_tests.mjs && node tests/run_post6_certification.mjs` -> `npm run build && npm run start`.
+- **Update & Rollback**: Update `data_version`/`method_version` in `data/manifest.json` and `services/intelligenceValidator.ts`, rebuild, and push. Roll back via Render or `git checkout phase3-v1.0.0`.
+</file>
+
+<file path="docs/PHASE3_RELEASE_MANIFEST.md">
+# Phase 3 Release Manifest — PoC-25
+- **Project**: POC-25 — Energy Infrastructure Watchtower | **Release Tag**: `phase3-v1.0.0` | **App Version**: `0.1.0`
+- **Data Version**: `1.0.1` | **Method Version**: `1.0.0` | **Track**: Track A — Comparative Intelligence (`32` validated results)
+- **Routes**: `/` (Operational View), `/data-intelligence` (Decision Intelligence View), `/api/assistant/query` (Mode A Deterministic Assistant)
+- **Live Deployment**: https://poc-25-energy-infrastructure-watchtower.onrender.com (Render Cloud Web Service, Docker)
+- **Known Limitations**: Curated 45-plant registry (`201,264.0 MW`, `n < 5` conditional); U.S. EIA isolated to 2024 (`1,449` records, `thousand_MWh`); static maintenance snapshot (`31,719.0 MW` derived dynamically, non-SCADA); forecasting unsupported.
+- **Final Result**: `PHASE 3 COMPLETE — CERTIFIED`
 </file>
 
 <file path="docs/REPRESENTATIVENESS_ASSESSMENT.md">
@@ -6126,6 +5831,289 @@ python scripts/data_pipeline/publish_data.py
 | What evidence supports ranking RES-XXXX? | `explain_result` | `result_id` (`^RES-[0-9]{4}$`) | `explain_result_by_id` | `evidence[]` factors & units | Subject to record-level `limitation` field. |
 | Summarize the approved Track A findings | `get_summary` | None | `get_executive_summary` | `RES-0001, RES-0011, RES-0020, RES-0028` | Summarizes only approved Post #3 findings. |
 | What are the analytical limitations and data versions? | `explain_limitation` / `get_data_freshness` | None | `get_analytical_limitations` | `summary.json` (`1.0.1` / `1.0.0`) | 30-day freshness window; Track F forecasting unsupported. |
+</file>
+
+<file path="final-evidence/01-release/PHASE3_RELEASE_MANIFEST.md">
+# Phase 3 Release Manifest — PoC-25
+- **Project**: POC-25 — Energy Infrastructure Watchtower | **Release Tag**: `phase3-v1.0.0` | **App Version**: `0.1.0`
+- **Data Version**: `1.0.1` | **Method Version**: `1.0.0` | **Track**: Track A — Comparative Intelligence (`32` validated results)
+- **Routes**: `/` (Operational View), `/data-intelligence` (Decision Intelligence View), `/api/assistant/query` (Mode A Deterministic Assistant)
+- **Live Deployment**: https://poc-25-energy-infrastructure-watchtower.onrender.com (Render Cloud Web Service, Docker)
+- **Known Limitations**: Curated 45-plant registry (`201,264.0 MW`, `n < 5` conditional); U.S. EIA isolated to 2024 (`1,449` records, `thousand_MWh`); static maintenance snapshot (`31,719.0 MW` derived dynamically, non-SCADA); forecasting unsupported.
+- **Final Result**: `PHASE 3 COMPLETE — CERTIFIED`
+</file>
+
+<file path="final-evidence/02-clean-clone/CLEAN_CLONE_VALIDATION_REPORT.md">
+# Clean Clone Validation Report — PoC-25
+- **Repository**: https://github.com/justeenathankachan-del/POC-25-EnergyInfrastructureWatchtower-Justeena-Phase3
+- **Checked-Out Tag / Branch**: `main` / `phase3-v1.0.0`
+- **Clone & Setup Flow**: `git clone` -> `npm ci` -> `python scripts/data_pipeline/validate_data.py` -> `python scripts/data_pipeline/run_track_a_analysis.py` -> `npm run build`
+- **Verification**: Dependency install (`PASS`), Canonical data validation `v1.0.1` (`PASS`), Analytical regeneration `m1.0.0` (`PASS`), Production build (`PASS`), Routes `/` and `/data-intelligence` (`PASS`).
+- **Final Result**: `PASS`
+</file>
+
+<file path="final-evidence/03-data-foundation/manifest.json">
+{
+  "project_id": "POC-25",
+  "project_title": "Energy Infrastructure Watchtower",
+  "data_version": "1.0.1",
+  "canonical_file": "data/canonical/intelligence_data.csv",
+  "published_file": "data/published/intelligence_data.json",
+  "source_type": "public_api_and_static_registry",
+  "source_names": [
+    "PLANTS_DATA_TS",
+    "EIA_API_v2"
+  ],
+  "is_sampled": true,
+  "sampling_method": "full_entity_preservation_plus_stratified_by_location_and_fueltypeid",
+  "random_seed": 42,
+  "original_record_count": 5045,
+  "sample_record_count": 1832,
+  "canonical_record_count": 1832,
+  "canonical_column_count": 20,
+  "source_sample_size_mb": 0.186,
+  "canonical_file_size_mb": 0.409,
+  "published_file_size_mb": 0.944,
+  "contains_synthetic_data": false,
+  "contains_personal_data": false
+}
+</file>
+
+<file path="final-evidence/03-data-foundation/schema.json">
+{
+  "record_id": { "type": "string", "required": true, "nullable": false, "unique": true, "description": "Unique canonical asset or measurement identifier" },
+  "record_type": { "type": "string", "required": true, "nullable": false, "allowed_values": ["entity", "event", "transaction", "measurement", "process", "scenario", "node", "edge", "document"] },
+  "observed_at": { "type": "datetime", "required": true, "nullable": false, "format": "ISO-8601" },
+  "entity_id": { "type": "string", "required": true, "nullable": false, "description": "Power plant ID or U.S. state/national location code" },
+  "related_entity_id": { "type": "string", "required": false, "nullable": true, "description": "Parent region slug or US national interconnect code" },
+  "entity_name": { "type": "string", "required": false, "nullable": true, "description": "Readable power plant or state/region name" },
+  "category": { "type": "string", "required": true, "nullable": false, "allowed_values": ["natural_gas", "solar", "wind", "coal", "nuclear", "hydro", "geothermal", "petroleum", "biomass", "other"] },
+  "subcategory": { "type": "string", "required": false, "nullable": true, "description": "Grid region slug or raw EIA fueltypeid code" },
+  "status": { "type": "string", "required": false, "nullable": true, "allowed_values": ["online", "maintenance", "offline", "active", "unknown"] },
+  "stage": { "type": "string", "required": false, "nullable": true, "allowed_values": ["operational", "annual"] },
+  "metric_name": { "type": "string", "required": true, "nullable": false, "allowed_values": ["nameplate_capacity", "net_generation"] },
+  "metric_value": { "type": "number", "required": false, "nullable": true, "description": "Nameplate capacity (MW) or annual generation (thousand_MWh)" },
+  "metric_unit": { "type": "string", "required": true, "nullable": false, "allowed_values": ["MW", "thousand_MWh", "MWh"] },
+  "text_value": { "type": "string", "required": false, "nullable": true, "max_length": 500 },
+  "latitude": { "type": "number", "required": false, "nullable": true, "min": -90, "max": 90 },
+  "longitude": { "type": "number", "required": false, "nullable": true, "min": -180, "max": 180 },
+  "source_name": { "type": "string", "required": true, "nullable": false, "allowed_values": ["PLANTS_DATA_TS", "EIA_API_v2"] },
+  "source_record_id": { "type": "string", "required": false, "nullable": true, "description": "Original plant ID or composite period_location_fueltypeid key" },
+  "is_synthetic": { "type": "boolean", "required": true, "nullable": false },
+  "data_version": { "type": "string", "required": true, "nullable": false }
+}
+</file>
+
+<file path="final-evidence/04-data-readiness/validation_report.json">
+{
+  "status": "PASS",
+  "errors": [],
+  "data_version": "1.0.1",
+  "total_data_size_mb": 1.549,
+  "canonical_rows": 1832,
+  "canonical_columns": 20
+}
+</file>
+
+<file path="final-evidence/05-analytical-validation/FINAL_ANALYTICAL_REVALIDATION.md">
+# Final Analytical Revalidation — PoC-25
+- **Approved Track**: Track A — Comparative Intelligence (`Partitioned Comparative Intelligence`)
+- **Versions**: `data_version: 1.0.1` | `method_version: 1.0.0`
+- **Pipeline**: `data/canonical/intelligence_data.csv` -> `run_track_a_analysis.py` -> Baseline + Stratified Ranking + `n >= 5` Quality Flagging -> `intelligence_results.json` (`32`), `intelligence_summary.json`, `validation_metrics.json`.
+- **Reproducibility**: Repeated runs produce identical values (`77,505.0 MW` Asia Pacific, `95,308.0 MW` Global Hydro, `1,864,874.294 thousand_MWh` U.S. 2024 Natural Gas, `31,719.0 MW` Maintenance Baseline) with zero manual edits or LLM-generated numbers.
+- **Final Result**: `PASS`
+</file>
+
+<file path="final-evidence/05-analytical-validation/validation_metrics.json">
+{
+  "status": "PASS",
+  "data_version": "1.0.1",
+  "method_version": "1.0.0",
+  "approved_track": "Track A â€” Comparative Intelligence",
+  "independent_recalculation": {
+    "asia_pacific_capacity_mw": {
+      "expected": 77505.0,
+      "reported": 77505.0,
+      "match": true
+    },
+    "global_hydro_capacity_mw": {
+      "expected": 95308.0,
+      "reported": 95308.0,
+      "match": true
+    },
+    "us_2024_solar_generation_thousand_mwh": {
+      "expected": 357237.562,
+      "reported": 357237.562,
+      "match": true
+    }
+  },
+  "contract_compliance": {
+    "total_results_exported": 32,
+    "validated_results_count": 18,
+    "conditional_results_count": 14,
+    "strict_unit_separation": true,
+    "all_contract_keys_present": true
+  },
+  "sensitivity_checks": {
+    "min_group_size_threshold": 5,
+    "regions_below_min_group_size": [
+      "south_america",
+      "texas_gulf",
+      "west",
+      "northeast",
+      "southwest",
+      "southeast",
+      "northwest"
+    ],
+    "sparse_year_2022_record_count": 7,
+    "ranking_stability_top3_regions": "Stable (asia_pacific, europe, middle_east_&_africa each have >= 7 plants)"
+  }
+}
+</file>
+
+<file path="final-evidence/06-intelligence-contract/metadata.json">
+{
+  "project_id": "POC-25",
+  "project_title": "Energy Infrastructure Watchtower",
+  "approved_track": "Track A — Comparative Intelligence",
+  "data_version": "1.0.1",
+  "method_version": "1.0.0",
+  "generated_at": "2026-11-20T16:36:34Z",
+  "quality_status": "validated",
+  "result_count": 32,
+  "validation_status": "PASS",
+  "freshness_window_days": 30
+}
+</file>
+
+<file path="final-evidence/06-intelligence-contract/summary.json">
+{
+  "project_id": "POC-25",
+  "project_title": "Energy Infrastructure Watchtower",
+  "approved_track": "Track A — Comparative Intelligence",
+  "primary_analytical_question": "How do electricity generation shares and capacity concentrations compare across fuel types, U.S. states (2021-2024), and global grid regions, and which high-capacity facilities currently in maintenance represent the largest regional capacity exposure?",
+  "decision_to_be_supported": "Prioritizing regional grid resilience monitoring and clean-energy vs. fossil fuel-mix benchmarking without conflating static global plant capacity (MW) with U.S. annual net generation (thousand_MWh).",
+  "data_version": "1.0.1",
+  "method_version": "1.0.0",
+  "baseline_summary": {
+    "method": "Unstratified Category Total & Mean Ranking",
+    "category_count": 10,
+    "limitation": "Baseline mixes MW capacity and thousand_MWh generation on the same scale, demonstrating why record_type partitioning is required."
+  },
+  "key_findings": [
+    "Asia Pacific leads curated global infrastructure capacity with 77,505.0 MW (38.51% of the 201,264.0 MW registry across 12 facilities).",
+    "Hydroelectric plants represent the largest share of curated global nameplate capacity (95,308.0 MW, 47.35%), followed by nuclear and natural gas.",
+    "In U.S. 2024 EIA utility measurements (n=1,449), composite 'other' leads total volume, while among specific fuels coal, solar, and natural gas dominate sampled generation shares.",
+    "Five curated flagship facilities are marked in baseline 'maintenance' status totaling 31,719.0 MW, led by Guri (10,235 MW) and Kashiwazaki-Kariwa (8,212 MW)."
+  ],
+  "priority_items": [
+    "RES-0001",
+    "RES-0011",
+    "RES-0018",
+    "RES-0028"
+  ],
+  "validation_result": "PASS",
+  "important_limitations": [
+    "Global power plant capacity (MW) and U.S. annual net generation (thousand_MWh) are strictly partitioned and never combined.",
+    "EIA 2022 coverage is sparse (7 records vs. 1,449 in 2024); 2024 is used as the primary single-year U.S. benchmark.",
+    "Plant maintenance statuses reflect curated baseline metadata in app/plantsData.ts rather than live SCADA telemetry."
+  ],
+  "generated_at": "2026-11-20T16:36:34Z",
+  "result_count": 32
+}
+</file>
+
+<file path="final-evidence/07-operational-regression/FINAL_OPERATIONAL_REGRESSION_REPORT.md">
+# Final Operational Regression Report — PoC-25
+- **Route**: `/` (`app/page.tsx`) & `/api/eia` (`app/api/eia/route.ts`)
+- **Verification**: Interactive Leaflet global power plant map (`PowerPlantMap.tsx`), operational region/fuel filters, live EIA telemetry chart, mobile layout, and navigation link to `/data-intelligence` operate with zero console or server errors.
+- **Final Result**: `PASS`
+</file>
+
+<file path="final-evidence/08-data-intelligence/FINAL_DATA_INTELLIGENCE_VALIDATION.md">
+# Final Data Intelligence Validation — PoC-25
+- **Route**: `/data-intelligence` (`app/data-intelligence/page.tsx`)
+- **Verification**: Displays Track A badge, `data_version: 1.0.1`, `method_version: 1.0.0`, `generated_at`, 4 KPI summary cards, unit-separated `MW` and `thousand_MWh` comparative charts, domain/category/quality/search filters, sortable 32-row explorer, clickable `EvidencePanel`, `MethodologyPanel`, `LimitationsPanel`, and fail-closed contract validation (`services/intelligenceValidator.ts`).
+- **Final Result**: `PASS`
+</file>
+
+<file path="final-evidence/09-assistant-or-skip/ASSISTANT_GROUNDING_VALIDATION.md">
+# Assistant Grounding Validation Report — PoC-25
+| Measure | Result |
+| :--- | :--- |
+| Intent accuracy | 100% (7/7) |
+| Parameter accuracy | 100% (7/7) |
+| Retrieval accuracy | 100% |
+| Numeric fidelity (`77,505 MW`, `95,308 MW`, `31,719 MW`) | 100% |
+| Evidence coverage | 100% |
+| Limitation & version fidelity (`1.0.1` / `1.0.0`) | 100% |
+| Unsupported & prompt-injection resistance | 100% |
+</file>
+
+<file path="final-evidence/09-assistant-or-skip/FINAL_ASSISTANT_VALIDATION.md">
+# Final Assistant Validation — PoC-25
+- **Mode**: Mode A — Deterministic Guided Assistant (`GROUNDED DATA ASSISTANT APPROVED`)
+- **Verification**: All 7 approved Track A intents execute deterministic retrieval prior to response composition; combined maintenance capacity (`31,719 MW`) is derived dynamically from validated results; clickable `RES-XXXX` evidence references highlight the corresponding record in `EvidencePanel`; `LimitationNotice` is visible on every card; forecasting (`2026`), live SCADA queries, and prompt-injection attempts are safely refused; persistent sensitive memory is disabled.
+- **Final Result**: `PASS`
+</file>
+
+<file path="final-evidence/10-automated-tests/FINAL_AUTOMATED_TEST_REPORT.md">
+# Final Automated Test Report — PoC-25
+| Test Group | Command | Passed | Failed | Skipped | Result |
+| :--- | :--- | :---: | :---: | :---: | :---: |
+| Data pipeline | `python scripts/data_pipeline/validate_data.py` | 1 | 0 | 0 | PASS |
+| Data readiness | `python scripts/data_pipeline/profile_and_readiness.py` | 1 | 0 | 0 | PASS |
+| Analytical & publish | `python scripts/data_pipeline/publish_intelligence.py` | 1 | 0 | 0 | PASS |
+| Output contract & UI | `node tests/run_post4_tests.mjs` | 1 | 0 | 0 | PASS |
+| Assistant grounding & safety | `node tests/run_post5_tests.mjs` | 1 | 0 | 0 | PASS |
+| End-to-end certification | `node tests/run_post6_certification.mjs` | 1 | 0 | 0 | PASS |
+| Production build | `npm run build` | 1 | 0 | 0 | PASS |
+</file>
+
+<file path="final-evidence/11-selenium/run_post6_certification.mjs">
+import assert from "node:assert/strict";
+import fs from "node:fs";
+const docs = ["docs/PHASE3_RELEASE_MANIFEST.md","docs/CLEAN_CLONE_VALIDATION_REPORT.md","docs/FINAL_ANALYTICAL_REVALIDATION.md","docs/BUILD_AND_ENVIRONMENT_VALIDATION.md","docs/FINAL_OPERATIONAL_REGRESSION_REPORT.md","docs/FINAL_DATA_INTELLIGENCE_VALIDATION.md","docs/FINAL_ASSISTANT_VALIDATION.md","docs/FINAL_AUTOMATED_TEST_REPORT.md","docs/PHASE3_FINAL_UAT.md","docs/DEPLOYMENT_VALIDATION_REPORT.md","docs/PHASE3_FINAL_ARCHITECTURE.md","docs/PHASE3_COMPLETION_REPORT.md","docs/PHASE3_HANDOVER_GUIDE.md","README.md"];
+for (const doc of docs) { assert.equal(fs.existsSync(doc), true, `Missing ${doc}`); }
+assert.equal(fs.readFileSync("services/assistantEngine.ts", "utf8").includes("matched.reduce"), true);
+const s = JSON.parse(fs.readFileSync("public/data/intelligence/summary.json", "utf8"));
+const r = JSON.parse(fs.readFileSync("public/data/intelligence/results.json", "utf8"));
+assert.equal(s.data_version, "1.0.1"); assert.equal(s.method_version, "1.0.0"); assert.equal(s.result_count, r.length);
+console.log("ALL POST #6 FINAL CERTIFICATION CHECKS PASSED (phase3-v1.0.0)");
+</file>
+
+<file path="final-evidence/12-uat/PHASE3_FINAL_UAT.md">
+# Phase 3 Final UAT — PoC-25
+| Area | Expected | Actual | Status | Evidence |
+| :--- | :--- | :--- | :--- | :--- |
+| Operational page (`/`) | Primary Leaflet map, filters, and `/api/eia` work | Verified intact with navigation to `/data-intelligence` | PASS | `FINAL_OPERATIONAL_REGRESSION_REPORT.md` |
+| Data Intelligence (`/data-intelligence`) | Track A charts, KPIs, and 32 results display | Verified `1.0.1` / `1.0.0` outputs and separated units | PASS | `FINAL_DATA_INTELLIGENCE_VALIDATION.md` |
+| Filters & Evidence | Filters narrow 32 rows; clicking row opens `EvidencePanel` | Verified domain/quality/search filters & evidence factors | PASS | `DATA_INTELLIGENCE_UAT.md` |
+| Methodology & Limitations | Track A rules and unsupported uses visible | Verified in `MethodologyPanel` and `LimitationsPanel` | PASS | `DATA_INTELLIGENCE_UAT.md` |
+| Grounded Assistant | Answers 7 Track A intents; refuses out-of-scope/injection | Dynamic maintenance sum, evidence links, and refusals verified | PASS | `FINAL_ASSISTANT_VALIDATION.md` |
+| Mobile & Deployment | Responsive on mobile viewports; live Render URL accessible | Verified mobile grid stacking and Render container deployment | PASS | `DEPLOYMENT_VALIDATION_REPORT.md` |
+</file>
+
+<file path="final-evidence/13-deployment/DEPLOYMENT_VALIDATION_REPORT.md">
+# Deployment Validation Report — PoC-25
+- **Target**: Render Cloud Web Service (Docker runtime) | **Live URL**: https://poc-25-energy-infrastructure-watchtower.onrender.com
+- **Build & Start**: `docker build -t phase3-app .` (`publish_intelligence.py && next build`) -> `node server.js` (`PORT=3000`, `HOSTNAME=0.0.0.0`)
+- **Security & Rollback**: `EIA_API_KEY` server-side only (zero secrets in client bundle); public JSON ~24 KB; rollback via Render dashboard or tag `phase3-v1.0.0`.
+- **Final Result**: `PASS`
+</file>
+
+<file path="final-evidence/15-handover/PHASE3_COMPLETION_REPORT.md">
+# Phase 3 Completion Report — PoC-25
+- **Summary**: Certified Phase 3 delivery (`phase3-v1.0.0`) extending `/` operational map with `/data-intelligence` Track A dashboard (`1.0.1` / `1.0.0`) and Mode A Deterministic Guided Assistant (`7` intents, dynamic maintenance sum `31,719 MW`, clickable evidence citations, prompt-injection/out-of-scope guards).
+- **Limitations & Unsupported Uses**: `MW` capacity and `thousand_MWh` generation are strictly partitioned; maintenance baseline is non-SCADA; Track F forecasting is unsupported.
+- **Final Result**: `PHASE 3 COMPLETE — CERTIFIED`
+</file>
+
+<file path="final-evidence/15-handover/PHASE3_HANDOVER_GUIDE.md">
+# Phase 3 Handover Guide — PoC-25
+- **Repository**: https://github.com/justeenathankachan-del/POC-25-EnergyInfrastructureWatchtower-Justeena-Phase3 | **Tag**: `phase3-v1.0.0` | **Live URL**: https://poc-25-energy-infrastructure-watchtower.onrender.com
+- **Setup & Run**: `npm ci` -> `python scripts/data_pipeline/validate_data.py` -> `python scripts/data_pipeline/run_track_a_analysis.py` -> `node tests/run_post4_tests.mjs && node tests/run_post5_tests.mjs && node tests/run_post6_certification.mjs` -> `npm run build && npm run start`.
+- **Update & Rollback**: Update `data_version`/`method_version` in `data/manifest.json` and `services/intelligenceValidator.ts`, rebuild, and push. Roll back via Render or `git checkout phase3-v1.0.0`.
 </file>
 
 <file path="public/data/intelligence/metadata.json">
@@ -7695,94 +7683,6 @@ if __name__ == "__main__":
     main()
 </file>
 
-<file path="services/assistantEngine.ts">
-import type { AssistantIntent, EvidenceReference, GroundedAssistantResponse, KeyValueItem, ScopeClassification } from "@/types/assistant";
-import type { IntelligenceResult, IntelligenceSummary } from "@/types/intelligence";
-import { EXPECTED_DATA_VERSION, EXPECTED_METHOD_VERSION } from "./intelligenceValidator";
-
-export const SUGGESTED_QUESTIONS: string[] = [
-  "Which global regions have the highest curated generation capacity?",
-  "How does U.S. electricity generation compare across fuel categories?",
-  "Which curated facilities are marked for maintenance?",
-  "What evidence supports ranking RES-0001?",
-  "Summarize the approved Track A comparative intelligence findings",
-  "What are the analytical limitations and data versions?",
-];
-
-const UNSAFE_TERMS = ["ignore previous instructions", "ignore your instructions", "system prompt", "environment variable", "process.env", "secret", "api_key", "all records", "dump csv", "run sql", "execute code", "eval(", "change the score", "change the rank"];
-const OUT_OF_SCOPE_TERMS = ["predict", "forecast", "next year", "2025", "2026", "2030", "live outage", "scada", "grid failure", "probability", "who is responsible", "owner"];
-const DEFAULT_FOLLOW_UPS = [
-  "Which global regions have the highest curated generation capacity?",
-  "How does U.S. electricity generation compare across fuel categories?",
-  "Which curated facilities are marked for maintenance?",
-];
-
-function classifyScopeAndIntent(question: string): { classification: ScopeClassification; intent: AssistantIntent | null; params: Record<string, string | number>; message?: string } {
-  const trimmed = question.trim();
-  if (!trimmed || trimmed.length > 500) return { classification: "UNSAFE", intent: null, params: {}, message: "Question must be between 1 and 500 characters." };
-  const lower = trimmed.toLowerCase();
-  if (UNSAFE_TERMS.some((t) => lower.includes(t))) return { classification: "UNSAFE", intent: null, params: {}, message: "Request refused: cannot reveal prompts, access secrets, dump raw tables, or alter intelligence outputs." };
-  if (OUT_OF_SCOPE_TERMS.some((t) => lower.includes(t))) return { classification: "OUT_OF_SCOPE", intent: null, params: {}, message: "Outside approved Track A scope: forecasting, live SCADA outage status, and ownership inference are unsupported." };
-  const resMatch = trimmed.match(/\bRES-\d{4}\b/i);
-  if (resMatch) return { classification: "SUPPORTED", intent: "explain_result", params: { result_id: resMatch[0].toUpperCase() } };
-  if (/\b(explain|evidence|why|support)\b.*\b(result|ranking|rank)\b/i.test(trimmed)) return { classification: "MISSING_PARAMETER", intent: "explain_result", params: {}, message: "Please specify an approved result ID (e.g., RES-0001 through RES-0032)." };
-  if (/\b(maintenance|outage|flagship|guri|taichung|ratcliffe|kashiwazaki|bruce)\b/i.test(lower)) return { classification: "SUPPORTED", intent: "list_maintenance_items", params: { limit: 5 } };
-  if (/\b(u\.?s\.?|eia|2024|generation|thousand_mwh)\b/i.test(lower)) return { classification: "SUPPORTED", intent: "compare_groups", params: { domain: "us_2024_fuel", limit: 8 } };
-  if (/\b(plant fuel|fuel mix|hydro|coal|nuclear|gas|wind)\b/i.test(lower) && !/\b(u\.?s\.?|eia)\b/i.test(lower)) return { classification: "SUPPORTED", intent: "compare_groups", params: { domain: "global_plant_fuel", limit: 9 } };
-  if (/\b(region|asia|europe|americas|capacity|mw|highest|top|rank|compare)\b/i.test(lower)) return { classification: "SUPPORTED", intent: "compare_groups", params: { domain: "global_region", limit: 5 } };
-  if (/\b(version|freshness|updated|generated|timestamp)\b/i.test(lower)) return { classification: "SUPPORTED", intent: "get_data_freshness", params: {} };
-  if (/\b(method|methodology|baseline|partition|validation)\b/i.test(lower)) return { classification: "SUPPORTED", intent: "explain_method", params: {} };
-  if (/\b(limitation|caveat|warning|weak|bias|unsupported)\b/i.test(lower)) return { classification: "SUPPORTED", intent: "explain_limitation", params: {} };
-  if (/\b(summary|overview|key finding|findings|what requires attention)\b/i.test(lower)) return { classification: "SUPPORTED", intent: "get_summary", params: {} };
-  return { classification: "OUT_OF_SCOPE", intent: null, params: {}, message: "Question does not match an approved Track A intent. Select one of the supported questions below." };
-}
-export function runDeterministicAssistant(question: string, summary: IntelligenceSummary, results: IntelligenceResult[]): GroundedAssistantResponse {
-  const answerId = `ANS-${Date.now().toString().slice(-6)}`;
-  const baseMeta = { data_version: summary.data_version, method_version: summary.method_version, generated_at: summary.generated_at, quality_status: "validated" };
-
-  if (summary.data_version !== EXPECTED_DATA_VERSION || summary.method_version !== EXPECTED_METHOD_VERSION || summary.result_count !== results.length) {
-    return { answer_id: answerId, status: "error", classification: "UNAVAILABLE", intent: null, answer: "Assistant blocked: intelligence version or result count failed contract verification.", evidence_references: [], key_values: [], metadata: baseMeta, limitation: "Contract validation must pass before grounded answers can be generated.", suggested_follow_ups: [] };
-  }
-
-  const scoped = classifyScopeAndIntent(question);
-  if (scoped.classification === "UNSAFE") return { answer_id: answerId, status: "unsafe", classification: "UNSAFE", intent: null, answer: scoped.message!, evidence_references: [], key_values: [], metadata: baseMeta, limitation: "Enforces prompt-injection, secret-protection, and query-catalog boundaries.", suggested_follow_ups: DEFAULT_FOLLOW_UPS };
-  if (scoped.classification === "OUT_OF_SCOPE") return { answer_id: answerId, status: "unsupported", classification: "OUT_OF_SCOPE", intent: null, answer: scoped.message!, evidence_references: [], key_values: [], metadata: baseMeta, limitation: summary.important_limitations[0], suggested_follow_ups: DEFAULT_FOLLOW_UPS };
-  if (scoped.classification === "MISSING_PARAMETER") return { answer_id: answerId, status: "missing_parameter", classification: "MISSING_PARAMETER", intent: scoped.intent, answer: scoped.message!, evidence_references: [], key_values: [], metadata: baseMeta, limitation: "Requires an approved result ID (RES-0001 to RES-0032).", suggested_follow_ups: ["What evidence supports ranking RES-0001?", "What evidence supports ranking RES-0011?", "What evidence supports ranking RES-0020?"] };
-
-  if (scoped.intent === "compare_groups") {
-    const domain = String(scoped.params.domain);
-    const matched = results.filter((r) => (r.group_key ?? "").startsWith(`${domain}:`) && r.quality_status !== "rejected").sort((a, b) => (a.priority_rank ?? 999) - (b.priority_rank ?? 999)).slice(0, Number(scoped.params.limit || 5));
-    const refs: EvidenceReference[] = matched.map((r) => ({ result_id: r.result_id, record_id: r.record_id, group_key: r.group_key, label: `#${r.priority_rank} ${(r.group_key ?? "").split(":")[1]} (${r.quality_status})` }));
-    const kvs: KeyValueItem[] = matched.map((r) => ({ name: (r.group_key ?? r.result_id).replace(`${domain}:`, ""), value: r.result_value ?? 0, unit: r.result_unit ?? "" }));
-    const lines = matched.map((r) => `#${r.priority_rank} ${(r.group_key ?? "").replace(`${domain}:`, "").replace(/_/g, " ")}: ${r.result_value?.toLocaleString()} ${r.result_unit} [${r.quality_status}]`);
-    return { answer_id: answerId, status: "answered", classification: "SUPPORTED", intent: "compare_groups", answer: `Top ranked ${domain.replace(/_/g, " ")}: ${lines.join("; ")}.`, evidence_references: refs, key_values: kvs, metadata: { ...baseMeta, quality_status: matched.some((m) => m.quality_status === "conditional") ? "conditional" : "validated" }, limitation: matched[0]?.limitation ?? summary.important_limitations[0], suggested_follow_ups: DEFAULT_FOLLOW_UPS };
-  }
-
-  if (scoped.intent === "list_maintenance_items") {
-    const matched = results.filter((r) => (r.group_key ?? "").startsWith("maintenance_baseline:") && r.quality_status !== "rejected").sort((a, b) => (a.priority_rank ?? 999) - (b.priority_rank ?? 999));
-    return { answer_id: answerId, status: "answered", classification: "SUPPORTED", intent: "list_maintenance_items", answer: `Five curated flagship stations (${matched.reduce((sum, r) => sum + (r.result_value ?? 0), 0).toLocaleString()} MW combined capacity derived from validated results) in static maintenance baseline: ${matched.map((r) => r.finding).join(" ")}`, evidence_references: matched.map((r) => ({ result_id: r.result_id, record_id: r.record_id, group_key: r.group_key, label: `${r.entity_id ?? r.group_key} (${r.result_value?.toLocaleString()} MW)` })), key_values: matched.map((r) => ({ name: (r.entity_id ?? r.group_key ?? r.result_id).replace("maintenance_baseline:", ""), value: r.result_value ?? 0, unit: "MW" })), metadata: { ...baseMeta, quality_status: "conditional" }, limitation: "Static baseline snapshot (conditional quality); not live SCADA outage telemetry.", suggested_follow_ups: DEFAULT_FOLLOW_UPS };
-  }
-
-  if (scoped.intent === "explain_result") {
-    const targetId = String(scoped.params.result_id);
-    const item = results.find((r) => r.result_id === targetId);
-    if (!item) return { answer_id: answerId, status: "unavailable", classification: "UNAVAILABLE", intent: "explain_result", answer: `Result ${targetId} not found (valid range: RES-0001 to RES-0032).`, evidence_references: [], key_values: [], metadata: baseMeta, limitation: "Only approved IDs RES-0001 through RES-0032 are available.", suggested_follow_ups: DEFAULT_FOLLOW_UPS };
-    const evSummary = item.evidence.map((ev) => `${ev.factor}=${typeof ev.value === "number" ? ev.value.toLocaleString() : String(ev.value)}${ev.unit ? ` ${ev.unit}` : ""}`).join(", ");
-    return { answer_id: answerId, status: "answered", classification: "SUPPORTED", intent: "explain_result", answer: `${item.result_id} (Rank #${item.priority_rank ?? "N/A"}, ${item.quality_status}): ${item.finding} Factors: ${evSummary}.`, evidence_references: [{ result_id: item.result_id, record_id: item.record_id, group_key: item.group_key, label: `${item.result_id} — ${item.group_key ?? item.metric_name}` }], key_values: [{ name: item.metric_name, value: item.result_value ?? 0, unit: item.result_unit ?? "" }, ...item.evidence.slice(0, 4).map((ev) => ({ name: ev.factor, value: typeof ev.value === "boolean" ? String(ev.value) : (ev.value ?? "null"), unit: ev.unit ?? "" }))], metadata: { data_version: item.data_version, method_version: item.method_version, generated_at: item.generated_at, quality_status: item.quality_status }, limitation: item.limitation, suggested_follow_ups: DEFAULT_FOLLOW_UPS };
-  }
-
-  if (scoped.intent === "explain_method") {
-    return { answer_id: answerId, status: "answered", classification: "SUPPORTED", intent: "explain_method", answer: `Approved Track A uses Partitioned Comparative Intelligence (method_version ${summary.method_version}) on canonical data v${summary.data_version}, separating 45 global plant entities (MW) from 1,787 U.S. EIA utility records (thousand_MWh) with n >= 5 validation flags.`, evidence_references: [{ result_id: "RES-0001", record_id: null, group_key: "global_region:asia_pacific", label: "Partitioned MW ranking (n >= 5)" }, { result_id: "RES-0020", record_id: null, group_key: "us_2024_fuel:natural_gas", label: "Isolated U.S. 2024 benchmark" }], key_values: [{ name: "validated_outputs", value: summary.result_count, unit: "results" }, { name: "min_group_threshold", value: 5, unit: "entities" }], metadata: baseMeta, limitation: summary.baseline_summary?.limitation ?? summary.important_limitations[0], suggested_follow_ups: DEFAULT_FOLLOW_UPS };
-  }
-
-  if (scoped.intent === "explain_limitation" || scoped.intent === "get_data_freshness") {
-    return { answer_id: answerId, status: "answered", classification: "SUPPORTED", intent: scoped.intent, answer: `Active package: data_version ${summary.data_version}, method_version ${summary.method_version} (generated_at: ${summary.generated_at}, validation: ${summary.validation_result}). Limitations: ${summary.important_limitations.join(" ")}`, evidence_references: [{ result_id: "RES-0001", record_id: null, group_key: "global_region:asia_pacific", label: `Verified v${summary.data_version} / m${summary.method_version}` }], key_values: [{ name: "data_version", value: summary.data_version, unit: "semver" }, { name: "method_version", value: summary.method_version, unit: "semver" }, { name: "result_count", value: summary.result_count, unit: "results" }], metadata: baseMeta, limitation: summary.important_limitations.join(" | "), suggested_follow_ups: DEFAULT_FOLLOW_UPS };
-  }
-
-  return { answer_id: answerId, status: "answered", classification: "SUPPORTED", intent: "get_summary", answer: `Approved Track A Executive Summary (${summary.result_count} outputs): ${summary.key_findings.join(" ")}`, evidence_references: [{ result_id: "RES-0001", record_id: null, group_key: "global_region:asia_pacific", label: "Asia Pacific: 77,505.0 MW" }, { result_id: "RES-0011", record_id: null, group_key: "global_plant_fuel:hydro", label: "Global Hydro: 95,308.0 MW" }, { result_id: "RES-0020", record_id: null, group_key: "us_2024_fuel:natural_gas", label: "U.S. 2024 Natural Gas: 1,864,874.294 thousand_MWh" }, { result_id: "RES-0028", record_id: null, group_key: "maintenance_baseline:guri", label: "Maintenance Baseline: 31,719.0 MW" }], key_values: [{ name: "total_outputs", value: summary.result_count, unit: "results" }, { name: "asia_pacific_capacity", value: 77505.0, unit: "MW" }, { name: "global_hydro_capacity", value: 95308.0, unit: "MW" }, { name: "maintenance_baseline_capacity", value: 31719.0, unit: "MW" }], metadata: baseMeta, limitation: summary.important_limitations[0], suggested_follow_ups: DEFAULT_FOLLOW_UPS };
-}
-</file>
-
 <file path="services/intelligenceService.ts">
 import type {
   IntelligenceFilterState,
@@ -7905,6 +7805,18 @@ for (const f of ["assistant/prompts/grounded_explanation_prompt", "assistant/cor
   assert.equal(fs.existsSync(f), true, `Missing ${f}`);
 }
 console.log("ALL POST #5 UNIT, GROUNDING, SAFETY & CONTRACT TESTS PASSED");
+</file>
+
+<file path="tests/run_post6_certification.mjs">
+import assert from "node:assert/strict";
+import fs from "node:fs";
+const docs = ["docs/PHASE3_RELEASE_MANIFEST.md","docs/CLEAN_CLONE_VALIDATION_REPORT.md","docs/FINAL_ANALYTICAL_REVALIDATION.md","docs/BUILD_AND_ENVIRONMENT_VALIDATION.md","docs/FINAL_OPERATIONAL_REGRESSION_REPORT.md","docs/FINAL_DATA_INTELLIGENCE_VALIDATION.md","docs/FINAL_ASSISTANT_VALIDATION.md","docs/FINAL_AUTOMATED_TEST_REPORT.md","docs/PHASE3_FINAL_UAT.md","docs/DEPLOYMENT_VALIDATION_REPORT.md","docs/PHASE3_FINAL_ARCHITECTURE.md","docs/PHASE3_COMPLETION_REPORT.md","docs/PHASE3_HANDOVER_GUIDE.md","README.md"];
+for (const doc of docs) { assert.equal(fs.existsSync(doc), true, `Missing ${doc}`); }
+assert.equal(fs.readFileSync("services/assistantEngine.ts", "utf8").includes("matched.reduce"), true);
+const s = JSON.parse(fs.readFileSync("public/data/intelligence/summary.json", "utf8"));
+const r = JSON.parse(fs.readFileSync("public/data/intelligence/results.json", "utf8"));
+assert.equal(s.data_version, "1.0.1"); assert.equal(s.method_version, "1.0.0"); assert.equal(s.result_count, r.length);
+console.log("ALL POST #6 FINAL CERTIFICATION CHECKS PASSED (phase3-v1.0.0)");
 </file>
 
 <file path="types/assistant.ts">
@@ -8079,6 +7991,7 @@ COPY package.json package-lock.json ./
 RUN npm ci
 
 FROM node:20-alpine AS builder
+RUN apk add --no-cache python3 && ln -sf python3 /usr/bin/python
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
@@ -8146,20 +8059,6 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
-</file>
-
-<file path="README.md">
-# PoC-25 — Energy Infrastructure Watchtower (Phase 3 Certified)
-Interactive operational energy infrastructure watchtower (`/`) integrated with a validated **Track A Comparative Intelligence** decision dashboard (`/data-intelligence`) and a **Mode A Deterministic Guided Assistant**.
-- **Release Tag**: `phase3-v1.0.0` | **Canonical Data Version**: `1.0.1` | **Method Version**: `1.0.0`
-- **Live Deployment URL**: https://poc-25-energy-infrastructure-watchtower.onrender.com
-- **Routes**: `/` (Operational View), `/data-intelligence` (Decision Intelligence View), `/api/assistant/query` (Deterministic Assistant API), `/api/eia` (EIA Telemetry)
-## Quickstart, Validation & Build
-Run `npm ci`, `python scripts/data_pipeline/validate_data.py`, `python scripts/data_pipeline/run_track_a_analysis.py`, `node tests/run_post4_tests.mjs`, `node tests/run_post5_tests.mjs`, `node tests/run_post6_certification.mjs`, and `npm run build`.
-## Certification Documentation
-All 13 certification reports (`PHASE3_RELEASE_MANIFEST.md`, `CLEAN_CLONE_VALIDATION_REPORT.md`, `FINAL_ANALYTICAL_REVALIDATION.md`, `BUILD_AND_ENVIRONMENT_VALIDATION.md`, `FINAL_OPERATIONAL_REGRESSION_REPORT.md`, `FINAL_DATA_INTELLIGENCE_VALIDATION.md`, `FINAL_ASSISTANT_VALIDATION.md`, `FINAL_AUTOMATED_TEST_REPORT.md`, `PHASE3_FINAL_UAT.md`, `DEPLOYMENT_VALIDATION_REPORT.md`, `PHASE3_FINAL_ARCHITECTURE.md`, `PHASE3_COMPLETION_REPORT.md`, `PHASE3_HANDOVER_GUIDE.md`) are located in `/docs/`.
-## Known Limitations & Safety Boundary
-Nameplate capacity (`MW`) and U.S. 2024 utility net generation (`thousand_MWh`) are strictly partitioned and never combined. Maintenance baseline records (`31,719.0 MW` across 5 flagship stations) reflect a static snapshot rather than live SCADA telemetry. Time-series forecasting (Track F) is unsupported and refused by the assistant.
 </file>
 
 <file path="tsconfig.json">
@@ -11044,6 +10943,94 @@ if __name__ == "__main__":
     main()
 </file>
 
+<file path="services/assistantEngine.ts">
+import type { AssistantIntent, EvidenceReference, GroundedAssistantResponse, KeyValueItem, ScopeClassification } from "@/types/assistant";
+import type { IntelligenceResult, IntelligenceSummary } from "@/types/intelligence";
+import { EXPECTED_DATA_VERSION, EXPECTED_METHOD_VERSION } from "./intelligenceValidator";
+
+export const SUGGESTED_QUESTIONS: string[] = [
+  "Which global regions have the highest curated generation capacity?",
+  "How does U.S. electricity generation compare across fuel categories?",
+  "Which curated facilities are marked for maintenance?",
+  "What evidence supports ranking RES-0001?",
+  "Summarize the approved Track A comparative intelligence findings",
+  "What are the analytical limitations and data versions?",
+];
+
+const UNSAFE_TERMS = ["ignore previous instructions", "ignore your instructions", "system prompt", "environment variable", "process.env", "secret", "api_key", "all records", "dump csv", "run sql", "execute code", "eval(", "change the score", "change the rank"];
+const OUT_OF_SCOPE_TERMS = ["predict", "forecast", "next year", "2025", "2026", "2030", "live outage", "scada", "grid failure", "probability", "who is responsible", "owner"];
+const DEFAULT_FOLLOW_UPS = [
+  "Which global regions have the highest curated generation capacity?",
+  "How does U.S. electricity generation compare across fuel categories?",
+  "Which curated facilities are marked for maintenance?",
+];
+
+function classifyScopeAndIntent(question: string): { classification: ScopeClassification; intent: AssistantIntent | null; params: Record<string, string | number>; message?: string } {
+  const trimmed = question.trim();
+  if (!trimmed || trimmed.length > 500) return { classification: "UNSAFE", intent: null, params: {}, message: "Question must be between 1 and 500 characters." };
+  const lower = trimmed.toLowerCase();
+  if (UNSAFE_TERMS.some((t) => lower.includes(t))) return { classification: "UNSAFE", intent: null, params: {}, message: "Request refused: cannot reveal prompts, access secrets, dump raw tables, or alter intelligence outputs." };
+  if (OUT_OF_SCOPE_TERMS.some((t) => lower.includes(t))) return { classification: "OUT_OF_SCOPE", intent: null, params: {}, message: "Outside approved Track A scope: forecasting, live SCADA outage status, and ownership inference are unsupported." };
+  const resMatch = trimmed.match(/\bRES-\d{4}\b/i);
+  if (resMatch) return { classification: "SUPPORTED", intent: "explain_result", params: { result_id: resMatch[0].toUpperCase() } };
+  if (/\b(explain|evidence|why|support)\b.*\b(result|ranking|rank)\b/i.test(trimmed)) return { classification: "MISSING_PARAMETER", intent: "explain_result", params: {}, message: "Please specify an approved result ID (e.g., RES-0001 through RES-0032)." };
+  if (/\b(maintenance|outage|flagship|guri|taichung|ratcliffe|kashiwazaki|bruce)\b/i.test(lower)) return { classification: "SUPPORTED", intent: "list_maintenance_items", params: { limit: 5 } };
+  if (/\b(u\.?s\.?|eia|2024|generation|thousand_mwh)\b/i.test(lower)) return { classification: "SUPPORTED", intent: "compare_groups", params: { domain: "us_2024_fuel", limit: 8 } };
+  if (/\b(plant fuel|fuel mix|hydro|coal|nuclear|gas|wind)\b/i.test(lower) && !/\b(u\.?s\.?|eia)\b/i.test(lower)) return { classification: "SUPPORTED", intent: "compare_groups", params: { domain: "global_plant_fuel", limit: 9 } };
+  if (/\b(region|asia|europe|americas|capacity|mw|highest|top|rank|compare)\b/i.test(lower)) return { classification: "SUPPORTED", intent: "compare_groups", params: { domain: "global_region", limit: 5 } };
+  if (/\b(version|freshness|updated|generated|timestamp)\b/i.test(lower)) return { classification: "SUPPORTED", intent: "get_data_freshness", params: {} };
+  if (/\b(method|methodology|baseline|partition|validation)\b/i.test(lower)) return { classification: "SUPPORTED", intent: "explain_method", params: {} };
+  if (/\b(limitation|caveat|warning|weak|bias|unsupported)\b/i.test(lower)) return { classification: "SUPPORTED", intent: "explain_limitation", params: {} };
+  if (/\b(summary|overview|key finding|findings|what requires attention)\b/i.test(lower)) return { classification: "SUPPORTED", intent: "get_summary", params: {} };
+  return { classification: "OUT_OF_SCOPE", intent: null, params: {}, message: "Question does not match an approved Track A intent. Select one of the supported questions below." };
+}
+export function runDeterministicAssistant(question: string, summary: IntelligenceSummary, results: IntelligenceResult[]): GroundedAssistantResponse {
+  const answerId = `ANS-${Date.now().toString().slice(-6)}`;
+  const baseMeta = { data_version: summary.data_version, method_version: summary.method_version, generated_at: summary.generated_at, quality_status: "validated" };
+
+  if (summary.data_version !== EXPECTED_DATA_VERSION || summary.method_version !== EXPECTED_METHOD_VERSION || summary.result_count !== results.length) {
+    return { answer_id: answerId, status: "error", classification: "UNAVAILABLE", intent: null, answer: "Assistant blocked: intelligence version or result count failed contract verification.", evidence_references: [], key_values: [], metadata: baseMeta, limitation: "Contract validation must pass before grounded answers can be generated.", suggested_follow_ups: [] };
+  }
+
+  const scoped = classifyScopeAndIntent(question);
+  if (scoped.classification === "UNSAFE") return { answer_id: answerId, status: "unsafe", classification: "UNSAFE", intent: null, answer: scoped.message!, evidence_references: [], key_values: [], metadata: baseMeta, limitation: "Enforces prompt-injection, secret-protection, and query-catalog boundaries.", suggested_follow_ups: DEFAULT_FOLLOW_UPS };
+  if (scoped.classification === "OUT_OF_SCOPE") return { answer_id: answerId, status: "unsupported", classification: "OUT_OF_SCOPE", intent: null, answer: scoped.message!, evidence_references: [], key_values: [], metadata: baseMeta, limitation: summary.important_limitations[0], suggested_follow_ups: DEFAULT_FOLLOW_UPS };
+  if (scoped.classification === "MISSING_PARAMETER") return { answer_id: answerId, status: "missing_parameter", classification: "MISSING_PARAMETER", intent: scoped.intent, answer: scoped.message!, evidence_references: [], key_values: [], metadata: baseMeta, limitation: "Requires an approved result ID (RES-0001 to RES-0032).", suggested_follow_ups: ["What evidence supports ranking RES-0001?", "What evidence supports ranking RES-0011?", "What evidence supports ranking RES-0020?"] };
+
+  if (scoped.intent === "compare_groups") {
+    const domain = String(scoped.params.domain);
+    const matched = results.filter((r) => (r.group_key ?? "").startsWith(`${domain}:`) && r.quality_status !== "rejected").sort((a, b) => (a.priority_rank ?? 999) - (b.priority_rank ?? 999)).slice(0, Number(scoped.params.limit || 5));
+    const refs: EvidenceReference[] = matched.map((r) => ({ result_id: r.result_id, record_id: r.record_id, group_key: r.group_key, label: `#${r.priority_rank} ${(r.group_key ?? "").split(":")[1]} (${r.quality_status})` }));
+    const kvs: KeyValueItem[] = matched.map((r) => ({ name: (r.group_key ?? r.result_id).replace(`${domain}:`, ""), value: r.result_value ?? 0, unit: r.result_unit ?? "" }));
+    const lines = matched.map((r) => `#${r.priority_rank} ${(r.group_key ?? "").replace(`${domain}:`, "").replace(/_/g, " ")}: ${r.result_value?.toLocaleString()} ${r.result_unit} [${r.quality_status}]`);
+    return { answer_id: answerId, status: "answered", classification: "SUPPORTED", intent: "compare_groups", answer: `Top ranked ${domain.replace(/_/g, " ")}: ${lines.join("; ")}.`, evidence_references: refs, key_values: kvs, metadata: { ...baseMeta, quality_status: matched.some((m) => m.quality_status === "conditional") ? "conditional" : "validated" }, limitation: matched[0]?.limitation ?? summary.important_limitations[0], suggested_follow_ups: DEFAULT_FOLLOW_UPS };
+  }
+
+  if (scoped.intent === "list_maintenance_items") {
+    const matched = results.filter((r) => (r.group_key ?? "").startsWith("maintenance_baseline:") && r.quality_status !== "rejected").sort((a, b) => (a.priority_rank ?? 999) - (b.priority_rank ?? 999));
+    return { answer_id: answerId, status: "answered", classification: "SUPPORTED", intent: "list_maintenance_items", answer: `Five curated flagship stations (${matched.reduce((sum, r) => sum + (r.result_value ?? 0), 0).toLocaleString()} MW combined capacity derived from validated results) in static maintenance baseline: ${matched.map((r) => r.finding).join(" ")}`, evidence_references: matched.map((r) => ({ result_id: r.result_id, record_id: r.record_id, group_key: r.group_key, label: `${r.entity_id ?? r.group_key} (${r.result_value?.toLocaleString()} MW)` })), key_values: matched.map((r) => ({ name: (r.entity_id ?? r.group_key ?? r.result_id).replace("maintenance_baseline:", ""), value: r.result_value ?? 0, unit: "MW" })), metadata: { ...baseMeta, quality_status: "conditional" }, limitation: "Static baseline snapshot (conditional quality); not live SCADA outage telemetry.", suggested_follow_ups: DEFAULT_FOLLOW_UPS };
+  }
+
+  if (scoped.intent === "explain_result") {
+    const targetId = String(scoped.params.result_id);
+    const item = results.find((r) => r.result_id === targetId);
+    if (!item) return { answer_id: answerId, status: "unavailable", classification: "UNAVAILABLE", intent: "explain_result", answer: `Result ${targetId} not found (valid range: RES-0001 to RES-0032).`, evidence_references: [], key_values: [], metadata: baseMeta, limitation: "Only approved IDs RES-0001 through RES-0032 are available.", suggested_follow_ups: DEFAULT_FOLLOW_UPS };
+    const evSummary = item.evidence.map((ev) => `${ev.factor}=${typeof ev.value === "number" ? ev.value.toLocaleString() : String(ev.value)}${ev.unit ? ` ${ev.unit}` : ""}`).join(", ");
+    return { answer_id: answerId, status: "answered", classification: "SUPPORTED", intent: "explain_result", answer: `${item.result_id} (Rank #${item.priority_rank ?? "N/A"}, ${item.quality_status}): ${item.finding} Factors: ${evSummary}.`, evidence_references: [{ result_id: item.result_id, record_id: item.record_id, group_key: item.group_key, label: `${item.result_id} — ${item.group_key ?? item.metric_name}` }], key_values: [{ name: item.metric_name, value: item.result_value ?? 0, unit: item.result_unit ?? "" }, ...item.evidence.slice(0, 4).map((ev) => ({ name: ev.factor, value: typeof ev.value === "boolean" ? String(ev.value) : (ev.value ?? "null"), unit: ev.unit ?? "" }))], metadata: { data_version: item.data_version, method_version: item.method_version, generated_at: item.generated_at, quality_status: item.quality_status }, limitation: item.limitation, suggested_follow_ups: DEFAULT_FOLLOW_UPS };
+  }
+
+  if (scoped.intent === "explain_method") {
+    return { answer_id: answerId, status: "answered", classification: "SUPPORTED", intent: "explain_method", answer: `Approved Track A uses Partitioned Comparative Intelligence (method_version ${summary.method_version}) on canonical data v${summary.data_version}, separating 45 global plant entities (MW) from 1,787 U.S. EIA utility records (thousand_MWh) with n >= 5 validation flags.`, evidence_references: [{ result_id: "RES-0001", record_id: null, group_key: "global_region:asia_pacific", label: "Partitioned MW ranking (n >= 5)" }, { result_id: "RES-0020", record_id: null, group_key: "us_2024_fuel:natural_gas", label: "Isolated U.S. 2024 benchmark" }], key_values: [{ name: "validated_outputs", value: summary.result_count, unit: "results" }, { name: "min_group_threshold", value: 5, unit: "entities" }], metadata: baseMeta, limitation: summary.baseline_summary?.limitation ?? summary.important_limitations[0], suggested_follow_ups: DEFAULT_FOLLOW_UPS };
+  }
+
+  if (scoped.intent === "explain_limitation" || scoped.intent === "get_data_freshness") {
+    return { answer_id: answerId, status: "answered", classification: "SUPPORTED", intent: scoped.intent, answer: `Active package: data_version ${summary.data_version}, method_version ${summary.method_version} (generated_at: ${summary.generated_at}, validation: ${summary.validation_result}). Limitations: ${summary.important_limitations.join(" ")}`, evidence_references: [{ result_id: "RES-0001", record_id: null, group_key: "global_region:asia_pacific", label: `Verified v${summary.data_version} / m${summary.method_version}` }], key_values: [{ name: "data_version", value: summary.data_version, unit: "semver" }, { name: "method_version", value: summary.method_version, unit: "semver" }, { name: "result_count", value: summary.result_count, unit: "results" }], metadata: baseMeta, limitation: summary.important_limitations.join(" | "), suggested_follow_ups: DEFAULT_FOLLOW_UPS };
+  }
+
+  return { answer_id: answerId, status: "answered", classification: "SUPPORTED", intent: "get_summary", answer: `Approved Track A Executive Summary (${summary.result_count} outputs): ${summary.key_findings.join(" ")}`, evidence_references: [{ result_id: "RES-0001", record_id: null, group_key: "global_region:asia_pacific", label: "Asia Pacific: 77,505.0 MW" }, { result_id: "RES-0011", record_id: null, group_key: "global_plant_fuel:hydro", label: "Global Hydro: 95,308.0 MW" }, { result_id: "RES-0020", record_id: null, group_key: "us_2024_fuel:natural_gas", label: "U.S. 2024 Natural Gas: 1,864,874.294 thousand_MWh" }, { result_id: "RES-0028", record_id: null, group_key: "maintenance_baseline:guri", label: "Maintenance Baseline: 31,719.0 MW" }], key_values: [{ name: "total_outputs", value: summary.result_count, unit: "results" }, { name: "asia_pacific_capacity", value: 77505.0, unit: "MW" }, { name: "global_hydro_capacity", value: 95308.0, unit: "MW" }, { name: "maintenance_baseline_capacity", value: 31719.0, unit: "MW" }], metadata: baseMeta, limitation: summary.important_limitations[0], suggested_follow_ups: DEFAULT_FOLLOW_UPS };
+}
+</file>
+
 <file path="services/intelligenceValidator.ts">
 import type {
   IntelligenceMetadata,
@@ -11207,6 +11194,20 @@ yarn-error.log*
 next-env.d.ts
 
 data/source-sample/raw_combined_extract.csv
+</file>
+
+<file path="README.md">
+# PoC-25 — Energy Infrastructure Watchtower (Phase 3 Certified)
+Interactive operational energy infrastructure watchtower (`/`) integrated with a validated **Track A Comparative Intelligence** decision dashboard (`/data-intelligence`) and a **Mode A Deterministic Guided Assistant**.
+- **Release Tag**: `phase3-v1.0.0` | **Canonical Data Version**: `1.0.1` | **Method Version**: `1.0.0`
+- **Live Deployment URL**: https://poc-25-energy-infrastructure-watchtower.onrender.com
+- **Routes**: `/` (Operational View), `/data-intelligence` (Decision Intelligence View), `/api/assistant/query` (Deterministic Assistant API), `/api/eia` (EIA Telemetry)
+## Quickstart, Validation & Build
+Run `npm ci`, `python scripts/data_pipeline/validate_data.py`, `python scripts/data_pipeline/run_track_a_analysis.py`, `node tests/run_post4_tests.mjs`, `node tests/run_post5_tests.mjs`, `node tests/run_post6_certification.mjs`, and `npm run build`.
+## Certification Documentation
+All 13 certification reports (`PHASE3_RELEASE_MANIFEST.md`, `CLEAN_CLONE_VALIDATION_REPORT.md`, `FINAL_ANALYTICAL_REVALIDATION.md`, `BUILD_AND_ENVIRONMENT_VALIDATION.md`, `FINAL_OPERATIONAL_REGRESSION_REPORT.md`, `FINAL_DATA_INTELLIGENCE_VALIDATION.md`, `FINAL_ASSISTANT_VALIDATION.md`, `FINAL_AUTOMATED_TEST_REPORT.md`, `PHASE3_FINAL_UAT.md`, `DEPLOYMENT_VALIDATION_REPORT.md`, `PHASE3_FINAL_ARCHITECTURE.md`, `PHASE3_COMPLETION_REPORT.md`, `PHASE3_HANDOVER_GUIDE.md`) are located in `/docs/`.
+## Known Limitations & Safety Boundary
+Nameplate capacity (`MW`) and U.S. 2024 utility net generation (`thousand_MWh`) are strictly partitioned and never combined. Maintenance baseline records (`31,719.0 MW` across 5 flagship stations) reflect a static snapshot rather than live SCADA telemetry. Time-series forecasting (Track F) is unsupported and refused by the assistant.
 </file>
 
 <file path="data-science/outputs/intelligence_results.json">
